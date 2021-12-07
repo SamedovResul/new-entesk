@@ -1914,7 +1914,10 @@ body {
   height: auto;
 }
 
-
+.img-box img{
+  width: 100%;
+  height: auto;
+}
 
 .home-folder .text-box .png {
   position: absolute !important;

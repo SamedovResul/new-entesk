@@ -4,6 +4,7 @@ import { getDatabase, ref, set} from "firebase/database";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { send } from 'emailjs-com';
 import { useAlert } from 'react-alert'
+
 // import database from '../../firebase/firebase';
 
 const SectionSeven = () =>{

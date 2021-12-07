@@ -9,7 +9,7 @@ import saytyoutube from '../../images/saytyoutube.png'
 import saytfb from '../../images/saytfb.png'
 import saytlinkedin from '../../images/saytlinkedin.png'
 import tiktoksayt from '../../images/tiktoksayt.png'
-import { send } from 'emailjs-com';
+import emailjs from 'emailjs-com';
 
 
 const FooterSection =(props) =>{
@@ -34,7 +34,7 @@ const FooterSection =(props) =>{
     
 
     if(re.test(subscribe.email)){
-      send(
+      emailjs.send(
         'service_n5lz3c9',
         'template_q5qpc7d',
         subscribe,
