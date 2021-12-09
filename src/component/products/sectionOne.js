@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 
 
 function SectionOne(props) {
+
+  const  {executeScroll} = props
   return (
     <article>
       <div className="container">
@@ -35,8 +37,10 @@ function SectionOne(props) {
                             aboutProps:{
                               name: 'fromproducts',
                             }
-                          }} >
-                            <button>Qeydiyyat</button>
+                          }} 
+                          
+                          >
+                            <button  >Qeydiyyat</button>
                           </Link >
 
                         

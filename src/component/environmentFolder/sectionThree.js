@@ -29,7 +29,7 @@ const SectionThree = ({data,myRef,blog}) =>{
                 if(name === scineceBlog){
                   return(
                     <Link to={{pathname:`/blog/${name}`, }} key={index} >
-                      <button className="section-3-button">Davami</button>
+                      <button className="section-3-button">Davamı</button>
                     </Link>
                   )
                   }
@@ -42,7 +42,7 @@ const SectionThree = ({data,myRef,blog}) =>{
         </div> 
       </div>
 
-      <MediaQuery maxDeviceWidth={780}  >
+      <MediaQuery maxDeviceWidth={767}  >
         <div className="container">
           <div className="container-fluid">
             <div className="row">
@@ -60,7 +60,7 @@ const SectionThree = ({data,myRef,blog}) =>{
                 if(name === scineceBlog){
                   return(
                     <Link to={{pathname:`/blog/${name}`, }} key={index} >
-                      <button className="section-3-button">Davami</button>
+                      <button className="section-3-button">Davamı</button>
                     </Link>
                   )
                   }

@@ -3,7 +3,7 @@ import SectionOne from './sectionOne'
 import SectionFive from '../homeFolder/sectionFive'
 import FooterSection from '../homeFolder/footerSection'
 import allData from '../../course'
-import { useParams } from 'react-router-dom'
+import { useParams,useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import Circular from '../../circular/circular'
 
@@ -11,6 +11,7 @@ import Circular from '../../circular/circular'
 function Blog(props) { 
 
   const state = useSelector(state => state.allData)
+  const location = useLocation();
   
   const { name } = useParams();
   let Course = allData.Course
@@ -19,7 +20,6 @@ function Blog(props) {
   
   
 blogs.map((blog) =>{
-  console.log(blog)
   if(blog.name === name ){
     data = blog
     

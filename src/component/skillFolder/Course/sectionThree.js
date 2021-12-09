@@ -120,7 +120,9 @@ const SectionThree = (props) =>{
                     }
                     }}
                   >
-                    Davami
+                    {
+                      span ? ( <p> Daha az </p> ) : ( <p> Daha çox </p> )
+                    }
                   </button>
 
                   

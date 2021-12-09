@@ -840,8 +840,8 @@ export  const allData = {
 	Skill : [
 		{
 		id: uuid(2),
-	  name: 'Rəqəmsal İncəsənət',
-		skillBlog: 'Metakoqnitiv Bacarıqları',
+	  name: 'Bacarıqlar',
+		skillBlog: 'Metakoqnitiv Bacarıqlar',
 		skill: 'METAKOQNİTİV BACARIQLAR',
 		Description_1: 'METAKOQNİTİV BACARIQLAR',
 		Description_2: 'Yuxarıdakı təcrübəyə əsasən',
@@ -894,7 +894,7 @@ export  const allData = {
 		{
 			id: uuid(),
 			name: 'Steam nədir',
-			blogname: 'Steam nədir',
+			blogname: 'Steam nədir ?',
 			description:'STEAM nədir',
 			text: 'STEAM - Elm, Texnologiya, Mühəndislik, İncəsənət və Riyaziyyatın birləşməsi nəticəsində  yeni ideyaların reallaşdırılması, cəmiyyətdə müxtəlif problemlərin həllinə  kömək edə biləcək  təhsil yanaşmasıdır. STEAM təhsilalanlarda tənqidi yanaşma, yaradıcı düşünmə, qazanılan biliklərin  müqayisəli şəkildə anlaşılması, yaradıcı formada yeni layihələr əsasında biliyin möhkəmlənməsi, əməkdaşlıqetmə və s. kimi XXI əsr bacarıqlarını formalaşdırır. STEAM fənləri ayrılıqda öyrətmək əvəzinə, onları real dünyadakı tətbiqlərə əsaslanan vahid öyrənmə modelində birləşdirir.',
 			blogContent: [
@@ -1034,9 +1034,9 @@ export  const allData = {
 		},
 		{
 			id: uuid(),
-			name: 'Metakoqnitiv Bacarıqları',
-			blogname: 'Metakoqnitiv Bacarıqları',
-			title: 'Situasiyadan asılı məlumat',
+			name: 'Metakoqnitiv Bacarıqlar',
+			blogname: 'Metakoqnitiv Bacarıqlar',
+			title: 'Metakoqnitiv Bacarıqlar',
 			text: 'Şagirdin qarşılaşdığı bir situasiyada hansı məlumatı funksional olaraq istifadə edə biləcəyini bilməsini, başqa sözlə, hansı vəziyyətdə nə edəcəyini bilməsini tələb edir. Bu forma prosedural məlumat və təsvir edən məlumatın hər ikisinə birdən sahib olmanı tələb edir. Yəni, situasiyaya bağlı məlumatda fərdin bir işin həm necə ediləcəyini, həm özünün edib-edə bilməyəcəyini, həm də hansı vəziyyətdə nə edəcəyini bilməsi lazımdır. Metakoqnitiv məlumat şagirdin öz koqnitiv qabiliyyətləri, koqnitiv əməliyyatları və hansı vəziyyətdə nə edəcəyini bilməsi kimi məlumatlara sahib olmasıdır. Belə bir bilik əvvəlki təcrübələrin də təsiri ilə şagirdin davranışına əhəmiyyətli dərəcədə təsir göstərəcək. Ancaq metakoqnisiya şagirdin yuxarıda sadalanan məlumatlarla yanaşı bu məlumatları düzgün istifadə etməsini də tələb edir. Metakoqnitiv məlumatları istifadə edə bilmə qabiliyyəti isə metakoqnitiv idarə və ya tənzimləmə adlanır.',
 			img: '/images/skill.jpg',
 		},

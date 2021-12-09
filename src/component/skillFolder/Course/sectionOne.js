@@ -84,7 +84,9 @@ const  SectionOne = (props) =>{
                 }else
                   setShowMore(false)
                 }}
-              > daha coxu </button>
+              >               {
+                showMore ? ( <p> Daha az </p> ) : ( <p> Daha çox </p> )
+              }</button>
             </div>
             
           </div>
@@ -166,7 +168,9 @@ const  SectionOne = (props) =>{
                 }else
                   setShowMore(false)
                 }}
-              > daha coxu </button>
+              >               {
+                showMore ? ( <p> Daha az </p> ) : ( <p> Daha çox </p> )
+              } </button>
             </div>
             
           </div>

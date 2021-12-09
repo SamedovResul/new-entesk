@@ -34,9 +34,14 @@ function SectionOne(props) {
       <div className="container">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-12">
               <div className="blog-text-box">
 
+            {
+              data.blogContent ? (<img className='blog-img' src={img} alt='img'/>) :
+              ( <p></p>)
+            }
+              
                 {
                   data.blogContent ? 
                   data.blogContent.map((subject) =>{
@@ -47,16 +52,15 @@ function SectionOne(props) {
                       <p>
                         {description}
                       </p>
+                      
                       <ul>
                         {
                           list ? list.map((list)=>{
                             const {li} = list
-                            console.log(li)
                             return(
                               <li>
-                                {
-                                  li
-                                }
+                                
+                                {li}
                               </li>
                             )
                           }) : (
@@ -72,10 +76,12 @@ function SectionOne(props) {
                     )
                   }):(
                     <>
+                      
                       <p>
-                        {title}
-                      </p>
-                      <p>
+                        <p>
+                          {title}
+                        </p>
+                          <img className='blog-img' src={img} alt='img'/>
                         {text}
                       </p> 
                     </>
@@ -85,11 +91,11 @@ function SectionOne(props) {
                 
               </div>
             </div>
-            <div className="col-md-6">
+            {/* <div className="col-md-6">
               <div className="blog-img-box">
                 <img src={img} alt='img'/>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

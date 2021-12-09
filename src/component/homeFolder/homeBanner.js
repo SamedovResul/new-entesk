@@ -1,4 +1,4 @@
-import  {React, useEffect, useState } from 'react'
+import  {React, useEffect, useState,useRef } from 'react'
 import {useSpring, animated} from 'react-spring'
 import { Link} from 'react-router-dom'
 import SectionOne from './sectionOne'
@@ -17,10 +17,11 @@ import FooterSection from './footerSection'
 
 import allData from '../../course'
 
-
 const HomeBanner = (props) =>{
 	// let state = useSelector(state => state.allData)
-
+	
+	// const {myRef} = props
+	const myRef = useRef(null)
 	const [screenSize, getDimension] = useState({
     dynamicWidth: window.innerWidth,
     dynamicHeight: window.innerHeight
@@ -53,14 +54,13 @@ const HomeBanner = (props) =>{
 	Course.map((subject) =>{
 		return data = subject
 	})
-
 	useEffect(() => {
 	location ? location.name === "toAbout" ?
-	window.scrollTo(0, 3500) : 
+	window.scrollTo(0, myRef.current.offsetTop ) : 
 	location.name === "fromKSM" ?
-	window.scrollTo(0, 3500) : 
+	window.scrollTo(0, myRef.current.offsetTop ) : 
 	location.name === "fromproducts" ? 
-	window.scrollTo(0, 3500) :
+	window.scrollTo(0, myRef.current.offsetTop ) :
 	window.scrollTo(0, 0):
 	window.scrollTo(0, 0)
 	}, [location] );
@@ -414,7 +414,7 @@ const HomeBanner = (props) =>{
 				<SectionFour data={images}  />
 				<SectionFive data={blog} />
 				<SectionSix data={Client} />
-				<SectionSeven  />
+				<SectionSeven  myRef={myRef} />
 				<FooterSection data={Course} />
 			</div>
 		</article>

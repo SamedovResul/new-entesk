@@ -5,6 +5,7 @@ import FooterSection from '../homeFolder/footerSection'
 
 
 export default function Product(props) {
+  const {executeScroll} = props
   console.log(props)
   const data = Course.Course
   useEffect(() => {
@@ -16,7 +17,7 @@ export default function Product(props) {
       <div className="col-md-12 products-name">
         <h1>Tədris Proqramları</h1>
       </div>
-      <SectionOne data={data} />
+      <SectionOne data={data} executeScroll={executeScroll} />
       <FooterSection  data={data} />
     </article>
   )

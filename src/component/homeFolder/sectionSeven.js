@@ -4,12 +4,16 @@ import { getDatabase, ref, set} from "firebase/database";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { send } from 'emailjs-com';
 import { useAlert } from 'react-alert'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 // import database from '../../firebase/firebase';
 
-const SectionSeven = () =>{
+const SectionSeven = ({myRef}) =>{
+  
   const alert = useAlert()
   const [userId, setUserId] = useState()
-  
+  // const [phone, setPhone] = useState(0)
+  // console.log(phone)
   const [user,setUser] = useState({
     name: "",
     email: "",
@@ -21,18 +25,28 @@ const SectionSeven = () =>{
 
   const time = new Date()
 
-  
+  let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 
 
   function writeUserData(e) {
     e.preventDefault();
-    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    let pattern1 = /@gmail.com/;
+    let pattern2 = /@mail.ru/;
+    let result = user.email.match(pattern1);
+    let result2 = user.email.match(pattern2);
+    if(result || result2){
+      console.log(true)
+    }else{
+      console.log(false)
+    }
     
-
+      
+      console.log(user)
     if(user.name && user.email && user.phone && user.topic ){
-      if( re.test(user.email) ){
+      if(  result || result2 ){
       alert.show(<div style={{ color: 'green' }}>Sizinlə əlaqə saxlanilacaq </div>)
+      
       send(
         'service_n5lz3c9',
         'template_p1ycadr',
@@ -52,7 +66,7 @@ const SectionSeven = () =>{
         topic:"",
       })
       }else{
-        alert.show(<div style={{ color: 'red' }}>Xahiş edirik xanaları  düzgün doldurun</div>)
+        alert.show(<div style={{ color: 'red' }}>Xahiş edirik Mail addresi  düzgün yazın </div>)
       }
     }else{
       alert.show(<div style={{ color: 'red' }}>Xahiş edirik xanaları doldurun</div>)
@@ -86,9 +100,11 @@ const SectionSeven = () =>{
 
   let name, value
   const hadlerGetClientInfo = (event) =>{
+
     event.preventDefault();
     name = event.target.name
     value = event.target.value
+    // console.log(re.test(user.email))
     // console.log(value)
     setUser({...user, [name]: value })
   }
@@ -102,7 +118,7 @@ const SectionSeven = () =>{
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-12">
-              <div className="section-text-div">
+              <div className="section-text-div" ref={myRef}>
                 <h6>Bizimlə Əlaqə</h6>
               </div>
 
@@ -124,15 +140,18 @@ const SectionSeven = () =>{
                   placeholder="E-mail" 
                   required
                   ></input>
-                <input 
+                <PhoneInput 
+                  onlyCountries={['az']}
                   type="number" 
                   value={user.phone}
                   id="phone" 
                   name="phone" 
-                  onChange={hadlerGetClientInfo}
+                  onChange={phone => setUser({
+                    ...user, phone: phone
+                  })}
                   placeholder="Telefon" 
                   required
-                ></input>
+                />
                 <textarea
                   type="text" 
                   value={user.topic}

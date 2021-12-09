@@ -10,7 +10,6 @@ import saytfb from '../../images/saytfb.png'
 import saytlinkedin from '../../images/saytlinkedin.png'
 import tiktoksayt from '../../images/tiktoksayt.png'
 import { send } from 'emailjs-com';
-import ReactWhatsapp from 'react-whatsapp';
 
 
 const FooterSection =(props) =>{
@@ -170,9 +169,7 @@ const FooterSection =(props) =>{
               
               <div className="social-media">
                 <p>
-                  <span
-                    onClick={() =>{<ReactWhatsapp number="077-347-20-63" message="Hello World!!!" />}}
-                  >
+                  <span>
                     <img src={swp} alt="img" />
                   </span>
                   <a href="https://api.whatsapp.com/send?phone=994558067669" >

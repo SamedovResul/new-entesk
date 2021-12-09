@@ -39,7 +39,7 @@ const SectionThree = ({data,myRef,blog}) =>{
                 if(name === technologyBlog){
                   return(
                     <Link to={{pathname:`/blog/${name}`, }} key={index} >
-                      <button className="section-3-button">Davami</button>
+                      <button className="section-3-button">Davamı</button>
                     </Link>
                   )
                   }
@@ -52,7 +52,7 @@ const SectionThree = ({data,myRef,blog}) =>{
         </div> 
       </div>
 
-      <MediaQuery maxDeviceWidth={780}  >
+      <MediaQuery maxDeviceWidth={767}  >
         <div className="container">
           <div className="container-fluid">
             <div className="row">
@@ -62,11 +62,7 @@ const SectionThree = ({data,myRef,blog}) =>{
                   <img src={image_2} alt='img' ></img>
                 
                 
-                <p>Hey dostlar, salam! Bu gün müxtəlif peşələr haqqında maraqlı bir kitab oxudum. 
-                Sən demə, həkim, müəllim, polis, yanğınsöndürən kimi fərqli peşə növləri var. 
-                Öyrəndim ki,  
-                  
-              </p>
+                <p>{text_2}</p>
 
                 {
                   blog.map((blog,index) =>{
@@ -77,7 +73,7 @@ const SectionThree = ({data,myRef,blog}) =>{
                     
                     return(
                       <Link to={{pathname:`/blog/${name}`, }} key={index} >
-                        <button className="section-3-button">Davami</button>
+                        <button className="section-3-button">Davamı</button>
                       </Link>
                     )
                     }
