@@ -4,6 +4,7 @@ import { Link} from 'react-router-dom'
 import leaf from '../../../images/leaf.png'
 import brush from '../../../images/brush.png'
 import circle from '../../../images/circle.png'
+import icon from '../../../images/logoicon.png'
 import SectionOne from './sectionOne'
 import SectionTwo from '../../homeFolder/sectionTwo'
 import SectionThree from './sectionThree'
@@ -11,7 +12,7 @@ import FooterSection from '../../homeFolder/footerSection'
 import { useParams } from 'react-router-dom'
 // import { useSelector } from 'react-redux'
 import Alldata from '../../../course'
-
+import {Helmet} from "react-helmet";
 
 const Skill = (props) =>{
 	const [screenSize, getDimension] = useState({
@@ -155,6 +156,10 @@ const Skill = (props) =>{
     return(
 			<>
 				<article className="skill-section">
+				<Helmet>
+					<title>Entesk</title>
+					<link rel="icon" href={icon} />
+        </Helmet>
 
 						<animated.div className="skill-img3" style={brushimg} >
 						

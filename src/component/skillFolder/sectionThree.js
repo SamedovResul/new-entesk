@@ -13,11 +13,11 @@ const SectionThree = ({data,myRef,blog}) =>{
   return(
     <article className="section-3-main-div home-folder">
       
-      <div key={id} className="container bigScreenContainer">
+      <div key={id} className="container bigScreenContainer skill">
         <div className="container-fluid">
-          <div className="row" >
+          <div className="row " >
             
-            <div ref={myRef} className="text-box col-md-6 col-sm-12 col-12">
+            <div ref={myRef} className="img-box col-md-6 col-sm-12 col-12 ">
               <img src={image_2} alt='img' ></img>
             </div>
 
@@ -29,9 +29,10 @@ const SectionThree = ({data,myRef,blog}) =>{
                 blog.map((blog,index) =>{
     
                 const {name} = blog
+                console.log(skillBlog)
                 if(name === skillBlog){
                   return(
-                    <Link to={{pathname:`/blog/${name}`, }} key={index} >
+                    <Link to={{pathname:`/blog/${name}`,}} key={index} >
                       <button className="section-3-button">Davami</button>
                     </Link>
                   )
@@ -46,10 +47,10 @@ const SectionThree = ({data,myRef,blog}) =>{
       </div>
 
       <MediaQuery maxDeviceWidth={780}  >
-        <div className="container">
+        <div className="container ">
           <div className="container-fluid">
-            <div className="row">
-              <div className="col-md-12 col-sm-12 section-3-for-mobile" >
+            <div className="row ">
+              <div className="col-md-12 col-sm-12 section-3-for-mobile img-box skill " >
                 
                 
                   <img src={image_2} alt='img' ></img>

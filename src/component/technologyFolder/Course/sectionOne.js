@@ -11,7 +11,7 @@ const  SectionOne = (props) =>{
   const [showMore,setShowMore ] = useState(false)
   
 
-  const {id,   Video, text_1, learn,requireds } = props.data 
+  const {id,   Video, text_1, learn,requireds,image_1 } = props.data 
 
   
   return(
@@ -19,7 +19,7 @@ const  SectionOne = (props) =>{
     
   <article className="position section-one">
 
-    <div className="container bigScreenContainer ">
+    <div className="container bigScreenContainer technology ">
       <div key={id} className="container-fluid">
         <div className="row" >
           
@@ -62,10 +62,8 @@ const  SectionOne = (props) =>{
             </div>
           </div>
           
-          <div  className=" col-md-5 col-sm-12 col-12">
-            <VideoPlayer 
-            src={Video} poster={poster} className="video"   
-            />
+          <div  className=" col-md-5 col-sm-12 col-12 img-box">
+            <img src={image_1} alt="" />
           </div>
           <div className=" col-md-12">
             <div   className="technology-desc main-desc">
@@ -99,11 +97,9 @@ const  SectionOne = (props) =>{
     <div className='smallScreen'  >
       <div key={id} className="container">
         <div className="container-fluid">
-          <div className="row" >
-          <div  className=" col-md-12 col-sm-12 col-12">
-            <VideoPlayer 
-            src={Video} poster={poster} className="video"   
-            />
+          <div className="row technology" >
+          <div  className=" col-md-12 col-sm-12 col-12 img-box">
+            <img src={image_1} alt="img" />
           </div>
 
 

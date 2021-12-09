@@ -5,7 +5,7 @@ import poster from '../../../images/guneshsistemi.png';
 
 
 const SectionThree = (props) =>{
-  const { id,   Video, module, levels,  module_for} = props.data
+  const { id,  module, levels,  module_for,image_2} = props.data
   const [moreLess , setMoreLess] = useState({display: 'none'})
   const [span , setSpan] = useState(false);
 
@@ -18,15 +18,13 @@ const SectionThree = (props) =>{
   return(
     <article className="section-3-main-div">
       
-      <div key={id} className="container ">
+      <div key={id} className="container skill ">
         <div className="container-fluid">
           <div className="row" >
 
 
-            <div  className=" col-md-5 col-sm-12 col-12">
-              <VideoPlayer 
-              src={Video} poster={poster} className="video"   
-              />
+            <div  className=" col-md-5 col-sm-12 col-12 img-box">
+              <img src={image_2} alt="" />
             </div>
 
             <div  className=" linethree col-md-7 col-sm-12 col-xs-12" >

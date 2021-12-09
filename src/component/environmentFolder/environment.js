@@ -11,7 +11,7 @@ import FooterSection from '../homeFolder/footerSection'
 // import { useSelector } from 'react-redux'
 import Alldata from '../../course'
 
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 80)
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 150)
 const Environment = (props) =>{
 	const myRef = useRef(null)
 	const executeScroll = () => scrollToRef(myRef)
@@ -116,7 +116,7 @@ const Environment = (props) =>{
 			
 			top: width <= 768 ?  
 			location ? '37px' : '37px' :  location ? 
-			'97px' : '97px'
+			'117px' : '117px'
 	
 		}],
 
@@ -148,7 +148,7 @@ const Environment = (props) =>{
 			location.name === 'fromTechnology' ? 
 			'37px' : '37px' : '37px'   :    location ? 
 			location.name === 'fromTechnology' ?
-			'97px' : '97px' : '97px'
+			'117px' : '117px' : '117px'
 		,	
 		}],
   		from: {right: location ?

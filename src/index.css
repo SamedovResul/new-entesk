@@ -491,6 +491,17 @@ body {
 
 /* environment ---- */
 
+.img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px 20px 0px;
+}
+
+.environment img {
+  border: 5px solid #97C441;
+}
+
 .click-div {
   cursor: pointer;
 }
@@ -832,7 +843,7 @@ body {
 
 @media(max-width:991px) {
   .section-3-main-div .main-box {
-    width: 91%;
+    width: 100%;
   }
 
   .mundaricat {
@@ -1076,7 +1087,6 @@ body {
   height: unset;
   overflow: hidden;
   margin-bottom: 30px;
-  /* padding-right: 20px; */
 }
 
 .level-div {
@@ -1128,15 +1138,6 @@ body {
 }
 
 @media(max-width:665px) {
-  /* .section-3-main-div .environment-course {
-    width: 80%;
-    margin: auto;
-  }
-
-  .section-3-main-div .environment-desc {
-    width: 80%;
-    margin: auto;
-  } */
 
   .contentpng {
     width: 80%;
@@ -1218,7 +1219,13 @@ body {
 
 /* technology ----- */
 
+.technology .img-box img {
+  border: 5px solid #55CBF9;
+}
 
+.technology img {
+  border: 5px solid #55CBF9;
+}
 
 .technology-banner {
   background-image: url('./images/technologybg-shape.png');
@@ -1330,6 +1337,13 @@ body {
 
 /* skill ------ */
 
+.skill .img-box img {
+  border: 5px solid #FBB116;
+}
+
+.skill  img {
+  border: 5px solid #FBB116;
+}
 
 .skill-banner {
   background-image: url('./images/skillbg-shape.png');
@@ -1675,6 +1689,7 @@ body {
   width: 100%;
   height: auto;
   margin: 20px auto 20px auto;
+  border-radius: 30px;
 }
 
 .section-1-for-mobile ul {
@@ -1897,6 +1912,12 @@ body {
 
 /*  section 3  */
 
+.img-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+
 .section-3-main-div {
   height: auto;
   display: flex;
@@ -2018,6 +2039,7 @@ body {
   width: 100%;
   height: auto;
   margin: 20px auto 20px auto;
+  border-radius: 30px;
 }
 
 @media (max-width: 350px) {
@@ -2804,7 +2826,7 @@ body {
 
   .section-6-main-div .slick-center .squer-div {
     width: 90%;
-    height: 50%;
+    height: auto;
     border-radius: 55px;
   }
 }

@@ -63,7 +63,7 @@ return(
       <Slider {...settings}>
         {
           props.data.map((blog) =>{
-            const {id, name, img} = blog
+            const {id, blogname, name,img} = blog
             // console.log(image)
             return(
             <div className="caruseldiv" key={id}>
@@ -72,7 +72,7 @@ return(
               </div>
               <div className="bottom-div">
                 <p>
-                  {name}
+                  {blogname}
                 </p>
                 <Link to={{pathname:`/blog/${name}`, }}>
                   <button> Davamı </button>

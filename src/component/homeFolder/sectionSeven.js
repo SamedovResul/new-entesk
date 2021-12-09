@@ -131,6 +131,7 @@ const SectionSeven = () =>{
                   name="phone" 
                   onChange={hadlerGetClientInfo}
                   placeholder="Telefon" 
+                  required
                 ></input>
                 <textarea
                   type="text" 
@@ -139,6 +140,7 @@ const SectionSeven = () =>{
                   name="topic" 
                   onChange={hadlerGetClientInfo}
                   placeholder="Movzu"
+                  required
                 ></textarea>
                 <button type="submit" onClick={writeUserData} >Göndər</button>
               </form>

@@ -4,12 +4,14 @@ import { Link} from 'react-router-dom'
 import leaf from '../../../images/leaf.png'
 import brush from '../../../images/brush.png'
 import circle from '../../../images/circle.png'
+import icon from '../../../images/logoicon.png'
 import SectionOne from './sectionOne'
 import SectionTwo from '../../homeFolder/sectionTwo'
 import SectionThree from './sectionThree'
 import FooterSection from '../../homeFolder/footerSection'
 import { useParams } from 'react-router-dom'
 import Alldata from '../../../course'
+import {Helmet} from "react-helmet";
 
 const Environment = (props) =>{
 
@@ -150,6 +152,10 @@ const Environment = (props) =>{
     return(
 
 			<article onClick={props.handlerSideClose}>
+				<Helmet>
+						<title>Entesk</title>
+						<link rel="icon" href={icon} />
+        </Helmet>
 				<div className="environment-section" style={{position: 'relative', zIndex: `${props.zIndex}`}} >
 
 								<animated.div className="environment-img1" style={leafimg} >

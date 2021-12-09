@@ -306,14 +306,12 @@ const HomeBanner = (props) =>{
 			'100%' : location.name === 'fromTechnology' ? 
 			'100%' : location.name === 'fromSkill'? 
 			'50%' : '70%' : '70%',
-			
 
 
 			top: location? location.name === 'fromNavication' ? 
 					"-50%" : location.name === 'fromSkill' ? 
 					'-15%' : '30%' :  '30%',
 					width: '15%'
-				
 				},
 			config: {
 				duration: 500
@@ -394,15 +392,15 @@ const HomeBanner = (props) =>{
 								<p>Skills</p>
 							</animated.div>
 
-								<Link  className='link environment' to='/environment'>
+								<Link  className='link ' to='/environment'>
 									<animated.img  src={ leaf} alt='img'  style={leafimg} className=''></animated.img>
 								</Link >
 
-								<Link className='link technology' to='/technology'>
+								<Link className='link ' to='/technology'>
 									<animated.img src={ circle} alt='img' className='centerimg'style={circleimg} ></animated.img>
 								</Link>
 
-								<Link className='link skill' to='/skill'>
+								<Link className='link ' to='/skill'>
 									<animated.img src={brush} alt='img' style={brushimg} ></animated.img>
 								</Link>
 								

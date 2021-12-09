@@ -107,6 +107,8 @@ export  const allData = {
 		Description_2: 'Elm tarixi',
 	  Video: '/video/video1.mp4',
 	  image:'/images/science.jpg',
+		image_1:'/images/science_class1.png',
+		image_2:'/images/science_class2.jpg',
 	  text_1:"Bu dərs elm və onun necə istifadə olunmasından bəhs edir. Elm bizi əhatə edən mühiti, yəni, dünyanı və kainatı, buradakı bütün canlı və varlıqları - atomlardan tutmuş nəhəng dağları, kiçik bakteriyalardan tutmuş böyük balniları anlamağa kömək edir. Daha çox öyrəndikcə, daha mürəkkəb biliklərə yol açırıq. Kainatdan kənarda nə yerləşir və biz teleskopla görə bilərikmi? Beyin necə düşünür və hiss edir? Texnologiya və ixtiralarıımızdan səmərəli istifadə etmək üçün elmi biliklər çox vacibdir. Elm hər kəsin xeyrinə istifadə oluna bilər, lakin yanlış istifadə olunan elmi biliklər zərərli ola bilər. Düzgün istifadə edildikdə, elmin gətirdiyi biliklər daha sağlam olmağımıza və daha yaxşı yaşamağımıza kömək edir.",
 		text_2:"obyektiv, sistemli və əsaslandırılmış biliklərin əldə edilməsinə, dəqiqləşdirilməsinə və yayılmasına yönəlmiş insan fəaliyyəti növüdür. Bu fəaliyyətin əsasını elmi faktların toplanması, onların daima yenilənməsi və sistemləşdirilməsi, tənqidi analizi və bu əsasda elmi biliklərin toplanması təşkil edir. Elm təkcə müşahidə edilən təbiət və ictimai halları təsvir etmir, həm də onların əlaqələrini tapır və nəticəni müəyyən edə bilir.",
 		slide_text:"Elm"
@@ -284,6 +286,8 @@ export  const allData = {
 
 	  Video: '/video/video1.mp4',
 	  image:'/images/coding.jpg',
+		image_1:'/images/coding_class1.jpg',
+		image_2:'/images/coding_class2.jpg',
 	  text_1:"Ümumiyyətlə dil öyrənmək uşaqlara ünsiyyət qurmağı və məntiqi təfəkkürü öyrədir. Dil həm şifahi, həm də yazılı bacarıqları gücləndirir. Uşaqlar erkən yaşlarında fərqli dilləri öyrənmələri tövsiyyə olunur, çünki bu uşaqlara ətraf dünyanı daha yaxşı anlamalarına kömək edir. Kodlaşdırmanın isə özünəməxsus bir dili var. Əlifbadakı A, B və digər hərflər kimi kodlaşdırmanın da əlifbasını təmsil edən xüsusi 0 və 1 hərfləri var. Bu 0 və 1 -lər ətrafımızdakı texnologiyadan necə istifadə etməli olduğumuza dair göstərişlər verir. Uşaqların ətrafdakı texnologiyanın niyə və necə işləməsini başa düşməsi üçün kodlaşdırma öyrənməkdən və ətrafdakı texnologiya ilə danışmaqdan daha yaxşı yolu nədir?",
 		text_2:"obyektiv, sistemli və əsaslandırılmış biliklərin əldə edilməsinə, dəqiqləşdirilməsinə və yayılmasına yönəlmiş insan fəaliyyəti növüdür. Bu fəaliyyətin əsasını elmi faktların toplanması, onların daima yenilənməsi və sistemləşdirilməsi, tənqidi analizi və bu əsasda elmi biliklərin toplanması təşkil edir. Elm təkcə müşahidə edilən təbiət və ictimai halları təsvir etmir, həm də onların əlaqələrini tapır və nəticəni müəyyən edə bilir.",
 		slide_text:"Proqramlaşdırma"
@@ -435,6 +439,8 @@ export  const allData = {
 		Description_2: 'Rəqəmsal İncəsənət',
 	  Video: '/video/video1.mp4',
 	  image:'/images/digital.jpg',
+		image_1:'/images/digital-art1.jpg',
+		image_2:'/images/digital-art2.png',
 	  text_1:"Bəziləri texnologiyaya orijinallığa təhlükə kimi baxır və ənənəvi sənətkarlığı əvəz etməyə çalışdığını düşünür. Bu fikir, əlbəttə ki, rəsm müəllimləri üçün narahatlıq yarada bilər. Bununla belə, tədqiqatlar incəsənət təhsilində rəqəmsal alətlərdən istifadənin bədii inkişafı və yaradıcılığı artırdığını göstərir. Rəqəmsal əsrdə incəsənət müəllimləri öz proqramlarını müdafiə etmək ehtiyacını indi həmişəkindən daha çox hiss edirlər. Rəqəmsal incəsənət dərsləri güclü gələcək uğur aləti kimi xidmət edə bilər.",
 		text_2:"obyektiv, sistemli və əsaslandırılmış biliklərin əldə edilməsinə, dəqiqləşdirilməsinə və yayılmasına yönəlmiş insan fəaliyyəti növüdür. Bu fəaliyyətin əsasını elmi faktların toplanması, onların daima yenilənməsi və sistemləşdirilməsi, tənqidi analizi və bu əsasda elmi biliklərin toplanması təşkil edir. Elm təkcə müşahidə edilən təbiət və ictimai halları təsvir etmir, həm də onların əlaqələrini tapır və nəticəni müəyyən edə bilir.",
 		slide_text:"Rəqəmsal İncəsənət"
@@ -687,6 +693,8 @@ export  const allData = {
 		Description_2: 'Elm tarixi',
 	  Video: '/video/video1.mp4',
 	  image:'/images/robot.jpg',
+		image_1:'/images/robotika-1.jpg',
+		image_2:'/images/robotika-2.jpg',
 	  text_1:"Dünyadakı şirkətlər yaxın gələcəkdə biznes infrastrukturlarına robotlama və avtomatlaşdırmanı tətbiq etməyi planlaşdırırlar. Təhsil qurumları və təşkilatları bunu yaxından izləyir və robototexnikanı bütün dünyada məktəb proqramının ayrılmaz bir hissəsi halına gətirməkdə artıq böyük uğurlar əldə ediblər. Övladlarımızı gələcək işçi qüvvəsinin çətinliklərinə hazırlamalı onlara inkişaf etməyə və geniş bir sıra bacarıqları daha asan inkişaf etdirə biləcək bir mühit yaratmalıyıq. ",
 		text_2:"obyektiv, sistemli və əsaslandırılmış biliklərin əldə edilməsinə, dəqiqləşdirilməsinə və yayılmasına yönəlmiş insan fəaliyyəti növüdür. Bu fəaliyyətin əsasını elmi faktların toplanması, onların daima yenilənməsi və sistemləşdirilməsi, tənqidi analizi və bu əsasda elmi biliklərin toplanması təşkil edir. Elm təkcə müşahidə edilən təbiət və ictimai halları təsvir etmir, həm də onların əlaqələrini tapır və nəticəni müəyyən edə bilir.",
 		slide_text:"Robotika"
@@ -769,32 +777,32 @@ export  const allData = {
 		{
 			id:uuid(),
 			img: '/images/Gunay.png',
-			name: 'Rəsul Səmədov',
-			text: 'the industry s standard dummy text ever since the 1500s,',
+			name: 'Tohida Xanım',
+			text: 'Hər iki qızım bir aya artıq sərbəst şəkildə kiçik oyunlar hazılayırlar. ',
 		},
 		{
 			id:uuid(),
 			img: '/images/Gunay.png',
-			name: 'Günay İmanzadə',
-			text: 'the industry s standard dummy text ever since the 1500s,',
+			name: 'Humay Xanım',
+			text: 'Çox yaxşı ki, Sizi tapdıq. İmran çox böyük həvəslə robotları yığır və programlaşdırır.',
 		},
 		{
 			id:uuid(),
 			img: '/images/Gunay.png',
-			name: 'Şahin Xalilov',
-			text: 'the industry s standard dummy text ever since the 1500s,',
+			name: 'Nigar Xanım',
+			text: 'Oğlum Murad ingilis dili və robotika dərslərinə başladı. Nəticədən o qədər məmnun qaldım ki, digər iki qızlarımı da kurslara cəlb etdim.',
 		},
 		{
 			id:uuid(),
 			img: '/images/Gunay.png',
-			name: 'Püstəxanim Abbasova',
-			text: 'the industry s standard dummy text ever since the 1500s,',
+			name: 'Zeynəb Xanım',
+			text: 'İki ay ərzində Raul artıq sərbəst ingilis dilində oxuyur və danışır. Çox minnətdaram.',
 		},
 		{
 			id:uuid(),
 			img: '/images/Gunay.png',
-			name: 'Fərid İmanzadə',
-			text: 'the industry s standard dummy text ever since the 1500s,',
+			name: 'Emin Bəy',
+			text: 'Elm dərsləri oğlumun dünya görüşünə və təfəkkürünə çox müsbət təsir etdi. Çox bəyənirik.',
 		}
 	],
 
@@ -803,8 +811,8 @@ export  const allData = {
 		{
 		id: uuid(2),
 	  name: 'Elm ',
-		scineceBlog: 'TƏBİƏT ELMLƏRİ',
-		Description_1: 'TƏBİƏT ELMLƏRİ',
+		scineceBlog: 'Təbiət Elmləri',
+		Description_1: 'Təbiət Elmləri',
 		Description_2: 'Təbiət elmlərinin əsası',
 	  Video: '/video/video1.mp4',
 	  image:'/images/image-3.jpg',
@@ -817,8 +825,8 @@ export  const allData = {
 	Technology : [
 		{
 		id: uuid(2),
-	  name: 'Technology',
-		technologyBlog: 'texnologiya nədir',
+	  name: 'Texnologiya',
+		technologyBlog: 'Texnologiya nədir',
 		Description_1: 'Texnologiyanın həyatımızdakı rolu, texnologiya nədir?',
 		Description_2: 'Texnologiya daim özünü yeniləyir və inkişaf edir.',
 	  Video: '/video/video1.mp4',
@@ -833,7 +841,7 @@ export  const allData = {
 		{
 		id: uuid(2),
 	  name: 'Rəqəmsal İncəsənət',
-		skillBlog: 'METAKOQNİTİV BACARIQLAR',
+		skillBlog: 'Metakoqnitiv Bacarıqları',
 		skill: 'METAKOQNİTİV BACARIQLAR',
 		Description_1: 'METAKOQNİTİV BACARIQLAR',
 		Description_2: 'Yuxarıdakı təcrübəyə əsasən',
@@ -841,7 +849,7 @@ export  const allData = {
 	  image:'/images/image-3.jpg',
 	  text_1:" Aparılan bir təcrübədə məktəbəqədər yaşlı və ibtidai sinif şagirdlərindən ibarət bir qrup uşağa əzbərləmələri üçün müəyyən yazılı məlumatlar verilir. Əzbərlədiklərinə əmin olana qədər üzərində işləmələri xahiş olunur. Bir müddət sonra yaşca böyük olan uşaqlar hazır olduqlarını söyləyirlər. Həqiqətən də yoxladıqda soruşulan bütün məlumatları düzgün xatırlayırlar. Bundan fərqli olaraq, yaşca daha kiçik olan uşaqlar, hazır olduqlarını bildirməklərinə baxmayaraq soruşulan bəzi maddələri xatırlaya bilmirlər.",
 		image_1: '/images/skill1.jpg',
-		text_2:" məktəbəqədər yaşlı uşaqların həmin anda hafizələrinin həcmini düzgün qiymətləndirə bilmədikləri qənaətinə gələ bilərik. İnsanın hafizəsinin həcmini düzgün qiymətləndirməsi və izləyə bilməsi metakoqnisiya (üstün bilik) mövzusuna gözəl bir nümunədir.  Üstün biliyin bilikdən  fərqi odur ki, üstün bilik anlamlı olur və ondan situasiyaya uyğun şəkildə istifadə edilir. Bilik verilməsinə əsaslanan təhsil şagirdlərə xüsusi biliklərin qazandırılmasına önəm verərkən, metakoqnitiv bacarıqların verilməsinə əsaslanan təhsil bu prosesi izləmə və idarə edə bilmə bacarıqlarının öyrədilməsi üzərinə fokuslaşır.",
+		text_2:" Məktəbəqədər yaşlı uşaqların həmin anda hafizələrinin həcmini düzgün qiymətləndirə bilmədikləri qənaətinə gələ bilərik. İnsanın hafizəsinin həcmini düzgün qiymətləndirməsi və izləyə bilməsi metakoqnisiya (üstün bilik) mövzusuna gözəl bir nümunədir.  Üstün biliyin bilikdən  fərqi odur ki, üstün bilik anlamlı olur və ondan situasiyaya uyğun şəkildə istifadə edilir. Bilik verilməsinə əsaslanan təhsil şagirdlərə xüsusi biliklərin qazandırılmasına önəm verərkən, metakoqnitiv bacarıqların verilməsinə əsaslanan təhsil bu prosesi izləmə və idarə edə bilmə bacarıqlarının öyrədilməsi üzərinə fokuslaşır.",
 		image_2: '/images/skill2.jpg',
 		}
 	],
@@ -886,6 +894,7 @@ export  const allData = {
 		{
 			id: uuid(),
 			name: 'Steam nədir',
+			blogname: 'Steam nədir',
 			description:'STEAM nədir',
 			text: 'STEAM - Elm, Texnologiya, Mühəndislik, İncəsənət və Riyaziyyatın birləşməsi nəticəsində  yeni ideyaların reallaşdırılması, cəmiyyətdə müxtəlif problemlərin həllinə  kömək edə biləcək  təhsil yanaşmasıdır. STEAM təhsilalanlarda tənqidi yanaşma, yaradıcı düşünmə, qazanılan biliklərin  müqayisəli şəkildə anlaşılması, yaradıcı formada yeni layihələr əsasında biliyin möhkəmlənməsi, əməkdaşlıqetmə və s. kimi XXI əsr bacarıqlarını formalaşdırır. STEAM fənləri ayrılıqda öyrətmək əvəzinə, onları real dünyadakı tətbiqlərə əsaslanan vahid öyrənmə modelində birləşdirir.',
 			blogContent: [
@@ -1001,6 +1010,7 @@ export  const allData = {
 		},
 		{
 			id: uuid(),
+			blogname: 'Uşaq Evinə Səyahət',
 			name: 'Uşaq Evinə Səyahət',
 			title: 'Uşaq Evinə Səyahət',
 			text: 'Entesk komandası xeyriyyə məqsədi ilə uşaq evində maraqlı və əyləncəli robotlaşdırma təlimləri keçirmişdir. Burada tələbələr robotun fiziki hissələrini və onların yığılmasını öyrənərək daha sonra kod hissəsini araşdırdılar. Proqramlaşdırmanın əsaslarını öyrənərək və lazımı alqoritmləri test edərək real mühitdə işləyən kod yazmışdılar. Kod robota yükləndikdən sonra düzgün işləmiş və gənc uşaqları çox sevindirmişdir.',
@@ -1008,21 +1018,24 @@ export  const allData = {
 		},
 		{
 			id: uuid(),
-			name: 'texnologiya nədir',
-			title: 'texnologiya nədir?',
+			blogname: 'Texnologiya nədir?',
+			name: 'Texnologiya nədir',
+			title: 'Texnologiya nədir?',
 			text: 'Texnologiyanın insanlara asanlıqla qəbul edilməsi və keçirilməsinin səbəbi insanların işini asanlaşdırmasıdır. Başqa sözlə, insanlar tez texnologiyanı qəbul etdilər, çünki texnologiyanı tez bir zamanda qəbul etdilər və həyatlarında istifadə etdilər. İnsanların gündəlik həyatında texnoloji iştirakı bir çox kəşflər kimi uzun illər almadı. İnsanların həyatını hər cür asanlaşdırdığından, qısa bir müddət saxlanılır və qəbul edilir. Texnologiya insanların həyatına müxtəlif yollarla faydalana bilər. Bəzi insanlar texnoloji istifadə edərək işlərini daha sürətli edirlər və bunu tətbiq edirlər. Hər iki vəziyyət bir çox insanın həyatını asanlaşdırır və bir çox insanlar üçün həyat səviyyəsini qaldırır. Buna görə də qəbul edilir və üstünlük təşkil edir.',
 			img: '/images/technology.jpg',
 		},
 		{
 			id: uuid(),
-			name: 'TƏBİƏT ELMLƏRİ',
+			blogname: 'Təbiət Elmləri',
+			name: 'Təbiət Elmləri',
 			title: 'Təbiət elmlərinin digər elmlərə təsiri',
 			text: 'Ənənəvi olaraq elm dedikdə daha çox fundamental təbiət elmləri (natural science) nəzərdə tutulur, texnoloji inkişaf üçün isə mühəndislik elmlərinə (artificial science) ehtiyac vardır. Elm fundamental bilikləri əldə edir. Ona söykənən mühəndislik elmi isə, artıq məlum qanunlara əsasən istehsalat yaradır və onun davamlılığına ciddi diqqət edir. Müasir təbiətşünaslığın ən səciyyəvi cəhətlərindən biri də elmlərin qarşılıqlı təsirinin olmasıdır. Buna görə də müasir dövrdə təbiət elmləridakı sintetik ənənə daha çox əhəmiyyət kəsb edir. Müxtəlif elmlərin əldə etdiyi nailiyyətlərdən biri də obyektin öyrənilməsində inteqrasiyaya daha çox fikir verilməsidir. Sintetik ənənə müxtəlif elmlərin qovuşduğu yerlərə aid biliklərin müəyyən edilməsində özünü xüsusilə büruzə verir. Son illərdəki elmi ixtira və kəşflərin əksəriyyətini sintetik elmlərə aiddir. Biliklərin sintezi sayəsində müasir təbiət elmlərida maddənin təkamülü və onun bir-birinə keçən müxtəlif növ quruluş əlaqələri haqqında bitkin və püxtləşmiş nəzəriyyələr yaranır. Minerallarla canlılar arasındakı əlaqələr açılır. Canlı və cansız aləm arasındakı sərhədin şərti olduğu daha çox nəzərə çarpır.',
 			img: '/images/environment.jpg',
 		},
 		{
 			id: uuid(),
-			name: 'METAKOQNİTİV BACARIQLAR',
+			name: 'Metakoqnitiv Bacarıqları',
+			blogname: 'Metakoqnitiv Bacarıqları',
 			title: 'Situasiyadan asılı məlumat',
 			text: 'Şagirdin qarşılaşdığı bir situasiyada hansı məlumatı funksional olaraq istifadə edə biləcəyini bilməsini, başqa sözlə, hansı vəziyyətdə nə edəcəyini bilməsini tələb edir. Bu forma prosedural məlumat və təsvir edən məlumatın hər ikisinə birdən sahib olmanı tələb edir. Yəni, situasiyaya bağlı məlumatda fərdin bir işin həm necə ediləcəyini, həm özünün edib-edə bilməyəcəyini, həm də hansı vəziyyətdə nə edəcəyini bilməsi lazımdır. Metakoqnitiv məlumat şagirdin öz koqnitiv qabiliyyətləri, koqnitiv əməliyyatları və hansı vəziyyətdə nə edəcəyini bilməsi kimi məlumatlara sahib olmasıdır. Belə bir bilik əvvəlki təcrübələrin də təsiri ilə şagirdin davranışına əhəmiyyətli dərəcədə təsir göstərəcək. Ancaq metakoqnisiya şagirdin yuxarıda sadalanan məlumatlarla yanaşı bu məlumatları düzgün istifadə etməsini də tələb edir. Metakoqnitiv məlumatları istifadə edə bilmə qabiliyyəti isə metakoqnitiv idarə və ya tənzimləmə adlanır.',
 			img: '/images/skill.jpg',
@@ -1030,6 +1043,7 @@ export  const allData = {
 		{
 			id: uuid(),
 			name: 'Minecraft Proqramlaşdırma Müsabiqəsi',
+			blogname: 'Minecraft Proqramlaşdırma Müsabiqəsi',
 			title: 'Minecraft Proqramlaşdırma Müsabiqəsi',
 			text: 'Uşaqların dilində daim səslənən və hər zaman böyük maraq yaradan Minecraft oyunu yarışmanın əsas istiqaməti olaraq seçildi. Daxili yarışma zamanı 20 tələbə aktiv şəkildə bir saatlıq və 11 missiyadan ibarət tapşırığı yerinə yetirməli idilər. Birinci bitirən və bütün missiyaları düzgün həll edən tələbə qalib adını qazandı. Missiyalar əsasən proqramlaşdırma ilə əsas oyun qəhrəmanının çətinlikləri aşaraq irəliləməsindən ibarət idi. Burada fundamental biliklər, dövrlər, sadə alqoritmalar, funksiyalar çox önəmli idi. Birinci yerin sahibi Kəbirə adlı gənc tələbimiz oldu. Onu təbrik edir, gələcək təhsilində uğurlar diləyirik.',
 			img: '/images/blog-3.jpg',
@@ -1037,6 +1051,7 @@ export  const allData = {
 		{
 			id: uuid(),
 			name: 'Entesk - də Halloween Partisi',
+			blogname: 'Entesk - də Halloween Partisi',
 			title: 'Entesk - də Halloween Partisi',
 			text: 'Tələbələr müasir dünyaya hazır olmaq üçün daim yeni məlumatlar və müxtəlif elm sahələrini öyrənməlidirlər. Lakin bəzən dünyanı daha yaxından tanımaq üçün orada mövcud olan müxtəlif ölkələrin adətlərini, dillərini, yeməklərini, bayramlarını öyrənmək də çox kömək olur. Məhz balaca tələbələrimizi həm sevindirmək, həm də onlara dünyanı yaxından tanımaq üçün Entesk məktəbində kökünü İrlandiyadan götürən və bütün dünyaya yayılan Halloween bayramı keçirilmişdir. Burada ilk olaraq bayramın önəmi, yaranma tarixi, fərqli personajları və daha çox məlumat verilmiş daha sonra oyunlarla, mahnılarla əyləncəli proqram keçirilmişdir. Tələbələr isə Harry Potter, Pirat, Cadügər kimi maraqlı personajlara bəzənərək şənliyi daha maraqlı etmişdilər.',
 			img: '/images/blog-4.jpeg',
@@ -1075,7 +1090,7 @@ export  const allData = {
 				{
 					team_img: '/images/Agababa.png',
 					team_name: 'Ağababa Bağırov',
-					teacher:'Rəqəmsal İncəsnət',
+					teacher:'Rəqəmsal İncəsənət',
 					id:uuid()
 				},
 				{

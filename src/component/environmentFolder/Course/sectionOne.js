@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import poster from '../../../images/guneshsistemi.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import VideoPlayer from "react-video-js-player";
-
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const  SectionOne = (props) =>{
    
@@ -11,7 +11,7 @@ const  SectionOne = (props) =>{
   const [showMore,setShowMore ] = useState(false)
   
 
-  const {id,  Description_1, Video, text_1, learn,requireds } = props.data 
+  const {id,  Description_1, Video, text_1, learn,requireds, image_1 } = props.data 
 
   
   return(
@@ -19,7 +19,7 @@ const  SectionOne = (props) =>{
     
   <article className="position section-one">
 
-    <div className="container bigScreenContainer ">
+    <div className="container bigScreenContainer environment ">
       <div key={id} className="container-fluid">
         <div className="row" >
           <div  className=" information col-md-7 col-sm-12 col-xs-12 " >
@@ -65,11 +65,14 @@ const  SectionOne = (props) =>{
 
           </div>
           
-          <div  className=" col-md-5 col-sm-12 col-12">
-            <VideoPlayer 
-            src={Video} poster={poster} className="video"   
-            />
+          
+          <div  className=" img-box col-md-5 col-sm-12 col-12">
+            {
+              image_1 ? (<img src={image_1} alt="img" />) : ( <p> Loading... </p>)
+            }
+            
           </div>
+          
           <div className=" col-md-12">
             <div   className="environment-desc main-desc">
               <div className='png' ></div>
@@ -101,11 +104,9 @@ const  SectionOne = (props) =>{
     <div className='smallScreen'  >
       <div key={id} className="container">
         <div className="container-fluid">
-          <div className="row" >
-          <div  className=" col-md-12 col-sm-12 col-12">
-            <VideoPlayer 
-            src={Video} poster={poster} className="video"   
-            />
+          <div className="row environment" >
+          <div  className=" img-box col-md-5 col-sm-12 col-12">
+            <img src={image_1} alt="img" />
           </div>
           <div  className="  col-md-12 col-sm-12 col-xs-12 " >
             <div className="environment-course main-box">

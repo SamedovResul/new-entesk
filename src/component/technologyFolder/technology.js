@@ -11,7 +11,7 @@ import FooterSection from '../homeFolder/footerSection'
 import allData from '../../course.js'
 // import { useSelector } from 'react-redux'
 
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 80)
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 150)
 const TecnologyBanner = (props) =>{
 	const myRef = useRef(null)
 	let location = props.location.aboutProps

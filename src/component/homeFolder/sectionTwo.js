@@ -19,6 +19,7 @@ const SectionTwo = (props)=>{
       pauseOnHover: true,
       autoplaySpeed: 4000,
       dots: true,
+      autoplay: true,
       responsive: [
         {
           breakpoint: 1024,

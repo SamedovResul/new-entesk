@@ -12,7 +12,7 @@ import FooterSection from '../homeFolder/footerSection'
 import allData from '../../course.js'
 
 
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 80)
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 150)
 const Skill =(props)=>{
 	const myRef = useRef(null)
 	const [screenSize, getDimension] = useState({

@@ -11,7 +11,7 @@ const  SectionOne = (props) =>{
   const [showMore,setShowMore ] = useState(false)
   
 
-  const {id, Video, text_1, learn,requireds } = props.data 
+  const {id,  text_1, learn,requireds,image_1 } = props.data 
 
   
   return(
@@ -19,7 +19,7 @@ const  SectionOne = (props) =>{
     
   <article className="position section-one">
 
-    <div className="container bigScreenContainer ">
+    <div className="container bigScreenContainer skill">
       <div key={id} className="container-fluid">
         <div className="row" >
           
@@ -62,10 +62,8 @@ const  SectionOne = (props) =>{
             </div>
           </div>
           
-          <div  className=" col-md-5 col-sm-12 col-12">
-            <VideoPlayer 
-            src={Video} poster={poster} className="video"   
-            />
+          <div  className=" img-box col-md-5 col-sm-12 col-12">
+            <img src={image_1} alt="" />
           </div>
           <div className=" col-md-12">
             <div   className="skill-desc main-desc">
@@ -99,16 +97,14 @@ const  SectionOne = (props) =>{
     <div className='smallScreen'  >
       <div key={id} className="container">
         <div className="container-fluid">
-          <div className="row" >
-          <div  className=" col-md-12 col-sm-12 col-12">
-            <VideoPlayer 
-            src={Video} poster={poster} className="video"   
-            />
+          <div className="row skill" >
+          <div  className=" img-box col-md-5 col-sm-12 col-12">
+            <img src={image_1} alt="" />
           </div>
 
 
           <div  className="  col-md-12 col-sm-12 col-xs-12 " >
-            <div className="main-box technology-course ">
+            <div className="main-box skill-course ">
             <div>
               <div className='png' ></div>
              <h2>Nə əldə edəcəksiniz</h2>
@@ -127,7 +123,7 @@ const  SectionOne = (props) =>{
               </ul>
              </div>
             </div>
-            <div className="main-box technology-course ">
+            <div className="main-box skill-course ">
               <div>
                <div className='png' ></div>
                 <h2>Tələblər</h2>
@@ -152,7 +148,7 @@ const  SectionOne = (props) =>{
           
           
           <div className=" col-md-12">
-            <div   className="technology-desc main-desc">
+            <div   className="skill-desc main-desc">
               <div className='png' ></div>
               <b>Description</b>
               <div className={showMore ? "linearunset" : "linear"} >
