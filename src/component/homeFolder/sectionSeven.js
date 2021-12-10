@@ -44,7 +44,7 @@ const SectionSeven = ({myRef}) =>{
       
       console.log(user)
     if(user.name && user.email && user.phone && user.topic ){
-      if(  result || result2 ){
+      if(  re.test(user.email) ){
       alert.show(<div style={{ color: 'green' }}>Sizinlə əlaqə saxlanilacaq </div>)
       
       send(

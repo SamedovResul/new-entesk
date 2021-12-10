@@ -233,7 +233,7 @@ const enteskStyle = useSpring({
 										name: 'fromNavication'
 									}
 								}}>
-									Məhsullar
+								Tədris Proqramları
 								</Link>
 							
 							</li>

@@ -37,7 +37,6 @@ const  SectionOne = (props) =>{
                 })
               }
              </ul>
-            {/* <button className="section-1-button" >Davami</button> */}
 
             <Link to={{
                 pathname:'/products',

@@ -10,9 +10,10 @@ import saytfb from '../../images/saytfb.png'
 import saytlinkedin from '../../images/saytlinkedin.png'
 import tiktoksayt from '../../images/tiktoksayt.png'
 import { send } from 'emailjs-com';
-
+import { useAlert } from 'react-alert'
 
 const FooterSection =(props) =>{
+  const alert = useAlert()
   // console.log(props)
   const [subscribe, setSubscribe] = useState({
     email: "",
@@ -34,6 +35,7 @@ const FooterSection =(props) =>{
     
 
     if(re.test(subscribe.email)){
+      alert.show(<div style={{ color: 'green' }}>Sizinlə əlaqə saxlanilacaq </div>)
       send(
         'service_n5lz3c9',
         'template_q5qpc7d',

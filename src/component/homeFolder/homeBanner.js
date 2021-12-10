@@ -48,12 +48,13 @@ const HomeBanner = (props) =>{
 	let location = props.location.aboutProps
 	const [openSide, setopenSide ] = useState(false);
 	const { innerWidth: width} = window;
-	
+	console.log(width)
 	const {blog, Course, Home, Sectionone, Sectionthree, images, Client} = allData
 	let data 
 	Course.map((subject) =>{
 		return data = subject
 	})
+	
 	useEffect(() => {
 	location ? location.name === "toAbout" ?
 	window.scrollTo(0, myRef.current.offsetTop ) : 
@@ -62,7 +63,7 @@ const HomeBanner = (props) =>{
 	location.name === "fromproducts" ? 
 	window.scrollTo(0, myRef.current.offsetTop ) :
 	window.scrollTo(0, 0):
-	window.scrollTo(0, 0)
+	window.scrollTo(0, myRef.current.offsetTop )
 	}, [location] );
 
 
@@ -164,7 +165,8 @@ const HomeBanner = (props) =>{
 			openSide? '1.1vw' : '2.1vw'  ,
 
 		}],
-		from: {top: '30rem'},
+		from: {top: '30rem', fontSize: '1.1vw'
+				},
 		config: {
 			duration: 500
 		}
@@ -190,7 +192,9 @@ const HomeBanner = (props) =>{
 
 				paddingTop: location? openSide? '20px' : '0px': openSide? '0px' : '20px' ,
 	}],
-		from: {top: location? '-60%' : '0%'},
+	from: {top: location? '-60%' : '0%',
+	paddingTop: '20px'
+	},
 		config: {
 			duration: 500
 		}

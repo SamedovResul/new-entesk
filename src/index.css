@@ -2851,6 +2851,33 @@ body {
 
 /* section 7  */
 
+.react-tel-input {
+  font-family: 'Roboto',sans-serif;
+  font-size: 15px;
+  position: relative;
+  margin: 10px auto 10px auto;
+  border: 2px solid #2A56D5;
+  padding-left: 10px;
+  border-radius: 20px;
+  width: 70% !important;
+}
+
+.react-tel-input .form-control {
+  position: relative;
+  font-size: 14px;
+  letter-spacing: .01rem;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-left: 48px;
+  margin-left: 0;
+  background: none;
+  border: unset !important ;
+  border-radius: 5px;
+  line-height: 25px;
+  height: 35px;
+  width: 90% !important; 
+}
+
 .section-7-main-div {
   height: 550px;
 }
@@ -2948,21 +2975,21 @@ body {
 }
 
 
-.footer-section .col-md-4 p {
+/* .footer-section .col-md-4 p {
   color: white;
 }
 
 .footer-section .col-md-4 {
   display: flex;
   justify-content: center;
-}
+} */
 
 .div-1 {
   display: flex;
   flex-direction: column;
   width: 60%;
   height: 100%;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
 .div-1 ul {
@@ -2972,7 +2999,7 @@ body {
   width: 50%;
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 .div-1 ul li {
@@ -3003,6 +3030,7 @@ body {
   width: 100%;
   display: flex;
   position: relative;
+  margin: auto auto 0px auto;
 }
 
 .subscribe div {
@@ -3054,6 +3082,16 @@ body {
   justify-content: space-evenly;
 }
 
+.footer-section .social-media p:nth-child(1) a{
+  font-size: 12px;
+}
+
+@media(max-width:991px){
+  .footer-section .social-media p:nth-child(1) a{
+    font-size: 10px;
+  }
+}
+
 .footer-section .social-media p {
   font-size: 20px;
   margin-block-start: 0em;
@@ -3084,7 +3122,7 @@ body {
 }
 
 .social-media img {
-  width: 8%;
+  width: 12%;
   height: auto;
 }
 
@@ -3208,7 +3246,7 @@ body {
   }
 
   .div-1 ul li {
-    font-size: 13px;
+    font-size: 11px;
     margin-top: 10px;
   }
 
@@ -3462,6 +3500,13 @@ table tbody td {
   height: auto;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+}
+
+@media(max-width:1199px){
+  .circle {
+    height: 120px;
+    width: 280px;
+  }
 }
 
 @media(max-width:991px) {
