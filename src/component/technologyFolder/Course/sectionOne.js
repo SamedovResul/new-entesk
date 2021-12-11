@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
 import poster from '../../../images/guneshsistemi.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import VideoPlayer from "react-video-js-player";
 
 
 const  SectionOne = (props) =>{
@@ -11,7 +10,7 @@ const  SectionOne = (props) =>{
   const [showMore,setShowMore ] = useState(false)
   
 
-  const {id,   Video, text_1, learn,requireds,image_1 } = props.data 
+  const {id,   text_1, learn,requireds,image_1 } = props.data 
 
   
   return(

@@ -14,7 +14,7 @@ function sectionTwo(props) {
                 const {teacher, team_img, team_name, id} = team
 
                 return(
-                  <div key={id} className="col-md-2 col-lg-2 col-sm-4 col-6 team-info">
+                  <div key={id} className="col-md-3 col-lg-2 col-sm-4 col-6 team-info">
                     <img src={team_img} alt="" />
                     <h5> {team_name} </h5>
                     <p> {teacher} </p>

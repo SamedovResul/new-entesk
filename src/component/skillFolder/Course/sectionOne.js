@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
 import poster from '../../../images/guneshsistemi.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import VideoPlayer from "react-video-js-player";
 
 
 const  SectionOne = (props) =>{

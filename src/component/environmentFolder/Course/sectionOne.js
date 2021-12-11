@@ -11,7 +11,7 @@ const  SectionOne = (props) =>{
   const [showMore,setShowMore ] = useState(false)
   
 
-  const {id,  Description_1, Video, text_1, learn,requireds, image_1 } = props.data 
+  const {id,  Description_1,  text_1, learn,requireds, image_1 } = props.data 
 
   
   return(

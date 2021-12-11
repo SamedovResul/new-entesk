@@ -63,7 +63,7 @@ const HomeBanner = (props) =>{
 	location.name === "fromproducts" ? 
 	window.scrollTo(0, myRef.current.offsetTop ) :
 	window.scrollTo(0, 0):
-	window.scrollTo(0, myRef.current.offsetTop )
+	window.scrollTo(0, 0 )
 	}, [location] );
 
 

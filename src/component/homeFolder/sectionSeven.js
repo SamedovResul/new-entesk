@@ -141,7 +141,7 @@ const SectionSeven = ({myRef}) =>{
                   required
                   ></input>
                 <PhoneInput 
-                  onlyCountries={['az']}
+                  // onlyCountries={['az']}
                   type="number" 
                   value={user.phone}
                   id="phone" 

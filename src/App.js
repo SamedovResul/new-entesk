@@ -11,6 +11,7 @@ import admin from './component/adminfile/admin';
 import Products from './component/products/product'
 import Blog from './component/blog/blog'
 import About from './component/About/about'
+import Circular from './circular/circular';
 import EnvironmentCourse from './component/environmentFolder/Course/Course'
 import TexnologyCourse from './component/technologyFolder/Course/Course'
 import SkillCours from './component/skillFolder/Course/Course'
@@ -25,7 +26,11 @@ function App(props) {
   }, [dispatch])
   const [zIndex, setZindex] = useState(0);
   const [openSide, setopenSide ] = useState(false);
+  const [loading, setLoading] = useState(false)
 
+  setTimeout(() => {
+    setLoading(true)
+  }, 7000);
   
    const handlerSideClose= function(){
     setZindex(0)
@@ -36,7 +41,9 @@ function App(props) {
   return (
     <Router>
       <div className="App" >
-        <NavBar 
+      {loading ? (
+        <>
+          <NavBar 
           component={HomeBanner} 
           setZindex={setZindex}
           setopenSide={setopenSide}
@@ -64,9 +71,15 @@ function App(props) {
             <Route path='/CourseEnviroment/:name' component={EnvironmentCourse} />
             <Route path='/CourseTecnology/:name' component={TexnologyCourse} />
             <Route path='/CourseSkill/:name' component={SkillCours} />
-              <HomeBanner path='/' handlerSideClose={handlerSideClose} zIndex={zIndex}  />
+            <HomeBanner path='/' handlerSideClose={handlerSideClose} zIndex={zIndex}  /> 
             
           </Switch>
+        </>
+      ):(
+        <Circular />
+      )}
+      
+        
       </div>
     </Router>
   );

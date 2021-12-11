@@ -1,14 +1,77 @@
 import React from 'react'
+import {useSpring, animated} from 'react-spring'
+import circle from '../images/circle.png'
+import leaf from '../images/leaf.png'
+import brush from '../images/brush.png'
+import Toggle from './toggl'
 
-function circular() {
+const Circular = () => {
+  const leafStyles = useSpring({
+    
+    to: [
+      { opacity: 0.1,  },
+      { opacity: 0.5,  },
+      { opacity: 1  },
+    ],
+    from: { opacity: 0.1,  },
+    delay: 1500,
+    config :{
+      duration: 1000
+    }
+  })
 
-  const percentage = 66
+  const gearStyles = useSpring({
+    
+    to: [
+      { opacity: 0.1,  },
+      { opacity: 0.5,  },
+      { opacity: 1  },
+    ],
+    from: { opacity: 0,  },
+    delay: 2500,
+    config :{
+      duration: 1000
+    },
+  })
+
+  const brushStyles = useSpring({
+    
+    to: [
+      { opacity: 0.1,  },
+      { opacity: 0.5,  },
+      { opacity: 1  },
+    ],
+    from: { opacity: 0,  },
+    delay: 3500,
+    config :{
+      duration: 1000
+    }
+  })
+  
   return (
-    <div className='conatiner'>
-      <div className='conatiner-fluid'>
+    <div className='container'>
+      <div className='container-fluid'>
         <div className='row'>
           <div className='col-md-12 text-center '>
-            <b>Loading</b>
+          <div className='loading'>
+          <div className='loading-text'>
+            <animated.div style={leafStyles} >
+              <p>
+                Environment
+              </p>
+              </animated.div>
+            <animated.div style={gearStyles} > <p>Technology</p> </animated.div>
+            <animated.div style={brushStyles} > <p>Skill</p>  </animated.div>
+          </div>
+            
+            < div  className='loading-img'>
+              {/* <Toggle /> */}
+              < animated.img style={leafStyles} src={leaf} alt="img"></animated.img>
+              < animated.img style={gearStyles} src={circle} alt="img"></animated.img>
+              < animated.img style={brushStyles} src={brush} alt="img"></animated.img>
+            </ div>
+
+          </div>
           </div>
         </div>
       </div>
@@ -16,4 +79,4 @@ function circular() {
   )
 }
 
-export default circular
+export default Circular

@@ -105,7 +105,6 @@ export  const allData = {
 		],
 
 		Description_2: 'Elm tarixi',
-	  Video: '/video/video1.mp4',
 	  image:'/images/science.jpg',
 		image_1:'/images/science_class1.png',
 		image_2:'/images/science_class2.jpg',
@@ -284,7 +283,6 @@ export  const allData = {
 			},
 		],
 
-	  Video: '/video/video1.mp4',
 	  image:'/images/coding.jpg',
 		image_1:'/images/coding_class1.jpg',
 		image_2:'/images/coding_class2.jpg',
@@ -437,7 +435,6 @@ export  const allData = {
 		],
 
 		Description_2: 'Rəqəmsal İncəsənət',
-	  Video: '/video/video1.mp4',
 	  image:'/images/digital.jpg',
 		image_1:'/images/digital-art1.jpg',
 		image_2:'/images/digital-art2.png',
@@ -691,7 +688,6 @@ export  const allData = {
 		],
 
 		Description_2: 'Elm tarixi',
-	  Video: '/video/video1.mp4',
 	  image:'/images/robot.jpg',
 		image_1:'/images/robotika-1.jpg',
 		image_2:'/images/robotika-2.jpg',
@@ -707,7 +703,6 @@ export  const allData = {
 		id: uuid(2),
 	  name: 'Biz kimik ?',
 		Description_2: 'Həftəlik ödənişsiz elm dərsləri hədiyyə',
-	  Video: '/video/video1.mp4',
 	  text_1:"Mərkəzimizdə uşaqlara STEAM tədris metodundan istifadə edərək müasir bilik və bacarıqlar asan, eləcə də əyləncəli üsulla öyrədilir. Bu dərslər uşaqlarda təhsil və gələcəkdə iş həyatı üçün vacib olan araşdırma (research), yaradıcılıq (creativity), məntiqi təfəkkür və  tənqidi düşüncə (critical thinking) bacarıqlarına yiyələnməyə kömək edir. ",
 		text_2:" Uşaqların əl işlərini sevməsi heç kimə sirr deyil. Hər hansısa bir ixtiranı etmək və ya müxtəlif konsepsiyaları kəşf etmək şansı onların elmlə məşğul olmağına təkan verən əsas amillərdəndir. Burada uşaqlar biologiya, Yer elmi, fizika, mühəndislik kimi sahələrə oyun və əyləncə dolu maraqlı üsullarla dərslər keçirilir. Bu tipli dərslər hər həftə ödənişsiz bütün tələbələrə tədris olunur.",
 		}
@@ -814,7 +809,6 @@ export  const allData = {
 		scineceBlog: 'Təbiət Elmləri',
 		Description_1: 'Təbiət Elmləri',
 		Description_2: 'Təbiət elmlərinin əsası',
-	  Video: '/video/video1.mp4',
 	  image:'/images/image-3.jpg',
 	  text_1:" Təbiət elmləri dünyanı naturalist nöqteyi-nəzərindən öyrənir və cəmiyyətdən təbiətə münasibətdə onun qanunlarına hörmətlə yanaşmağı tələb edir. Naturalizm insanın yaratdığı qanunları təbii proseslərə şamil etmədən, təbiət qanunlarını öyrənərək istifadə etmək üzərində qurulan sistemdir. Təbiət elmlərinin yaranması elmi tədqiqatlara fəlsəfi yanaşmanın nəticəsidir.",
 		image_1: '/images/environmentscience.jpg',
@@ -829,7 +823,6 @@ export  const allData = {
 		technologyBlog: 'Texnologiya nədir',
 		Description_1: 'Texnologiyanın həyatımızdakı rolu, texnologiya nədir?',
 		Description_2: 'Texnologiya daim özünü yeniləyir və inkişaf edir.',
-	  Video: '/video/video1.mp4',
 	  image:'/images/image-3.jpg',
 	  text_1:"Texnologiya, elmin inkişafı ilə birlikdə həyata keçirilən işlər sayəsində texniki cəhətdən irəliləmək və inkişaf etmək üçün verilmişdir. İnsanın mövcudluğundan bəri elmin bilik yığması vasitəsilə irəliləmişdir. İnformasiya ilə bağlı yeni məlumatlar verən Elm, hər sahədə və hər zaman irəliləməyə davam edir. Elmin inkişafı və buna görə texniki məlumatların köməyi ilə texnologiyanın inkişafı insan ehtiyaclarından da təsirlənmişdir.",
 		image_1: '/images/technology1.jpg',
@@ -845,7 +838,6 @@ export  const allData = {
 		skill: 'METAKOQNİTİV BACARIQLAR',
 		Description_1: 'METAKOQNİTİV BACARIQLAR',
 		Description_2: 'Yuxarıdakı təcrübəyə əsasən',
-	  Video: '/video/video1.mp4',
 	  image:'/images/image-3.jpg',
 	  text_1:" Aparılan bir təcrübədə məktəbəqədər yaşlı və ibtidai sinif şagirdlərindən ibarət bir qrup uşağa əzbərləmələri üçün müəyyən yazılı məlumatlar verilir. Əzbərlədiklərinə əmin olana qədər üzərində işləmələri xahiş olunur. Bir müddət sonra yaşca böyük olan uşaqlar hazır olduqlarını söyləyirlər. Həqiqətən də yoxladıqda soruşulan bütün məlumatları düzgün xatırlayırlar. Bundan fərqli olaraq, yaşca daha kiçik olan uşaqlar, hazır olduqlarını bildirməklərinə baxmayaraq soruşulan bəzi maddələri xatırlaya bilmirlər.",
 		image_1: '/images/skill1.jpg',
@@ -885,7 +877,7 @@ export  const allData = {
 				}
 			],
 			example_2:{
-				Video :'	https://adobeprod-a.akamaihd.net/IC_RxEcHii2/image…d4c70e1f8b96800ec47dcc5d89e60af9869111b510581151e',
+				
 				description: 'KSM',
 				text:'Entesk MMC üçüncü tərəf qurum olaraq şirkətlər üçün Korporativ Sosial Məsuliyyət çərçivəsində təhsil və ekologiya xidmətləri təklif edir. Təhsil xidmətləri çərçivəsində müasir texnoloji təhsilin əlçatmaz olduğu uşaq evlərində, sığınacaqlarda, məktəblərdə və ucqar ərazilərdə robotlama, proqramlaşdırma, mühəndislik və animasiya dərsləri tədris olunur.'
 			}

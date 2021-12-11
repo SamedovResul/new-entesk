@@ -6,7 +6,7 @@ import VideoPlayer from "react-video-js-player";
 const  SectionOne = ({data,executeScroll }) =>{
 
 
-  const {id,  Description_1, Video, text_1, image_1} = data 
+  const {id,  Description_1,  text_1, image_1} = data 
   
   console.log()
   return(

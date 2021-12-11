@@ -1,8 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import VideoPlayer from "react-video-js-player";
-import MediaQuery from 'react-responsive'
-import poster from '../../../images/guneshsistemi.png';
 
 
 const SectionThree = (props) =>{

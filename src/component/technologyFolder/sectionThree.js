@@ -1,22 +1,17 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import VideoPlayer from "react-video-js-player";
 import MediaQuery from 'react-responsive'
-import video from "../../video/video1.mp4";
-import poster from '../../images/guneshsistemi.png';
 import { Link} from 'react-router-dom'
 
 
 const SectionThree = ({data,myRef,blog}) =>{
   
 
-  const { id,  Description_2, Video, text_2, technologyBlog, image_2 } = data
+  const { id,  Description_2,  text_2, technologyBlog, image_2 } = data
 
   
 
 
-  // console.log(myRef.current.offsetTop)
-  const videoSrc = video;
   return(
     <article className="section-3-main-div home-folder " >
       

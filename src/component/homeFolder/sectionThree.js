@@ -1,8 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import VideoPlayer from "react-video-js-player";
 import MediaQuery from 'react-responsive'
-import video from "../../video/video1.mp4";
 import poster from '../../images/guneshsistemi.png';
 import { Link } from 'react-router-dom';
 
@@ -11,7 +9,6 @@ const SectionThree = ({data,blog}) =>{
   const {name} = blog[0]
 
   
-  const videoSrc = video;
   return(
     <article className="section-3-main-div home-folder">
       
