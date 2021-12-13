@@ -53,7 +53,13 @@ const SectionThree = ({data,blog}) =>{
                 
                 
                 <p>{text}</p>
-              <button className="section-3-button">Qeydiyyat</button>
+                <Link to={{
+                      pathname:`/blog/${name}`,
+                    }}>
+                    <button className="section-3-button">
+                      Ətraflı
+                    </button>
+                </Link>
               </div>
             </div>
           </div>

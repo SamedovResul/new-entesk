@@ -14,7 +14,7 @@ const Circular = () => {
       { opacity: 1  },
     ],
     from: { opacity: 0.1,  },
-    delay: 1500,
+    delay: 500,
     config :{
       duration: 1000
     }
@@ -28,7 +28,7 @@ const Circular = () => {
       { opacity: 1  },
     ],
     from: { opacity: 0,  },
-    delay: 2500,
+    delay: 1500,
     config :{
       duration: 1000
     },
@@ -42,7 +42,7 @@ const Circular = () => {
       { opacity: 1  },
     ],
     from: { opacity: 0,  },
-    delay: 3500,
+    delay: 2500,
     config :{
       duration: 1000
     }

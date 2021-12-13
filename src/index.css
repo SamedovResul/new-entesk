@@ -3704,7 +3704,7 @@ table tbody td {
 @media(max-width:768px) {
   .blog-img  {
     width: 100%;
-    margin: auto
+    margin: 20px auto 20px auto;
   }
 }
 

@@ -30,7 +30,7 @@ function App(props) {
 
   setTimeout(() => {
     setLoading(true)
-  }, 7000);
+  }, 5000);
   
    const handlerSideClose= function(){
     setZindex(0)

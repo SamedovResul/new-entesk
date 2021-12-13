@@ -48,7 +48,7 @@ const SectionThree = ({data,myRef,blog}) =>{
         <div className="container ">
           <div className="container-fluid">
             <div className="row ">
-              <div className="col-md-12 col-sm-12 section-3-for-mobile img-box skill " >
+              <div className="col-md-12 col-sm-12 section-3-for-mobile img-box skill " ref={myRef} >
                 
                 
                   <img src={image_2} alt='img' ></img>

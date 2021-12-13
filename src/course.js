@@ -315,9 +315,9 @@ export  const allData = {
 		],
 		requireds: [
 			{
-				required:'Oyrenmeye hevesle yanasmaq'
+				required:'Öyrənməyə həvəslə yanaşmaq'
 			},{
-				required:'Kreativ dunyaya bash vurmaq maraqi'
+				required:'Kreativ dünyaya baş vurmaq marağı'
 			}
 		],
 		module:[
@@ -1010,7 +1010,7 @@ export  const allData = {
 		},
 		{
 			id: uuid(),
-			blogname: 'Texnologiya nədir?',
+			blogname: 'Texnologiya nədir ?',
 			name: 'Texnologiya nədir',
 			title: 'Texnologiya nədir?',
 			text: 'Texnologiyanın insanlara asanlıqla qəbul edilməsi və keçirilməsinin səbəbi insanların işini asanlaşdırmasıdır. Başqa sözlə, insanlar tez texnologiyanı qəbul etdilər, çünki texnologiyanı tez bir zamanda qəbul etdilər və həyatlarında istifadə etdilər. İnsanların gündəlik həyatında texnoloji iştirakı bir çox kəşflər kimi uzun illər almadı. İnsanların həyatını hər cür asanlaşdırdığından, qısa bir müddət saxlanılır və qəbul edilir. Texnologiya insanların həyatına müxtəlif yollarla faydalana bilər. Bəzi insanlar texnoloji istifadə edərək işlərini daha sürətli edirlər və bunu tətbiq edirlər. Hər iki vəziyyət bir çox insanın həyatını asanlaşdırır və bir çox insanlar üçün həyat səviyyəsini qaldırır. Buna görə də qəbul edilir və üstünlük təşkil edir.',
