@@ -61,8 +61,8 @@ const Circular = () => {
               </p>
               </animated.div>
             <animated.div style={gearStyles} > <p>Technology</p> </animated.div>
-            <animated.div style={brushStyles} > <p>Skill</p>  </animated.div>
-          </div>
+            <animated.div style={brushStyles} > <p>Skills</p>  </animated.div>
+          </div> 
             
             < div  className='loading-img'>
               {/* <Toggle /> */}
