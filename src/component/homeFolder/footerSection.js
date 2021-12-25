@@ -80,7 +80,7 @@ const FooterSection =(props) =>{
                 </Link >
                 <Link to='/products'>
                   <li>
-                    Kurslar
+                    Tədris
                   </li>
                 </Link >
                 <Link to='/About'>
@@ -129,7 +129,7 @@ const FooterSection =(props) =>{
             <div className="div-1">
 
               <ul>
-                <p>Əlaqə</p>
+                <p>Ünvan</p>
                 <li>
                   Bakı ş. Yasamal r. 
                 </li>

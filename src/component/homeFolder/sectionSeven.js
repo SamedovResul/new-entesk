@@ -128,7 +128,7 @@ const SectionSeven = ({myRef}) =>{
                   value={user.name}
                   name='name'
                   onChange={hadlerGetClientInfo}
-                  placeholder="AD VƏ SOYAD"
+                  placeholder="Ad və Soyad"
                   required
                      ></input>
                 <input 
@@ -158,7 +158,7 @@ const SectionSeven = ({myRef}) =>{
                   id="phone" 
                   name="topic" 
                   onChange={hadlerGetClientInfo}
-                  placeholder="Movzu"
+                  placeholder="Mövzu"
                   required
                 ></textarea>
                 <button type="submit" onClick={writeUserData} >Göndər</button>

@@ -23,6 +23,7 @@ const  SectionOne = ({data, executeScroll}) =>{
             
           </div>
           <div  className="img-box col-md-6 col-sm-12 col-12">
+            
             <img src={image_1} alt='img' ></img>
           </div>
         </div>

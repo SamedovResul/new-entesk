@@ -446,7 +446,7 @@ export  const allData = {
 
 	{
 	  id: uuid(),
-	  name: 'Robotika',
+	  name: 'Robototexnika',
 		Category: '/CourseTecnology',
 		Description_1: 'Beləliklə, uşaqlar kod yazmağı öyrənməlidirlər, çünki:',
 		learn:[
@@ -687,13 +687,13 @@ export  const allData = {
 			},
 		],
 
-		Description_2: 'Elm tarixi',
+		Description_2: 'Robototexnika',
 	  image:'/images/robot.jpg',
 		image_1:'/images/robotika-1.jpg',
 		image_2:'/images/robotika-2.jpg',
 	  text_1:"Dünyadakı şirkətlər yaxın gələcəkdə biznes infrastrukturlarına robotlama və avtomatlaşdırmanı tətbiq etməyi planlaşdırırlar. Təhsil qurumları və təşkilatları bunu yaxından izləyir və robototexnikanı bütün dünyada məktəb proqramının ayrılmaz bir hissəsi halına gətirməkdə artıq böyük uğurlar əldə ediblər. Övladlarımızı gələcək işçi qüvvəsinin çətinliklərinə hazırlamalı onlara inkişaf etməyə və geniş bir sıra bacarıqları daha asan inkişaf etdirə biləcək bir mühit yaratmalıyıq. ",
 		text_2:"obyektiv, sistemli və əsaslandırılmış biliklərin əldə edilməsinə, dəqiqləşdirilməsinə və yayılmasına yönəlmiş insan fəaliyyəti növüdür. Bu fəaliyyətin əsasını elmi faktların toplanması, onların daima yenilənməsi və sistemləşdirilməsi, tənqidi analizi və bu əsasda elmi biliklərin toplanması təşkil edir. Elm təkcə müşahidə edilən təbiət və ictimai halları təsvir etmir, həm də onların əlaqələrini tapır və nəticəni müəyyən edə bilir.",
-		slide_text:"Robotika"
+		slide_text:"Robototexnika"
 	},
 
 

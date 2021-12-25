@@ -16,21 +16,21 @@ import EnvironmentCourse from './component/environmentFolder/Course/Course'
 import TexnologyCourse from './component/technologyFolder/Course/Course'
 import SkillCours from './component/skillFolder/Course/Course'
 import { useDispatch } from 'react-redux';
-import {getUser} from './reducer/action'
+// import {getUser} from './reducer/action'
 
 
 function App(props) {
   const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(getUser())
-  }, [dispatch])
+  // useEffect(() => {
+  //   dispatch(getUser())
+  // }, [dispatch])
   const [zIndex, setZindex] = useState(0);
   const [openSide, setopenSide ] = useState(false);
   const [loading, setLoading] = useState(false)
 
   setTimeout(() => {
     setLoading(true)
-  }, 5000);
+  }, 100);
   
    const handlerSideClose= function(){
     setZindex(0)
@@ -41,7 +41,6 @@ function App(props) {
   return (
     <Router>
       <div className="App" >
-      {loading ? (
         <>
           <NavBar 
           component={HomeBanner} 
@@ -75,9 +74,6 @@ function App(props) {
             
           </Switch>
         </>
-      ):(
-        <Circular />
-      )}
       
         
       </div>

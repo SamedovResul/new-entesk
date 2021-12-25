@@ -19,115 +19,115 @@ const SectionThree = (props) =>{
       <div key={id} className="container skill ">
         <div className="container-fluid">
           <div className="row" >
-
-
-            <div  className=" col-md-5 col-sm-12 col-12 img-box">
-              <img src={image_2} alt="" />
-            </div>
-
-            <div  className=" linethree col-md-7 col-sm-12 col-xs-12" >
-              
-              <div className='main-box skill-course'>
-                <div className='png' ></div>
-                <p>Modula daxildir</p>
-              <ul>
-                {
-                  module.map((subject, index) =>{
-                    const {mod,note} = subject
-
-                    return(
-                      <li key={index}>
-                        <p>{mod}</p>  <span>&#8226;</span>
-                        <p style={ note ? {display: 'block'} : {display: 'none'} } > {note} </p>
-                      </li>
-                    )
-                  })
-
-                }
-                
-              </ul>
+            <div>
+              <div  className=" course-img-box img-box">
+                <img src={image_2} alt="" />
               </div>
-              
-            </div>
-            
-{/* <span>&#8226;</span> */}
-            <div className="col-md-12 ">
-              <div className='main-box skill-course mundaricat' >
-                <div className='png' ></div>
-                <div className={ span? "cantentul  " : "cantents " }  >
-                  <p>Modulun mündəricatı</p>
+
+              <div  className=" linethree col-md-12 col-sm-12 col-xs-12" >
+                
+                <div className='main-box skill-course'>
+                  <div className='png' ></div>
+                  <p>Modula daxildir</p>
+                <ul>
                   {
-                    levels.map((subject, index) =>{
-                      const {name,list} = subject
+                    module.map((subject, index) =>{
+                      const {mod,note} = subject
+
                       return(
-                        <div key={index}  className="level-div" >
-                          <p> {name} </p>
-                            <div key={index} className='list-div' >
-                              <ul >
-
-                                {
-                                  list.map((subject, index) =>{
-                                    const {li} = subject
-                                    // console.log(subject)
-                                    return(
-                                      
-                                      <li key={index}>
-                                          {li} <span>&#8226;</span>
-                                        </li>
-                                        
-                                    )
-                                  })
-                                }
-
-                            </ul>
-                          </div>
-                        </div>
+                        <li key={index}>
+                          <p>{mod}</p>  <span>&#8226;</span>
+                          <p style={ note ? {display: 'block'} : {display: 'none'} } > {note} </p>
+                        </li>
                       )
                     })
+
                   }
                   
-                  <div>
-                    <p>Bu modul kimlər üçündür</p>
-                    <ul>
+                </ul>
+                </div>
+                
+              </div>
+              
+  {/* <span>&#8226;</span> */}
+              <div className="col-md-12 ">
+                <div className='main-box skill-course mundaricat' >
+                  <div className='png' ></div>
+                  <div className={ span? "cantentul  " : "cantents " }  >
+                    <p>Modulun mündəricatı</p>
                     {
-                      module_for.map((subject, index) =>{
-                        const {li} = subject
-
+                      levels.map((subject, index) =>{
+                        const {name,list} = subject
                         return(
-                          <li key={index} >
-                            {li}
-                          </li>
+                          <div key={index}  className="level-div" >
+                            <p> {name} </p>
+                              <div key={index} className='list-div' >
+                                <ul >
+
+                                  {
+                                    list.map((subject, index) =>{
+                                      const {li} = subject
+                                      // console.log(subject)
+                                      return(
+                                        
+                                        <li key={index}>
+                                            {li} <span>&#8226;</span>
+                                          </li>
+                                          
+                                      )
+                                    })
+                                  }
+
+                              </ul>
+                            </div>
+                          </div>
                         )
                       })
                     }
-                    </ul>
+                    
+                    <div>
+                      <p>Bu modul kimlər üçündür</p>
+                      <ul>
+                      {
+                        module_for.map((subject, index) =>{
+                          const {li} = subject
+
+                          return(
+                            <li key={index} >
+                              {li}
+                            </li>
+                          )
+                        })
+                      }
+                      </ul>
+                      
+                    </div>
+                    
+
                     
                   </div>
-                  
+                  <button className="cantent-btn"
+                      onClick={() => {
+                      if(moreLess.display === 'none'){
+                        setSpan(true)
+                        setMoreLess({display: 'flex'})
+                      }else{
+                        setMoreLess({display: 'none'})
+                        setSpan(false)
+                      }
+                      }}
+                    >
+                      {
+                        span ? ( <p> Daha az </p> ) : ( <p> Daha çox </p> )
+                      }
+                    </button>
 
-                  
+                    
                 </div>
-                <button className="cantent-btn"
-                    onClick={() => {
-                    if(moreLess.display === 'none'){
-                      setSpan(true)
-                      setMoreLess({display: 'flex'})
-                    }else{
-                      setMoreLess({display: 'none'})
-                      setSpan(false)
-                    }
-                    }}
-                  >
-                    {
-                      span ? ( <p> Daha az </p> ) : ( <p> Daha çox </p> )
-                    }
-                  </button>
-
-                  
+                
               </div>
-              
             </div>
-          </div>
+        </div>
         </div> 
       </div>
 

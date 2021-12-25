@@ -32,12 +32,6 @@ const NavBar = ( {setZindex,setopenSide,openSide}) =>{
 		}
 	})
 
-	// location.pathname === '/'? window.scrollY === 0 ? 
-	// 			"-12%" : "1%" : location.pathname === '/' ? "1%" : "-12%":
-	// 			location? 
-	// 			location.pathname === '/' ? "-12%" : "1%" : location.pathname === '/' ? "1%" : "-12%"
-				
-
 
 	const handlerScroll = () =>{
 		window.scrollTo(0, 0)
@@ -173,7 +167,7 @@ const enteskStyle = useSpring({
 										name: 'fromNavication'
 									}
 								}}>
-									Tədris Proqramları
+									Tədris 	
 								</Link>
 								</li>
 							<li>
@@ -233,7 +227,7 @@ const enteskStyle = useSpring({
 										name: 'fromNavication'
 									}
 								}}>
-								Tədris Proqramları
+								Tədris 
 								</Link>
 							
 							</li>

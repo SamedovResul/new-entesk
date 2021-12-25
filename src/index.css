@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: Calibri;
 }
 
 body {
@@ -498,6 +499,15 @@ body {
   margin: 20px 0px 20px 0px;
 }
 
+@media(max-width:675px){
+  .img-box {
+    width: 70% !important;
+    height: auto;
+    margin: 10px auto 10px auto;
+    
+  }
+}
+
 .environment img {
   border: 5px solid #97C441;
 }
@@ -829,18 +839,16 @@ body {
 }
 
 .section-3-main-div .main-box {
-  margin-top: 20px !important;
-  margin: auto;
+  margin: 0px 0px 0px auto;
   text-align: right;
   position: relative;
   padding-right: 10px;
-  width: 100%;
 }
 
 @media(max-width:1199px) {
   .section-3-main-div .main-box {
-    margin-top: 0px !important;
-    width: 100%;
+    margin: 0px 0px 0px auto;
+    width: 50% ;
   }
 
   .mundaricat {
@@ -850,7 +858,7 @@ body {
 
 @media(max-width:991px) {
   .section-3-main-div .main-box {
-    width: 100%;
+    width: 40%;
   }
 
   .mundaricat {
@@ -871,6 +879,7 @@ body {
 @media(max-width:675px) {
   .section-3-main-div .main-box {
     width: 90%;
+    margin: 0px 40px 0px auto;
   }
 
   .mundaricat {
@@ -882,6 +891,7 @@ body {
 @media(max-width:576px) {
   .section-3-main-div .main-box {
     width: 70%;
+    margin: 0px 60px 0px auto;
   }
 
   .mundaricat {
@@ -902,7 +912,7 @@ body {
 }
 
 .linethree .main-box .png::before {
-  height: 130%;
+  height: 150%;
 }
 
 
@@ -935,6 +945,27 @@ body {
 }
 
 /* Technology design */
+
+.course-img-box{
+  width: 50% ;
+  position: absolute;
+}
+
+
+
+
+@media(max-width:2300px) and (min-width:1600px){
+  .course-img-box{
+    width:30% ;
+  }
+}
+
+@media(max-width:1600px){
+  .course-img-box{
+    width: 40%;
+  }
+}
+
 
 .main-box-tech {
   position: relative;
@@ -997,7 +1028,7 @@ body {
 
 .main-box {
   position: relative;
-  margin-bottom: 30px !important;
+  margin-bottom: 50px !important;
 }
 
 
@@ -1013,11 +1044,29 @@ body {
   .main-box .png {
     right: -35px;
   }
+
+  .course-img-box{
+    width: 40% ;
+  }
 }
 
 @media(max-width:991px) {
   .main-box .png {
     right: -45px;
+  }
+}
+
+@media(max-width:768px){
+  .course-img-box{
+    width: 100% ;
+    position: static;
+  }
+}
+
+@media(max-width:576px){
+  .course-img-box{
+    width: 70% ;
+    margin: 10px auto 10px auto;
   }
 }
 
@@ -2023,10 +2072,15 @@ body {
   }
 }
 
-@media(max-width:780px) {
+@media(max-width:768px) {
   .section-3-main-div {
     height: auto;
   }
+
+  .section-3-main-div h2 {
+    color: blue;
+  }
+
 
   .section-3-button {
     margin: auto !important;
@@ -2393,8 +2447,6 @@ body {
 
 .section-6-main-div .slick-center>div {
   height: 350px;
-  /* animation-name: center;
-  animation-duration: 0.5s; */
 }
 
 @keyframes center {
@@ -2414,12 +2466,6 @@ body {
   align-items: center !important;
 }
 
-/* .section-6-main-div .slick-center .circle-div {
-  width: 48%;
-  height: auto;
-  border-radius: 120px;
-  margin: auto 0px -80px 0px;
-} */
 
 
 .section-6-main-div .slick-center .squer-div {
@@ -2443,19 +2489,6 @@ body {
 .section-6-main-div .slick-center .squer-div p:nth-child(1) {
   font-size: 22px;
 }
-
-/* .circle-div {
-  width: 36%;
-  height: auto;
-  border-radius: 120px;
-  margin: auto 0px -70px 0px;
-}
-
-.circle-div img {
-  width: 100%;
-  height: auto;
-} */
-
 
 
 .squer-div {
@@ -2893,9 +2926,11 @@ body {
   background: unset !important;
 }
 
-react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus {
+.react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus {
   background-color: unset !important;
 }
+
+
 
 .section-7-main-div {
   height: 550px;
@@ -3829,6 +3864,11 @@ table tbody td {
   width: 100%;
 }
 
+.admin-form .btn-primary p{
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
 /* .admin-form label:nth-of-type(1){
   width: 100%;
 } */
@@ -3940,5 +3980,5 @@ table tbody td {
 
 .loading-text div:nth-child(3) p{
   color: #ff952b;
-  
 }
+

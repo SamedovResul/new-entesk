@@ -15,101 +15,96 @@ const SectionThree = (props) =>{
       <div key={id} className="container environment ">
         <div className="container-fluid">
           <div className="row" >
+            <div>
+              <div  className=" course-img-box img-box">
+                <img src={image_2} alt="" />
+              </div>
 
-
-            <div  className=" col-md-5 col-sm-12 col-12 img-box">
-              <img src={image_2} alt="" />
-            </div>
-
-            <div  className=" linethree col-md-7 col-sm-12 col-xs-12" >
-              
-              <div className='environment-course main-box'>
-                <div className='png' ></div>
-                <p>Modula daxildir</p>
-              <ul>
-                {
-                  module.map((subject, index) =>{
-                    const {mod,note} = subject
-
-                    return(
-                      <li key={index}>
-                        <p>{mod}</p> <span>&#8226;</span>
-                        <p style={ note ? {display: 'block'} : {display: 'none'} } > {note} </p>
-                      </li>
-                    )
-                  })
-
-                }
+              <div  className=" linethree col-md-12 col-sm-12 col-xs-12" >
                 
-              </ul>
-              </div>
-              
-            </div>
-            
+                <div className='environment-course main-box'>
+                  <div className='png' ></div>
+                  <p>Modula daxildir</p>
+                <ul>
+                  {
+                    module.map((subject, index) =>{
+                      const {mod,note} = subject
 
-            <div className="col-md-12 ">
-              <div className='main-box environment-course mundaricat ' >
-                <div className='png' ></div>
-                <div className={span? "cantentul  " : "cantents " }  >
-                  
-
-                  <div className="cantent">
-
-                    <p> Modulun mündəricatı </p>
-                    <ul  >
-                    {
-                    module_mun.map((subject, index) =>{
-                      const {li} = subject
                       return(
-                      <li key={index}>
-                        <p> {li} </p>  <span>&#8226;</span>
-                      </li>
+                        <li key={index}>
+                          <p>{mod}</p> <span>&#8226;</span>
+                          <p style={ note ? {display: 'block'} : {display: 'none'} } > {note} </p>
+                        </li>
                       )
                     })
-                    }
-                    </ul>
-                  </div>
-                    
-                  <div className="note">
-                    <p> Bu modul kimlər üçündü  </p>
-                    <ul  >
-                    {
-                    module_for.map((subject, index) =>{
-                      const {li} = subject
-                      return(
-                      <li key={index}>
-                        <p> {li} </p>  <span>&#8226;</span>
-                      </li>
-                      )
-                    })
-                    }
-                    </ul>
 
-                  </div>
+                  }
                   
+                </ul>
                 </div>
-                  <button className="cantent-btn"
-                    onClick={() => {
-                    if(moreLess.display === 'none'  ){
-                      setSpan(true)
-                      setMoreLess({display: 'flex'})
-                    }else{
-                      setMoreLess({display: 'none'})
-                      setSpan(false)
-                    }
-                    }}
-                  >
-                    {
-                      span ? ( <p> Daha az </p> ) : ( <p> Daha çox </p> )
-                    }
-                  </button>
+                
               </div>
-              
-            </div>
-              
-            
-            
 
+              <div className="col-md-12 ">
+                <div className='main-box environment-course mundaricat ' >
+                  <div className='png' ></div>
+                  <div className={span? "cantentul  " : "cantents " }  >
+                    
+
+                    <div className="cantent">
+
+                      <p> Modulun mündəricatı </p>
+                      <ul  >
+                      {
+                      module_mun.map((subject, index) =>{
+                        const {li} = subject
+                        return(
+                        <li key={index}>
+                          <p> {li} </p>  <span>&#8226;</span>
+                        </li>
+                        )
+                      })
+                      }
+                      </ul>
+                    </div>
+                      
+                    <div className="note">
+                      <p> Bu modul kimlər üçündü  </p>
+                      <ul  >
+                      {
+                      module_for.map((subject, index) =>{
+                        const {li} = subject
+                        return(
+                        <li key={index}>
+                          <p> {li} </p>  <span>&#8226;</span>
+                        </li>
+                        )
+                      })
+                      }
+                      </ul>
+
+                    </div>
+                    
+                  </div>
+                    <button className="cantent-btn"
+                      onClick={() => {
+                      if(moreLess.display === 'none'  ){
+                        setSpan(true)
+                        setMoreLess({display: 'flex'})
+                      }else{
+                        setMoreLess({display: 'none'})
+                        setSpan(false)
+                      }
+                      }}
+                    >
+                      {
+                        span ? ( <p> Daha az </p> ) : ( <p> Daha çox </p> )
+                      }
+                    </button>
+                </div>
+                
+              </div>
+            </div>
           </div>
         </div> 
       </div>
