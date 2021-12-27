@@ -111,7 +111,7 @@ const { innerWidth: width} = window;
           top: 
             width <= 768 ? location ? 
             location.name === 'fromTechnology' ?  
-            '37px' : '-37px' : '-80px'  :  location ? 
+            '37px' : '-37px' : '37px'  :  location ? 
             location.name === 'fromTechnology' ? 
             '117px' : '-117px' : locationId ?  
               locationId.id === 'fromNav-technology' ? '-80px' : '-80px' : '117px'
