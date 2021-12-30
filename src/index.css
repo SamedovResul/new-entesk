@@ -839,7 +839,7 @@ body {
 }
 
 .section-3-main-div .main-box {
-  margin: 0px 0px 0px auto;
+  margin: 0px 0px 50px auto;
   text-align: right;
   position: relative;
   padding-right: 10px;
@@ -847,7 +847,7 @@ body {
 
 @media(max-width:1199px) {
   .section-3-main-div .main-box {
-    margin: 0px 0px 0px auto;
+    margin: 0px 0px 50px auto;
     width: 50% ;
   }
 
@@ -859,6 +859,7 @@ body {
 @media(max-width:991px) {
   .section-3-main-div .main-box {
     width: 40%;
+    margin: 0px 0px 50px auto;
   }
 
   .mundaricat {
@@ -879,7 +880,7 @@ body {
 @media(max-width:675px) {
   .section-3-main-div .main-box {
     width: 90%;
-    margin: 0px 40px 0px auto;
+    margin: 0px 40px 50px auto;
   }
 
   .mundaricat {
@@ -891,7 +892,7 @@ body {
 @media(max-width:576px) {
   .section-3-main-div .main-box {
     width: 70%;
-    margin: 0px 60px 0px auto;
+    margin: 0px 60px 50px auto;
   }
 
   .mundaricat {
@@ -1028,7 +1029,6 @@ body {
 
 .main-box {
   position: relative;
-  margin-bottom: 50px !important;
 }
 
 
@@ -3894,9 +3894,6 @@ table tbody td {
   height: 50px;
 }
 
-
-
-
 .file {
   width: 100%;
   border: 1px solid;
@@ -3981,4 +3978,142 @@ table tbody td {
 .loading-text div:nth-child(3) p{
   color: #ff952b;
 }
+
+/* admin blog */
+
+.admin-page{
+  border: 1px solid black;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-page a{
+  width: 20%;
+  height: 20%;
+  background-color: unset;
+  margin: 10px;
+}
+
+.admin-page button {
+  width: 100%;
+  height: 100%;
+  background-color: unset;
+
+}
+
+.admin-blog{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px 10px 0px;
+}
+
+
+
+.admin-blog-img  {
+  width: 80%;
+  height: 200px;
+}
+
+.admin-blog-img  img {
+  width: 100%;
+  height: 100%;
+}
+
+.admin-blog-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+}
+
+.admin-blog-content p:nth-of-type(1) {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.admin-blog-content p:nth-of-type(2) {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.admin-blog-content p:nth-of-type(3) {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.admin-form a {
+  color: white !important;
+  text-decoration: unset;
+}
+
+.admin-btn-div{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.admin-btn-div button{
+  width: 100px;
+  border: none;
+  border-radius: 10px;
+}
+
+.admin-btn-div a:nth-of-type(1) button  {
+  background-color: green;
+}
+
+.admin-btn-div a:nth-of-type(2) button  {
+  background-color: yellow;
+}
+
+.admin-btn-div button p{
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+
+/* update image */
+
+
+.updateBlog{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.updateimgDiv{
+  width: 100%;
+  display: flex;
+}
+
+.updateImage{
+  width: 50%;
+  height: 300px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.updateImage button{
+  position: absolute;
+
+}
+
+.updateImage img{
+  width: 100%;
+  height: 100%;
+}
+
+.updateText{
+  border: 1px solid black;
+  width: 90%;
+}
+
 

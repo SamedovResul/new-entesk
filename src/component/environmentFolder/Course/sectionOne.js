@@ -159,7 +159,7 @@ const  SectionOne = (props) =>{
           <div className=" col-md-12">
             <div   className="environment-desc main-desc">
               <div className='png' ></div>
-              <b>Description</b>
+              <b>Ümumi təsvir</b>
               <div className={showMore ? "linearunset" : "linear"} >
                 <p>
                   {

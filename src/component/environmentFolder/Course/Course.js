@@ -18,16 +18,16 @@ const Environment = (props) =>{
 
 	let location = props.location.aboutProps
 	const locationId =  props.location.aboutId
-
+	const { name } = useParams();
 	const {
 		brushimg,
 		gearimg,
 		leafimg,
 		container,
-	} = environmentFunctions(location, locationId)
+	} = environmentFunctions(location, locationId,name)
 
 	// let state = useSelector(state => state.allData)
-	const { name } = useParams();
+	
 	console.log(name)
 	
 

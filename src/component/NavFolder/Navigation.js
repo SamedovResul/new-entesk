@@ -16,7 +16,6 @@ const NavBar = ( {setZindex,setopenSide,openSide}) =>{
 	const location = useLocation();
 
 
-
 	const sideAnimation = useSpring({
 		to: [{right: openSide ? "0%" : "-50%"}],
 		from: {right: openSide ? "-50%" : "-50%"},
@@ -31,7 +30,6 @@ const NavBar = ( {setZindex,setopenSide,openSide}) =>{
 			duration: 500
 		}
 	})
-
 
 	const handlerScroll = () =>{
 		window.scrollTo(0, 0)
@@ -94,10 +92,6 @@ useEffect(() => {
   };
 }, [handleNavigation,count,y]);
 
-// console.log(count)
-
-
-
 const enteskStyle = useSpring({
 	to: [{top: window.scrollY > 200 && location.pathname === '/' ? '0px' : '100px'}],
 	from: {top: location.pathname === '/'? '0px' : '100px'},
@@ -117,7 +111,101 @@ const enteskStyle = useSpring({
 
 				
 				<div className='nav-main-menu'>
-					<animated.div className="entesk" style={enteskStyle} >
+				{
+					location.pathname === "/admin" ? (
+						<div>
+							{/* <Link>
+								blog
+							</Link>
+							<Link>
+								students
+							</Link> */}
+						</div>
+						):(
+						<>
+						<animated.div className="entesk" style={enteskStyle} >
+							<Link
+							  to={{ pathname: '/environment',
+										aboutId:{
+											id: 'fromNav-environment'
+										}
+									}}>
+								<img  src={ leaf} alt='img'  className=''></img>
+							</Link >
+
+							<Link  to={{ pathname: '/technology',
+										aboutId:{
+											id: 'fromNav-environment'
+										}
+									}}>
+								<img src={ circle} alt='img' className='centerimg'  ></img>
+							</Link>
+
+							<Link to={{ pathname: '/skill',
+										aboutId:{
+											id: 'fromNav-skill'
+										}
+									}}>
+								<img src={brush} alt='img'  ></img>
+							</Link>
+						</animated.div>
+							<div className='nav-menu'>
+
+								<ul className='ul-nav'>
+										<li >
+											<Link  to={{
+														pathname:'/',
+														aboutProps:{
+															name: 'fromNavication'
+														}
+													}}>
+														
+
+													Ana Səhifə
+											</Link>
+										</li>
+
+										<li>
+											<Link to={{
+												pathname: '/products',
+												aboutProps:{
+													name: 'fromNavication'
+												}
+											}}>
+												Tədris 	
+											</Link>
+										</li>
+
+										<li>
+											<Link to={{
+												pathname: '/About',
+												aboutProps:{
+													name: ''
+												}
+												}}> 
+												Haqqımızda
+											</Link>
+										</li>
+
+										<li>
+											<Link to={{
+														pathname:'/',
+														aboutProps:{
+															name: 'toAbout'
+														}
+													}}>
+													Əlaqə
+											</Link>
+										</li>
+										
+									</ul>
+							</div>
+						</>
+						
+					)
+				}
+
+					{/* <animated.div className="entesk" style={enteskStyle} >
 							<Link
 							  to={{ pathname: '/environment',
 										aboutId:{
@@ -146,53 +234,54 @@ const enteskStyle = useSpring({
 					<div className='nav-menu'>
 
 						<ul className='ul-nav'>
-					<li >
-						<Link  to={{
-									pathname:'/',
-									aboutProps:{
-										name: 'fromNavication'
-									}
-								}}>
-									
+								<li >
+									<Link  to={{
+												pathname:'/',
+												aboutProps:{
+													name: 'fromNavication'
+												}
+											}}>
+												
 
-								Ana Səhifə
-						</Link>
-					</li>
-							
-
-							<li>
-								<Link to={{
-									pathname: '/products',
-									aboutProps:{
-										name: 'fromNavication'
-									}
-								}}>
-									Tədris 	
-								</Link>
+											Ana Səhifə
+									</Link>
 								</li>
-							<li>
-								<Link to={{
-									pathname: '/About',
-									aboutProps:{
-										name: ''
-									}
-									}}> 
-									Haqqımızda
-								</Link>
-							</li>
-							<li>
-							
-								<Link to={{
-											pathname:'/',
-											aboutProps:{
-												name: 'toAbout'
-											}
-										}}>
-										Əlaqə
-								</Link>
-							</li>
-						</ul>
-					</div>
+
+								<li>
+									<Link to={{
+										pathname: '/products',
+										aboutProps:{
+											name: 'fromNavication'
+										}
+									}}>
+										Tədris 	
+									</Link>
+								</li>
+
+								<li>
+									<Link to={{
+										pathname: '/About',
+										aboutProps:{
+											name: ''
+										}
+										}}> 
+										Haqqımızda
+									</Link>
+								</li>
+
+								<li>
+									<Link to={{
+												pathname:'/',
+												aboutProps:{
+													name: 'toAbout'
+												}
+											}}>
+											Əlaqə
+									</Link>
+								</li>
+								
+							</ul>
+					</div> */}
 
 					<MediaQuery maxDeviceWidth={1198}>
 						<button className="main-burger" onClick={handlerSideOpen}>

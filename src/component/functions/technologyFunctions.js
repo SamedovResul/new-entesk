@@ -9,6 +9,7 @@ const TechnologyFunctions = (
 	locationId,
 	name
 ) =>{
+  // console.log(locationId)
   const {screenSize} =GetDimension()
   const { innerWidth: width} = window;
 

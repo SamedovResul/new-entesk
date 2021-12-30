@@ -24,7 +24,7 @@ export const createPosts = (data) =>{
       formdata.append('files', data.file[i])
     }
   
-  formdata.append('blogName', data.blogName)
+  formdata.append('name', data.name)
   formdata.append('text', data.text)
   formdata.append('title', data.title)
     console.log(data)

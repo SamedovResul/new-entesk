@@ -15,8 +15,10 @@ import Circular from './circular/circular';
 import EnvironmentCourse from './component/environmentFolder/Course/Course'
 import TexnologyCourse from './component/technologyFolder/Course/Course'
 import SkillCours from './component/skillFolder/Course/Course'
+import Blogs from './component/adminfile/blogs'
+import Createblog from './component/adminfile/Createblog'
 import { useDispatch } from 'react-redux';
-// import {getUser} from './reducer/action'
+import {getUser} from './reducer/action'
 
 
 function App(props) {
@@ -67,9 +69,19 @@ function App(props) {
             <Route path='/About'  >
               <About handlerSideClose={handlerSideClose} />
             </Route>
+
+            {/* admin page */}
+            <Route path='/adminBlogs' >
+              <Blogs  />
+            </Route>
+            <Route path='/Createblog/:id' >
+              <Createblog  />
+            </Route>
+            {/* ------ */}
             <Route path='/CourseEnviroment/:name' component={EnvironmentCourse} />
             <Route path='/CourseTecnology/:name' component={TexnologyCourse} />
             <Route path='/CourseSkill/:name' component={SkillCours} />
+            
             <HomeBanner path='/' handlerSideClose={handlerSideClose} zIndex={zIndex}  /> 
             
           </Switch>
