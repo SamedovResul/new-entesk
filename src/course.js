@@ -105,7 +105,7 @@ export  const allData = {
 		],
 
 		Description_2: 'Elm tarixi',
-	  image:'/images/science.jpg',
+	  image:'/images/science.png',
 		image_1:'/images/science_class1.png',
 		image_2:'/images/science_class2.jpg',
 	  text_1:"Bu dərs elm və onun necə istifadə olunmasından bəhs edir. Elm bizi əhatə edən mühiti, yəni, dünyanı və kainatı, buradakı bütün canlı və varlıqları - atomlardan tutmuş nəhəng dağları, kiçik bakteriyalardan tutmuş böyük balniları anlamağa kömək edir. Daha çox öyrəndikcə, daha mürəkkəb biliklərə yol açırıq. Kainatdan kənarda nə yerləşir və biz teleskopla görə bilərikmi? Beyin necə düşünür və hiss edir? Texnologiya və ixtiralarıımızdan səmərəli istifadə etmək üçün elmi biliklər çox vacibdir. Elm hər kəsin xeyrinə istifadə oluna bilər, lakin yanlış istifadə olunan elmi biliklər zərərli ola bilər. Düzgün istifadə edildikdə, elmin gətirdiyi biliklər daha sağlam olmağımıza və daha yaxşı yaşamağımıza kömək edir.",
@@ -688,7 +688,7 @@ export  const allData = {
 		],
 
 		Description_2: 'Robototexnika',
-	  image:'/images/robot.jpg',
+	  image:'/images/robot.png',
 		image_1:'/images/robotika-1.jpg',
 		image_2:'/images/robotika-2.jpg',
 	  text_1:"Dünyadakı şirkətlər yaxın gələcəkdə biznes infrastrukturlarına robotlama və avtomatlaşdırmanı tətbiq etməyi planlaşdırırlar. Təhsil qurumları və təşkilatları bunu yaxından izləyir və robototexnikanı bütün dünyada məktəb proqramının ayrılmaz bir hissəsi halına gətirməkdə artıq böyük uğurlar əldə ediblər. Övladlarımızı gələcək işçi qüvvəsinin çətinliklərinə hazırlamalı onlara inkişaf etməyə və geniş bir sıra bacarıqları daha asan inkişaf etdirə biləcək bir mühit yaratmalıyıq. ",
@@ -710,25 +710,26 @@ export  const allData = {
 
 	Sectionone: [
 		{
-			Description: 'Mərkəzimizdə müasir bilik və bacarıqların qazanılmasına yönəlmiş Azərbaycan, İngilis və Rus bölmələri üzrə aşağıdakı istiqamətlərdə tədris aparılır:',
+
+			Description: 'Mərkəzimizdə STEAM tədris metodundan istifadə edərək müasir bilik və bacarıqların qazanılmasına yönəlmiş Azərbaycan, İngilis və Rus bölmələri üzrə aşağıdakı istiqamətlərdə tədris aparılır:',
 			areas: [
 				{
-					area: 'ROBOTOTEXNİKA'
+					area: 'Robototexnika'
 				},
 				{
-					area: 'PROQRAMLAŞDIRMA'
+					area: 'Proqramlaşdırma'
 				},
 				{
-					area: 'ELM'
+					area: 'STEAM Əsasında Elm'
 				},
 				{
-					area: 'RƏQƏMSAL İNCƏSƏNƏT'
+					area: 'Rəqəmsal İncəsənət'
 				},
 				{
-					area: 'İNGİLİS DİLİ'
+					area: 'İngilis dili'
 				},
 				{
-					area: 'RUS DİLİ'
+					area: 'Rus dili'
 				},
 			]
 		}
@@ -738,7 +739,7 @@ export  const allData = {
 		{
 			description:'STEAM nədir',
 			text: 'Bu gün rəqəmsal çevrilmənin iş modelləri və müştəri davranışı üzərindəki təsirlərinin qaçılmaz nəticələri iş dünyasına dərindən təsir edir. Məlumat dünyasına asanlıqla sürət qazanan iş dünyasındakı bu dönüş rəqabəti də artırdı. Azərbaycanın böyük və rəqəmsal çevrilməyə davam edən ixtisaslı iş gücünə ehtiyacı var. İş dünyasının texnologiya, yenilik və rəqəmsallaşmanın idarə etdiyi qlobal iqtisadiyyatda rəqabətdə qalmaq üçün STEAM bacarıqlarına, yəni elm, texnologiya, mühəndislik, sənəd və riyaziyyat bacarıqlarına sahib işçi qüvvəsinə ehtiyacı var.',
-			img: '/images/steam.jpg',
+			img: '/images/steam.png',
 		}
 	],
 
@@ -772,26 +773,26 @@ export  const allData = {
 		{
 			id:uuid(),
 			img: '/images/Gunay.png',
-			name: 'Tohida Xanım',
-			text: 'Hər iki qızım bir aya artıq sərbəst şəkildə kiçik oyunlar hazılayırlar. ',
+			name: 'Mələk Xanım',
+			text: 'Hər iki övladım bir aya artıq sərbəst şəkildə kiçik oyunlar hazılayırlar. ',
 		},
 		{
 			id:uuid(),
 			img: '/images/Gunay.png',
-			name: 'Humay Xanım',
-			text: 'Çox yaxşı ki, Sizi tapdıq. İmran çox böyük həvəslə robotları yığır və programlaşdırır.',
+			name: 'Ləman Xanım',
+			text: 'Çox yaxşı ki, Sizi tapdıq. Emin çox böyük həvəslə robotları yığır və programlaşdırır.',
 		},
 		{
 			id:uuid(),
 			img: '/images/Gunay.png',
-			name: 'Nigar Xanım',
-			text: 'Oğlum Murad ingilis dili və robotika dərslərinə başladı. Nəticədən o qədər məmnun qaldım ki, digər iki qızlarımı da kurslara cəlb etdim.',
+			name: 'Cəlal bəy',
+			text: 'Oğlum Adil ingilis dili və robotika dərslərinə başladı. Nəticədən o qədər məmnun qaldım ki, digər övladlarımı da kurslara cəlb etdim.',
 		},
 		{
 			id:uuid(),
 			img: '/images/Gunay.png',
-			name: 'Zeynəb Xanım',
-			text: 'İki ay ərzində Raul artıq sərbəst ingilis dilində oxuyur və danışır. Çox minnətdaram.',
+			name: 'Fərid bəy',
+			text: 'İki ay ərzində Rəsul artıq sərbəst ingilis dilində oxuyur və danışır. Çox minnətdaram.',
 		},
 		{
 			id:uuid(),
@@ -997,7 +998,7 @@ export  const allData = {
 					Mətn, video, səsyazma və ya fotoşəkil kimi bütün səsli və vizual vasitələrdən istifadə edərək yaradılan hissələr veb saytları və bütün veb səhifələrin eyni sistem altında birləşməsindən yaranan veb saytları təşkil edir.`
 				},
 			],
-			img: '/images/steam.jpg',
+			img: '/images/steam.png',
 			
 		},
 		{

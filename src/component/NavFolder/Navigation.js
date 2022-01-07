@@ -14,7 +14,7 @@ const NavBar = ( {setZindex,setopenSide,openSide}) =>{
 	const [scroll, setScroll] =  useState();
 	const { innerWidth: width} = window;
 	const location = useLocation();
-
+	const admin = false
 
 	const sideAnimation = useSpring({
 		to: [{right: openSide ? "0%" : "-50%"}],
@@ -112,14 +112,24 @@ const enteskStyle = useSpring({
 				
 				<div className='nav-main-menu'>
 				{
-					location.pathname === "/admin" ? (
-						<div>
-							{/* <Link>
-								blog
-							</Link>
-							<Link>
-								students
-							</Link> */}
+					admin ? (
+						<div className='nav-menu'>
+							<ul className='ul-nav' >
+								<li>
+									<Link
+										to={{ pathname: '/Students',}}>
+										Students
+									</Link >
+								</li>
+								<li>
+									<Link
+										to={{ pathname: '/Adminblogs',}}>
+										blog
+									</Link >
+								</li>
+							</ul>
+							
+							
 						</div>
 						):(
 						<>

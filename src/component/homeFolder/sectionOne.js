@@ -21,7 +21,8 @@ const  SectionOne = (props) =>{
         <div className="row" >
           <div  className="text-box col-md-6 col-sm-12 col-xs-12" >
             <div className='png' ></div>
-             <p>{Description}</p>
+            <p className='sectionOneP' >Biz Kimik ?</p>
+             <p >{Description}</p>
              <ul>
               {
                 areas.map((areas, index) =>{

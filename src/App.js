@@ -7,7 +7,6 @@ import Technology from './component/technologyFolder/technology'
 import NavBar from './component/NavFolder/Navigation'
 import HomeBanner from './component/homeFolder/homeBanner'
 import Skill from './component/skillFolder/skill'
-import admin from './component/adminfile/admin';
 import Products from './component/products/product'
 import Blog from './component/blog/blog'
 import About from './component/About/about'
@@ -15,17 +14,19 @@ import Circular from './circular/circular';
 import EnvironmentCourse from './component/environmentFolder/Course/Course'
 import TexnologyCourse from './component/technologyFolder/Course/Course'
 import SkillCours from './component/skillFolder/Course/Course'
-import Blogs from './component/adminfile/blogs'
-import Createblog from './component/adminfile/Createblog'
+import Login from './component/adminfolder/adminlogin/login';
+import Students from './component/adminfolder/studentsFolder/students'
+import Blogs from './component/adminfolder/blogfolder/blogs'
+import Createblog from './component/adminfolder/blogfolder/Createblog'
 import { useDispatch } from 'react-redux';
 import {getUser} from './reducer/action'
 
 
 function App(props) {
   const dispatch = useDispatch()
-  // useEffect(() => {
-  //   dispatch(getUser())
-  // }, [dispatch])
+  useEffect(() => {
+    dispatch(getUser())
+  }, [dispatch])
   const [zIndex, setZindex] = useState(0);
   const [openSide, setopenSide ] = useState(false);
   const [loading, setLoading] = useState(false)
@@ -56,7 +57,7 @@ function App(props) {
             <Route path="/technology" component={Technology} />
             <Route path="/skill" component={Skill} />
             
-            <Route path='/admin' component={admin} />
+            
 
             <Route path="/products"  >
               <Products  handlerSideClose={handlerSideClose} />
@@ -71,6 +72,10 @@ function App(props) {
             </Route>
 
             {/* admin page */}
+            <Route path='/Login' component={Login } />
+            <Route path='/Students' >
+              <Students />
+            </Route>
             <Route path='/adminBlogs' >
               <Blogs  />
             </Route>

@@ -1,8 +1,8 @@
-import {createPosts,fetchUsers, updateUsers, deleteBlogs} from './api'
+import {createBlogs,fetchBlogs, updateBlogs, deleteBlogs} from './api'
  
-export const createUser = (user) => async (dispatch) => {
+export const createUser = (blog) => async (dispatch) => {
   try {
-    const { data } = await createPosts(user);
+    const { data } = await createBlogs(blog);
     dispatch({ type: "CREATE", payload: data });
   } catch (error) {
     console.log(error.message);
@@ -12,7 +12,7 @@ export const createUser = (user) => async (dispatch) => {
 
 export const getUser = () => async (dispatch) => {
   try {
-    const { data } = await fetchUsers();
+    const { data } = await fetchBlogs();
     console.log(data)
     dispatch({ type: "FETCH_ALL", payload: data });
   } catch (error) {
@@ -23,7 +23,7 @@ export const getUser = () => async (dispatch) => {
 export const updateUser = (id, blog) => async (dispatch) =>{
   try{
     
-    const {data} = await updateUsers(id, blog);
+    const {data} = await updateBlogs(id, blog);
     console.log(data)
 
     dispatch({type: 'UPDATE' ,payload: data})

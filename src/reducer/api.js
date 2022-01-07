@@ -1,15 +1,15 @@
 import axios from 'axios'
 
-const url = 'http://localhost:5000/users';
+const url = 'http://localhost:5000/blogs';
 
 
 
 
 
 
-export const fetchUsers = () => axios.get(url)
+export const fetchBlogs = () => axios.get(url)
 // export const createPosts = (data,) => axios.post(url, {...data}, );
-export const createPosts = (data) =>{
+export const createBlogs = (data) =>{
   const formdata = new FormData()
     console.log(data)
     const config = {
@@ -36,7 +36,7 @@ export const createPosts = (data) =>{
 }
 
 
-export const updateUsers = (id, updateUser) => {
+export const updateBlogs = (id, updateBlog) => {
 
     const config = {
     headers: {
@@ -46,17 +46,17 @@ export const updateUsers = (id, updateUser) => {
 
     const formdata = new FormData()
 
-    formdata.append('blogName', updateUser.blogName)
-    formdata.append('text', updateUser.text)
-    formdata.append('title', updateUser.title)
-    console.log(updateUser)
-    for (let i = 0; i < updateUser.file.length; i++) {
-      formdata.append('files', updateUser.file[i])
+    formdata.append('name', updateBlog.name)
+    formdata.append('text', updateBlog.text)
+    formdata.append('title', updateBlog.title)
+    
+    for (let i = 0; i < updateBlog.file.length; i++) {
+      formdata.append('files', updateBlog.file[i])
     }
     let postData = []
 
-    for (let i = 0; i < updateUser.file.length; i++) {
-      postData.push(JSON.stringify(updateUser.file[i]))
+    for (let i = 0; i < updateBlog.file.length; i++) {
+      postData.push(JSON.stringify(updateBlog.file[i]))
       console.log(postData[i])
     }
     for (let i = 0; i < postData.length; i++) {

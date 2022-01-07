@@ -52,7 +52,7 @@ const SectionSix = (props) =>{
 return(
   <article className="section-6-main-div">
     <div className="section-text-div">
-      <h5>İnsanlar bizim haqqımızda nə düşünür?</h5>
+      <p className='text-6' >İnsanlar bizim haqqımızda nə düşünür?</p>
     </div>
     <div className="container">
       <div className="container-fluid">
