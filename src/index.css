@@ -1,17 +1,18 @@
 @font-face {
-  font-family: 'Calibri Light';
+  font-family: 'CirceRounded Alt Bold';
   font-style: normal;
   font-weight: normal;
-  src: local('Calibri Light'), url('./calibril.woff') format('woff');
+  src: local('CirceRounded Alt Bold'), url('./fonts/CirceRounded-Alt-Bold.otf') format('otf');
 }
 @font-face {
-  font-family: "";
+  font-family: "Calibri Light";
   font-style: normal;
   font-weight: normal;
-  src: local('Calibri Light'), url('./ARLRDBD.ttf') format('woff');
+  src: local('Calibri Light'), url('./fonts/calibril.woff') format('woff');
 }
 
 * {
+  font-family: 'CirceRounded Alt Bold';
   box-sizing: border-box;
 }
 
@@ -363,6 +364,7 @@ body {
   left: 50%;
   width: auto;
   transform: translateX(-50%);
+  /* z-index: 10; */
 }
 
 .banner-style-text p {
@@ -564,6 +566,7 @@ body {
 
 .environment-banner h1 {
   color: white;
+  font-family: 'Calibri Light' !important;
 }
 
 .environment-img1 {
@@ -1836,6 +1839,64 @@ body {
 }
 
 
+.slick-dots li{
+  display: none !important;
+  
+}
+
+
+.slick-dots li button:before {
+  font-size: 12px !important;
+  border-radius: 10px !important;
+  width: 10px !important;
+  height: 10px !important;
+  line-height: 15px !important;
+  top: 0px !important;
+  left: 0px !important;
+}
+
+
+.section-2
+.slick-dots li button:before{
+  color: #482AFF !important;
+}
+
+
+.section-2
+.slick-dots li button:hover:before {
+  color: #6750E3 !important;
+}
+
+.section-2
+.slick-dots li button:focus:before {
+  opacity: 0 !important;
+  color: #482AFF !important;
+}
+
+.slick-dots li button{
+  border: 1px solid white !important;
+  border-radius: 10px !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.section-2
+.slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: #482AFF !important;
+}
+
+.slick-dots li:nth-of-type(1){
+  display: inline-block !important;
+}
+.slick-dots li:nth-of-type(2){
+  display: inline-block !important;
+}
+.slick-dots li:nth-of-type(3){
+  display: inline-block !important;
+}
+
+
 
 .caruseldiv {
   height: 100% !important;
@@ -2047,6 +2108,8 @@ body {
 .section-3-main-div .text-box p {
   z-index: -1;
   margin: 30px 20px 30px 20px;
+  mask-image: linear-gradient(#fff, #fff, rgba(255, 255, 255, 0));
+  -webkit-mask-image: linear-gradient(#fff, #fff, rgba(255, 255, 255, 0));
 }
 
 .section-3-main-div .section-3-button {
@@ -2327,8 +2390,36 @@ body {
   margin-top: 50px;
 }
 
-.section-5-main-div .bottom-div button{
-  background-color: #FF952C;
+
+/* slider dots css */
+
+.section-5-main-div
+.slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: #FF952C !important;
+}
+
+
+.section-5-main-div
+.slick-dots li button:hover:before {
+  color: #C96E15 !important;
+}
+
+.section-5-main-div
+.slick-dots li button:focus:before {
+  opacity: 0 !important;
+  color: #FF952C !important;
+}
+
+
+/* .section-5-main-div 
+.bottom-div button{
+  background-color: #FF952C ;
+} */
+
+.section-5-main-div
+.slick-dots li button:before {
+  color: #FF952C !important;
 }
 
 
@@ -2436,6 +2527,29 @@ body {
 .section-6-main-div {
   height: auto;
   width: 100%;
+}
+
+.section-6-main-div
+.slick-dots li button:before{
+  color: #8872FF !important;
+}
+
+.section-6-main-div
+.slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: #8872FF !important;
+}
+
+
+.section-6-main-div
+.slick-dots li button:hover:before {
+  color: #6750E3 !important;
+}
+
+.section-6-main-div
+.slick-dots li button:focus:before {
+  opacity: 0.75 !important;
+  color: #8872FF !important;
 }
 
 .section-6-main-div .section-text-div {

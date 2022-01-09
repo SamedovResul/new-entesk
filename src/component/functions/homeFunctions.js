@@ -60,6 +60,7 @@ useEffect(() => {
 
 	const bannerStyleText = useSpring({
 		to: [{
+			// zIndex:openSide? 0: 3,
 			top: width >= 1800 && width <= 2300 ? location ?
 			openSide? '44.5rem' : '8rem' : 
 			openSide? '8rem' : '44.5rem' :
@@ -108,10 +109,15 @@ useEffect(() => {
 			openSide? '2.2vw' : '3.1vw':
 			location ? 
 			openSide? '2.1vw' : '1.1vw':
-			openSide? '1.1vw' : '2.1vw'  ,
+			openSide? '1.1vw' : '2.1vw' ,
+
+			
 
 		}],
-		from: {top: '30rem', fontSize: '1.1vw'
+		from: { 
+				top: '30rem',
+			 	fontSize: '1.1vw',
+			  
 				},
 		config: {
 			duration: 500
@@ -142,7 +148,7 @@ useEffect(() => {
 
 		from:{
 			marginLeft:"0px" ,
-			marginRight:"0px"
+			marginRight:"0px",
 		},
 		config: {
 			duration: 500
@@ -341,6 +347,10 @@ useEffect(() => {
 
   // scroll for section
 
+	function scrollTop() {
+		window.scrollTo(0, 0 )
+	}
+
   useEffect(() => {
     location ? location.name === "toAbout" ?
     window.scrollTo(0, myRef.current.offsetTop ) : 
@@ -353,7 +363,7 @@ useEffect(() => {
   }, [location] );
 
 
-
+	
   
 
   return {
@@ -369,7 +379,8 @@ useEffect(() => {
     leafimg,
     brushimg,
     circleimg,
-		paragraphtxt
+		paragraphtxt,
+		scrollTop
   }
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import poster from '../../images/poster.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import VideoPlayer from "react-video-js-player";
-import video from "../../video/EnteskVideo.mp4"
+import video from "../../video/Entesk.MOV"
 import { Link } from 'react-router-dom';
 
 
@@ -49,7 +49,7 @@ const  SectionOne = (props) =>{
           </div>
           <div  className="text-box col-md-6 col-sm-12 col-12">
             <VideoPlayer 
-            src={videoSrc} poster={poster} className="video"   
+            src={videoSrc} className="video"   
             />
           </div>
         </div>

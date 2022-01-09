@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MediaQuery from 'react-responsive'
 import { Link} from 'react-router-dom'
 
 const SectionThree = ({data,myRef,blog}) =>{
+  const [showMore,setShowMore ] = useState(false)
   const { id,  Description_2,  text_2, scineceBlog, image_2} = data
   // console.log(id)
   return(
@@ -20,7 +21,9 @@ const SectionThree = ({data,myRef,blog}) =>{
             <div  className="text-box col-md-6 col-sm-12 col-xs-12" >
               <div className='png' ></div>
               <h2>{Description_2}</h2>
-              <p>{text_2}</p>
+              <p>{
+              showMore?  `${text_2}` : `${text_2.slice(0, 400)} ... `
+              }</p>
               {
                 blog.map((blog,index) =>{
     

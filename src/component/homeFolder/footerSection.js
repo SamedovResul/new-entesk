@@ -13,6 +13,7 @@ import { send } from 'emailjs-com';
 import { useAlert } from 'react-alert'
 
 const FooterSection =(props) =>{
+  const {scrollTop} = props
   const alert = useAlert()
   // console.log(props)
   const [subscribe, setSubscribe] = useState({
@@ -73,7 +74,7 @@ const FooterSection =(props) =>{
             <div className="col-md-3 col-sm-6 col-6">
               <ul>
                 <p>Keçidlər</p>
-                <Link to='/'>
+                <Link to='/' onClick={scrollTop}>
                   <li>
                     Ana Səhifə
                   </li>
@@ -103,7 +104,7 @@ const FooterSection =(props) =>{
             {/* kurslar */}
             <div className="col-md-3 col-sm-6 col-6 ">
               <ul>
-                <p>Kurslar</p>
+                <p>Tədris</p>
                 {
                   props.data.map((subject) =>{
                     const  {name, Category,id} = subject

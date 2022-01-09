@@ -818,14 +818,14 @@ export  const allData = {
 	Environment : [
 		{
 		id: uuid(2),
-	  name: 'Elm ',
+	  name: 'Environment',
 		scineceBlog: 'Təbiət Elmləri',
-		Description_1: 'Təbiət Elmləri',
-		Description_2: 'Təbiət elmlərinin əsası',
+		Description_1: 'Ətraf Mühit',
+		Description_2: 'STEAM əsasında Elm',
 	  image:'/images/image-3.jpg',
-	  text_1:" Təbiət elmləri dünyanı naturalist nöqteyi-nəzərindən öyrənir və cəmiyyətdən təbiətə münasibətdə onun qanunlarına hörmətlə yanaşmağı tələb edir. Naturalizm insanın yaratdığı qanunları təbii proseslərə şamil etmədən, təbiət qanunlarını öyrənərək istifadə etmək üzərində qurulan sistemdir. Təbiət elmlərinin yaranması elmi tədqiqatlara fəlsəfi yanaşmanın nəticəsidir.",
+	  text_1:"Hər nəsil öncəkindən daha yaxşı olmalıdır.  Uşaqlar ətraf mühiti qorumağı, bir-birlərinə qarşı mehriban olmağı və bütövlükdə dünyaya fayda verən qərarlar qəbul etməyi öyrənməlidirlər.Uşaqlara ətraf mühit haqqında bilikləri erkən yaşda öyrətmək vacibdir, çünki bu təlimlər onlar üçün normaya çevriləcəkdir.  Öyrəndikləri ekoloji vərdişlər, etdikləri ekoloji şüurlu istehlakçı seçimləri və təbiəti sevməyi və qiymətləndirməyi öyrənmək üçün sərf etdikləri vaxt onlara ekoloji davamlılı gələcək yaratmağa kömək edəcək. Davamlı gələcək üçün isə ən yaxşı qərarları geniş dünya görüşünə malik olaraq verə bilərik. ",
 		image_1: '/images/environmentscience.jpg',
-		text_2:"Təbiət elmlərini öyrənərkən fizika, kimya və biologiya elmləri arasındakı əlaqənin öyrənilməsi xüsusilə vacibdir. Çünki, bu elmlərin əsas məzmununu təşkil edən bir sıra qabaqcıl elmi fikirlər, məsələn, molekulyar-kinetik nəzəriyyə, elektron nəzəriyyəsi, elektroliz və bir sıra başqa anlayışlar təbiət elmlərində özünə möhkəm mövqe tutmuşdur. Onların bir sıra əsas məsələləri həmin anlayışlar əsasında izah edilir.",
+		text_2:"Bu dərs elm və onun necə istifadə olunmasından bəhs edir. Elm bizi əhatə edən mühiti, yəni, dünyanı və kainatı, buradakı bütün canlı və varlıqları - atomlardan tutmuş nəhəng dağları, kiçik bakteriyalardan tutmuş böyük balniları anlamağa kömək edir. Daha çox öyrəndikcə, daha mürəkkəb biliklərə yol açırıq. Kainatdan kənarda nə yerləşir və biz teleskopla görə bilərikmi? Beyin necə düşünür və hiss edir? Texnologiya və ixtiralarıımızdan səmərəli istifadə etmək üçün elmi biliklər çox vacibdir. Elm hər kəsin xeyrinə istifadə oluna bilər, lakin yanlış istifadə olunan elmi biliklər zərərli ola bilər. Düzgün istifadə edildikdə, elmin gətirdiyi biliklər daha sağlam olmağımıza və daha yaxşı yaşamağımıza kömək edir.",
 		image_2: '/images/environmentscience2.jpg'
 	}
 	],

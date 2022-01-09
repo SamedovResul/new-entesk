@@ -30,7 +30,8 @@ const HomeBanner = (props) =>{
 	leafimg,
 	brushimg,
 	circleimg,
-	paragraphtxt
+	paragraphtxt,
+	scrollTop
 } = HomeFunctions({location})
 
 	// data for site
@@ -90,7 +91,7 @@ const HomeBanner = (props) =>{
 				<SectionFive data={blog} />
 				<SectionSix data={Client} />
 				<SectionSeven  myRef={myRef} />
-				<FooterSection data={Course} />
+				<FooterSection data={Course} scrollTop={scrollTop} />
 			</div>
 		</article>
 	)
