@@ -767,6 +767,18 @@ export  const allData = {
 		{
 			id:uuid(),
 			image:'/images/gallery-img6.JPG'
+		},
+		{
+			id:uuid(),
+			image:'/images/gallery-img4.JPG'
+		},
+		{
+			id:uuid(),
+			image:'/images/gallery-img5.JPG'
+		},
+		{
+			id:uuid(),
+			image:'/images/gallery-img6.JPG'
 		}
 	],
 	Client :[
@@ -797,7 +809,7 @@ export  const allData = {
 		{
 			id:uuid(),
 			img: '/images/Gunay.png',
-			name: 'Emin Bəy',
+			name: 'Rauf Bəy',
 			text: 'Elm dərsləri oğlumun dünya görüşünə və təfəkkürünə çox müsbət təsir etdi. Çox bəyənirik.',
 		}
 	],

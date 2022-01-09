@@ -1,5 +1,5 @@
 import react, {useState,useRef, useEffect} from 'react'
-import {useSpring,} from 'react-spring'
+import {useSpring, useSprings,} from 'react-spring'
 import GetDimension from './getDimension'
 
 const HomeFunctions = (props) =>{
@@ -64,11 +64,11 @@ useEffect(() => {
 			openSide? '44.5rem' : '8rem' : 
 			openSide? '8rem' : '44.5rem' :
 			width >= 1400 && width <= 1800 ? location ?
-			openSide? '32.5rem' : '8rem' : 
-			openSide? '8rem' : '32.5rem' :
+			openSide? '34.5rem' : '8rem' : 
+			openSide? '8rem' : '34.5rem' :
 			width <= 991 && width >= 769 ? location ?
-			openSide? '22rem' : '4.4rem' : 
-			openSide? '4.4rem' : '22rem' :
+			openSide? '23rem' : '4.9rem' : 
+			openSide? '4.9rem' : '23rem' :
 			width <= 769 &&  width >= 600 ? 
 			location ?
 			openSide? '13.8rem' : '4rem' :
@@ -80,8 +80,8 @@ useEffect(() => {
 			openSide? '14rem' : '3.7rem' : 
 			openSide? '3.7rem' : '14rem' :
 			width <= 390 ? location ? 
-			openSide? '10.8rem' : '3.6rem' : 
-			openSide? '3.6rem' : '10.8rem' :
+			openSide? '11.2rem' : '3.6rem' : 
+			openSide? '3.6rem' : '11.2rem' :
 			location ? 
 			openSide? '26.5rem' : '5.8rem' : 
 			openSide? '5.8rem' : '26.5rem' ,
@@ -113,6 +113,37 @@ useEffect(() => {
 		}],
 		from: {top: '30rem', fontSize: '1.1vw'
 				},
+		config: {
+			duration: 500
+		}
+	})
+
+	// paraggraph text animation --------------
+
+	const paragraphtxt = useSpring({
+		to:[{
+			marginLeft: width >= 1400 && width <= 1800 ?location?  
+			openSide? "2rem" : "0.6rem" :
+			openSide? "0.6rem" : "2rem" :
+			width >= 1199 && width <= 1400 ?location?  
+			openSide? "1.2rem" : "0.6rem" :
+			openSide? "0.6rem" : "1.2rem":
+			openSide? "0.6rem" : "1rem" ,
+
+			
+			marginRight: width >= 1400 && width <= 1800 ?location?  
+			openSide? "2rem" : "0.6rem" :
+			openSide? "0.6rem" : "2rem" :
+			width >= 1199 && width <= 1400 ?location?  
+			openSide? "1.2rem" : "0.6rem" :
+			openSide? "0.6rem" : "1.2rem":
+			openSide? "0.6rem" : "1rem" ,
+		}],
+
+		from:{
+			marginLeft:"0px" ,
+			marginRight:"0px"
+		},
 		config: {
 			duration: 500
 		}
@@ -337,7 +368,8 @@ useEffect(() => {
     bannerStyleLogo,
     leafimg,
     brushimg,
-    circleimg
+    circleimg,
+		paragraphtxt
   }
 }
 
