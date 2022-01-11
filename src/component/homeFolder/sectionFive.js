@@ -18,7 +18,7 @@ const SectionFive = (props) =>{
     infinite: true,
     centerPadding: "0px",
     slidesToShow: 3,
-    autoplay: true,
+    // autoplay: true,
     pauseOnHover: true,
     autoplaySpeed: 2000,
     dots: true,
@@ -56,10 +56,11 @@ return(
    <article className="section-5-main-div">
     
     <div className="bg-img-div">
-      <h4>Entesk Xəbərlər</h4>
+      
       <img src={bgShape}  alt="img"></img>
     </div>
     <div className="slide-div" >
+      <h4>Entesk Xəbərlər</h4>
       <Slider {...settings}>
         {
           props.data.map((blog) =>{
@@ -75,7 +76,7 @@ return(
                   {blogname}
                 </p>
                 <Link to={{pathname:`/blog/${name}`, }}>
-                  <button> Davamı </button>
+                  <button className='green-button-small' > davamı </button>
                 </Link>
                 
 

@@ -67,19 +67,22 @@ const HomeBanner = (props) =>{
 								<p>Technology</p>
 								<p>Skills</p> */}
 							</animated.div>
+								<div className="box_shadow_icons">
+									<Link  className='link ' to='/environment'>
+										<animated.img  src={ leaf} alt='img'  style={leafimg} className=''></animated.img>
+									</Link >
+								</div>
+								<div className="box_shadow_icons">
+									<Link className='link ' to='/technology'>
+										<animated.img src={ circle} alt='img' className='centerimg'style={circleimg} ></animated.img>
+									</Link>
+								</div>
 
-								<Link  className='link ' to='/environment'>
-									<animated.img  src={ leaf} alt='img'  style={leafimg} className=''></animated.img>
-								</Link >
-
-								<Link className='link ' to='/technology'>
-									<animated.img src={ circle} alt='img' className='centerimg'style={circleimg} ></animated.img>
-								</Link>
-
-								<Link className='link ' to='/skill'>
-									<animated.img src={brush} alt='img' style={brushimg} ></animated.img>
-								</Link>
-								
+								<div className="box_shadow_icons">
+									<Link className='link ' to='/skill'>
+										<animated.img src={brush} alt='img' style={brushimg} ></animated.img>
+									</Link>
+								</div>
 							
 						</div>
 					</animated.div>

@@ -51,14 +51,17 @@ const SectionSix = (props) =>{
 
 return(
   <article className="section-6-main-div">
-    <div className="section-text-div">
+    {/* <div className="section-text-div">
       <p className='text-6' >İnsanlar bizim haqqımızda nə düşünür?</p>
-    </div>
+    </div> */}
     <div className="container">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
             <div className="section-6" >
+            <div className="section-text-div">
+              <p className='text-6' >İnsanlar bizim haqqımızda nə düşünür?</p>
+            </div>
               <Slider {...settings}>
                 {props.data.map((client) =>{
                   const {id, img, name, text} =client

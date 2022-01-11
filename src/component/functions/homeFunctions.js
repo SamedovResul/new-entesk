@@ -58,6 +58,8 @@ useEffect(() => {
 
   // banner text animation -------------------------
 
+
+
 	const bannerStyleText = useSpring({
 		to: [{
 			// zIndex:openSide? 0: 3,
@@ -117,7 +119,6 @@ useEffect(() => {
 		from: { 
 				top: '30rem',
 			 	fontSize: '1.1vw',
-			  
 				},
 		config: {
 			duration: 500
@@ -185,7 +186,8 @@ useEffect(() => {
   // leaf img animation----------------------------------
 
 	const leafimg = useSpring({
-		to:[{	left: width <= 767 && width >= 600 ?
+		to:[{	zIndex:openSide? 3: 0,
+			left: width <= 767 && width >= 600 ?
 					location? 
 					openSide? '37%' : '30%' : openSide? '30%' : '37%': 
 				 	width <= 600 && width >= 430 ? location? 
@@ -219,8 +221,8 @@ useEffect(() => {
 					location?
 					openSide ? '13%': '15%' : openSide ? '15%' : '13%':
 					location ?
-					openSide ? '8%': '15%' : openSide ? '15%' : '8%'
-
+					openSide ? '8%': '15%' : openSide ? '15%' : '8%',
+					
 				}],
   	from:{left: location? 
 					location.name === 'fromNavication' ? 

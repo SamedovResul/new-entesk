@@ -15,13 +15,13 @@ const  SectionOne = (props) =>{
   return(
 
     
-  <article className="position section-one">
-    <div   className="container bigScreenContainer">
+  <article className="position home section-one">
+    <div   className="container  bigScreenContainer">
       <div className="container-fluid">
         <div className="row" >
           <div  className="text-box col-md-6 col-sm-12 col-xs-12" >
             <div className='png' ></div>
-            <p className='sectionOneP' >Biz Kimik ?</p>
+            <p className='' >Biz Kimik ?</p>
              <p >{Description}</p>
              <ul>
               {
@@ -42,8 +42,8 @@ const  SectionOne = (props) =>{
             <Link to={{
                 pathname:'/products',
               }}>
-              <button className="section-1-button">
-                Ətraflı
+              <button className="yellow-button-big">
+              Davamı
               </button>
             </Link>
           </div>
@@ -60,10 +60,11 @@ const  SectionOne = (props) =>{
       <div  className="container">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-12 col-sm-12 section-1-for-mobile" >
+            <div className=" col-md-12 col-sm-12 section-1-for-mobile" >
+              <p>Biz Kimik ?</p>
               <p>{Description}</p>
                 <VideoPlayer 
-                  src={videoSrc} poster={poster} className="video"   
+                  src={videoSrc}  className="video"   
                 />
                <ul>
               {
@@ -83,7 +84,7 @@ const  SectionOne = (props) =>{
             <Link to={{
                 pathname:'/products',
               }}>
-              <button className="button">
+              <button className="yellow-button-big">
                 Ətraflı
               </button>
             </Link>

@@ -29,7 +29,7 @@ const SectionThree = ({data,blog}) =>{
                 <Link to={{
                       pathname:`/blog/${name}`,
                     }}>
-                    <button className="section-3-button">
+                    <button className="yellow-button-big custom-margin">
                       Ətraflı
                     </button>
                 </Link>
@@ -42,10 +42,10 @@ const SectionThree = ({data,blog}) =>{
       </div>
 
       <MediaQuery maxDeviceWidth={767}  >
-        <div className="container">
+        <div className="container section-3-for-mobile">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-md-12 col-sm-12 section-3-for-mobile" >
+              <div className="col-md-12 col-sm-12 " >
                 
                 
                 <div  className="img-box col-md-6 col-sm-12 col-12">

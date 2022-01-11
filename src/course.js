@@ -1048,7 +1048,7 @@ export  const allData = {
 		{
 			id: uuid(),
 			name: 'Minecraft Proqramlaşdırma Müsabiqəsi',
-			blogname: 'Minecraft Proqramlaşdırma Müsabiqəsi',
+			blogname: 'Proqramlaşdırma Müsabiqəsi',
 			title: 'Minecraft Proqramlaşdırma Müsabiqəsi',
 			text: 'Uşaqların dilində daim səslənən və hər zaman böyük maraq yaradan Minecraft oyunu yarışmanın əsas istiqaməti olaraq seçildi. Daxili yarışma zamanı 20 tələbə aktiv şəkildə bir saatlıq və 11 missiyadan ibarət tapşırığı yerinə yetirməli idilər. Birinci bitirən və bütün missiyaları düzgün həll edən tələbə qalib adını qazandı. Missiyalar əsasən proqramlaşdırma ilə əsas oyun qəhrəmanının çətinlikləri aşaraq irəliləməsindən ibarət idi. Burada fundamental biliklər, dövrlər, sadə alqoritmalar, funksiyalar çox önəmli idi. Birinci yerin sahibi Kəbirə adlı gənc tələbimiz oldu. Onu təbrik edir, gələcək təhsilində uğurlar diləyirik.',
 			img: '/images/blog-3.jpg',
@@ -1056,7 +1056,7 @@ export  const allData = {
 		{
 			id: uuid(),
 			name: 'Entesk - də Halloween Partisi',
-			blogname: 'Entesk - də Halloween Partisi',
+			blogname: 'Halloween Partisi',
 			title: 'Entesk - də Halloween Partisi',
 			text: 'Tələbələr müasir dünyaya hazır olmaq üçün daim yeni məlumatlar və müxtəlif elm sahələrini öyrənməlidirlər. Lakin bəzən dünyanı daha yaxından tanımaq üçün orada mövcud olan müxtəlif ölkələrin adətlərini, dillərini, yeməklərini, bayramlarını öyrənmək də çox kömək olur. Məhz balaca tələbələrimizi həm sevindirmək, həm də onlara dünyanı yaxından tanımaq üçün Entesk məktəbində kökünü İrlandiyadan götürən və bütün dünyaya yayılan Halloween bayramı keçirilmişdir. Burada ilk olaraq bayramın önəmi, yaranma tarixi, fərqli personajları və daha çox məlumat verilmiş daha sonra oyunlarla, mahnılarla əyləncəli proqram keçirilmişdir. Tələbələr isə Harry Potter, Pirat, Cadügər kimi maraqlı personajlara bəzənərək şənliyi daha maraqlı etmişdilər.',
 			img: '/images/blog-4.jpeg',

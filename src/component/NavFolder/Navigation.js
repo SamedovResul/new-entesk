@@ -216,83 +216,7 @@ const enteskStyle = useSpring({
 					)
 				}
 
-					{/* <animated.div className="entesk" style={enteskStyle} >
-							<Link
-							  to={{ pathname: '/environment',
-										aboutId:{
-											id: 'fromNav-environment'
-										}
-									}}>
-								<img  src={ leaf} alt='img'  className=''></img>
-							</Link >
-
-							<Link  to={{ pathname: '/technology',
-										aboutId:{
-											id: 'fromNav-environment'
-										}
-									}}>
-								<img src={ circle} alt='img' className='centerimg'  ></img>
-							</Link>
-
-							<Link to={{ pathname: '/skill',
-										aboutId:{
-											id: 'fromNav-skill'
-										}
-									}}>
-								<img src={brush} alt='img'  ></img>
-							</Link>
-						</animated.div>
-					<div className='nav-menu'>
-
-						<ul className='ul-nav'>
-								<li >
-									<Link  to={{
-												pathname:'/',
-												aboutProps:{
-													name: 'fromNavication'
-												}
-											}}>
-												
-
-											Ana Səhifə
-									</Link>
-								</li>
-
-								<li>
-									<Link to={{
-										pathname: '/products',
-										aboutProps:{
-											name: 'fromNavication'
-										}
-									}}>
-										Tədris 	
-									</Link>
-								</li>
-
-								<li>
-									<Link to={{
-										pathname: '/About',
-										aboutProps:{
-											name: ''
-										}
-										}}> 
-										Haqqımızda
-									</Link>
-								</li>
-
-								<li>
-									<Link to={{
-												pathname:'/',
-												aboutProps:{
-													name: 'toAbout'
-												}
-											}}>
-											Əlaqə
-									</Link>
-								</li>
-								
-							</ul>
-					</div> */}
+					
 
 					<MediaQuery maxDeviceWidth={1198}>
 						<button className="main-burger" onClick={handlerSideOpen}>
@@ -317,7 +241,7 @@ const enteskStyle = useSpring({
 												name: 'fromNavication'
 											}
 										}}>
-										Əsas
+										əsas
 								</Link>
 							</li>
 							<li>
@@ -327,7 +251,7 @@ const enteskStyle = useSpring({
 										name: 'fromNavication'
 									}
 								}}>
-								Tədris 
+								tədris 
 								</Link>
 							
 							</li>
@@ -338,7 +262,7 @@ const enteskStyle = useSpring({
 										name: ''
 									}
 									}}> 
-									Haqqımızda
+									haqqımızda
 								</Link>
 							</li>
 							<li>
@@ -348,7 +272,7 @@ const enteskStyle = useSpring({
 												name: 'toAbout'
 											}
 										}}>
-										Əlaqə
+										əlaqə
 								</Link>
 							</li>
 						</ul>

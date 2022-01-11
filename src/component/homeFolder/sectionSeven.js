@@ -19,7 +19,8 @@ const SectionSeven = ({myRef}) =>{
     email: "",
     phone: "",
     topic:"",
-    date: ''
+    date: '',
+    text:""
   })
 
 
@@ -86,7 +87,8 @@ const SectionSeven = ({myRef}) =>{
       email: user.email,
       phone : user.phone,
       topic : user.topic,
-      date :date
+      date :date,
+      text: user.text,
     });
     
     }else if(user.name === 'Admin' && user.email === 'Entesk'){
@@ -139,7 +141,7 @@ const SectionSeven = ({myRef}) =>{
                   onChange={hadlerGetClientInfo}
                   placeholder="E-mail" 
                   required
-                  ></input>
+                ></input>
                 <PhoneInput 
                    country={"az"}
                   type="number" 
@@ -152,13 +154,22 @@ const SectionSeven = ({myRef}) =>{
                   placeholder="Telefon" 
                   required
                 />
+                <input 
+                  type="text" 
+                  value={user.email}
+                  id="topic" 
+                  name="topic" 
+                  onChange={hadlerGetClientInfo}
+                  placeholder="Mövzu" 
+                  required
+                ></input>
                 <textarea
                   type="text" 
                   value={user.topic}
                   id="phone" 
-                  name="topic" 
+                  name="text" 
                   onChange={hadlerGetClientInfo}
-                  placeholder="Mövzu"
+                  placeholder="text"
                   required
                 ></textarea>
                 <button type="submit" onClick={writeUserData} >Göndər</button>

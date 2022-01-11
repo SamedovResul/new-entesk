@@ -19,7 +19,7 @@ const SectionTwo = (props)=>{
       pauseOnHover: true,
       autoplaySpeed: 4000,
       dots: true,
-      autoplay: true,
+      // autoplay: true,
       responsive: [
         {
           breakpoint: 1024,
@@ -52,34 +52,35 @@ const SectionTwo = (props)=>{
 
   return(
     <article className="section-2">
-      <Slider {...settings}>
-        {Course.map((subject) =>{
-          // subject ? console.log(true) : console.log(false)
-          
-          const {name,id,Category,slide_text,image} = subject
-          return(
-          <div key={id} className="caruseldiv">
-            <div className="top-div">
-              <img  src={image} alt="img" ></img>
+      <div className="">
+        <Slider {...settings}>
+          {Course.map((subject) =>{
+            // subject ? console.log(true) : console.log(false)
+            
+            const {name,id,Category,slide_text,image} = subject
+            return(
+            <div key={id} className="caruseldiv">
+              <div className="top-div">
+                <img  src={image} alt="img" ></img>
+              </div>
+              <div className="bottom-div">
+                <p>{slide_text}</p>
+                <Link 
+                  to={{pathname:`${Category}/${name}`,
+                    aboutProps:{
+                      name: name,
+                    }
+                    }} >
+                  <button className="blue-button-small"> Davamı </button>
+                </Link>
+                
+              </div>
             </div>
-            <div className="bottom-div">
-              <p>{slide_text}</p>
-              <Link 
-                to={{pathname:`${Category}/${name}`,
-                  aboutProps:{
-                    name: name,
-                  }
-                  }} >
-                <button
-                 > Davamı </button>
-              </Link>
-              
-            </div>
-          </div>
-          )
-        })
-        }
-      </Slider>
+            )
+          })
+          }
+        </Slider>
+      </div>
     </article>
     
   )
