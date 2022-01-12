@@ -482,7 +482,7 @@ svg{
 } */
 
 .box_shadow_icons{
-  border-radius: 100px;
+  border-radius: 400px;
   position: absolute;
   transform: translateX(-50%);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -491,7 +491,6 @@ svg{
 
 .link img:hover {
   box-shadow: 0 2px 25px 0 white, 0 2px 25px 0 white;
-  transition: 0.1s;
 }
 
 @media(max-width:2300px) and (min-width:1800px) {
@@ -1862,6 +1861,16 @@ svg{
 }
 
 
+@media(max-width:1800px) and (min-width:1400px){
+  .video{
+    width: 500px;
+    height: 320px;
+  }
+  .video-js .vjs-big-play-button{
+    height: 350px !important;
+  }
+}
+
 /* section 1 mediaquery */
 
 
@@ -2026,13 +2035,13 @@ svg{
 
 .section-2
 .slick-dots li button:hover:before {
-  color: #6750E3 !important;
+  color: #482AFF !important;
 }
 
 .section-2
 .slick-dots li button:focus:before {
   opacity: 0 !important;
-  color: #482AFF !important;
+  color: #8872FF !important;
 }
 
 .slick-dots li button{
@@ -2045,7 +2054,7 @@ svg{
 .section-2
 .slick-dots li.slick-active button:before {
   opacity: .75;
-  color: #482AFF !important;
+  color: #8872FF !important;
 }
 
 
@@ -2099,6 +2108,15 @@ svg{
   margin-block-end: 0em;
   font-size: 1.8rem;
   font-weight: 700;
+}
+
+@media(max-width:768px){
+  .bottom-div p{
+    margin: 10px 0;
+    margin-block-end: 0em;
+    font-size: 1rem;
+    font-weight: 600;
+  }
 }
 
 /* .bottom-div button {
@@ -2592,7 +2610,7 @@ svg{
 .section-5-main-div
 .slick-dots li.slick-active button:before {
   opacity: .75;
-  color: #DB9400 !important;
+  color: #FFC243 !important;
 }
 
 
@@ -2784,14 +2802,14 @@ svg{
 
 @media(max-width:450px){
   .section-6-main-div .section-text-div p{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
   }
 }
 
 @media(max-width:350px){
   .section-6-main-div .section-text-div p{
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -2917,12 +2935,14 @@ svg{
   left: -50px !important;
   width: 50px !important;
   height: 100px !important;
+  top: 40% !important;
 }
 
 .slick-next {
   left: 100% !important;
   width: 50px !important;
   height: 100px !important;
+  top: 40% !important;
 }
 
 .slick-next:before {
