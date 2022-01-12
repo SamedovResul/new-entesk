@@ -169,7 +169,7 @@ const SectionSeven = ({myRef}) =>{
                   id="phone" 
                   name="text" 
                   onChange={hadlerGetClientInfo}
-                  placeholder="text"
+                  placeholder="Mətn"
                   required
                 ></textarea>
                 <button type="submit" onClick={writeUserData} >Göndər</button>

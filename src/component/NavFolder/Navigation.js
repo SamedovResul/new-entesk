@@ -31,6 +31,28 @@ const NavBar = ( {setZindex,setopenSide,openSide}) =>{
 		}
 	})
 
+	const enteskStyle = useSpring({
+		to: [{top: window.scrollY > 200 && location.pathname === '/' ? '0px' : '100px'}],
+		from: {top: location.pathname === '/'? '0px' : '100px'},
+			config: {
+				duration: location.pathname === '/'? 600 : 600
+			}
+	})
+
+	
+
+	const navMenuAnimation = useSpring({
+		to: [{bottom: window.scrollY > 200 && location.pathname === '/' ? '100px' : '0px'}],
+		from: {bottom: location.pathname === '/'? '100px' : '0px'},
+			config: {
+				duration: location.pathname === '/'? 600 : 600
+			}
+	})
+
+
+
+
+
 	const handlerScroll = () =>{
 		window.scrollTo(0, 0)
 	}
@@ -92,13 +114,7 @@ useEffect(() => {
   };
 }, [handleNavigation,count,y]);
 
-const enteskStyle = useSpring({
-	to: [{top: window.scrollY > 200 && location.pathname === '/' ? '0px' : '100px'}],
-	from: {top: location.pathname === '/'? '0px' : '100px'},
-		config: {
-			duration: location.pathname === '/'? 600 : 600
-		}
-})
+
 
     
 
@@ -159,8 +175,17 @@ const enteskStyle = useSpring({
 									}}>
 								<img src={brush} alt='img'  ></img>
 							</Link>
+
+								
 						</animated.div>
-							<div className='nav-menu'>
+						
+								<animated.div className="desktopBurger" style={enteskStyle}>
+									<button  className="main-burger" onClick={handlerSideOpen}>
+										<FaBars />
+									</button>
+								</animated.div>
+							
+							<animated.div style={ navMenuAnimation } className='nav-menu'>
 
 								<ul className='ul-nav'>
 										<li >
@@ -210,7 +235,59 @@ const enteskStyle = useSpring({
 										</li>
 										
 									</ul>
-							</div>
+							</animated.div>
+
+							<animated.div style={sideAnimation} className="sidebar">
+						<button className="side-burger" onClick={handlerSideClose}>
+							<FaStream />
+						</button>
+
+						<ul>
+							<li>
+								<Link to={{
+											pathname:'/',
+											aboutProps:{
+												name: 'fromNavication'
+											}
+										}}>
+										əsas
+								</Link>
+							</li>
+							<li>
+								<Link to={{
+									pathname: '/products',
+									aboutProps:{
+										name: 'fromNavication'
+									}
+								}}>
+								tədris 
+								</Link>
+							
+							</li>
+							<li>
+								<Link to={{
+									pathname: '/About',
+									aboutProps:{
+										name: ''
+									}
+									}}> 
+									haqqımızda
+								</Link>
+							</li>
+							<li>
+								<Link to={{
+											pathname:'/',
+											aboutProps:{
+												name: 'toAbout'
+											}
+										}}>
+										əlaqə
+								</Link>
+							</li>
+						</ul>
+
+					</animated.div>
+
 						</>
 						
 					)
@@ -218,7 +295,7 @@ const enteskStyle = useSpring({
 
 					
 
-					<MediaQuery maxDeviceWidth={1198}>
+					<MediaQuery maxDeviceWidth={1199}>
 						<button className="main-burger" onClick={handlerSideOpen}>
 						<FaBars />
 						</button>
@@ -227,7 +304,7 @@ const enteskStyle = useSpring({
 				</div>
 
 			</article>
-			<MediaQuery maxDeviceWidth={1198}  >
+			<MediaQuery maxDeviceWidth={1199}  >
 					<animated.div style={sideAnimation} className="sidebar">
 						<button className="side-burger" onClick={handlerSideClose}>
 							<FaStream />

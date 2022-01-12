@@ -1,5 +1,6 @@
 import  {React, } from 'react'
 import { animated} from 'react-spring'
+import {useSpring, } from 'react-spring'
 import { Link} from 'react-router-dom'
 import SectionOne from './sectionOne'
 import circle from '../../images/circle.png'
@@ -15,12 +16,14 @@ import SectionSix from './sectionSix'
 import SectionSeven from './sectionSeven'
 import FooterSection from './footerSection'
 import HomeFunctions from '../functions/homeFunctions'
+import Iconshadow from '../functions/iconshadow'
 import allData from '../../course'
 
 const HomeBanner = (props) =>{
 	let location = props.location.aboutProps
 	
 	// home functions 
+	// const {leafshadow} = Iconshadow()
 	const {
 	myRef,
 	handlerSide,
@@ -31,8 +34,12 @@ const HomeBanner = (props) =>{
 	brushimg,
 	circleimg,
 	paragraphtxt,
-	scrollTop
+	scrollTop,
+	openSide,
+	width
 } = HomeFunctions({location})
+
+
 
 	// data for site
 	const {blog, Course, Home, Sectionone, Sectionthree, images, Client} = allData
@@ -67,22 +74,31 @@ const HomeBanner = (props) =>{
 								<p>Technology</p>
 								<p>Skills</p> */}
 							</animated.div>
-								<div className="box_shadow_icons">
+								
+
+								{/* for shadow icons */}
+							<animated.img  src={ leaf} alt='img'  style={leafimg} className='box_shadow_icons'></animated.img>
+
+							<animated.img src={ circle} alt='img' className='centerimg box_shadow_icons' style={circleimg} ></animated.img>
+
+							<animated.img src={brush} alt='img' className='centerimg box_shadow_icons' style={brushimg} ></animated.img>
+
+
 									<Link  className='link ' to='/environment'>
 										<animated.img  src={ leaf} alt='img'  style={leafimg} className=''></animated.img>
 									</Link >
-								</div>
-								<div className="box_shadow_icons">
+								
+								
 									<Link className='link ' to='/technology'>
 										<animated.img src={ circle} alt='img' className='centerimg'style={circleimg} ></animated.img>
 									</Link>
-								</div>
+								
 
-								<div className="box_shadow_icons">
+								
 									<Link className='link ' to='/skill'>
 										<animated.img src={brush} alt='img' style={brushimg} ></animated.img>
 									</Link>
-								</div>
+								
 							
 						</div>
 					</animated.div>

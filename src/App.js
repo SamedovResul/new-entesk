@@ -1,5 +1,5 @@
-import {React, useState, useEffect,useRef} from 'react';
-import {useSpring} from 'react-spring'
+import {React, useState, useEffect} from 'react';
+// import {useSpring} from 'react-spring'
 import 'react-bootstrap';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import Environment from './component/environmentFolder/environment'
@@ -10,7 +10,7 @@ import Skill from './component/skillFolder/skill'
 import Products from './component/products/product'
 import Blog from './component/blog/blog'
 import About from './component/About/about'
-import Circular from './circular/circular';
+// import Circular from './circular/circular';
 import EnvironmentCourse from './component/environmentFolder/Course/Course'
 import TexnologyCourse from './component/technologyFolder/Course/Course'
 import SkillCours from './component/skillFolder/Course/Course'

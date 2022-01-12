@@ -1,5 +1,5 @@
 import react, {useState,useRef, useEffect} from 'react'
-import {useSpring, useSprings,} from 'react-spring'
+import {useSpring, } from 'react-spring'
 import GetDimension from './getDimension'
 
 const HomeFunctions = (props) =>{
@@ -62,7 +62,6 @@ useEffect(() => {
 
 	const bannerStyleText = useSpring({
 		to: [{
-			// zIndex:openSide? 0: 3,
 			top: width >= 1800 && width <= 2300 ? location ?
 			openSide? '44.5rem' : '8rem' : 
 			openSide? '8rem' : '44.5rem' :
@@ -74,8 +73,8 @@ useEffect(() => {
 			openSide? '4.9rem' : '23rem' :
 			width <= 769 &&  width >= 600 ? 
 			location ?
-			openSide? '13.8rem' : '4rem' :
-			openSide? '4rem' : '13.8rem': 
+			openSide? '14.5rem' : '4rem' :
+			openSide? '4rem' : '14.5rem': 
 			width <= 600 &&  width >= 450 ?  location ?
 			openSide? '14.5rem' : '4rem' : 
 			openSide? '4rem' : '14.5rem' :
@@ -130,21 +129,21 @@ useEffect(() => {
 	const paragraphtxt = useSpring({
 		to:[{
 			marginLeft: width >= 1400 && width <= 1800 ?location?  
-			openSide? "2rem" : "0.6rem" :
-			openSide? "0.6rem" : "2rem" :
+			openSide? "1.3rem" : "0.6rem" :
+			openSide? "0.6rem" : "1.3rem" :
 			width >= 1199 && width <= 1400 ?location?  
 			openSide? "1.2rem" : "0.6rem" :
 			openSide? "0.6rem" : "1.2rem":
-			openSide? "0.6rem" : "1rem" ,
+			openSide? "0.6rem" : "0.8rem" ,
 
 			
 			marginRight: width >= 1400 && width <= 1800 ?location?  
-			openSide? "2rem" : "0.6rem" :
-			openSide? "0.6rem" : "2rem" :
+			openSide? "1.3rem" : "0.6rem" :
+			openSide? "0.6rem" : "1.3rem" :
 			width >= 1199 && width <= 1400 ?location?  
 			openSide? "1.2rem" : "0.6rem" :
 			openSide? "0.6rem" : "1.2rem":
-			openSide? "0.6rem" : "1rem" ,
+			openSide? "0.6rem" : "0.8rem" ,
 		}],
 
 		from:{
@@ -173,7 +172,7 @@ useEffect(() => {
 					openSide? '0%' : '-31%' : 
 					openSide? '-31%' : '0%' ,
 
-					paddingTop: location? openSide? '20px' : '0px': openSide? '0px' : '20px' ,
+					paddingTop: location? openSide? '30px' : '0px': openSide? '0px' : '30px' ,
 				}],
 	from:{	top: location? '-60%' : '0%',
 					paddingTop: '20px'},
@@ -186,7 +185,7 @@ useEffect(() => {
   // leaf img animation----------------------------------
 
 	const leafimg = useSpring({
-		to:[{	zIndex:openSide? 3: 0,
+		to:[{	
 			left: width <= 767 && width >= 600 ?
 					location? 
 					openSide? '37%' : '30%' : openSide? '30%' : '37%': 
@@ -382,7 +381,10 @@ useEffect(() => {
     brushimg,
     circleimg,
 		paragraphtxt,
-		scrollTop
+		scrollTop,
+		location,
+		openSide,
+		width
   }
 }
 

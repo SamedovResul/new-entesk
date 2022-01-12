@@ -30,7 +30,7 @@ const SectionThree = ({data,blog}) =>{
                       pathname:`/blog/${name}`,
                     }}>
                     <button className="yellow-button-big custom-margin">
-                      Ətraflı
+                      Davamı
                     </button>
                 </Link>
               
