@@ -2053,7 +2053,7 @@ svg{
 
 .section-2
 .slick-dots li.slick-active button:before {
-  opacity: .75;
+  opacity: .75 !important;
   color: #8872FF !important;
 }
 
