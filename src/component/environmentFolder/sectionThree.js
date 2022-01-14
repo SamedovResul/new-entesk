@@ -8,7 +8,7 @@ const SectionThree = ({data,myRef,blog}) =>{
   const { id, Course} = data
   // console.log(id)
   return(
-    <article className="section-3-main-div home-folder">
+    <article className="section-3-main-div ">
       
       <div key={id} className="container bigScreenContainer environment ">
         <div className="container-fluid">
@@ -33,7 +33,11 @@ const SectionThree = ({data,myRef,blog}) =>{
                     <div  className="text-box col-md-6 col-sm-12 col-xs-12"  >
                       <div className='png' ></div>
                       <h2>{class_description}</h2>
-                      <p>{class_text}</p>
+                      <p>
+                        {
+                          showMore? `${class_text}` : `${class_text.slice(0, 300)} ... `
+                        }
+                      </p>
 
                       
                             <Link to={{pathname:`/CourseEnviroment/${classLink}`, }}  >

@@ -1,11 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MediaQuery from 'react-responsive'
 import { Link} from 'react-router-dom'
 
 
 const SectionThree = ({data,myRef,blog}) =>{
-  
+  const [showMore,setShowMore ] = useState(false)
 
   const { id, Course} = data
 
@@ -15,7 +15,7 @@ const SectionThree = ({data,myRef,blog}) =>{
   return(
     <article className="section-3-main-div " >
       
-      <div key={id} className="container bigScreenContainer  technology" >
+      <div key={id} className="container bigScreenContainer Course  technology" >
         <div className="container-fluid">
           <div className="row  area" >
 
@@ -38,7 +38,11 @@ const SectionThree = ({data,myRef,blog}) =>{
                     <div  className="text-box col-md-6 col-sm-12 col-xs-12"  >
                       <div className='png' ></div>
                       <h2>{class_description}</h2>
-                      <p>{class_text}</p>
+                      <p>
+                        {
+                          showMore? `${class_text}` : `${class_text.slice(0, 300)} ... `
+                        }
+                      </p>
 
                       
                             <Link to={{pathname:`/CourseTecnology/${classLink}`, }}  >
@@ -69,7 +73,7 @@ const SectionThree = ({data,myRef,blog}) =>{
                     classLink
                   } = subject
                   return(
-                    <div key={index} className="col-md-12 col-sm-12 section-3-for-mobile technology" ref={myRef} >
+                    <div key={index} className="col-md-12 col-sm-12 section-3-for-mobile Course technology" ref={myRef} >
                 
                       <h2>{class_description}</h2>
                       <img src={class_image} alt='img' ></img>

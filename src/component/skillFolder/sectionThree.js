@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import VideoPlayer from "react-video-js-player";
 import MediaQuery from 'react-responsive'
@@ -6,6 +6,7 @@ import poster from '../../images/guneshsistemi.png';
 import { Link} from 'react-router-dom'
 
 const SectionThree = ({data,myRef,blog}) =>{
+  const [showMore,setShowMore ] = useState(false)
   const { id,  Course} = data
   // console.log(id)
   return(
@@ -34,7 +35,11 @@ const SectionThree = ({data,myRef,blog}) =>{
                     <div  className="text-box col-md-6 col-sm-12 col-xs-12"  >
                       <div className='png' ></div>
                       <h2>{class_description}</h2>
-                      <p>{class_text}</p>
+                      <p>
+                        {
+                          showMore? `${class_text}` : `${class_text.slice(0, 300)} ... `
+                        }
+                      </p>
 
                       
                             <Link to={{pathname:`/CourseSkill/${classLink}`, }}  >

@@ -13,10 +13,10 @@ const SectionThree = (props) =>{
   }, [props.data])
 
 
-  return(
+  return( 
     <article className="section-3-main-div">
       
-      <div key={id} className="container technology   ">
+      <div key={id} className="container technology Course  ">
         <div className="container-fluid">
           <div className="row" >
             <div>

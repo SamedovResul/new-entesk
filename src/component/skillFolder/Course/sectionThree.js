@@ -16,7 +16,7 @@ const SectionThree = (props) =>{
   return(
     <article className="section-3-main-div">
       
-      <div key={id} className="container skill ">
+      <div key={id} className="container skill Course ">
         <div className="container-fluid">
           <div className="row" >
             <div>
