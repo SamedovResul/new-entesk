@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 const  SectionOne = ({data, executeScroll}) =>{
   
-  const {id,  Description_1,  text_1,image_1 } = data 
+  const {id,  SectionOne_description,  SectionOne_text,SectionOne_image } = data 
   
   
 
@@ -21,13 +21,13 @@ const  SectionOne = ({data, executeScroll}) =>{
         <div className="row" >
           <div  className="text-box col-md-6 col-sm-12 col-xs-12 " >
             <div className='png' ></div>
-             <h2>{Description_1}</h2>
-             <p>{text_1}</p>
+             <h2>{SectionOne_description}</h2>
+             <p>{SectionOne_text}</p>
             {/* <button  className="section-1-button" onClick={executeScroll} >Davamı</button> */}
             
           </div>
           <div  className="img-box col-md-6 col-sm-12 col-12 img-box ">
-            <img src={image_1} alt='img'></img>
+            <img src={SectionOne_image} alt='img'></img>
           </div>
         </div>
         
@@ -39,10 +39,10 @@ const  SectionOne = ({data, executeScroll}) =>{
         <div className="container-fluid">
           <div className="row technology">
             <div className="col-md-12 col-sm-12 section-1-for-mobile" >
-              <h2>{Description_1}</h2>
-                <img src={image_1} alt='img'></img>
-              <p>{text_1}</p>
-            <button  className="section-1-button" onClick={executeScroll} >Davamı</button>
+              <h2>{SectionOne_description}</h2>
+                <img src={SectionOne_image} alt='img'></img>
+              <p>{SectionOne_text}</p>
+            {/* <button  className="section-1-button" onClick={executeScroll} >Davamı</button> */}
             </div>
           </div>
         </div>

@@ -6,39 +6,48 @@ import poster from '../../images/guneshsistemi.png';
 import { Link} from 'react-router-dom'
 
 const SectionThree = ({data,myRef,blog}) =>{
-  const { id,  Description_2, Video, text_2,skillBlog, image_2} = data
+  const { id,  Course} = data
   // console.log(id)
   return(
-    <article className="section-3-main-div home-folder">
+    <article className="section-3-main-div  ">
       
       <div key={id} className="container bigScreenContainer skill">
         <div className="container-fluid">
-          <div className="row " >
+          <div className="row  area" >
             
-            <div ref={myRef} className="img-box col-md-6 col-sm-12 col-12 ">
-              <img src={image_2} alt='img' ></img>
-            </div>
+          {
+              Course.map((subject, index)=>{
+                const {
+                  class_description,
+                  class_text,
+                  class_image,
+                  classLink
+                } = subject
 
-            <div  className="text-box col-md-6 col-sm-12 col-xs-12" >
-              <div className='png' ></div>
-              <h2>{Description_2}</h2>
-              <p>{text_2}</p>
-              {
-                blog.map((blog,index) =>{
-    
-                const {name} = blog
-                console.log(skillBlog)
-                if(name === skillBlog){
-                  return(
-                    <Link to={{pathname:`/blog/${name}`,}} key={index} >
-                      <button className="section-3-button">Davamı</button>
-                    </Link>
-                  )
-                  }
-                })
-              }
-              
-            </div>
+                return(
+                  <div key={index} className='d-flex'>
+
+                    <div ref={myRef} className="img-box col-md-6 col-sm-12 col-12">
+                      <img src={class_image} alt='img' ></img>
+                    </div>
+
+                    <div  className="text-box col-md-6 col-sm-12 col-xs-12"  >
+                      <div className='png' ></div>
+                      <h2>{class_description}</h2>
+                      <p>{class_text}</p>
+
+                      
+                            <Link to={{pathname:`/CourseSkill/${classLink}`, }}  >
+                              <button className="section-3-button">Davamı</button>
+                            </Link>
+                          
+                      
+                    </div>
+
+                  </div>
+                )
+              })
+            }
 
           </div>
         </div> 
@@ -48,31 +57,28 @@ const SectionThree = ({data,myRef,blog}) =>{
         <div className="container ">
           <div className="container-fluid">
             <div className="row ">
-              <div className="col-md-12 col-sm-12 section-3-for-mobile img-box skill " ref={myRef} >
-                
-                
-                  <img src={image_2} alt='img' ></img>
-                
-                
-                <p>Hey dostlar, salam! Bu gün müxtəlif peşələr haqqında maraqlı bir kitab oxudum. 
-                Sən demə, həkim, müəllim, polis, yanğınsöndürən kimi fərqli peşə növləri var. 
-                Öyrəndim ki,  
-                  
-              </p>
               {
-                blog.map((blog,index) =>{
-    
-                const {name} = blog
-                if(name === skillBlog){
+                Course.map((subject, index)=>{
+                  const {
+                    class_description,
+                    class_text,
+                    class_image,
+                    classLink
+                  } = subject
                   return(
-                    <Link to={{pathname:`/blog/${name}`, }} key={index} >
-                      <button className="section-3-button">Davamı</button>
-                    </Link>
+                    <div key={index} className="col-md-12 col-sm-12 section-3-for-mobile skill" ref={myRef} >
+                
+                      <h2>{class_description}</h2>
+                      <img src={class_image} alt='img' ></img>
+                      <p>{class_text}</p>
+                      <Link to={{pathname:`/CourseSkill/${classLink}`, }}  >
+                        <button className="section-3-button">Davamı</button>
+                      </Link>
+
+                    </div>
                   )
-                  }
                 })
               }
-              </div>
             </div>
           </div>
         </div>

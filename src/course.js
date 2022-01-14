@@ -821,41 +821,73 @@ export  const allData = {
 	  name: 'Environment',
 		scineceBlog: 'Təbiət Elmləri',
 		Description_1: 'Ətraf Mühit',
-		Description_2: 'STEAM əsasında Elm',
 	  image:'/images/image-3.jpg',
 	  text_1:"Hər nəsil öncəkindən daha yaxşı olmalıdır.  Uşaqlar ətraf mühiti qorumağı, bir-birlərinə qarşı mehriban olmağı və bütövlükdə dünyaya fayda verən qərarlar qəbul etməyi öyrənməlidirlər.Uşaqlara ətraf mühit haqqında bilikləri erkən yaşda öyrətmək vacibdir, çünki bu təlimlər onlar üçün normaya çevriləcəkdir.  Öyrəndikləri ekoloji vərdişlər, etdikləri ekoloji şüurlu istehlakçı seçimləri və təbiəti sevməyi və qiymətləndirməyi öyrənmək üçün sərf etdikləri vaxt onlara ekoloji davamlılı gələcək yaratmağa kömək edəcək. Davamlı gələcək üçün isə ən yaxşı qərarları geniş dünya görüşünə malik olaraq verə bilərik. ",
 		image_1: '/images/environmentscience.jpg',
-		text_2:"Bu dərs elm və onun necə istifadə olunmasından bəhs edir. Elm bizi əhatə edən mühiti, yəni, dünyanı və kainatı, buradakı bütün canlı və varlıqları - atomlardan tutmuş nəhəng dağları, kiçik bakteriyalardan tutmuş böyük balniları anlamağa kömək edir. Daha çox öyrəndikcə, daha mürəkkəb biliklərə yol açırıq. Kainatdan kənarda nə yerləşir və biz teleskopla görə bilərikmi? Beyin necə düşünür və hiss edir? Texnologiya və ixtiralarıımızdan səmərəli istifadə etmək üçün elmi biliklər çox vacibdir. Elm hər kəsin xeyrinə istifadə oluna bilər, lakin yanlış istifadə olunan elmi biliklər zərərli ola bilər. Düzgün istifadə edildikdə, elmin gətirdiyi biliklər daha sağlam olmağımıza və daha yaxşı yaşamağımıza kömək edir.",
-		image_2: '/images/environmentscience2.jpg'
+		Course:[
+			{
+				class_description: 'Proqramlaşdırma',
+				class_text:'Ümumiyyətlə dil öyrənmək uşaqlara ünsiyyət qurmağı və məntiqi təfəkkürü öyrədir. Dil həm şifahi, həm də yazılı bacarıqları gücləndirir. Uşaqlar erkən yaşlarında fərqli dilləri öyrənmələri tövsiyyə olunur, çünki bu uşaqlara ətraf dünyanı daha yaxşı anlamalarına kömək edir. Kodlaşdırmanın isə özünəməxsus bir dili var. Əlifbadakı A, B və digər hərflər kimi kodlaşdırmanın da əlifbasını təmsil edən xüsusi 0 və 1 hərfləri var. Bu 0 və 1 -lər ətrafımızdakı texnologiyadan necə istifadə etməli olduğumuza dair göstərişlər verir. Uşaqların ətrafdakı texnologiyanın niyə və necə işləməsini başa düşməsi üçün kodlaşdırma öyrənməkdən və ətrafdakı texnologiya ilə danışmaqdan daha yaxşı yolu nədir?',
+				class_image:'/images/technology2.jpg',
+				classLink:'Elm',
+			},
+			{
+				class_description: 'Robototexnika',
+				class_text:'Dünyadakı şirkətlər yaxın gələcəkdə biznes infrastrukturlarına robotlama və avtomatlaşdırmanı tətbiq etməyi planlaşdırırlar. Təhsil qurumları və təşkilatları bunu yaxından izləyir və robototexnikanı bütün dünyada məktəb proqramının ayrılmaz bir hissəsi halına gətirməkdə artıq böyük uğurlar əldə ediblər. Övladlarımızı gələcək işçi qüvvəsinin çətinliklərinə hazırlamalı onlara inkişaf etməyə və geniş bir sıra bacarıqları daha asan inkişaf etdirə biləcək bir mühit yaratmalıyıq.',
+				class_image:'/images/technology2.jpg',
+				classLink:'Elm',
+			}
+		]
 	}
 	],
 	Technology : [
 		{
-		id: uuid(2),
-	  name: 'Texnologiya',
-		technologyBlog: 'Texnologiya nədir',
-		Description_1: 'Texnologiyanın həyatımızdakı rolu, texnologiya nədir?',
-		Description_2: 'Texnologiya daim özünü yeniləyir və inkişaf edir.',
-	  image:'/images/image-3.jpg',
-	  text_1:"Texnologiya, elmin inkişafı ilə birlikdə həyata keçirilən işlər sayəsində texniki cəhətdən irəliləmək və inkişaf etmək üçün verilmişdir. İnsanın mövcudluğundan bəri elmin bilik yığması vasitəsilə irəliləmişdir. İnformasiya ilə bağlı yeni məlumatlar verən Elm, hər sahədə və hər zaman irəliləməyə davam edir. Elmin inkişafı və buna görə texniki məlumatların köməyi ilə texnologiyanın inkişafı insan ehtiyaclarından da təsirlənmişdir.",
-		image_1: '/images/technology1.jpg',
-		text_2:"Gündəlik gündəmə əsasən, insanların ehtiyacları hiss olunur. Bu ehtiyacları qarşılamaq üçün çalışan alimlər elmdə daim inkişaf edir və texnologiyaya doğru irəliləyirlər. Başqa sözlə, texnoloji inkişaflar və irəliləyişlər çərçivəsində insan ehtiyacları var. İnsanlar öz ehtiyaclarını ödəmək üçün çalışırlar, çünki elmi və texnologiyaya aparan hər bir addım bir az daha irəliyə gedəcəklər.",
-		image_2: '/images/technology2.jpg'
+			id: uuid(2),
+			name: 'Technology',
+			technologyBlog: 'Texnologiya nədir',
+			SectionOne_description:'Texnologiya',
+			SectionOne_text:"Hal-hazırda birbaşa gələcəyin sənaye və karyera imkanları ilə bağlı olan texniki bacarıqları inkişaf etdirən tələbələr yavaş-yavaş rəqabətdə önə keçməkdədirlər.  Bütün bunlar müəssisələrin, ümumiyyətlə cəmiyyətin işində seysmik dəyişikliklərə səbəb olur. Bilik gücdür və bütün bu texnologiyaları başa düşmək uşaqlara təhsildə və digər sahələrdə üstün olmağa imkan verəcək. Tətbiqləri və vebsaytları proqramlaşdırmaqdan tutmuş video redaktə proqramları ilə işləyə bilməyə qədər bu bacarıqlar təkcə texnologiya ilə bağlı ideyaları həyata keçirməyə yox, həm ötürüləbilən (transferable skills) bacarıqlar yaratmağa imkan verəcək. ",
+			SectionOne_image:'/images/technology1.jpg',
+			Course:[
+				{
+					class_description: 'Proqramlaşdırma',
+					class_text:'Ümumiyyətlə dil öyrənmək uşaqlara ünsiyyət qurmağı və məntiqi təfəkkürü öyrədir. Dil həm şifahi, həm də yazılı bacarıqları gücləndirir. Uşaqlar erkən yaşlarında fərqli dilləri öyrənmələri tövsiyyə olunur, çünki bu uşaqlara ətraf dünyanı daha yaxşı anlamalarına kömək edir. Kodlaşdırmanın isə özünəməxsus bir dili var. Əlifbadakı A, B və digər hərflər kimi kodlaşdırmanın da əlifbasını təmsil edən xüsusi 0 və 1 hərfləri var. Bu 0 və 1 -lər ətrafımızdakı texnologiyadan necə istifadə etməli olduğumuza dair göstərişlər verir. Uşaqların ətrafdakı texnologiyanın niyə və necə işləməsini başa düşməsi üçün kodlaşdırma öyrənməkdən və ətrafdakı texnologiya ilə danışmaqdan daha yaxşı yolu nədir?',
+					class_image:'/images/technology2.jpg',
+					classLink:'Proqramlaşdırma',
+				},
+				{
+					class_description: 'Robototexnika',
+					class_text:'Dünyadakı şirkətlər yaxın gələcəkdə biznes infrastrukturlarına robotlama və avtomatlaşdırmanı tətbiq etməyi planlaşdırırlar. Təhsil qurumları və təşkilatları bunu yaxından izləyir və robototexnikanı bütün dünyada məktəb proqramının ayrılmaz bir hissəsi halına gətirməkdə artıq böyük uğurlar əldə ediblər. Övladlarımızı gələcək işçi qüvvəsinin çətinliklərinə hazırlamalı onlara inkişaf etməyə və geniş bir sıra bacarıqları daha asan inkişaf etdirə biləcək bir mühit yaratmalıyıq.',
+					class_image:'/images/technology2.jpg',
+					classLink:'Robototexnika',
+				}
+			]
 		}
 	],
 	Skill : [
 		{
 		id: uuid(2),
-	  name: 'Bacarıqlar',
+	  name: 'Skills',
 		skillBlog: 'Metakoqnitiv Bacarıqlar',
-		skill: 'METAKOQNİTİV BACARIQLAR',
-		Description_1: 'METAKOQNİTİV BACARIQLAR',
-		Description_2: 'Yuxarıdakı təcrübəyə əsasən',
+		skill: ' Bacarıqlar',
+		Description_1: 'Bacarıqlar',
 	  image:'/images/image-3.jpg',
 	  text_1:" Aparılan bir təcrübədə məktəbəqədər yaşlı və ibtidai sinif şagirdlərindən ibarət bir qrup uşağa əzbərləmələri üçün müəyyən yazılı məlumatlar verilir. Əzbərlədiklərinə əmin olana qədər üzərində işləmələri xahiş olunur. Bir müddət sonra yaşca böyük olan uşaqlar hazır olduqlarını söyləyirlər. Həqiqətən də yoxladıqda soruşulan bütün məlumatları düzgün xatırlayırlar. Bundan fərqli olaraq, yaşca daha kiçik olan uşaqlar, hazır olduqlarını bildirməklərinə baxmayaraq soruşulan bəzi maddələri xatırlaya bilmirlər.",
 		image_1: '/images/skill1.jpg',
-		text_2:" Məktəbəqədər yaşlı uşaqların həmin anda hafizələrinin həcmini düzgün qiymətləndirə bilmədikləri qənaətinə gələ bilərik. İnsanın hafizəsinin həcmini düzgün qiymətləndirməsi və izləyə bilməsi metakoqnisiya (üstün bilik) mövzusuna gözəl bir nümunədir.  Üstün biliyin bilikdən  fərqi odur ki, üstün bilik anlamlı olur və ondan situasiyaya uyğun şəkildə istifadə edilir. Bilik verilməsinə əsaslanan təhsil şagirdlərə xüsusi biliklərin qazandırılmasına önəm verərkən, metakoqnitiv bacarıqların verilməsinə əsaslanan təhsil bu prosesi izləmə və idarə edə bilmə bacarıqlarının öyrədilməsi üzərinə fokuslaşır.",
-		image_2: '/images/skill2.jpg',
+		Course:[
+			{
+				class_description: 'Yuxarıdakı təcrübəyə əsasən',
+				class_text:'Məktəbəqədər yaşlı uşaqların həmin anda hafizələrinin həcmini düzgün qiymətləndirə bilmədikləri qənaətinə gələ bilərik. İnsanın hafizəsinin həcmini düzgün qiymətləndirməsi və izləyə bilməsi metakoqnisiya (üstün bilik) mövzusuna gözəl bir nümunədir.  Üstün biliyin bilikdən  fərqi odur ki, üstün bilik anlamlı olur və ondan situasiyaya uyğun şəkildə istifadə edilir. Bilik verilməsinə əsaslanan təhsil şagirdlərə xüsusi biliklərin qazandırılmasına önəm verərkən, metakoqnitiv bacarıqların verilməsinə əsaslanan təhsil bu prosesi izləmə və idarə edə bilmə bacarıqlarının öyrədilməsi üzərinə fokuslaşır.',
+				class_image:'/images/skill2.jpg',
+				classLink:'Rəqəmsal İncəsənət',
+			},
+			{
+				class_description: 'Robototexnika',
+				class_text:'Dünyadakı şirkətlər yaxın gələcəkdə biznes infrastrukturlarına robotlama və avtomatlaşdırmanı tətbiq etməyi planlaşdırırlar. Təhsil qurumları və təşkilatları bunu yaxından izləyir və robototexnikanı bütün dünyada məktəb proqramının ayrılmaz bir hissəsi halına gətirməkdə artıq böyük uğurlar əldə ediblər. Övladlarımızı gələcək işçi qüvvəsinin çətinliklərinə hazırlamalı onlara inkişaf etməyə və geniş bir sıra bacarıqları daha asan inkişaf etdirə biləcək bir mühit yaratmalıyıq.',
+				class_image:'/images/technology2.jpg',
+				classLink:'Robototexnika',
+			}
+		]
 		}
 	],
 	Ksm :{
