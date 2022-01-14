@@ -826,17 +826,11 @@ export  const allData = {
 		image_1: '/images/environmentscience.jpg',
 		Course:[
 			{
-				class_description: 'Proqramlaşdırma',
-				class_text:'Ümumiyyətlə dil öyrənmək uşaqlara ünsiyyət qurmağı və məntiqi təfəkkürü öyrədir. Dil həm şifahi, həm də yazılı bacarıqları gücləndirir. Uşaqlar erkən yaşlarında fərqli dilləri öyrənmələri tövsiyyə olunur, çünki bu uşaqlara ətraf dünyanı daha yaxşı anlamalarına kömək edir. Kodlaşdırmanın isə özünəməxsus bir dili var. Əlifbadakı A, B və digər hərflər kimi kodlaşdırmanın da əlifbasını təmsil edən xüsusi 0 və 1 hərfləri var. Bu 0 və 1 -lər ətrafımızdakı texnologiyadan necə istifadə etməli olduğumuza dair göstərişlər verir. Uşaqların ətrafdakı texnologiyanın niyə və necə işləməsini başa düşməsi üçün kodlaşdırma öyrənməkdən və ətrafdakı texnologiya ilə danışmaqdan daha yaxşı yolu nədir?',
-				class_image:'/images/technology2.jpg',
+				class_description: 'STEAM əsasında Elm',
+				class_text:'Bu dərs elm və onun necə istifadə olunmasından bəhs edir. Elm bizi əhatə edən mühiti, yəni, dünyanı və kainatı, buradakı bütün canlı və varlıqları - atomlardan tutmuş nəhəng dağları, kiçik bakteriyalardan tutmuş böyük balniları anlamağa kömək edir. Daha çox öyrəndikcə, daha mürəkkəb biliklərə yol açırıq. Kainatdan kənarda nə yerləşir və biz teleskopla görə bilərikmi? Beyin necə düşünür və hiss edir? Texnologiya və ixtiralarıımızdan səmərəli istifadə etmək üçün elmi biliklər çox vacibdir. Elm hər kəsin xeyrinə istifadə oluna bilər, lakin yanlış istifadə olunan elmi biliklər zərərli ola bilər. Düzgün istifadə edildikdə, elmin gətirdiyi biliklər daha sağlam olmağımıza və daha yaxşı yaşamağımıza kömək edir.',
+				class_image:'/images/environmentscience.jpg',
 				classLink:'Elm',
 			},
-			{
-				class_description: 'Robototexnika',
-				class_text:'Dünyadakı şirkətlər yaxın gələcəkdə biznes infrastrukturlarına robotlama və avtomatlaşdırmanı tətbiq etməyi planlaşdırırlar. Təhsil qurumları və təşkilatları bunu yaxından izləyir və robototexnikanı bütün dünyada məktəb proqramının ayrılmaz bir hissəsi halına gətirməkdə artıq böyük uğurlar əldə ediblər. Övladlarımızı gələcək işçi qüvvəsinin çətinliklərinə hazırlamalı onlara inkişaf etməyə və geniş bir sıra bacarıqları daha asan inkişaf etdirə biləcək bir mühit yaratmalıyıq.',
-				class_image:'/images/technology2.jpg',
-				classLink:'Elm',
-			}
 		]
 	}
 	],
