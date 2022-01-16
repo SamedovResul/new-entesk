@@ -20,10 +20,10 @@ const SectionThree = (props) =>{
                 <img src={image_2} alt="" />
               </div>
 
-              <div  className=" linethree col-md-12 col-sm-12 col-xs-12" >
-                
-                <div className='environment-course main-box'>
-                  <div className='png' ></div>
+              <div  className="main-box linethree col-md-12 col-sm-12 col-xs-12" >
+                <div className='png' ></div>
+                <div className='environment-course '>
+                  
                   <p>Modula daxildir</p>
                 <ul>
                   {
@@ -32,8 +32,8 @@ const SectionThree = (props) =>{
 
                       return(
                         <li key={index}>
-                          <p>{mod}</p> <span>&#8226;</span>
-                          <p style={ note ? {display: 'block'} : {display: 'none'} } > {note} </p>
+                          {mod} <span>&#8226;</span>
+                          <li style={ note ? {display: 'block'} : {display: 'none'} } > {note} </li>
                         </li>
                       )
                     })
@@ -60,7 +60,7 @@ const SectionThree = (props) =>{
                         const {li} = subject
                         return(
                         <li key={index}>
-                          <p> {li} </p>  <span>&#8226;</span>
+                           {li}   <span>&#8226;</span>
                         </li>
                         )
                       })
@@ -76,7 +76,7 @@ const SectionThree = (props) =>{
                         const {li} = subject
                         return(
                         <li key={index}>
-                          <p> {li} </p>  <span>&#8226;</span>
+                           {li}  <span>&#8226;</span>
                         </li>
                         )
                       })
@@ -98,7 +98,7 @@ const SectionThree = (props) =>{
                       }}
                     >
                       {
-                        span ? ( <p> Daha az </p> ) : ( <p> Daha çox </p> )
+                        span ? ( <span> Daha az </span> ) : ( <span> Davamı </span> )
                       }
                     </button>
                 </div>

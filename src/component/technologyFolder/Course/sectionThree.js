@@ -27,25 +27,27 @@ const SectionThree = (props) =>{
 
               <div  className=" linethree col-md-12 col-sm-12 col-xs-12" >
                 
-                <div className='main-box technology-course'>
+                <div className='main-box '>
                   <div className='png' ></div>
-                  <p>Modula daxildir</p>
-                <ul>
-                  {
-                    module.map((subject, index) =>{
-                      const {mod,note} = subject
+                  <div className='technology-course'>
+                      <p>Modula daxildir</p>
+                    <ul>
+                      {
+                        module.map((subject, index) =>{
+                          const {mod,note} = subject
 
-                      return(
-                        <li key={index}>
-                          <p>{mod}</p>  <span>&#8226;</span>
-                          <p style={ note ? {display: 'block'} : {display: 'none'} } > {note} </p>
-                        </li>
-                      )
-                    })
+                          return(
+                            <li key={index}>
+                              {mod}  <span>&#8226;</span>
+                              <p style={ note ? {display: 'block'} : {display: 'none'} } > {note} </p>
+                            </li>
+                          )
+                        })
 
-                  }
-                  
-                </ul>
+                      }
+                      
+                    </ul>
+                  </div>
                 </div>
                 
               </div>
@@ -119,7 +121,7 @@ const SectionThree = (props) =>{
                       }}
                     >
                       {
-                        span ? ( <p> Daha az </p> ) : ( <p> Daha çox </p> )
+                        span ? ( <span> Daha az </span> ) : ( <span> davamı </span> )
                       }
                     </button>
 

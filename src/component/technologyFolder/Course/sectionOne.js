@@ -26,7 +26,7 @@ const  SectionOne = (props) =>{
             <div className="main-box technology-course ">
               <div>
               <div className='png' ></div>
-              <h2>Nə əldə edəcəksiniz</h2>
+              <h2>Nə əldə edəcəksiniz ?</h2>
               <ul>
                 {
                   learn.map((subject, index) =>{
@@ -85,7 +85,7 @@ const  SectionOne = (props) =>{
                 }}
               > 
               {
-                showMore ? ( <p> Daha az </p> ) : ( <p> Daha çox </p> )
+                showMore ? ( <span> Daha az </span> ) : ( <span> davamı </span> )
               } 
               </button>
             </div>
@@ -108,23 +108,23 @@ const  SectionOne = (props) =>{
 
           <div  className="  col-md-12 col-sm-12 col-xs-12 " >
             <div className="main-box technology-course ">
-            <div>
-              <div className='png' ></div>
-             <h2>Nə əldə edəcəksiniz</h2>
-              <ul>
-                {
-                  learn.map((subject, index) =>{
-                    const {tic} = subject
-                    return(
-                      <li key={index} >
-                        <span>&#10003;</span> {tic}
-                      </li>
-                    )
+              <div>
+                <div className='png' ></div>
+                  <h2>Nə əldə edəcəksiniz ?</h2>
+                <ul>
+                  {
+                    learn.map((subject, index) =>{
+                      const {tic} = subject
+                      return(
+                        <li key={index} >
+                          <span>&#10003;</span> {tic}
+                        </li>
+                      )
 
-                  })
-                }
-              </ul>
-             </div>
+                    })
+                  }
+                </ul>
+              </div>
             </div>
             <div className="main-box technology-course ">
               <div>
@@ -170,7 +170,7 @@ const  SectionOne = (props) =>{
                   setShowMore(false)
                 }}
               > {
-                showMore ? ( <p> Daha az </p> ) : ( <p> Daha çox </p> )
+                showMore ? ( <span> Daha az </span> ) : ( <span> davamı </span> )
               }</button>
             </div>
             

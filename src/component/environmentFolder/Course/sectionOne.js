@@ -19,28 +19,28 @@ const  SectionOne = (props) =>{
     
   <article className="position section-one">
 
-    <div className="container bigScreenContainer environment ">
+    <div className="container bigScreenContainer environment course ">
       <div key={id} className="container-fluid">
         <div className="row" >
           <div  className=" information col-md-7 col-sm-12 col-xs-12 " >
-            
-            <div className="environment-course main-box">
-              <div>
-              <div className='png' ></div>
-             <h2>{Description_1}</h2>
-              <ul>
-                {
-                  learn.map((subject, index) =>{
-                    const {tic} = subject
-                    return(
-                      <li key={index} >
-                        <span>&#10003;</span> {tic}
-                      </li>
-                    )
 
-                  })
-                }
-              </ul>
+            <div className="environment-course  main-box">
+              <div>
+                <div className='png' ></div>
+                <h2>Nə əldə edəcəksiniz ?</h2>
+                <ul>
+                  {
+                    learn.map((subject, index) =>{
+                      const {tic} = subject
+                      return(
+                        <li key={index} >
+                          <span>&#10003;</span> {tic}
+                        </li>
+                      )
+
+                    })
+                  }
+                </ul>
              </div>
              <div>
                <div className='png' ></div>
@@ -61,7 +61,6 @@ const  SectionOne = (props) =>{
              </div>
              
             </div>
-
 
           </div>
           
@@ -94,12 +93,12 @@ const  SectionOne = (props) =>{
                 }}
               > 
               {
-                showMore ? ( <p> Daha az </p> ) : ( <p> Daha çox </p> )
+                showMore ? ( <span> Daha çox </span> ) : ( <span>Davamı </span> )
               } 
               </button>
             </div>
-            
           </div>
+
         </div>
         
       </div>
@@ -109,51 +108,51 @@ const  SectionOne = (props) =>{
       <div key={id} className="container">
         <div className="container-fluid">
           <div className="row environment" >
-          <div  className=" img-box col-md-5 col-sm-12 col-12">
-            <img src={image_1} alt="img" />
-          </div>
-          <div  className="  col-md-12 col-sm-12 col-xs-12 " >
-            <div className="environment-course main-box">
-            <div>
-              <div className='png' ></div>
-             <h2>{Description_1}</h2>
-              <ul>
-                {
-                  learn.map((subject, index) =>{
-                    const {tic} = subject
-                    return(
-                      <li key={index} >
-                        <span>&#10003;</span> {tic}
-                      </li>
-                    )
-
-                  })
-                }
-              </ul>
-             </div>
+            <div  className=" img-box col-md-5 col-sm-12 col-12">
+              <img src={image_1} alt="img" />
             </div>
-            <div className="environment-course main-box">
-              <div>
-               <div className='png' ></div>
-                <h2>Tələblər</h2>
-                <ul>
-                  {
-                    requireds.map((subject, index) =>{
-                      const {required} = subject
-                      return(
-                        <li key={index}>
-                          {required}
-                        </li>
-                      )
-                    })
-                  }
-                  
-                </ul>
-             </div>
+            <div  className="  col-md-12 col-sm-12 col-xs-12 " >
+              <div className="environment-course main-box">
+                <div>
+                  <div className='png' ></div>
+                  <h2>{Description_1}</h2>
+                  <ul>
+                    {
+                      learn.map((subject, index) =>{
+                        const {tic} = subject
+                        return(
+                          <li key={index} >
+                            <span>&#10003;</span> {tic}
+                          </li>
+                        )
+
+                      })
+                    }
+                  </ul>
+                </div>
+              </div>
+              <div className="environment-course main-box">
+                <div>
+                  <div className='png' ></div>
+                  <h2>Tələblər</h2>
+                  <ul>
+                    {
+                      requireds.map((subject, index) =>{
+                        const {required} = subject
+                        return(
+                          <li key={index}>
+                            {required}
+                          </li>
+                        )
+                      })
+                    }
+                    
+                  </ul>
+                </div>
+              </div>
+
+
             </div>
-
-
-          </div>
           
           
           <div className=" col-md-12">
@@ -177,7 +176,7 @@ const  SectionOne = (props) =>{
                 }}
               >
               {
-                showMore ? ( <p> Daha az </p> ) : ( <p> Daha çox </p> )
+                showMore ? ( <span>Daha az </span> ) : ( <span>Davamı</span> )
               } 
               </button>
             </div>

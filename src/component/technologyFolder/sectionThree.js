@@ -45,7 +45,12 @@ const SectionThree = ({data,myRef,blog}) =>{
                       </p>
 
                       
-                            <Link to={{pathname:`/CourseTecnology/${classLink}`, }}  >
+                            <Link to={{
+                              pathname:`/CourseTecnology/${classLink}`, 
+                              aboutId:{
+                                id: 'fromNav-environment'
+                              }
+                              }}  >
                               <button className="section-3-button">Davamı</button>
                             </Link>
                           

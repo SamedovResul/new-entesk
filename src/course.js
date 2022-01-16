@@ -295,29 +295,35 @@ export  const allData = {
 	  id: uuid(),
 	  name: 'Rəqəmsal İncəsənət',
 		Category: '/CourseSkill',
-		Description_1: 'Beləliklə, uşaqlar kod yazmağı öyrənməlidirlər, çünki:',
 		learn:[
 			{
-				tic: 'Rəqəmsal sənət faktiki olaraq heç bir tullantı yaratmır'
+				tic: 'Akademik nailiyyətlərin qazanılmasına müsbət təsir'
 			},
 			{
-				tic: 'Rəqəmsal sənətlə siz yalnız təsəvvürünüzlə məhdudlaşırsınız.'
+				tic: 'Kiçik və böyük motorika bacarıqlarının inkişafı'
 			},
 			{
-				tic: 'Rəqəmsal sənət uzunmüddətli perspektivdə çox daha sərfəli olur'
+				tic: 'Qərar qəbuletmə bacarıqlarının inkişafı'
 			},
 			{
-				tic: 'Rəqəmsal incəsənət onlayn dünyamıza daha yaxşı inteqrasiya olunub'
+				tic: 'Emosiyaları müsbət yolla ifadə etmə imkanı'
 			},
 			{
-				tic: 'Rəqəmsal incəsənət gələcəkdir'
+				tic: 'Yaradıcılıq bacarıqlarının inkişafı'
+			},
+			{
+				tic: 'Zehni stress səviyyəsinin azalması'
+			},
+			{
+				tic: 'Özünə inam hissinin inkişafı'
+			},
+			{
+				tic: 'Təxəyyülün inkişafı'
 			},
 		],
 		requireds: [
 			{
-				required:'Öyrənməyə həvəslə yanaşmaq'
-			},{
-				required:'Kreativ dünyaya baş vurmaq marağı'
+				required:'Qələmdən istifadə edə bilmək bacarığı'
 			}
 		],
 		module:[
@@ -871,16 +877,10 @@ export  const allData = {
 		Course:[
 			{
 				class_description: 'Yuxarıdakı təcrübəyə əsasən',
-				class_text:'Məktəbəqədər yaşlı uşaqların həmin anda hafizələrinin həcmini düzgün qiymətləndirə bilmədikləri qənaətinə gələ bilərik. İnsanın hafizəsinin həcmini düzgün qiymətləndirməsi və izləyə bilməsi metakoqnisiya (üstün bilik) mövzusuna gözəl bir nümunədir.  Üstün biliyin bilikdən  fərqi odur ki, üstün bilik anlamlı olur və ondan situasiyaya uyğun şəkildə istifadə edilir. Bilik verilməsinə əsaslanan təhsil şagirdlərə xüsusi biliklərin qazandırılmasına önəm verərkən, metakoqnitiv bacarıqların verilməsinə əsaslanan təhsil bu prosesi izləmə və idarə edə bilmə bacarıqlarının öyrədilməsi üzərinə fokuslaşır.',
+				class_text:'Bəziləri texnologiyaya orijinallığa təhlükə kimi baxır və ənənəvi sənətkarlığı əvəz etməyə çalışdığını düşünür. Bu fikir, əlbəttə ki, rəsm müəllimləri üçün narahatlıq yarada bilər. Bununla belə, tədqiqatlar incəsənət təhsilində rəqəmsal alətlərdən istifadənin bədii inkişafı və yaradıcılığı artırdığını göstərir. Rəqəmsal əsrdə incəsənət müəllimləri öz proqramlarını müdafiə etmək ehtiyacını indi həmişəkindən daha çox hiss edirlər. Rəqəmsal incəsənət dərsləri güclü gələcək uğur aləti kimi xidmət edə bilər.',
 				class_image:'/images/skill2.jpg',
 				classLink:'Rəqəmsal İncəsənət',
 			},
-			{
-				class_description: 'Robototexnika',
-				class_text:'Dünyadakı şirkətlər yaxın gələcəkdə biznes infrastrukturlarına robotlama və avtomatlaşdırmanı tətbiq etməyi planlaşdırırlar. Təhsil qurumları və təşkilatları bunu yaxından izləyir və robototexnikanı bütün dünyada məktəb proqramının ayrılmaz bir hissəsi halına gətirməkdə artıq böyük uğurlar əldə ediblər. Övladlarımızı gələcək işçi qüvvəsinin çətinliklərinə hazırlamalı onlara inkişaf etməyə və geniş bir sıra bacarıqları daha asan inkişaf etdirə biləcək bir mühit yaratmalıyıq.',
-				class_image:'/images/technology2.jpg',
-				classLink:'Robototexnika',
-			}
 		]
 		}
 	],

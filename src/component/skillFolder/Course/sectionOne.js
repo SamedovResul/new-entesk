@@ -26,7 +26,7 @@ const  SectionOne = (props) =>{
             <div className="main-box skill-course ">
               <div>
               <div className='png' ></div>
-              <h2>Nə əldə edəcəksiniz</h2>
+              <h2>Nə əldə edəcəksiniz ?</h2>
               <ul>
                 {
                   learn.map((subject, index) =>{
@@ -61,7 +61,7 @@ const  SectionOne = (props) =>{
             </div>
           </div>
           
-          <div  className=" img-box col-md-5 col-sm-12 col-12">
+          <div  className="  col-md-5 col-sm-12 col-12">
             <img src={image_1} alt="" />
           </div>
           <div className=" col-md-12">
@@ -84,7 +84,7 @@ const  SectionOne = (props) =>{
                   setShowMore(false)
                 }}
               >               {
-                showMore ? ( <p> Daha az </p> ) : ( <p> Daha çox </p> )
+                showMore ? ( <span> Daha az </span> ) : ( <span> davamı </span> )
               }</button>
             </div>
             
@@ -108,7 +108,7 @@ const  SectionOne = (props) =>{
             <div className="main-box skill-course ">
             <div>
               <div className='png' ></div>
-             <h2>Nə əldə edəcəksiniz</h2>
+             <h2>Nə əldə edəcəksiniz ?</h2>
               <ul>
                 {
                   learn.map((subject, index) =>{
@@ -168,7 +168,7 @@ const  SectionOne = (props) =>{
                   setShowMore(false)
                 }}
               >               {
-                showMore ? ( <p> Daha az </p> ) : ( <p> Daha çox </p> )
+                showMore ? ( <span> Daha az </span> ) : ( <span> davamı </span> )
               } </button>
             </div>
             

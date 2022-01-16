@@ -30,7 +30,7 @@ function SectionOne(props) {
                               name: name,
                             }
                           }} >
-                            <button>  Məzmun</button>
+                            <button >  Məzmun</button>
                           </Link >
                         
                           <Link to={{pathname:'/',

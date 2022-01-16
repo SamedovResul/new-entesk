@@ -39,6 +39,14 @@ const NavBar = ( {setZindex,setopenSide,openSide}) =>{
 			}
 	})
 
+	const burgerAnimation = useSpring({
+		to: [{right: window.scrollY > 200 && location.pathname === '/' ? '0px' : '-100px'}],
+		from: {right: location.pathname === '/'? '0px' : '-100px'},
+			config: {
+				duration: location.pathname === '/'? 500 : 500
+			}
+	})
+
 	
 
 	const navMenuAnimation = useSpring({
@@ -179,7 +187,7 @@ useEffect(() => {
 								
 						</animated.div>
 						
-								<animated.div className="desktopBurger" style={enteskStyle}>
+								<animated.div className="desktopBurger" style={burgerAnimation}>
 									<button  className="main-burger" onClick={handlerSideOpen}>
 										<FaBars />
 									</button>
