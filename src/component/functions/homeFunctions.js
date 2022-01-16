@@ -169,8 +169,8 @@ useEffect(() => {
 					openSide? '0%' : '-20%' : 
 					openSide? '-20%' : '0%' :
 					location?
-					openSide? '0%' : '-31%' : 
-					openSide? '-31%' : '0%' ,
+					openSide? '5%' : '-29%' : 
+					openSide? '-29%' : '5%' ,
 
 					paddingTop: location? openSide? '30px' : '0px': openSide? '0px' : '30px' ,
 				}],
