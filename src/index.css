@@ -1951,7 +1951,7 @@ svg{
 .yellow-button-big {
   border-radius: 30px;
   border: none;
-  margin: 35px 20px 0px 60px;
+  margin: 35px auto 0px 60px;
   background-color: #FBB116;
   color: white;
   font-family: "Nunito";
@@ -1960,6 +1960,9 @@ svg{
   padding: 5px 37px;
   font-size: 1.6rem;
 }
+
+
+
 
 
 
@@ -2040,12 +2043,15 @@ svg{
   margin: 20px auto;
 }
 
-
+.section-one
 .video-js .vjs-tech {
   border-radius: 60px;
   border: 5px solid #FBB116;
   object-fit: cover;
 }
+
+
+
 
 .vjs-poster {
   border-radius: 60px;
@@ -2353,17 +2359,6 @@ svg{
   }
 }
 
-/* .bottom-div button {
-  border: none;
-  border-radius: 20px;
-  color: white;
-  background-color: #5CCDFF;
-  width: 100px;
-  height: 30px;
-  margin: 10px auto 10px auto;
-} */
-
-/* #97c441 */
 
 
 
@@ -2490,10 +2485,17 @@ svg{
 }
 
 
+.section-3-main-div .yellow-button-big{
+  margin: 35px 0px 0px auto;
+}
+
 
 .section-3-main-div .text-box {
   padding: 0px 40px 0px 20px;
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
 }
 
@@ -2547,13 +2549,17 @@ svg{
   margin: 0px 20px 0px 0px;
 }
 
-.section-3-main-div .text-box p {
+.section-3-main-div  .text-box p {
+  z-index: -1;
+  margin: 30px 20px 30px 20px;
+}
+
+.section-3-main-div .area .text-box p {
   z-index: -1;
   margin: 30px 20px 30px 20px;
   mask-image: linear-gradient(#fff, #fff, rgba(255, 255, 255, 0));
   -webkit-mask-image: linear-gradient(#fff, #fff, rgba(255, 255, 255, 0));
 }
-
 
 
 .section-3-main-div .section-3-button {
@@ -2585,28 +2591,15 @@ svg{
   }
 }
 
-.section-3-main-div .video-js {
+.section-3-main-div .video-js .vjs-tech {
   border: 5px solid #5CCDFF;
   border-radius: 60px;
-  margin: 20px auto;
+  object-fit: cover;
 }
 
 
 .section-3-main-div .video-js .vjs-big-play-button {
   background-image: url('/src/images/Polygo2.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 60%;
-  line-height: unset !important;
-  height: 230px !important;
-  width: 200px !important;
-  top: 16px !important;
-  left: 38% !important;
-  background-color: unset !important;
-  background-color: unset !important;
-  border: none !important;
-  border-radius: 0.3em;
-  transition: all 0.4s;
 }
 
 /* section 3 mediaquery */
@@ -2623,22 +2616,6 @@ svg{
     font-size: 15px;
   }
 
-  .section-3-main-div .video-js .vjs-big-play-button {
-    background-image: url('/src/images/Polygo2.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60%;
-    line-height: unset !important;
-    height: 200px !important;
-    width: 200px !important;
-    top: 10px !important;
-    left: 38% !important;
-    background-color: unset !important;
-    background-color: unset !important;
-    border: none !important;
-    border-radius: 0.3em;
-    transition: all 0.4s;
-  }
 }
 
 @media(max-width:768px) {
@@ -2686,12 +2663,12 @@ svg{
     height: 140px !important;
   }
 
-  .section-3-main-div .video-js .vjs-big-play-button {
+  /* .section-3-main-div .video-js .vjs-big-play-button {
     background-size: 40%;
     height: 150px !important;
     width: 180px !important;
     left: 35% !important;
-  }
+  } */
 }
 
 

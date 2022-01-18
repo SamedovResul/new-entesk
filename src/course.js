@@ -672,8 +672,8 @@ export  const allData = {
 
 	Sectionthree : [
 		{
-			description:'STEAM nədir',
-			text: 'Bu gün rəqəmsal çevrilmənin iş modelləri və müştəri davranışı üzərindəki təsirlərinin qaçılmaz nəticələri iş dünyasına dərindən təsir edir. Məlumat dünyasına asanlıqla sürət qazanan iş dünyasındakı bu dönüş rəqabəti də artırdı. Azərbaycanın böyük və rəqəmsal çevrilməyə davam edən ixtisaslı iş gücünə ehtiyacı var. İş dünyasının texnologiya, yenilik və rəqəmsallaşmanın idarə etdiyi qlobal iqtisadiyyatda rəqabətdə qalmaq üçün STEAM bacarıqlarına, yəni elm, texnologiya, mühəndislik, sənəd və riyaziyyat bacarıqlarına sahib işçi qüvvəsinə ehtiyacı var.',
+			description:'Kosmos yoxsa dinozavrlar ?',
+			text: 'Uşaqlar üçün öyrədici, eyni zamanda da əyləndirici YouTube kanalımıza abunə olaraq maarifləndirici  videoları izləyə bilərsiniz.',
 			img: '/images/steam.png',
 		}
 	],

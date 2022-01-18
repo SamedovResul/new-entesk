@@ -2,6 +2,8 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MediaQuery from 'react-responsive'
 import poster from '../../images/guneshsistemi.png';
+import VideoPlayer from "react-video-js-player";
+import pika from "../../video/pika.mp4"
 import { Link } from 'react-router-dom';
 
 const SectionThree = ({data,blog}) =>{
@@ -17,22 +19,29 @@ const SectionThree = ({data,blog}) =>{
           <div className="row" >
 
 
-            <div  className="img-box col-md-6 col-sm-12 col-12">
-              <img src={img} alt="" />
-            </div>
+          <div  className="text-box col-md-6 col-sm-12 col-12">
+            <VideoPlayer 
+              src={pika} className="video"   
+            />
+          </div>
 
             <div  className="text-box col-md-6 col-sm-12 col-xs-12" >
               <div className='png' ></div>
               <h2>{description}</h2>
               <p>{text}</p>
               
-                <Link to={{
+                {/* <Link to={{
                       pathname:`/blog/${name}`,
-                    }}>
-                    <button className="yellow-button-big custom-margin">
+                    }}> */}
+                    <button 
+                      className="yellow-button-big custom-margin"
+                      onClick={()=>{
+                        window.open("https://www.youtube.com/channel/UCML2-bEpQ6NFKMIYUew_LBQ");
+                      }}
+                      >
                       Davamı
                     </button>
-                </Link>
+                {/* </Link> */}
               
 
             </div>
@@ -48,8 +57,10 @@ const SectionThree = ({data,blog}) =>{
               <div className="col-md-12 col-sm-12 " >
                 
                 
-                <div  className="img-box col-md-6 col-sm-12 col-12">
-                  <img src={img} alt="" />
+                <div  className="text-box col-md-6 col-sm-12 col-12">
+                  <VideoPlayer 
+                  src={pika} className="video"   
+                  />
                 </div>
                 
                 <h2>{description}</h2>
