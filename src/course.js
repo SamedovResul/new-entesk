@@ -703,6 +703,18 @@ export  const allData = {
 			id:uuid(),
 			image:'/images/gallery1.jpg'
 		},
+		{
+			id:uuid(),
+			image:'/images/gallery7.jpg'
+		},
+		{
+			id:uuid(),
+			image:'/images/gallery8.jpg'
+		},
+		{
+			id:uuid(),
+			image:'/images/gallery9.jpg'
+		},
 	],
 	Client :[
 		{
