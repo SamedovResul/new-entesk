@@ -681,40 +681,28 @@ export  const allData = {
 	images :[
 		{
 			id:uuid(),
-			image:'/images/gallery-img1.JPG'
+			image:'/images/gallery6.jpg'
 		},
 		{
 			id:uuid(),
-			image:'/images/gallery-img2.JPG'
+			image:'/images/gallery2.jpg'
 		},
 		{
 			id:uuid(),
-			image:'/images/gallery-img3.JPG'
+			image:'/images/gallery3.jpg'
 		},
 		{
 			id:uuid(),
-			image:'/images/gallery-img4.JPG'
+			image:'/images/gallery4.jpg'
 		},
 		{
 			id:uuid(),
-			image:'/images/gallery-img5.JPG'
+			image:'/images/gallery5.jpg'
 		},
 		{
 			id:uuid(),
-			image:'/images/gallery-img6.JPG'
+			image:'/images/gallery1.jpg'
 		},
-		{
-			id:uuid(),
-			image:'/images/gallery-img4.JPG'
-		},
-		{
-			id:uuid(),
-			image:'/images/gallery-img5.JPG'
-		},
-		{
-			id:uuid(),
-			image:'/images/gallery-img6.JPG'
-		}
 	],
 	Client :[
 		{
@@ -999,14 +987,6 @@ export  const allData = {
 			title: 'Metakoqnitiv Bacarıqlar',
 			text: 'Şagirdin qarşılaşdığı bir situasiyada hansı məlumatı funksional olaraq istifadə edə biləcəyini bilməsini, başqa sözlə, hansı vəziyyətdə nə edəcəyini bilməsini tələb edir. Bu forma prosedural məlumat və təsvir edən məlumatın hər ikisinə birdən sahib olmanı tələb edir. Yəni, situasiyaya bağlı məlumatda fərdin bir işin həm necə ediləcəyini, həm özünün edib-edə bilməyəcəyini, həm də hansı vəziyyətdə nə edəcəyini bilməsi lazımdır. Metakoqnitiv məlumat şagirdin öz koqnitiv qabiliyyətləri, koqnitiv əməliyyatları və hansı vəziyyətdə nə edəcəyini bilməsi kimi məlumatlara sahib olmasıdır. Belə bir bilik əvvəlki təcrübələrin də təsiri ilə şagirdin davranışına əhəmiyyətli dərəcədə təsir göstərəcək. Ancaq metakoqnisiya şagirdin yuxarıda sadalanan məlumatlarla yanaşı bu məlumatları düzgün istifadə etməsini də tələb edir. Metakoqnitiv məlumatları istifadə edə bilmə qabiliyyəti isə metakoqnitiv idarə və ya tənzimləmə adlanır.',
 			img: '/images/skill.jpg',
-		},
-		{
-			id: uuid(),
-			name: 'Minecraft Proqramlaşdırma Müsabiqəsi',
-			blogname: 'Proqramlaşdırma Müsabiqəsi',
-			title: 'Minecraft Proqramlaşdırma Müsabiqəsi',
-			text: 'Uşaqların dilində daim səslənən və hər zaman böyük maraq yaradan Minecraft oyunu yarışmanın əsas istiqaməti olaraq seçildi. Daxili yarışma zamanı 20 tələbə aktiv şəkildə bir saatlıq və 11 missiyadan ibarət tapşırığı yerinə yetirməli idilər. Birinci bitirən və bütün missiyaları düzgün həll edən tələbə qalib adını qazandı. Missiyalar əsasən proqramlaşdırma ilə əsas oyun qəhrəmanının çətinlikləri aşaraq irəliləməsindən ibarət idi. Burada fundamental biliklər, dövrlər, sadə alqoritmalar, funksiyalar çox önəmli idi. Birinci yerin sahibi Kəbirə adlı gənc tələbimiz oldu. Onu təbrik edir, gələcək təhsilində uğurlar diləyirik.',
-			img: '/images/blog-3.jpg',
 		},
 		{
 			id: uuid(),
