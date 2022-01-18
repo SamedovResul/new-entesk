@@ -65,6 +65,7 @@ const SectionSeven = ({myRef}) =>{
         email: "",
         phone: "",
         topic:"",
+        text:""
       })
       }else{
         alert.show(<div style={{ color: 'red' }}>Xahiş edirik Mail addresi  düzgün yazın </div>)
@@ -156,7 +157,7 @@ const SectionSeven = ({myRef}) =>{
                 />
                 <input 
                   type="text" 
-                  value={user.email}
+                  value={user.topic}
                   id="topic" 
                   name="topic" 
                   onChange={hadlerGetClientInfo}
@@ -165,7 +166,7 @@ const SectionSeven = ({myRef}) =>{
                 ></input>
                 <textarea
                   type="text" 
-                  value={user.topic}
+                  value={user.text}
                   id="phone" 
                   name="text" 
                   onChange={hadlerGetClientInfo}

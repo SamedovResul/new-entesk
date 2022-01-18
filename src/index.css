@@ -655,7 +655,7 @@ svg{
 
 .environment-banner h1 {
   color: white;
-  font-family: 'Nunito' !important;
+  font-family: 'Calibri Light' !important;
 }
 
 .environment-img1 {
@@ -1263,6 +1263,16 @@ svg{
   bottom: 0px;
   height: 97%;
 } 
+
+.Course .row div:nth-of-type(3) .png::after{
+  top: 10px;
+} 
+
+@media(max-width:991px){
+  .Course .row div:nth-of-type(3) .png::after{
+    top: 5px;
+  } 
+}
 
 .Course .area div:nth-of-type(2) .png{
   bottom: 0px;
@@ -3622,6 +3632,7 @@ svg{
   border-radius: 35px;
   padding: 10px 35px 10px 35px;
   font-size: 25px;
+  font-weight: 700;
   color: #482AFF;
   font-family: Nunito;
 }

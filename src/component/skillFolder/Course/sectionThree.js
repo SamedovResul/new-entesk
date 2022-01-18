@@ -25,33 +25,31 @@ const SectionThree = (props) =>{
               </div>
 
               <div  className=" linethree col-md-12 col-sm-12 col-xs-12" >
-                
                 <div className='main-box '>
                   <div className='png' ></div>
-                <div className='skill-course'>
+                      <div className='skill-course'>
 
-                  
-                    <p>Modula daxildir</p>
-                  <ul>
-                    {
-                      module.map((subject, index) =>{
-                        const {mod,note} = subject
+                        
+                          <p>Modula daxildir</p>
+                        <ul>
+                          {
+                            module.map((subject, index) =>{
+                              const {mod,note} = subject
 
-                        return(
-                          <li key={index}>
-                            {mod}  <span>&#8226;</span>
-                            <li style={ note ? {display: 'block'} : {display: 'none'} } > {note} </li>
-                          </li>
-                        )
-                      })
+                              return(
+                                <li key={index}>
+                                  {mod}  <span>&#8226;</span>
+                                  <li style={ note ? {display: 'block'} : {display: 'none'} } > {note} </li>
+                                </li>
+                              )
+                            })
 
-                    }
-                    
-                  </ul>
-                </div>
-                </div>
-                
-              </div>
+                          }
+                          
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
               
   {/* <span>&#8226;</span> */}
               <div className="col-md-12 ">
@@ -61,10 +59,10 @@ const SectionThree = (props) =>{
                     <p>Modulun mündəricatı</p>
                     {
                       levels.map((subject, index) =>{
-                        const {name,list} = subject
+                        const {list} = subject
                         return(
                           <div key={index}  className="level-div" >
-                            <p> {name} </p>
+                            <p> {subject?.name} </p>
                               <div key={index} className='list-div' >
                                 <ul >
 

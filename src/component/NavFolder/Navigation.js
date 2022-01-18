@@ -7,8 +7,10 @@ import { Link,useLocation } from 'react-router-dom'
 import MediaQuery from 'react-responsive'
 import { FaBars, FaStream } from 'react-icons/fa';
 import logo from '../../images/logoicon.png'
+import GetDimension from '../functions/getDimension'
 const NavBar = ( {setZindex,setopenSide,openSide}) =>{
-	// const [openSide, setopenSide ] = useState(false);
+
+	const  {screenSize} = GetDimension()
 	const [y, setY] = useState(window.scrollY);
 	const [count, setCount] = useState(false);
 	const [scroll, setScroll] =  useState();
@@ -17,7 +19,11 @@ const NavBar = ( {setZindex,setopenSide,openSide}) =>{
 	const admin = false
 
 	const sideAnimation = useSpring({
-		to: [{right: openSide ? "0%" : "-50%"}],
+		to: [{
+			right: screenSize.dynamicWidth < 1199 ? 
+			openSide ?  "0%" : "-50%":
+			openSide ?  "-20%" : "-50%"
+		}],
 		from: {right: openSide ? "-50%" : "-50%"},
 	})
 

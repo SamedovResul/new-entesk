@@ -29,11 +29,8 @@ function App(props) {
   }, [dispatch])
   const [zIndex, setZindex] = useState(0);
   const [openSide, setopenSide ] = useState(false);
-  const [loading, setLoading] = useState(false)
+  // const [loading, setLoading] = useState(false)
 
-  setTimeout(() => {
-    setLoading(true)
-  }, 100);
   
    const handlerSideClose= function(){
     setZindex(0)

@@ -85,8 +85,8 @@ useEffect(() => {
 			openSide? '11.2rem' : '3.6rem' : 
 			openSide? '3.6rem' : '11.2rem' :
 			location ? 
-			openSide? '26.5rem' : '5.8rem' : 
-			openSide? '5.8rem' : '26.5rem' ,
+			openSide? '26.5rem' : '6.5rem' : 
+			openSide? '6.5rem' : '26.5rem' ,
 
 			fontSize: width >= 1400 && width <= 1800 ?
 			location ? 

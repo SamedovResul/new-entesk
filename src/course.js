@@ -283,7 +283,7 @@ export  const allData = {
 			},
 		],
 
-	  image:'/images/coding.jpg',
+	  image:'/images/coding.png',
 		image_1:'/images/coding_class1.jpg',
 		image_2:'/images/coding_class2.jpg',
 	  text_1:"Ümumiyyətlə dil öyrənmək uşaqlara ünsiyyət qurmağı və məntiqi təfəkkürü öyrədir. Dil həm şifahi, həm də yazılı bacarıqları gücləndirir. Uşaqlar erkən yaşlarında fərqli dilləri öyrənmələri tövsiyyə olunur, çünki bu uşaqlara ətraf dünyanı daha yaxşı anlamalarına kömək edir. Kodlaşdırmanın isə özünəməxsus bir dili var. Əlifbadakı A, B və digər hərflər kimi kodlaşdırmanın da əlifbasını təmsil edən xüsusi 0 və 1 hərfləri var. Bu 0 və 1 -lər ətrafımızdakı texnologiyadan necə istifadə etməli olduğumuza dair göstərişlər verir. Uşaqların ətrafdakı texnologiyanın niyə və necə işləməsini başa düşməsi üçün kodlaşdırma öyrənməkdən və ətrafdakı texnologiya ilə danışmaqdan daha yaxşı yolu nədir?",
@@ -328,7 +328,7 @@ export  const allData = {
 		],
 		module:[
 			{
-				mod:'70 dərs',
+				mod:'nəzəri ve təcrubi dərslər',
 				note:"90 saat nəzəri, 30 saat təcrübi və 10 saat qrup təqdimat dərsləri"
 			},
 			{
@@ -336,95 +336,25 @@ export  const allData = {
 				note:""
 			},
 			{
-				mod:'Sertifikat',
+				mod:'sertifikat',
 				note:""
 			},
 		],
 		levels: [                              
 			{
-				name: 'Rəsm',
+				name: null,
 					list: [
 						{
-							li:	"Heykəltəraşlıq"
+							li:	"Qələmlə 2D rəsm"
 						},
 						{
-							li:	"Çap istehsalı"
+							li:	"animasiya"
 						},
 						{
-							li:	"eksperimental – yığma/tikinti. Qrafik rabitə"
+							li:	"3D modelləşdirmə və çap"
 						},
 						{
-							li:	"Rəsm"
-						},
-						{
-							li:	"Qarışıq media"
-						},
-						{
-							li:	"Fotoqrafiya"
-						},
-					]	
-			},
-			{
-				name: 'İllüstrasiya',
-					list: [
-						{
-							li:	" Qablaşdırma dizaynı "
-						},
-						{
-							li:	" Reklam "
-						},
-						{
-							li:	"tipoqrafiya"
-						},
-						{
-							li:	"Üç ölçülü dizayn"
-						},
-						{
-							li:	"çap edilməsi brendinq lövhəsi"
-						},
-					]	
-			},
-			{
-				name: 'heykəltəraşlıq, keramika',
-					list: [
-						{
-							li:	"İnteryer və eksteryer memarlıq"
-						},
-						{
-							li:	" Ətraf mühitin dizaynı"
-						},
-						{
-							li:	" Zərgərlik və dəb aksesuarları "
-						},
-						{
-							li:	"Tekstil və moda"
-						},
-						{
-							li:	"Məhsul dizaynı "
-						},
-						{
-							li:	"İnteryer dizaynı"
-						},
-						{
-							li:	"Dəst dizaynı "
-						},
-						{
-							li:	"Moda dizaynı və/və ya illüstrasiya"
-						},
-						{
-							li:	"Tikilmiş tekstil"
-						},
-						{
-							li:	"Ekran çapı"
-						},
-						{
-							li:	"Batik "
-						},
-						{
-							li:	"səth nümunəsi."
-						},
-						{
-							li:	"rəqəmsal çaplı tekstil"
+							li:	"Adobe İllustrator"
 						},
 					]	
 			},
@@ -441,14 +371,13 @@ export  const allData = {
 		],
 
 		Description_2: 'Rəqəmsal İncəsənət',
-	  image:'/images/digital.jpg',
+	  image:'/images/digital.png',
 		image_1:'/images/digital-art1.jpg',
 		image_2:'/images/digital-art2.png',
-	  text_1:"Bəziləri texnologiyaya orijinallığa təhlükə kimi baxır və ənənəvi sənətkarlığı əvəz etməyə çalışdığını düşünür. Bu fikir, əlbəttə ki, rəsm müəllimləri üçün narahatlıq yarada bilər. Bununla belə, tədqiqatlar incəsənət təhsilində rəqəmsal alətlərdən istifadənin bədii inkişafı və yaradıcılığı artırdığını göstərir. Rəqəmsal əsrdə incəsənət müəllimləri öz proqramlarını müdafiə etmək ehtiyacını indi həmişəkindən daha çox hiss edirlər. Rəqəmsal incəsənət dərsləri güclü gələcək uğur aləti kimi xidmət edə bilər.",
+	  text_1:"Uşağın edə biləcəyi ilkin fəaliyyətlərdən biri qələmi götürüb rəsm çəkməyə başlamaqdır. Yeni texnologiyalar insanlar üçün daha əlçatan olduqda, onlar özləri ilə mühüm yaradıcılıq bacarıqlarını öyrənmək üçün yeni yollar gətirirlər. Rəqəmsal İncəsənət dərsləri də bu bacarıqların ən əsaslarından biri hesab olunur.",
 		text_2:"obyektiv, sistemli və əsaslandırılmış biliklərin əldə edilməsinə, dəqiqləşdirilməsinə və yayılmasına yönəlmiş insan fəaliyyəti növüdür. Bu fəaliyyətin əsasını elmi faktların toplanması, onların daima yenilənməsi və sistemləşdirilməsi, tənqidi analizi və bu əsasda elmi biliklərin toplanması təşkil edir. Elm təkcə müşahidə edilən təbiət və ictimai halları təsvir etmir, həm də onların əlaqələrini tapır və nəticəni müəyyən edə bilir.",
 		slide_text:"Rəqəmsal İncəsənət"
 	},
-
 
 	{
 	  id: uuid(),
@@ -695,8 +624,8 @@ export  const allData = {
 
 		Description_2: 'Robototexnika',
 	  image:'/images/robot.png',
-		image_1:'/images/robotika-1.jpg',
-		image_2:'/images/robotika-2.jpg',
+		image_1:'/images/robototexnika.jpg',
+		image_2:'/images/robototexnika.jpg',
 	  text_1:"Dünyadakı şirkətlər yaxın gələcəkdə biznes infrastrukturlarına robotlama və avtomatlaşdırmanı tətbiq etməyi planlaşdırırlar. Təhsil qurumları və təşkilatları bunu yaxından izləyir və robototexnikanı bütün dünyada məktəb proqramının ayrılmaz bir hissəsi halına gətirməkdə artıq böyük uğurlar əldə ediblər. Övladlarımızı gələcək işçi qüvvəsinin çətinliklərinə hazırlamalı onlara inkişaf etməyə və geniş bir sıra bacarıqları daha asan inkişaf etdirə biləcək bir mühit yaratmalıyıq. ",
 		text_2:"obyektiv, sistemli və əsaslandırılmış biliklərin əldə edilməsinə, dəqiqləşdirilməsinə və yayılmasına yönəlmiş insan fəaliyyəti növüdür. Bu fəaliyyətin əsasını elmi faktların toplanması, onların daima yenilənməsi və sistemləşdirilməsi, tənqidi analizi və bu əsasda elmi biliklərin toplanması təşkil edir. Elm təkcə müşahidə edilən təbiət və ictimai halları təsvir etmir, həm də onların əlaqələrini tapır və nəticəni müəyyən edə bilir.",
 		slide_text:"Robototexnika"
