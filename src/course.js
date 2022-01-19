@@ -781,13 +781,13 @@ export  const allData = {
 				{
 					class_description: 'Proqramlaşdırma',
 					class_text:'Ümumiyyətlə dil öyrənmək uşaqlara ünsiyyət qurmağı və məntiqi təfəkkürü öyrədir. Dil həm şifahi, həm də yazılı bacarıqları gücləndirir. Uşaqlar erkən yaşlarında fərqli dilləri öyrənmələri tövsiyyə olunur, çünki bu uşaqlara ətraf dünyanı daha yaxşı anlamalarına kömək edir. Kodlaşdırmanın isə özünəməxsus bir dili var. Əlifbadakı A, B və digər hərflər kimi kodlaşdırmanın da əlifbasını təmsil edən xüsusi 0 və 1 hərfləri var. Bu 0 və 1 -lər ətrafımızdakı texnologiyadan necə istifadə etməli olduğumuza dair göstərişlər verir. Uşaqların ətrafdakı texnologiyanın niyə və necə işləməsini başa düşməsi üçün kodlaşdırma öyrənməkdən və ətrafdakı texnologiya ilə danışmaqdan daha yaxşı yolu nədir?',
-					class_image:'/images/technology2.jpg',
+					class_image:'/images/coding_class1.jpg',
 					classLink:'Proqramlaşdırma',
 				},
 				{
 					class_description: 'Robototexnika',
 					class_text:'Dünyadakı şirkətlər yaxın gələcəkdə biznes infrastrukturlarına robotlama və avtomatlaşdırmanı tətbiq etməyi planlaşdırırlar. Təhsil qurumları və təşkilatları bunu yaxından izləyir və robototexnikanı bütün dünyada məktəb proqramının ayrılmaz bir hissəsi halına gətirməkdə artıq böyük uğurlar əldə ediblər. Övladlarımızı gələcək işçi qüvvəsinin çətinliklərinə hazırlamalı onlara inkişaf etməyə və geniş bir sıra bacarıqları daha asan inkişaf etdirə biləcək bir mühit yaratmalıyıq.',
-					class_image:'/images/technology2.jpg',
+					class_image:'/images/robototexnika.jpg',
 					classLink:'Robototexnika',
 				}
 			]

@@ -1,4 +1,4 @@
-import {React, useState, } from 'react';
+import {React, useState,useEffect } from 'react';
 import uuid from 'react-uuid'
 import { getDatabase, ref, set} from "firebase/database";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,6 +12,8 @@ const SectionSeven = ({myRef}) =>{
   
   const alert = useAlert()
   const [userId, setUserId] = useState()
+  // const [date, setDate] = useState('')
+  let date
   // const [phone, setPhone] = useState(0)
   // console.log(phone)
   const [user,setUser] = useState({
@@ -19,7 +21,7 @@ const SectionSeven = ({myRef}) =>{
     email: "",
     phone: "",
     topic:"",
-    date: '',
+    date: ``,
     text:""
   })
 
@@ -27,27 +29,31 @@ const SectionSeven = ({myRef}) =>{
   const time = new Date()
 
   let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-
+  
 
 
   function writeUserData(e) {
     e.preventDefault();
     let pattern1 = /@gmail.com/;
     let pattern2 = /@mail.ru/;
-    let result = user.email.match(pattern1);
-    let result2 = user.email.match(pattern2);
-    if(result || result2){
-      console.log(true)
-    }else{
-      console.log(false)
-    }
     
       
-      console.log(user)
+      console.log(date)
     if(user.name && user.email && user.phone && user.topic ){
       if(  re.test(user.email) ){
-      alert.show(<div style={{ color: 'green' }}>Sizinlə əlaqə saxlanilacaq </div>)
       
+      alert.show(<div style={{ color: 'green' }}>Sizinlə əlaqə saxlanilacaq </div>)
+
+      console.log()
+      
+      date = `${time.getFullYear()}.${time.getMonth()+1}.${time.getDate()}.${time.getHours()}:${time.getMinutes()}`
+
+      user.date = date
+      console.log(date)
+      setUser({
+        date: date
+      })
+      console.log(user)
       send(
         'service_n5lz3c9',
         'template_p1ycadr',
@@ -60,6 +66,7 @@ const SectionSeven = ({myRef}) =>{
       .catch((err) => {
         console.log('FAILED...', err);
       });
+      
       setUser({
         name: "",
         email: "",
@@ -73,42 +80,19 @@ const SectionSeven = ({myRef}) =>{
     }else{
       alert.show(<div style={{ color: 'red' }}>Xahiş edirik xanaları doldurun</div>)
     }
-    
-    
-
-
-      
-    const date = `${time.getFullYear()},${time.getMonth()+1},${time.getDate()},${time.getHours()}:${time.getMinutes()}`
-      setUserId(userId + 1)
-    if(user.name && user.email && user.phone && user.topic ){
-      
-    const db = getDatabase();
-    set(ref(db, 'users/' + uuid()), {
-      username: user.name,
-      email: user.email,
-      phone : user.phone,
-      topic : user.topic,
-      date :date,
-      text: user.text,
-    });
-    
-    }else if(user.name === 'Admin' && user.email === 'Entesk'){
-      console.log(true)
-      window.open( '/admin')
-    }
   }
+
+ 
 
   // console.log(user)
 
 
   let name, value
   const hadlerGetClientInfo = (event) =>{
-
     event.preventDefault();
     name = event.target.name
     value = event.target.value
-    // console.log(re.test(user.email))
-    // console.log(value)
+    // console.log(user)
     setUser({...user, [name]: value })
   }
 

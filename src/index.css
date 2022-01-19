@@ -1008,7 +1008,7 @@ svg{
 
 .section-3-main-div .main-box ul li {
   list-style: none;
-  margin: 0px auto 0px 0px;
+  margin: 0px ;
   position: relative;
 }
 
@@ -1017,6 +1017,12 @@ svg{
   right: 0px;
   top: -3px;
 }
+
+.section-3-main-div .main-box ul li span:nth-of-type(2){
+  margin-right: 20px;
+}
+
+
 
 .section-3-main-div .main-box ul li p {
   margin-right: 15px;
@@ -2712,6 +2718,12 @@ svg{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media(max-width:768px){
+  .section-4-div:nth-of-type(8){
+    display: none;
+  }
 }
 
 .section-4-div div {

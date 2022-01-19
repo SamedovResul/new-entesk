@@ -37,10 +37,12 @@ const SectionThree = (props) =>{
                               const {mod,note} = subject
 
                               return(
-                                <li key={index}>
-                                  {mod}  <span>&#8226;</span>
-                                  <li style={ note ? {display: 'block'} : {display: 'none'} } > {note} </li>
-                                </li>
+                                <div key={index}>
+                                  <li >
+                                    {mod} <span>&#8226;</span>
+                                  </li>
+                                  <li style={ note ? {display: 'block'} : {display: 'none'} }>{note}</li>
+                                </div>
                               )
                             })
 
