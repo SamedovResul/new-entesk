@@ -4523,6 +4523,13 @@ table tbody td {
   color: #000000 !important;
 }
 
+
+@media(max-width:567px){
+  .blog-img p{
+    font-size: 12px !important;;
+  }
+}
+
 .blog-img2  {
   display: inline;
   float: left;

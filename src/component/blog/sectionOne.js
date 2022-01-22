@@ -70,7 +70,7 @@ function SectionOne(props) {
 
                       <p className='blog-desc'>
                         {
-                          data.blogContent[1]?.description
+                          data.blogContent[2]?.description
                         }
                       </p>
 
@@ -80,7 +80,13 @@ function SectionOne(props) {
                         }
                       </p>
 
-                      <p>
+                      <p className='blog-desc'>
+                        {
+                          data.blogContent[3]?.description
+                        }
+                      </p>
+
+                      <p >
                         {
                           data.blogContent[3].text
                         }
