@@ -56,17 +56,30 @@ function SectionOne(props) {
                         }
                       </p>
 
+                      <p className='blog-desc' >
+                        {
+                          data.blogContent[1]?.description
+                        }
+                      </p>
+
                       <p>
                         {
                           data.blogContent[1].text
                         }
                       </p>
 
-                      <p>
+                      <p className='blog-desc'>
+                        {
+                          data.blogContent[1]?.description
+                        }
+                      </p>
+
+                        <p>
                         {
                           data.blogContent[2].text
                         }
                       </p>
+
                       <p>
                         {
                           data.blogContent[3].text

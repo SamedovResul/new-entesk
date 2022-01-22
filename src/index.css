@@ -4533,6 +4533,11 @@ table tbody td {
   margin: 20px;
 }
 
+.blog-desc {
+  font-weight: 700;
+  font-family: "Nunito" !important;
+}
+
 /* .blog-img2 img {
   display: inline;
   float: left;

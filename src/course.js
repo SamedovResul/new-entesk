@@ -842,7 +842,7 @@ export  const allData = {
 		{
 			id: uuid(),
 			blogname: 'Elon Musk deyir ki ...',
-			name: 'Təhsilə fərqli baxış',
+			name: 'ElonMusk',
 			title: 'Elon Musk Uşaqların təhsili haqqında',
 			blogContent:[
 				{
