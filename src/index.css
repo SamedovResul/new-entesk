@@ -2211,7 +2211,9 @@ svg{
   }
 }
 
-
+.bigScreenContainer {
+  display: flex;
+}
 
 @media(max-width:767px) {
   .bigScreenContainer {
@@ -4441,7 +4443,7 @@ table tbody td {
 }
 
 
-.blog-text-box div:nth-of-type(6) {
+/* .blog-text-box div:nth-of-type(6) {
   width: 50%;
   margin: auto 0px auto auto;
 }
@@ -4466,7 +4468,7 @@ table tbody td {
     width: auto;
     margin: 300px 0px auto auto;
   }
-}
+} */
 
 .blog-text-box p{
   font-size: 1.3rem;
@@ -4477,40 +4479,51 @@ table tbody td {
   font-family: "Calibri Light";
 }
 
-.blog-text-box p:nth-child(1) {
+
+.blog-text-box-One p:nth-child(2) {
   font-size: 25px;
   font-weight: 700;
   font-family: "Nunito";
+  color: #482AFF;
 }
 
-/* .blog-img-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 350px;
-  border: 1px solid black;
-  margin: 20px;
-} */
+.blog-text-box-two p:nth-child(1) {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Nunito";
+  color: #482AFF;
+}
 
-/* .blog-img {
-  border: 1px solid black;
-  position: relative;
-} */
+.blog-text-box-two{
+  margin-top: 0px;
+}
+
 
 .blog-img  {
-  display: inline;
   float: right;
-  width: 45%;
+  height: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid; */
+}
+
+.blog-img img {
+  display: inline;
   height: auto;
   border: 5px solid #482AFF;
   border-radius: 30px;
   margin: 0px 20px 20px;
 }
 
+.blog-img p{
+  font-size: 15px !important;
+  color: #000000 !important;
+}
+
 .blog-img2  {
-  position: absolute;
   display: inline;
   float: left;
   width: 40%;
@@ -4518,18 +4531,22 @@ table tbody td {
   border: 5px solid #482AFF;
   border-radius: 30px;
   margin: 20px;
-  top: 55%;
 }
 
-@media(max-width:1199px){
-  .blog-img2  {
-    top: 55%;
-  }
-}
+/* .blog-img2 img {
+  display: inline;
+  float: left;
+  width: 40%;
+  height: auto;
+  border: 5px solid #482AFF;
+  border-radius: 30px;
+  margin: 20px;
+} */
+
+
 
 @media(max-width:768px){
   .blog-img2  {
-    top:67%;
     width: 80%;
   }
 }
@@ -4545,7 +4562,7 @@ table tbody td {
 
 @media(max-width:768px) {
   .blog-img  {
-    width: 100%;
+    width: 100% !important;
     margin: 20px auto 20px auto;
   }
 }

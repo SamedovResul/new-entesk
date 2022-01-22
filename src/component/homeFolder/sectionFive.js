@@ -69,7 +69,7 @@ return(
             return(
             <div className="caruseldiv" key={id}>
               <div className="top-div">
-                <img  src={img} alt="img" ></img>
+                <img  src={img[0].img} alt="img" ></img>
               </div>
               <div className="bottom-div">
                 <p>

@@ -25,85 +25,150 @@ function SectionOne(props) {
   //   console.log(subject)
   // }):
 
-
+  
 
   
   const {id, img,text,title} = data
+
   return (
     <article>
       <div className="container">
         <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="blog-text-box">
-
+          <div className="row ">
             {
-              data.blogContent ? ( <>
-              <img className='blog-img' src={img} alt='img'/>
-              <img className='blog-img2' src={img} alt='img'/>
-              </> ) :
-              ( <p></p>)
-            }
-              
-                {
-                  data.blogContent ? 
-                  data.blogContent.map((subject, index) =>{
-                    const {description, text,list  } = subject
-                    // console.log(subject)
-                    return(
-                      <div key={index}>
-                      <>
-                        {
-                        description ? (
-                          <p>{description}</p>
-                        ): (null)
-                        }
-                      </>
+              data.blogContent? (
+                <>
+                  <div className="col-md-12">
+                    <div className='blog-text-box  blog-text-box-One'>
+                      <div className='blog-img'>
+                        <img   style={{width: "80%"}} src={img[0].img} alt='img'/>
                       
-                      <ul>
-                        {
-                          list ? list.map((list)=>{
-                            const {li} = list
-                            return(
-                              <li>
-                                {li}
-                              </li>
-                            )
-                          }) : (
-                            null
-                          )
-                        } 
-                          
-                      </ul>
-                      <p>
-                        {text}
-                      </p> 
+                        <p>{img[0]?.imgName} <a href={img[0]?.imgSource}>{img[0]?.imgSourceName}</a> </p>
                       </div>
-                    )
-                  }):(
-                    <>
+                      <p>
+                        {
+                          data.blogContent[0].description
+                        }
+                      </p>
+                      <p>
+                        {
+                          data.blogContent[0].text
+                        }
+                      </p>
+
+                      <p>
+                        {
+                          data.blogContent[1].text
+                        }
+                      </p>
+
+                      <p>
+                        {
+                          data.blogContent[2].text
+                        }
+                      </p>
+                      <p>
+                        {
+                          data.blogContent[3].text
+                        }
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-md-12">
+                    <div className='blog-text-box '>
+                      {
+                        img[1] ? (
+                          <>
+                            <img  className='blog-img2' src={img[1].img} alt='img'/>
+                          </>
+                        ) : (
+                          null
+                        )
+                      }
                       
                       <p>
-                        <p>
-                          {title}
-                        </p>
-                        <div>
-                          <img className='blog-img' src={img} alt='img'/>
-                        </div>
-                        {text}
-                      </p> 
-                    </>
-                     
-                  )
-                }
+                        {
+                          data.blogContent[4]?.text
+                        }
+                      </p>
+
+                      <p>
+                        {
+                          data.blogContent[5]?.text
+                        }
+                      </p>
+
+                      <p>
+                        {
+                          data.blogContent[6]?.text
+                        }
+                      </p>
+                      <p>
+                        {
+                          data.blogContent[7]?.text
+                        }
+                      </p>
+                      <p>
+                        {
+                          data.blogContent[8]?.text
+                        }
+                      </p>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className=' bigScreenContainer ' >
+                    <div className="col-md-6 ">
+                      <div className='blog-text-box blog-text-box-two'>
+                        {
+                          <>
+                            <p>{title}</p>
+                            <p>{text}</p>
+                          </>
+                        }
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className='blog-text-box'>
+                        {
+                          <div className='blog-img' style={{width: "100%"}}>
+                            <img style={{width: "100%"}}  src={img[0].img} alt="img" />
+                          </div>
+                          
+                        }
+                      </div>
+                    </div>
+                  </div>
+                  <div className='smallScreen' >
+                    <div className="col-md-6">
+                      <div className='blog-text-box'>
+                        {
+                          <div className='blog-img' style={{width: "100%"}}>
+                            <img style={{width: "100%"}}  src={img[0].img} alt="img" />
+                          </div>
+                          
+                        }
+                      </div>
+                    </div>
+                    <div className="col-md-6 ">
+                      <div className='blog-text-box blog-text-box-two'>
+                        {
+                          <>
+                            <p>{title}</p>
+                            <p>{text}</p>
+                          </>
+                        }
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                </>
                 
-              </div>
-            </div>
-            {/* <div className="col-md-6">
-              <div className="blog-img-box">
-                <img src={img} alt='img'/>
-              </div>
-            </div> */}
+              )
+            }
+
           </div>
         </div>
       </div>

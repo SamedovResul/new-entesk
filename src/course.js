@@ -799,33 +799,54 @@ export  const allData = {
 					Riyaziyyat bütün təhsil sahələrinin ayrılmaz hissəsi kimi hər hər yerdə mövcuddur. Riyaziyyat gündəlik həyatımızda haqqında eşitdiyimiz bütün kəşflərdə istifadə edilir və mədəniyyət, din və cinsindən asılı olmayaraq hamı tərəfindən birmənalı olaraq universal bir dil kimi qəbul edilir.`
 				},
 			],
-			img: '/images/steam.png',
+			img:[
+				{
+					img: '/images/steam.png',
+					imgSource:"",
+					imgName:"",
+					imgSourceName:""
+				}
+			]
 			
 		},
 		{
 			id: uuid(),
-			blogname: 'Uşaq Evinə Səyahət',
-			name: 'Uşaq Evinə Səyahət',
-			title: 'Uşaq Evinə Səyahət',
-			text: 'Entesk komandası xeyriyyə məqsədi ilə uşaq evində maraqlı və əyləncəli robotlaşdırma təlimləri keçirmişdir. Burada tələbələr robotun fiziki hissələrini və onların yığılmasını öyrənərək daha sonra kod hissəsini araşdırdılar. Proqramlaşdırmanın əsaslarını öyrənərək və lazımı alqoritmləri test edərək real mühitdə işləyən kod yazmışdılar. Kod robota yükləndikdən sonra düzgün işləmiş və gənc uşaqları çox sevindirmişdir.',
-			img: '/images/blog-2.JPG',
+			blogname: 'Sığınacaqda keçirilmiş təlim',
+			name: 'Sığınacaqda keçirilmis təlim',
+			title: 'Sığınacaqda keçirilmiş təlim',
+			text: `Entesk komandası KSM fəaliyyəti nəticəsində sığınacaqda məskunlaşmış uşaqlar üçün maraqlı və əyləncəli robotlaşdırma təlimi keçirmişdir. “Robotların proqramlaşdırılması və yığılmasına giriş” adlı iki günlük təlimin ilk günündə uşaqlara robotlar haqqında ümumi nəzəri məlumatlar öyrədilmişdir. Daha sonra, uşaqlar lazımi detallardan istifadə edərək robotun fiziki hissələrini, kompüter vasitəsilə isə robotu hərəkət etdirəcək proqramı hazırlamışlar. 	`,
+			img: [
+				{
+					img: '/images/blog-2.JPG',
+					imgSource:"",
+					imgName:"",
+					imgSourceName:""
+				}
+			]
 		},
 		{
 			id: uuid(),
 			name: 'Entesk - də Halloween Partisi',
 			blogname: 'Halloween Partisi',
 			title: 'Entesk - də Halloween Partisi',
-			text: 'Tələbələr müasir dünyaya hazır olmaq üçün daim yeni məlumatlar və müxtəlif elm sahələrini öyrənməlidirlər. Lakin bəzən dünyanı daha yaxından tanımaq üçün orada mövcud olan müxtəlif ölkələrin adətlərini, dillərini, yeməklərini, bayramlarını öyrənmək də çox kömək olur. Məhz balaca tələbələrimizi həm sevindirmək, həm də onlara dünyanı yaxından tanımaq üçün Entesk məktəbində kökünü İrlandiyadan götürən və bütün dünyaya yayılan Halloween bayramı keçirilmişdir. Burada ilk olaraq bayramın önəmi, yaranma tarixi, fərqli personajları və daha çox məlumat verilmiş daha sonra oyunlarla, mahnılarla əyləncəli proqram keçirilmişdir. Tələbələr isə Harry Potter, Pirat, Cadügər kimi maraqlı personajlara bəzənərək şənliyi daha maraqlı etmişdilər.',
-			img: '/images/blog-4.jpeg',
+			text: 'Tələbələr müasir dünyaya hazır olmaq üçün daim yeni məlumatlar və müxtəlif elm sahələrini öyrənməlidirlər. Bu yolda müxtəlif ölkələrin adətlərini, dillərini, yeməklərini, bayramlarını öyrənmək də çox kömək olur. Məhz balaca tələbələrimizi həm sevindirmək, həm də onlara dünyanı yaxından tanıtmaq üçün Entesk mərkəzində kökünü İrlandiyadan götürən və bütün dünyaya yayılan Halloween tədbiri keçirilmişdir. Tədbir zamanı ilk olaraq bayramın önəmi, yaranma tarixi, fərqli personajları haqqında məlumat verilmiş, daha sonra oyunlarla, mahnılarla əyləncəli proqram keçirilmişdir. Tələbələr isə Harry Potter, Pirat, Cadugar kimi maraqlı personajlara bəzənərək tədbirə daha da maraq qatmışlar.',
+			img: [
+				{
+					img: '/images/blog-4.jpeg',
+					imgSource:"",
+					imgName:"",
+					imgSourceName:""
+				}
+			]
 		},
 		{
 			id: uuid(),
 			blogname: 'Elon Musk deyir ki ...',
 			name: 'Təhsilə fərqli baxış',
-			title: 'Təhsilə fərqli baxış',
+			title: 'Elon Musk Uşaqların təhsili haqqında',
 			blogContent:[
 				{
-					description:'Təhsilə fərqli yanaşma',
+					description:'Elon Musk Uşaqların təhsili haqqında',
 					text:"Tesla və SpaceX şirkətlərinin baş direktoru və 6 uşaq atası (5-i məktəb yaşında olmaqla) olan Elon Muska Clubhouse audio proqramında canlı müsahibə zamanı təhsillə bağlı sual verilib."
 				},
 				{
@@ -865,7 +886,20 @@ export  const allData = {
 					text:`Musk, potensial işçilərdən kollec dərəcəsinə malik olmalarının tələb olunmasına qarşı olduğunu bildirib. O, Teslanın işəgötürmə sənədlərində təhsil dərəcəsi tələbinin olmadığını və belə bir şərtin mövcudluğunu "absurd" adlandırdığını söyləyib.`
 				},
 			],
-			img: '/images/elonimg.jpeg',
+			img :[
+				{
+					img: '/images/elonimg.jpeg',
+					imgSource:"https://images.nasa.gov/details-KSC-20200530-PH-KLS04_0108",
+					imgName:"SpaceX founder Elon Mus",
+					imgSourceName:"Kim Shiflett/NASA"
+				},
+				{
+					img: '/images/elonimg2.jpg',
+					imgSource:"",
+					imgName:"",
+					imgSourceName:""
+				}
+			]
 		}
 	],
 	about:[{
