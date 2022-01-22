@@ -105,9 +105,21 @@ function SectionOne(props) {
                         )
                       }
                       
+                      <p className='blog-desc' >
+                        {
+                          data.blogContent[4]?.description
+                        }
+                      </p>
+
                       <p>
                         {
                           data.blogContent[4]?.text
+                        }
+                      </p>
+
+                      <p className='blog-desc' >
+                        {
+                          data.blogContent[5]?.description
                         }
                       </p>
 
