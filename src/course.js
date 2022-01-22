@@ -890,7 +890,7 @@ export  const allData = {
 				{
 					img: '/images/elonimg.jpeg',
 					imgSource:"https://images.nasa.gov/details-KSC-20200530-PH-KLS04_0108",
-					imgName:"SpaceX founder Elon Mus",
+					imgName:"SpaceX founder Elon Musk",
 					imgSourceName:"Kim Shiflett/NASA"
 				},
 				{
