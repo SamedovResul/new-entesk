@@ -156,11 +156,11 @@ export  const allData = {
 		],
 		module:[
 			{
-				mod:'70 dərs',
+				mod:'Nəzəri, təcrübi və qrup təqdimat dərsləri',
 				note:""
 			},
 			{
-				mod:'Dərs materialları',
+				mod:'Dərs materialı',
 				note:""
 			},
 			{
@@ -170,104 +170,18 @@ export  const allData = {
 		],
 		levels: [
 			{
-				name: 'İlk modul',
 					list: [
 						{
-							li:	"İlk anlayışlar"
+							li:	"Scratch proqramlaşdırma dili"
 						},
 						{
-							li:	"Kompüter elmi nədir"
+							li:	"Minecraft education"
 						},
 						{
-							li:	"Müasir texnoloji cihazlar"
+							li:	"Javasrcript proqramlaşdırma dili"
 						},
 						{
-							li:	"Kompüter kimi düşünmək "
-						},
-						{
-							li:	"Verilənlər / Data"
-						},
-						{
-							li:	"Programlaşdırma texnologiyaları"
-						},
-						{
-							li:	"Programlaşdırma dilləri"
-						},
-						{
-							li:	"Şəbəkələr"
-						},
-						{
-							li:	"Vebsayt və programların hazırlanması"
-						},
-						{
-							li:	"Rəqəmsal davranış"
-						},
-						{
-							li:	"Sosial Media"
-						},
-						{
-							li:	"Rəqəmsal mövzular"
-						},
-						{
-							li:	"Texnoloji gələcək"
-						},
-					]	
-			},
-			{
-				name: 'Orta modul',
-					list: [
-						{
-							li:	"Kodlaşdırma nədir ?"
-						},
-						{
-							li:	"Blok proqramlaşdırmadan başlayaq"
-						},
-						{
-							li:	"Macəra 1 - Əjdahadan Qaçış"
-						},
-						{
-							li:	"Macəra 2 - Zəri fırlat"
-						},
-						{
-							li:	"Macəra 3 - Rəqəmsal Meymunu"
-						},
-					]	
-			},
-			{
-				name: 'Yuxarı modul',
-					list: [
-						{
-							li:	"Kompüter Oyunları"
-						},
-						{
-							li:	"Rəqəmsal Səyahətə Başlayaq"
-						},
-						{
-							li:	"Macəra 1 - Ulduz Ovçusu "
-						},
-						{
-							li:	"Macəra 2 - Pendir izinə çıxmaq"
-						},
-						{
-							li:	"Macəra 3 - Çevrə Müharibəsi "
-						},
-						{
-							li:	"Macəra 4 - Hoplayan Meymun"
-						},
-						{
-							li:	"Macəra 5 - Uçan Süpürgə "
-						},
-						{
-							li:	"Macəra 6 - İtin Yeməyi"
-						},
-						{
-							li:	"Macəra 7 - Buzlaq Yarışı "
-						},
-						{
-							li:	"Macəra 8 - Tropik Səslər"
-						},
-						{
-							li:	"Macəra 9 - Növbədə Nədir ?"
+							li:	"Python proqramlaşdırma dili"
 						},
 					]	
 			},
@@ -328,15 +242,15 @@ export  const allData = {
 		],
 		module:[
 			{
-				mod:'nəzəri ve təcrubi dərslər',
-				note:"90 saat nəzəri, 30 saat təcrübi və 10 saat qrup təqdimat dərsləri"
+				mod:'Nəzəri, təcrübi və qrup təqdimat dərsləri',
+				note:""
 			},
 			{
 				mod:'Dərs materialları',
 				note:""
 			},
 			{
-				mod:'sertifikat',
+				mod:'Sertifikat',
 				note:""
 			},
 		],
@@ -419,11 +333,7 @@ export  const allData = {
 		],
 		module:[
 			{
-				mod:'70 dərs',
-				note:""
-			},
-			{
-				mod:'90 saat nəzəri, 30 saat təcrübi və 10 saat qrup təqdimat dərsləri',
+				mod:'Nəzəri, təcrübi və qrup təqdimat dərsləri',
 				note:""
 			},
 			{
@@ -437,13 +347,12 @@ export  const allData = {
 		],
 		levels: [
 			{
-				name: 'İlk modul',
 					list: [
 						{
-							li:	"Bərpa olunan enerji"
+							li:	"Lego Education"
 						},
 						{
-							li:	"Heyvanlar aləmi"
+							li:	"Ardunio"
 						},
 						{
 							li:	"Masınların Transmisiyyasi"
@@ -466,7 +375,6 @@ export  const allData = {
 					]	
 			},
 			{
-				name: 'Orta modul',
 					list: [
 						{
 							li:	"Xüsusi Robotlamaya giriş"
@@ -805,8 +713,8 @@ export  const allData = {
 		image_1: '/images/skill1.jpg',
 		Course:[
 			{
-				class_description: 'Yuxarıdakı təcrübəyə əsasən',
-				class_text:'Bəziləri texnologiyaya orijinallığa təhlükə kimi baxır və ənənəvi sənətkarlığı əvəz etməyə çalışdığını düşünür. Bu fikir, əlbəttə ki, rəsm müəllimləri üçün narahatlıq yarada bilər. Bununla belə, tədqiqatlar incəsənət təhsilində rəqəmsal alətlərdən istifadənin bədii inkişafı və yaradıcılığı artırdığını göstərir. Rəqəmsal əsrdə incəsənət müəllimləri öz proqramlarını müdafiə etmək ehtiyacını indi həmişəkindən daha çox hiss edirlər. Rəqəmsal incəsənət dərsləri güclü gələcək uğur aləti kimi xidmət edə bilər.',
+				class_description: 'Rəqəmsal İncəsənət',
+				class_text:'Uşağın edə biləcəyi ilkin fəaliyyətlərdən biri qələmi götürüb rəsm çəkməyə başlamaqdır. Yeni texnologiyalar insanlar üçün daha əlçatan olduqda, onlar özləri ilə mühüm yaradıcılıq bacarıqlarını öyrənmək üçün yeni yollar gətirirlər. Rəqəmsal İncəsənət dərsləri də bu bacarıqların ən əsaslarından biri hesab olunur.',
 				class_image:'/images/skill2.jpg',
 				classLink:'Rəqəmsal İncəsənət',
 			},
@@ -854,115 +762,41 @@ export  const allData = {
 		{
 			id: uuid(),
 			name: 'Steam nədir',
-			blogname: 'Steam nədir ?',
+			blogname: 'STEAM nədir ?',
 			description:'STEAM nədir',
 			text: 'STEAM - Elm, Texnologiya, Mühəndislik, İncəsənət və Riyaziyyatın birləşməsi nəticəsində  yeni ideyaların reallaşdırılması, cəmiyyətdə müxtəlif problemlərin həllinə  kömək edə biləcək  təhsil yanaşmasıdır. STEAM təhsilalanlarda tənqidi yanaşma, yaradıcı düşünmə, qazanılan biliklərin  müqayisəli şəkildə anlaşılması, yaradıcı formada yeni layihələr əsasında biliyin möhkəmlənməsi, əməkdaşlıqetmə və s. kimi XXI əsr bacarıqlarını formalaşdırır. STEAM fənləri ayrılıqda öyrətmək əvəzinə, onları real dünyadakı tətbiqlərə əsaslanan vahid öyrənmə modelində birləşdirir.',
 			blogContent: [
 				{
-					description:'STEAM TƏHSİLİNİN MƏQSƏDLƏRİ:',
-					list:[
-						{
-							li:'Təhsil Nazirliyi universitetlər, sənaye təşkilatları, qeyri-hökumət təşkilatları və məktəblər arasında STEAM ilə əlaqəli milli çərçivə yaratmaq.'
-						},
-						{
-							li:'Tədqiqat, inkişaf və layihə tədqiqatları aparmaq və əldə edilmiş məlumatları qiymətləndirərək STEAM əsaslı yeni təhsil modellərini aşkar etmək və bu modellərə uyğun proqramlar yaratmaq, yaradılan proqramların milli proqrama inteqrasiya olunmasını təmin etmək.'
-						},{
-							li:'Dünyada STEAM sahələrində aparılan işləri izləmək, araşdırmaq və qiymətləndirmək. Nəticələri ictimaiyyət və səlahiyyətli orqanlarla bölüşmək.'
-						},{
-							li:'STEAM sahələrində regional, milli və beynəlxalq proqramlar hazırlamaq; mühazirələr oxumaq, seminarlar, simpoziumlar və konfranslar təşkil etmək'
-						}
-					]
+					description:'STEAM nədir ?',
+					text:"STEAM - Elm (Science), Texnologiya (Technology), Mühəndislik (Engineering), İncəsənət (Arts) və Riyaziyyatdan (Mathematics) istifadə edərək araşdırma, yaradıcılıq (creativity), məntiqi təfəkkür və  tənqidi düşüncə (critical thinking) bacarıqlarına yiyələnmək üçün bələdçi tədris metodudur."
 				},
 				{
-					description: 'STEAM təhsilinin əsası:',
-					text:`STEAM, Elm, Texnologiya, Mühəndislik, Art və Riyaziyyatın qısaltmasıdır. İbtidai və orta təhsildə fənn tədrisi sahələrinin bütövlükdə deyil, ayrı-ayrılıqda tədris olunmasında yaranan narahatlıqlardan çəkinmək fikrinə əsaslanır və dünyada getdikcə daha çox əhəmiyyət kəsb edir. Prezident Obama 2012-ci ildən bəri ABŞ-da STEAM təhsilinin əhəmiyyətinə diqqət çəkir; dövlətlərə STEAM-da müəllim yetişdirmək üçün vəsait ayrılır.
-
-					Bəzi Məktəblərimizdə STEAM təhsili tətbiq olunur və şagirdlərin akademik nailiyyətləri, həyata keçirdikləri layihələr, STEAM təhsilinin milli və beynəlxalq yarışlarda qazandığı düzgün tətbiq edildikdə nə qədər uğurlu olduğunu göstərir.
-
-
-					STEAM təhsilinin əsası müxtəlif fənlərdən birlikdə istifadə etmək, layihələr hazırlamaq və bu layihələri istehsalata çevirərək həyata keçirməkdir. Riyazi təfəkkür bacarıqlarını inkişaf etdirən şagirdlər həm də elmdəki iş qabiliyyətlərini artırırlar. İbtidai və orta təhsildə qazanılan riyazi düşüncə bacarıqlarının elm təhsili infrastrukturunun gücləndirilməsi və layihə əsaslı təhsilə istehsal proseslərinin əlavə edilməsi STEAM təhsilinə şagirdin düşüncələrini həyatı boyu istehsalata çevirmə qabiliyyəti verir. Əslində bu, bu layihənin ilhamverici məqamlarından biridir.`
+					description:'#STEAM sözündəki S hərfi nəyi izah edir?',
+					text:`S - #Science yəni, #Elm sözünün ilk hərfi olub, sistemli biliklərin əldə edilməsinə yönəlmiş fəaliyyət növüdür.
+					Araşdırmalar göstərir ki, 7 yaşlı uşaqlarda artıq elmə qarşı müsbət və ya mənfi fikir formalaşmış olur. Erkən yaşlardan əyləncəli üsullarla elmlə məşğul olmaq onlarda bu istiqamətə maraq və sevgi yaratmaqla yanaşı onlarda elmi təfəkkürün formalaşmasına, əməkdaşlıq, komanda ilə işləmək, analitik düşünmə, problem həll etmə bacarıqlarının inkişafına kömək edir.`
 				},
 				{
-					description: 'STEAM məktəbi olmaq niyə bu qədər vacibdir?',
-					text: 'Bu gün kiçik şagirdlərimiz böyüyəcək və sabah öz peşələri ilə işə başlayacaq və ölkə iqtisadiyyatına töhfə verəcəklər. Bir çiçəyin kökü kimi, şagirdlər gənc olduqda inkişaf etdirilə biləcək qabiliyyət və bacarıqlarına uyğun olaraq böyüyərlərsə, o bitki böyüyəcək və öz genlərindən gələn çiçəyi əmələ gətirəcəkdir',
-					list:[
-						{
-							li: '- STEAM təhsilinin məqsədi, düşündüklərini reallaşdıra bilən, təməl elmlər tərəfindən ortaya qoyulan nəzəri bilikləri alaraq texnologiya və mühəndislik təhsili ilə qarışdıraraq həyata dəyər qatacaq məhsullar istehsal edən XXI əsr bacarıqlarına sahib gənclər yetişdirməkdir.'
-						},{
-							li: '- STEAM məktəbi olmaqla Azərbaycanda STEAM təhsilinə rəhbərlik etmək və bu təhsili genişləndirməyi hədəfləyir.'
-						},{
-							li: '- Bu gün, XXI əsr bacarıqlarına sahib fərdləri yetişdirməyin yolu- STEAM təhsildir.'
-						},{
-							li: '- STEAM təhsili dünyanın hər yerində təhsil islahatının mərkəzindədir və getdikcə daha çox əhəmiyyət kəsb edir.'
-						},{
-							li: '- STEAM təhsili inkişaf etmiş ölkələrdə, xüsusən ABŞ-da dövlət siyasəti olaraq tətbiq olunur.'
-						},
-						{
-							li: 'Bu sistemə keçmiş inkişafda olan ölkələrdə orta faiz hesabı ilə təqribən STEAM iş artımı, 2010-2020-ci illər arasında Riyaziyyatçılar 16%, Kompüter Sistemləri Analitikləri 22%, Sistem Proqramı Hazırlayanlar 32%, Tibb alimləri 36%, Biotibbi Mühəndislər 62%, Bütün peşələr 14% kimi  müəyyənləşdirilmişdir.'
-						}
-					],
+					description:'#STEAM sözündəki T hərfi nəyi izah edir?',
+					text: `T-#Technology yəni, #Texnologiya sözünün ilk hərfi olub, məhsul istehsalında və ya elmi araşdırma kimi məqsədlərin yerinə yetirilməsində istifadə olunan texnika, bacarıq, metod və proseslərin məcmusudur.
+
+					Araşdırmalar göstərir ki, texnologiyanın uşaqların həyatına bir çox müsbət təsiri vardır ki, bunlardan bəziləri tapşırıqları tamamlamaq üçün motivasiyanı artırmaq, uşaqların dünya görüşünün inkişaf etməsinə köməklik göstərmək, onların yaradıcı (kreativ) və tənqidi tərzdə düşünmələrində müstəsna rol oynamaq, hər hansısa bir problemi həll etmə bacarıqlarını inkişaf etdirməkdir.`,
 				},
 				{
-					description:'Alqoritm nədir?',
-					text: `Alqoritm sözünün mənşəyinə baxsaq, əl-xorazminin "alqoritm" sözündən gəlir. anlamı: "rəqəmlərdən istifadə edərək problemləri həll etmək" deməkdir.
-
-					Alqoritmi sadə bir şəkildə izah etmək üçün bir hadisənin addımlarını ardıcıllıqla birinin altına yazmaqdır. Real həyatda əməliyyatları bir qaydada etdiyimiz kimi hadisələri də ardıcıllıqla yazmalıyıq. Alqoritmlər kompüter proqramları yazmaq üçün faydalıdır. Yemək qrafiki. Bənzətmə ilə alqoritmə o yeməyin resepti deyə bilərik. Kodlaşdırma reseptdir, Kompüterin anlaya biləcəyi bir proqramlaşdırma dili ilə hazırlanmağa uyğundur. Düzgün kodlaya bilmək üçün alqoritm məntiqini öyrənmək lazımdır.
-
-					Alqoritmi öyrənmək tələbənin analitik düşünmə qabiliyyətini artırır. Düşüncələrini daha yaxşı ifadə etməyə imkan verir. Proqramlaşdırma öyrənmək üçün zəmin yaradır.`
+					description:'#STEAM sözündəki E hərfi nəyi izah edir?',
+					text: `E-#Engineering yəni #Mühəndislik sözünün ilk hərfi olub, geniş bir sahəni özündə əks etdirməkdədir. Mühəndislər alim, ixtiraçı, dizayner, inşaatçı və böyük mütəfəkkirlərdir. #STEAM-ın mühəndislik bölməsi elmi, sosial, mədəni və iqtisadi şüurun inkişafını, riyaziyyat, biologiya, kimya, fizika kimi elm sahələrini, yaradıcılıq və komanda işi kimi bacarıqları əhatə edir.
+					Araşdırmalar göstərir ki, 4 yaşdan 14 yaşa qədər olan uşaqlara mühəndislik anlayışlarını əyləncəli, praktiki şəkildə aşılamaq onları bu işlə məşğul olmaq üçün daha da ruhlandırır.`
 				},
 				{
-					description: '3D animasiya',
-					text: '3D animasiya, sektorda 3 ölçülü mənasını verən “3 Ölçü” qısaltması kimi yer tutmuşdur. 2D animasiyalarda yalnız X və Y oxları ilə işləyərkən 3D animasiyalar isə X, Y və Z oxunda daha çətin və inkişaf etmiş bir animasiya metodudur, yəni həm üfüqi, həm də şaquli və dərinliyə malikdir və 2D-dən daha çətin və inkişaflıdır.'
+					description: '#STEAM sözündəki A hərfi nəyi izah edir?',
+					text: `A-#Art yəni, #İncəsənət sözünün ilk hərfi olub, liberal, dil, təsviri və fiziki sənətləri, sosial araşdırmaları və musiqini təmsil edən bir termindir. İncəsənətlə məşğul olmaq əməkdaşlıq, ünsiyyət, problem həll etmə və tənqidi düşünmə kimi vacib bacarıqların inkişafına kömək edir. Həmçinin, incəsənət tələbənin mühitə uyğunlaşmasını, məhsuldarlığını, məsuliyyətliliyini və yenilik etmə bacarıqlarını artırır. Bütün bu bacarıqlar hər hansı bir sahədə uğurlu karyera qurmaq üçün vacib amillərdir. 
+					Haradan başlayacağınızı bilmirsiniz? Elə isə, soruşun, biz kömək edək!`
 				},
 				{
-					description: 'Kodlaşdırma nədir?',
-					text: `Proqramlaşdırma olaraq da bilinən kodlaşdırma, müəyyən şərtlərə və qaydalara uyğun olaraq həyata keçirilməsi proqnozlaşdırılan əməliyyatların hamısı.
-
-					Bu o deməkdir. Proqramlaşdırma bir kompüter və ya elektron sxemlərdən və mexaniki sistemlərdən ibarət aparat üçün bir prosesdir.
-
-					Bunu həyata keçirmək üçün yazılmış əmrlər ardıcıllığının bütöv və ya bir hissəsi kimi təyin olunur.`
-				},
-				{
-					description: 'Niyə uşaqlara proqramlaşdırma öyrətməliyik?',
-					text: `Kompüter sahəsindəki bütün çox vacib adların ortaq xüsusiyyəti, gənc yaşlarında proqramlaşdırma öyrənmələridir. Texnologiyalardakı irəliləyişlər sistematik və alternativ düşüncə bacarıqlarını artırır, hadisələr arasındakı əlaqəni görməyə imkan verir.
-
-					Artıq uşaqlara proqramlaşdırmanı həm əyləncəli, həm də ibrətamiz kimi öyrətmək mümkün olmuşdur. Xülasə olaraq, proqramlaşdırma öyrənmək insanlar üçündür; sistematik düşüncə, problem həll etmə, hadisələr arasındakı əlaqələri görmək və yaradıcı düşüncə.
-
-					Mobil tətbiqetmələr istifadə ediləcək cihaza uyğun olaraq dizayn edilir və kodlaşdırılır. Məsələn, tətbiqin iphone, ipad kimi cihazlarda işləməsini istəyirsinizsə, tətbiqiniz IOS-a, Samsung, HTC kimi android əməliyyat sistemlərindən istifadə edilən tablet və ya smartfonlarda işləməsini istəyirsinizsə, tətbiqetməniz Android bazasında inkişaf etdirilməlidir.`
-				},
-				{
-					description: 'Mobil tətbiqetmə',
-					text: `Mobil Tətbiq, bu gün çoxumuzun istifadə etdiyi smartfon və planşet kimi mobil cihazlar üçün müəyyən bir məqsəd üçün dizayn edilmiş və kodlanmış proqramlara verilən addır. Bu gün ən çox istifadə olunan mobil əsaslı tətbiqetmələr Android üçün IOS və Linux əsaslı Apple məhsulları üçün kodlaşdırılır.`
-				},
-				{
-					description: '3D modelləşdirmə',
-					text: `3D kompüter qrafikasında 3D modelləşdirmə və ya birbaşa modelləşdirmə bir cismin bütün səthləri ilə 3D-də riyazi ifadəsidir. Hər hansı bir canlı və ya cansız varlığın görüntüsünü üç ölçüdə modelləşdirmək üçün müxtəlif kompüter proqramlarından istifadə olunur. Yaranan məhsula 3D model deyilir. Azərbaycan dilində 3 ölçülü model də adlandırmaq olar. 3D modellər kobudluq alaraq kompüterdə 2 ölçülü bir görüntü olaraq görünə bilər. Layihələndirilmiş 3D model, həmçinin 3D printerlərdə 3D çap texnologiyalarından birini istifadə edərək həqiqi fiziki obyektə çevrilə bilər.`
-				},
-				{
-					description: 'Oyun Dizayn və Proqramlaşdırma',
-					text: `Kompüter oyunları, xüsusən də mobil platformaların və internet texnologiyalarının inkişafı ilə bütün dünyada olduğu kimi, ölkəmizdə də geniş yayılmış və cinsi və yaşından asılı olmayaraq, geniş kütlələrin istehlak etdiyi populyar bir vasitə olmuşdur.
-
-					Müasir mənada oyun dizayneri oyunun, atmosferin, qaydaların və əsas quruluşun dizaynını verən insandır. Başqa sözlə, oyun dizayneri oyunda istifadəçidə nəyi oyatmalı, oyunçu oynayarkən nə etməli, oyunun verməyə çalışdığı mesajı, hansı atmosferi keçəcəyini, nə qədər çətin olması lazım olduğunu və bir çox məqamları həll edən şəxsdir.`
-				},
-				{
-					description: 'Robot Təhsilinin Məqsədləri',
-					text: `Məqsədimiz gələcəyi formalaşdıracaq və bir Azərbaycan istehsalına doğru addımlar atacaq yaradıcı zehinləri yetişdirməkdir. Gənc öyrənənlərə hər kəsin sadə bir interfeyslə bir robot qura biləcəyini göstərmək və öyrətmək.`
-				},
-				{
-					description: 'Əsas İnformasiya Texnologiyaları',
-					text: `İnformasiya texnologiyaları anlayışı, telekommunikasiya və kompüter texnologiyalarının insan həyatına daxil edilməsi ilə ortaya çıxan bir anlayışdır. Sözügedən texnologiyalardakı inkişaflar və insanların gündəlik həyatında ön plana çıxması ilə onların əhəmiyyəti artır. XXI əsr baxımından, informasiya texnologiyaları insanlara və ya şəxslər tərəfindən məlumatların verilməsi, işlənməsi, ötürülməsi və hesabatı baxımından insanlara kömək edən texnologiyalar kimi qəbul edilə bilər.
-
-					Əsas informasiya texnologiyalarını öyrəndikdən sonra gündəlik həyatda istifadə olunan texnologiyalar daha yaxşı başa düşüləcəkdir. Bundan əlavə əvvəllər istifadə olunmamış texnologiyalar haqqında məlumatların verilməsi təmin ediləcək və istifadəsi üçün bir yol açılacaqdır. Əsas informasiya texnologiyaları aşağıdakı mövzuları əhatə edir:
-
-					Əsas kompüter bilikləri, Windows XP, Microsoft Word, Microsoft Excel, Microsoft Powerpoint, İnternet istifadəsi.`
-				},
-				{
-					description: 'Web dizaynı',
-					text: `Dizayn fikirlərinin estetik xətdə bir məqsəd üçün müəyyən prinsiplər əsasında rəhbər tutulması və təşkil edilməsi və praktikaya çevrilməsi (dizayn proqrama çevrilməsi) prosesidir. Bu proseslər bitdikdən sonra aktiv bir veb sayt yaranır. Veb dizaynı (aktiv veb sayt) tətbiqindən sonra son istifadəçilər veb brauzer köməyi ilə internet üzərindən veb saytlara daxil ola bilərlər. Bu veb dizayn nədir sualına verə biləcəyimiz ən qısa cavab ola bilər.
-
-					Hər hansı bir qurumun korporativ şəxsiyyətini əks etdirmək və tanıtım fəaliyyətlərini həyata keçirmək üçün milli və beynəlxalq şəbəkə mühitində yayımlanan onlayn sistemlərə veb dizayn deyilir.
-
-					Mətn, video, səsyazma və ya fotoşəkil kimi bütün səsli və vizual vasitələrdən istifadə edərək yaradılan hissələr veb saytları və bütün veb səhifələrin eyni sistem altında birləşməsindən yaranan veb saytları təşkil edir.`
+					description: '#STEAM sözündəki M hərfi nəyi izah edir?',
+					text: `#STEAM sözündəki M hərfi nəyi izah edir?
+					M-#Mathematics yəni, #Riyaziyyat sözünün ilk hərfi olub tariximizin qurulmasında və gələcəyimizin formalaşmasında əsas amil olmuş və #STEAM proqramının  komponentlərindən birinə çevrilmiş bir sahəni özündə əks etdirir.
+					
+					Riyaziyyat bütün təhsil sahələrinin ayrılmaz hissəsi kimi hər hər yerdə mövcuddur. Riyaziyyat gündəlik həyatımızda haqqında eşitdiyimiz bütün kəşflərdə istifadə edilir və mədəniyyət, din və cinsindən asılı olmayaraq hamı tərəfindən birmənalı olaraq universal bir dil kimi qəbul edilir.`
 				},
 			],
 			img: '/images/steam.png',
@@ -978,36 +812,61 @@ export  const allData = {
 		},
 		{
 			id: uuid(),
-			blogname: 'Texnologiya nədir ?',
-			name: 'Texnologiya nədir',
-			title: 'Texnologiya nədir?',
-			text: 'Texnologiyanın insanlara asanlıqla qəbul edilməsi və keçirilməsinin səbəbi insanların işini asanlaşdırmasıdır. Başqa sözlə, insanlar tez texnologiyanı qəbul etdilər, çünki texnologiyanı tez bir zamanda qəbul etdilər və həyatlarında istifadə etdilər. İnsanların gündəlik həyatında texnoloji iştirakı bir çox kəşflər kimi uzun illər almadı. İnsanların həyatını hər cür asanlaşdırdığından, qısa bir müddət saxlanılır və qəbul edilir. Texnologiya insanların həyatına müxtəlif yollarla faydalana bilər. Bəzi insanlar texnoloji istifadə edərək işlərini daha sürətli edirlər və bunu tətbiq edirlər. Hər iki vəziyyət bir çox insanın həyatını asanlaşdırır və bir çox insanlar üçün həyat səviyyəsini qaldırır. Buna görə də qəbul edilir və üstünlük təşkil edir.',
-			img: '/images/technology.jpg',
-		},
-		{
-			id: uuid(),
-			blogname: 'Təbiət Elmləri',
-			name: 'Təbiət Elmləri',
-			title: 'Təbiət elmlərinin digər elmlərə təsiri',
-			text: 'Ənənəvi olaraq elm dedikdə daha çox fundamental təbiət elmləri (natural science) nəzərdə tutulur, texnoloji inkişaf üçün isə mühəndislik elmlərinə (artificial science) ehtiyac vardır. Elm fundamental bilikləri əldə edir. Ona söykənən mühəndislik elmi isə, artıq məlum qanunlara əsasən istehsalat yaradır və onun davamlılığına ciddi diqqət edir. Müasir təbiətşünaslığın ən səciyyəvi cəhətlərindən biri də elmlərin qarşılıqlı təsirinin olmasıdır. Buna görə də müasir dövrdə təbiət elmləridakı sintetik ənənə daha çox əhəmiyyət kəsb edir. Müxtəlif elmlərin əldə etdiyi nailiyyətlərdən biri də obyektin öyrənilməsində inteqrasiyaya daha çox fikir verilməsidir. Sintetik ənənə müxtəlif elmlərin qovuşduğu yerlərə aid biliklərin müəyyən edilməsində özünü xüsusilə büruzə verir. Son illərdəki elmi ixtira və kəşflərin əksəriyyətini sintetik elmlərə aiddir. Biliklərin sintezi sayəsində müasir təbiət elmlərida maddənin təkamülü və onun bir-birinə keçən müxtəlif növ quruluş əlaqələri haqqında bitkin və püxtləşmiş nəzəriyyələr yaranır. Minerallarla canlılar arasındakı əlaqələr açılır. Canlı və cansız aləm arasındakı sərhədin şərti olduğu daha çox nəzərə çarpır.',
-			img: '/images/environment.jpg',
-		},
-		{
-			id: uuid(),
-			name: 'Metakoqnitiv Bacarıqlar',
-			blogname: 'Metakoqnitiv Bacarıqlar',
-			title: 'Metakoqnitiv Bacarıqlar',
-			text: 'Şagirdin qarşılaşdığı bir situasiyada hansı məlumatı funksional olaraq istifadə edə biləcəyini bilməsini, başqa sözlə, hansı vəziyyətdə nə edəcəyini bilməsini tələb edir. Bu forma prosedural məlumat və təsvir edən məlumatın hər ikisinə birdən sahib olmanı tələb edir. Yəni, situasiyaya bağlı məlumatda fərdin bir işin həm necə ediləcəyini, həm özünün edib-edə bilməyəcəyini, həm də hansı vəziyyətdə nə edəcəyini bilməsi lazımdır. Metakoqnitiv məlumat şagirdin öz koqnitiv qabiliyyətləri, koqnitiv əməliyyatları və hansı vəziyyətdə nə edəcəyini bilməsi kimi məlumatlara sahib olmasıdır. Belə bir bilik əvvəlki təcrübələrin də təsiri ilə şagirdin davranışına əhəmiyyətli dərəcədə təsir göstərəcək. Ancaq metakoqnisiya şagirdin yuxarıda sadalanan məlumatlarla yanaşı bu məlumatları düzgün istifadə etməsini də tələb edir. Metakoqnitiv məlumatları istifadə edə bilmə qabiliyyəti isə metakoqnitiv idarə və ya tənzimləmə adlanır.',
-			img: '/images/skill.jpg',
-		},
-		{
-			id: uuid(),
 			name: 'Entesk - də Halloween Partisi',
 			blogname: 'Halloween Partisi',
 			title: 'Entesk - də Halloween Partisi',
 			text: 'Tələbələr müasir dünyaya hazır olmaq üçün daim yeni məlumatlar və müxtəlif elm sahələrini öyrənməlidirlər. Lakin bəzən dünyanı daha yaxından tanımaq üçün orada mövcud olan müxtəlif ölkələrin adətlərini, dillərini, yeməklərini, bayramlarını öyrənmək də çox kömək olur. Məhz balaca tələbələrimizi həm sevindirmək, həm də onlara dünyanı yaxından tanımaq üçün Entesk məktəbində kökünü İrlandiyadan götürən və bütün dünyaya yayılan Halloween bayramı keçirilmişdir. Burada ilk olaraq bayramın önəmi, yaranma tarixi, fərqli personajları və daha çox məlumat verilmiş daha sonra oyunlarla, mahnılarla əyləncəli proqram keçirilmişdir. Tələbələr isə Harry Potter, Pirat, Cadügər kimi maraqlı personajlara bəzənərək şənliyi daha maraqlı etmişdilər.',
 			img: '/images/blog-4.jpeg',
 		},
+		{
+			id: uuid(),
+			blogname: 'Elon Musk deyir ki ...',
+			name: 'Təhsilə fərqli baxış',
+			title: 'Təhsilə fərqli baxış',
+			blogContent:[
+				{
+					description:'Təhsilə fərqli yanaşma',
+					text:"Tesla və SpaceX şirkətlərinin baş direktoru və 6 uşaq atası (5-i məktəb yaşında olmaqla) olan Elon Muska Clubhouse audio proqramında canlı müsahibə zamanı təhsillə bağlı sual verilib."
+				},
+				{
+					description:'',
+					text:`Müsahiblərdən biri Muskdan indiki dünyada 5 yaşlı uşağı öyrətməyin ən yaxşı yolunun nə olduğunu və növbəti 5-10 il ərzində bu uşağa təhsil vermək haqqında nə düşündüyünü soruşub.Bir qədər fasilədən sonra Musk, internetin övladlarının təhsilində mühüm rol oynadığını düşündüyünü söyləyib.
+					`
+				},
+				{
+					description:'',
+					text:`“Mənim müşahidələrimə görə, uşaqlarım daha çox YouTube və Reddit-lə öyrəniblər”, - deyib Musk. "Dərslərin də təsirinin olduğunu düşünürəm, lakin onların onlayn keçirdikləri zamanı nəzərə alarq, uşaqların təhsilinin çox hissəsinin əslində internetdən əldə olunduğu görünürdü."
+					`
+				},
+				{
+					description:'',
+					text:`Musk əlavə edib ki, o, təhsilin "mümkün qədər maraqlı və həyəcanverici" olmalı olduğuna inanır və bu fikiri uşaqların oyunlara göstərdiyi maraqla əsaslandırır. 
+					Musk, "Uşaqlar video oyunlara qarşı çox həvəsli ola bilirlərsə, onların tədrisə qarşı da böyük həvəs göstərməyinin bir yolu var." - deyib.
+					`
+				},
+				{
+					description:'',
+					text:`Musk, uşaqlarının öz sinif yoldaşlarından da - güman ki, Maskın Ad Astra məktəbinin digər şagirdlərindən çox şey öyrəndiyini söyləyib. Onun 2014-cü ildə həmtəsis etdiyi məktəbdə Muskın və SpaceX işçilərinin övladları təhsil alır. Ars Technica-nın 2018-ci ildə verdiyi IRS sənədlərinə görə, Ad Astrada qiymətləndirmə sistemi yoxdur. 2018-ci ildə məktəbin artıq 40-a yaxın şagirdi var idi.`
+				},
+				{
+					description:'',
+					text:`Ad Astra-nın kurikulumunda süni intellekt, proqramlaşdırma və tətbiqi elmlər üzrə dərslər üstünlük təşkil edir.  Məktəbin rəhbəri bildirib ki, məktəbdə idman və musiqi, eləcə də, xarici dil tədrisi aparılmır. Çünki, Musk real vaxt rejimində tərcümə proqramlarının tezliklə xarici dil fənnin tədrisini əhəmiyyətsiz hala gətirəcəyinə inanır.`
+				},
+				{
+					description:'',
+					text:`Bilindiyi kimi, Musk ənənəvi təhsilə şübhə ilə yanaşır. Öncəki mühasibələrindən biri zamanı Musk kolleci “bezdirici ev tapşırıqları”-dan ibarət müəssisə kimi təsvir edib və qeyd edib ki, kollecə getməyin əsas faydalarından biri tələbələrin ümumi işçi qüvvəsinə qoşulmazdan əvvəl öz yaşıdları ilə vaxt keçirmələridir.`
+				},
+				{
+					description:'',
+					text:`"Düşünürəm ki, kolleclər əsasən əylənmək və tapşırıqlarını yerinə yetirə biləcəyini sübut etmək üçündür, öyrənmək üçün deyil" - deyib.`
+				},
+				{
+					description:'',
+					text:`Musk, potensial işçilərdən kollec dərəcəsinə malik olmalarının tələb olunmasına qarşı olduğunu bildirib. O, Teslanın işəgötürmə sənədlərində təhsil dərəcəsi tələbinin olmadığını və belə bir şərtin mövcudluğunu "absurd" adlandırdığını söyləyib.`
+				},
+			],
+			img: '/images/elonimg.jpeg',
+		}
 	],
 	about:[{
 			description_1:'Entesk MMC robotlama, mühəndislik,  proqramlaşdırma və animasiyaya fokuslanan innovativ və yaradıcı dərslər hazırlayan və uşaqların/gənclərin dünyagörüşünün/zəkasının köklü çevrilməsi ilə məşğul olan bir EduTech startapdır.',

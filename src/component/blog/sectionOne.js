@@ -38,20 +38,27 @@ function SectionOne(props) {
               <div className="blog-text-box">
 
             {
-              data.blogContent ? (<img className='blog-img' src={img} alt='img'/>) :
+              data.blogContent ? ( <>
+              <img className='blog-img' src={img} alt='img'/>
+              <img className='blog-img2' src={img} alt='img'/>
+              </> ) :
               ( <p></p>)
             }
               
                 {
                   data.blogContent ? 
-                  data.blogContent.map((subject) =>{
+                  data.blogContent.map((subject, index) =>{
                     const {description, text,list  } = subject
-                    console.log(subject)
+                    // console.log(subject)
                     return(
-                      <div>
-                      <p>
-                        {description}
-                      </p>
+                      <div key={index}>
+                      <>
+                        {
+                        description ? (
+                          <p>{description}</p>
+                        ): (null)
+                        }
+                      </>
                       
                       <ul>
                         {
@@ -59,12 +66,11 @@ function SectionOne(props) {
                             const {li} = list
                             return(
                               <li>
-                                
                                 {li}
                               </li>
                             )
                           }) : (
-                            <p></p>
+                            null
                           )
                         } 
                           
@@ -81,7 +87,9 @@ function SectionOne(props) {
                         <p>
                           {title}
                         </p>
+                        <div>
                           <img className='blog-img' src={img} alt='img'/>
+                        </div>
                         {text}
                       </p> 
                     </>

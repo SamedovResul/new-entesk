@@ -1039,6 +1039,22 @@ svg{
   padding-right: 10px;
 }
 
+.section-3-main-div .main-box .note{
+  position: relative;
+}
+
+.section-3-main-div .main-box .note::before{
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  border: 1px solid #482AFF;
+  right: -55px;
+  top: 8px;
+  background-color: white;
+}
+
 @media(max-width:1199px) {
   .section-3-main-div .main-box {
     width: 50% ;
@@ -1274,6 +1290,8 @@ svg{
   top: 10px;
 } 
 
+
+
 @media(max-width:991px){
   .Course .row div:nth-of-type(3) .png::after{
     top: 5px;
@@ -1414,7 +1432,19 @@ svg{
   }
 }
 
+/* .note{
+  position: relative;
+}
 
+.note::before{
+  content: "";
+  position: absolute;
+  right: ;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  background-color: blue;
+} */
 
 .main-box div:nth-child(2) .note .cantent-btn {
   border: none;
@@ -1462,7 +1492,7 @@ svg{
 
 .cantentul {
   height: unset;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-bottom: 30px;
 }
 
@@ -4407,9 +4437,39 @@ table tbody td {
   text-align: left;
   margin-top: 20px;
   padding: 20px;
+  position: relative;
+}
+
+
+.blog-text-box div:nth-of-type(6) {
+  width: 50%;
+  margin: auto 0px auto auto;
+}
+
+.blog-text-box div:nth-of-type(7) {
+  width: 50%;
+  margin: auto 0px auto auto;
+}
+
+@media(max-width:1199px){
+  .blog-text-box div:nth-of-type(7) {
+    width: auto;
+    margin: auto 0px auto auto;
+  }
+}
+
+@media(max-width:768px){
+  .blog-text-box div:nth-of-type(6) {
+    width: auto;
+  }
+  .blog-text-box div:nth-of-type(7) {
+    width: auto;
+    margin: 300px 0px auto auto;
+  }
 }
 
 .blog-text-box p{
+  font-size: 1.3rem;
   font-family: "Calibri Light";
 }
 
@@ -4434,15 +4494,50 @@ table tbody td {
   margin: 20px;
 } */
 
+/* .blog-img {
+  border: 1px solid black;
+  position: relative;
+} */
+
 .blog-img  {
   display: inline;
   float: right;
-  width: 50%;
+  width: 45%;
   height: auto;
   border: 5px solid #482AFF;
   border-radius: 30px;
   margin: 0px 20px 20px;
 }
+
+.blog-img2  {
+  position: absolute;
+  display: inline;
+  float: left;
+  width: 40%;
+  height: auto;
+  border: 5px solid #482AFF;
+  border-radius: 30px;
+  margin: 20px;
+  top: 55%;
+}
+
+@media(max-width:1199px){
+  .blog-img2  {
+    top: 55%;
+  }
+}
+
+@media(max-width:768px){
+  .blog-img2  {
+    top:67%;
+    width: 80%;
+  }
+}
+
+/* .blog-img p{
+  position: absolute;
+  right: 0px;
+} */
 
 
 

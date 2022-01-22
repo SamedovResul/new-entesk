@@ -89,7 +89,7 @@ const SectionThree = (props) =>{
                       })
                     }
                     
-                    <div>
+                    <div className="note">
                       <p>Bu modul kimlər üçündür</p>
                       <ul>
                       {
