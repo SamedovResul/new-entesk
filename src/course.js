@@ -598,7 +598,7 @@ export  const allData = {
 	blog: [
 		{
 			id: uuid(),
-			name: 'Steam nədir',
+			name: 'Steam',
 			blogname: 'STEAM nədir ?',
 			description:'STEAM nədir',
 			text: 'STEAM - Elm, Texnologiya, Mühəndislik, İncəsənət və Riyaziyyatın birləşməsi nəticəsində  yeni ideyaların reallaşdırılması, cəmiyyətdə müxtəlif problemlərin həllinə  kömək edə biləcək  təhsil yanaşmasıdır. STEAM təhsilalanlarda tənqidi yanaşma, yaradıcı düşünmə, qazanılan biliklərin  müqayisəli şəkildə anlaşılması, yaradıcı formada yeni layihələr əsasında biliyin möhkəmlənməsi, əməkdaşlıqetmə və s. kimi XXI əsr bacarıqlarını formalaşdırır. STEAM fənləri ayrılıqda öyrətmək əvəzinə, onları real dünyadakı tətbiqlərə əsaslanan vahid öyrənmə modelində birləşdirir.',
@@ -649,7 +649,7 @@ export  const allData = {
 		{
 			id: uuid(),
 			blogname: 'Sığınacaqda keçirilmiş təlim',
-			name: 'Sığınacaqda keçirilmis təlim',
+			name: 'Sığınacaq',
 			title: 'Sığınacaqda keçirilmiş təlim',
 			text: `Entesk komandası KSM fəaliyyəti nəticəsində sığınacaqda məskunlaşmış uşaqlar üçün maraqlı və əyləncəli robotlaşdırma təlimi keçirmişdir. “Robotların proqramlaşdırılması və yığılmasına giriş” adlı iki günlük təlimin ilk günündə uşaqlara robotlar haqqında ümumi nəzəri məlumatlar öyrədilmişdir. Daha sonra, uşaqlar lazımi detallardan istifadə edərək robotun fiziki hissələrini, kompüter vasitəsilə isə robotu hərəkət etdirəcək proqramı hazırlamışlar. 	`,
 			img: [
@@ -663,7 +663,7 @@ export  const allData = {
 		},
 		{
 			id: uuid(),
-			name: 'Entesk - də Halloween Partisi',
+			name: 'Halloween',
 			blogname: 'Halloween Partisi',
 			title: 'Entesk - də Halloween Partisi',
 			text: 'Tələbələr müasir dünyaya hazır olmaq üçün daim yeni məlumatlar və müxtəlif elm sahələrini öyrənməlidirlər. Bu yolda müxtəlif ölkələrin adətlərini, dillərini, yeməklərini, bayramlarını öyrənmək də çox kömək olur. Məhz balaca tələbələrimizi həm sevindirmək, həm də onlara dünyanı yaxından tanıtmaq üçün Entesk mərkəzində kökünü İrlandiyadan götürən və bütün dünyaya yayılan Halloween tədbiri keçirilmişdir. Tədbir zamanı ilk olaraq bayramın önəmi, yaranma tarixi, fərqli personajları haqqında məlumat verilmiş, daha sonra oyunlarla, mahnılarla əyləncəli proqram keçirilmişdir. Tələbələr isə Harry Potter, Pirat, Cadugar kimi maraqlı personajlara bəzənərək tədbirə daha da maraq qatmışlar.',
