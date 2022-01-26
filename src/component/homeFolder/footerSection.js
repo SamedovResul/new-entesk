@@ -228,7 +228,7 @@ const FooterSection =(props) =>{
 
 
             <div className="col-md-12">
-              <p>Entesk. Bütün hüquqlar qorunur. ©2021</p>
+              <p>Entesk. Bütün hüquqlar qorunur. ©2022</p>
             </div>
           </div>
         </div>
