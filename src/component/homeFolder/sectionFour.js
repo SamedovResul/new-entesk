@@ -19,7 +19,7 @@ const SectionFour = ( props) =>{
                   return(
                   <div key={id} className="col-md-4 section-4-div">
                     <div className=" " >
-                      <img className="responsive" src={image} alt="img"></img>
+                      <img className="responsive" src={image} alt="..."></img>
                     </div>
                   </div>
                   )
