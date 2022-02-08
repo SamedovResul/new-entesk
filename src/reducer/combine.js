@@ -1,4 +1,9 @@
 import { combineReducers } from "redux";
 
-import allData from './reducer.js'
-export default combineReducers({allData})
+import blogs from './blogReducer/reducer'
+import admin from './crmReducer/reducer'
+
+export default combineReducers({
+  blogs,
+  admin
+})

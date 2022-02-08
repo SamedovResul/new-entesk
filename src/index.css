@@ -51,6 +51,7 @@ body {
   z-index: 5;
   background-color: #482AFF;
   height: 60px;
+  /* display: none; */
 }
 
 /* @media(max-width:2300px) and (min-width:1800px){

@@ -1,6 +1,6 @@
 import {React, useState,useEffect} from 'react'
 import {useDispatch } from 'react-redux';
-import {createUser, updateUser, deleteBlog} from '../../../reducer/action'
+import {createUser, updateUser, deleteBlog} from '../../../reducer/blogReducer/action'
 import { useSelector } from 'react-redux';
 
 

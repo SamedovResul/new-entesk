@@ -1,6 +1,6 @@
 import {React, useState, useEffect} from 'react';
 // import {useSpring} from 'react-spring'
-import 'react-bootstrap';
+// import 'react-bootstrap';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import Environment from './component/environmentFolder/environment'
 import Technology from './component/technologyFolder/technology'
@@ -19,7 +19,8 @@ import Students from './component/adminfolder/studentsFolder/students'
 import Blogs from './component/adminfolder/blogfolder/blogs'
 import Createblog from './component/adminfolder/blogfolder/Createblog'
 import { useDispatch } from 'react-redux';
-import {getUser} from './reducer/action'
+import {getUser} from './reducer/blogReducer/action'
+import Cv from './component/studentsCV/CV'
 
 
 function App(props) {
@@ -66,6 +67,10 @@ function App(props) {
 
             <Route path='/About'  >
               <About handlerSideClose={handlerSideClose} />
+            </Route>
+
+            <Route path='/:name'  >
+              <Cv />
             </Route>
 
             {/* admin page */}
