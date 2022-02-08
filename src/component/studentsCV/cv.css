@@ -31,6 +31,14 @@ body {
     object-fit: cover;
 }
 
+.img1{
+  display: block;
+}
+.img2{
+  display: none;
+}
+
+
 .front {
   margin: 10px auto 10px auto;
     width: 60%;
@@ -259,6 +267,13 @@ body {
   .map {
     bottom: 40px;
   }
+
+  .img1{
+    display: none;
+  }
+  .img2{
+    display: block;
+  }
 }
 
 @media (max-width:500px) {
@@ -276,46 +291,35 @@ body {
 @media (max-width:450px) {
 
   .front {
-    margin: 70px auto 70px auto;
+    margin: 120px auto 120px auto;
     width: 100%;
   }
 }
 
-@media (max-width:420px) {
 
-  .front {
-    margin: 140px auto 85px auto;
-    width: 100%;
-  }
-}
 
 @media (max-width:400px) {
 
   .front {
-    margin: 90px auto 90px auto;
-    width: 90%;
+    margin: 160px auto 160px auto;
+    width: 100%;
   }
 }
 
-@media (max-width:390px) {
 
-  .front {
-    margin: 100px auto 100px auto;
-  }
-}
 
 @media (max-width:375px) {
 
   .front {
-    margin: 120px auto 120px auto;
-    width: 95%;
+    margin: 180px auto 180px auto;
+    width: 100%;
   }
 }
 
-@media (max-width:350px) {
+@media (max-width:355px) {
 
   .front {
-    margin: 115px auto 115px auto;
+    margin: 200px auto 200px auto;
   }
 }
 

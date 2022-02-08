@@ -28,14 +28,14 @@ const Cv = () => {
     <div className="one">
       {
         studentData.map((data,index) =>{
-          const {studentName, frontImg,backImg} = data
+          const {studentName,resBackImg, frontImg,backImg} = data
           console.log(frontImg)
           if(studentName === name){
             studentNamelocation = studentName
             return(
               <div key={index} className="one">
-                <img  src={backImg} alt="img" />
-  
+                <img  src={backImg} alt="img" className='img1' />
+                <img src={resBackImg} alt="img" className='img2' />
                 <div className="front rellax">
                   <img src={frontImg} alt="img" useref={rellaxRef} />
                 </div>
