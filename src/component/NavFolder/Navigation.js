@@ -142,7 +142,7 @@ studentData.map((subject) =>{
 	const  {studentName} = subject
 	// console.log("/" + "/" + studentname)
 	// console.log(name)
-	if(location.pathname === "/" + studentName){
+	if(location.pathname === "/" + studentName ){
 		
 		style = {
 				display:"none"
@@ -156,6 +156,11 @@ studentData.map((subject) =>{
 
 })
 
+if(location.pathname === "/gallery"){
+	style = {
+		display:"none"
+	}
+}
 
 	// style = {
 	// 	display:"none"

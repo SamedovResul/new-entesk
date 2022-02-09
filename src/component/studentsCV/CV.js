@@ -3,6 +3,7 @@ import Rellax from "rellax";
 import './cv.css'
 import { studentData } from './studentData';
 import UserParams from './useParams';
+import { Link } from 'react-router-dom';
 
 const Cv = () => {
   let boolean = true
@@ -41,13 +42,13 @@ const Cv = () => {
                 </div>
 
                 <div className="map ">
-                  <a  href="https://www.google.co.uk/maps/@40.3849248,49.8027824,19z">
-                  Ünvana baxın
+                  <Link  to="/gallery">
+                    Certificate
                   <span></span>
                   <span></span>
                   <span></span>
                   <span></span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             )

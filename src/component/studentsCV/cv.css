@@ -74,7 +74,7 @@ body {
   position: absolute;
   position: relative;
   width: 150px;
-  bottom: 130px;
+  bottom: 140px;
   padding: 5px;
   background-color: white;
   /* animation: myLigt 4s infinite;
@@ -89,6 +89,7 @@ body {
   text-decoration: none !important;
   font-size: 18px;
   font-family: "Calibri Light";
+  text-transform: uppercase;
 }
 @keyframes myLigt {
   from {

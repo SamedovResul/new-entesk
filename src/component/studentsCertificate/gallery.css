@@ -1,0 +1,19 @@
+.Certificate-header {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.Certificate-header h1{
+  margin: 20px;
+  text-transform: uppercase;
+  font-family: "Calibri Light";
+}
+
+
+.certificate-div{
+  padding: 20px 20px;
+}

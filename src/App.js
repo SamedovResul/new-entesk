@@ -21,6 +21,7 @@ import Createblog from './component/adminfolder/blogfolder/Createblog'
 import { useDispatch } from 'react-redux';
 import {getUser} from './reducer/blogReducer/action'
 import Cv from './component/studentsCV/CV'
+import Gallery from './component/studentsCertificate/gallery';
 
 
 function App(props) {
@@ -30,7 +31,6 @@ function App(props) {
   }, [dispatch])
   const [zIndex, setZindex] = useState(0);
   const [openSide, setopenSide ] = useState(false);
-  // const [loading, setLoading] = useState(false)
 
   
    const handlerSideClose= function(){
@@ -69,9 +69,15 @@ function App(props) {
               <About handlerSideClose={handlerSideClose} />
             </Route>
 
-            <Route path='/:name'  >
+            <Route path='/gallery'>
+              <Gallery />
+            </Route>
+
+            <Route exact path='/:name'  >
               <Cv />
             </Route>
+
+            
 
             {/* admin page */}
             <Route path='/Login' component={Login } />
