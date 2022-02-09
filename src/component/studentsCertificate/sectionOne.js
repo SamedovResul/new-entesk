@@ -15,7 +15,7 @@ const SectionOne = ({GalleryData}) => {
                 return(
                 <div key={index} className="col-md-4 certificate-div">
                   <div className=" " >
-                    <img className="responsive" src={image} alt="..."></img>
+                    <img className="responsive" src={image} alt="test ne isteyirsen"></img>
                   </div>
                 </div>
                 )
