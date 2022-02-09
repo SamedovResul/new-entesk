@@ -25,7 +25,7 @@ const Cv = () => {
     
   }, []);
   return (
-    <div className="one">
+    <>
       {
         studentData.map((data,index) =>{
           const {studentName,resBackImg, frontImg,backImg} = data
@@ -39,13 +39,23 @@ const Cv = () => {
                 <div className="front rellax">
                   <img src={frontImg} alt="img" useref={rellaxRef} />
                 </div>
+
+                <div className="map ">
+                  <a  href="https://www.google.co.uk/maps/@40.3849248,49.8027824,19z">
+                  Ünvana baxın
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </a>
+                </div>
               </div>
             )
             
           }
         })
       }
-    </div>
+    </>
   );
 };
 
