@@ -7,7 +7,7 @@ const Gallery = () => {
   console.log(true)
   return (
     <div className='Certificate-header' >
-     <h1> Certificate </h1>
+     <h1> Certificates </h1>
       <SectionOne GalleryData={GalleryData} />  
     </div>
   )

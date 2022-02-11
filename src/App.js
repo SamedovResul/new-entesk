@@ -25,6 +25,8 @@ import Gallery from './component/studentsCertificate/gallery';
 
 
 function App(props) {
+  const [certificates, setCertificates] = useState([])
+  console.log(certificates)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getUser())
@@ -38,7 +40,6 @@ function App(props) {
 		setopenSide(false)
 	}
   
-
   return (
     <Router>
       <div className="App" >
@@ -69,12 +70,12 @@ function App(props) {
               <About handlerSideClose={handlerSideClose} />
             </Route>
 
-            <Route path='/gallery'>
-              <Gallery />
+            <Route path={`/${certificates}/:name`}  >
+              <Gallery  />
             </Route>
 
             <Route exact path='/:name'  >
-              <Cv />
+              <Cv setCertificates={setCertificates} />
             </Route>
 
             

@@ -5,13 +5,15 @@ import { studentData } from './studentData';
 import UserParams from './useParams';
 import { Link } from 'react-router-dom';
 
-const Cv = () => {
+const Cv = (props) => {
+  const {setCertificates} = props
   let boolean = true
   const rellaxRef = useRef();
   let studentNamelocation
- const {name} = UserParams(boolean)
+ const {name, } = UserParams(boolean)
 
-  
+ 
+ 
 
   useEffect(() => {
     new Rellax(rellaxRef.current, {
@@ -25,12 +27,20 @@ const Cv = () => {
     
     
   }, []);
+  console.log(props)
+  function Studentname(params) {
+    setCertificates(params)
+    console.log(params)
+  }
+
   return (
     <>
       {
         studentData.map((data,index) =>{
           const {studentName,resBackImg, frontImg,backImg} = data
+          // setCertificates(studentName)
           console.log(frontImg)
+          
           if(studentName === name){
             studentNamelocation = studentName
             return(
@@ -41,9 +51,9 @@ const Cv = () => {
                   <img src={frontImg} alt="img" useref={rellaxRef} />
                 </div>
 
-                <div className="map ">
-                  <Link  to="/gallery">
-                    Certificate
+                <div className="map " >
+                  <Link to={`/${studentName}/${studentName}`} onClick={() => Studentname(studentName)} >
+                    Certificates
                   <span></span>
                   <span></span>
                   <span></span>
