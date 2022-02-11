@@ -132,30 +132,25 @@ useEffect(() => {
   };
 }, [handleNavigation,count,y]);
 
-let style ={
-	display:"block"
-}
+let style 
 
 const studentname = name
 
 studentData.map((subject) =>{
 	const  {studentName} = subject
 	// console.log("/" + "/" + studentname)
-	// console.log(name)
+	// console.log("/" + studentName )
+	// console.log(location.pathname)
 	if(location.pathname === "/" + studentName ){
-		
+		console.log(location.pathname === "/" + studentName)
 		style = {
 				display:"none"
 			} 
 			
-	}else{
-		style = {
-			display:"block"
-		}
 	}
 
 })
-
+// console.log(style)
 if(location.pathname === "/gallery"){
 	style = {
 		display:"none"

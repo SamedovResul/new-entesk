@@ -27,7 +27,7 @@ const Cv = (props) => {
     
     
   }, []);
-  console.log(props)
+  // console.log(props)
   function Studentname(params) {
     setCertificates(params)
     console.log(params)
@@ -37,9 +37,9 @@ const Cv = (props) => {
     <>
       {
         studentData.map((data,index) =>{
-          const {studentName,resBackImg, frontImg,backImg} = data
+          const {studentName,resBackImg, frontImg,backImg,className} = data
           // setCertificates(studentName)
-          console.log(frontImg)
+          // console.log(frontImg)
           
           if(studentName === name){
             studentNamelocation = studentName
@@ -51,7 +51,7 @@ const Cv = (props) => {
                   <img src={frontImg} alt="img" useref={rellaxRef} />
                 </div>
 
-                <div className="map " >
+                <div className={`map ${className} `} >
                   <Link to={`/${studentName}/${studentName}`} onClick={() => Studentname(studentName)} >
                     Certificates
                   <span></span>

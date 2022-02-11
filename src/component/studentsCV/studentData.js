@@ -1,14 +1,16 @@
 export const studentData = [
   {
-    studentName:"AbImran",
+    studentName:"abimran12",
     frontImg:"/img/imranfront.png",
     backImg:"/img/imranback.jpg",
-    resBackImg:"/img/imranbackphone.jpg"
+    resBackImg:"/img/imranbackphone.jpg",
+    className:"imran"
   },
   {
-    studentName:"Oqtay",
+    studentName:"maogtay21",
     frontImg:"/img/oqtayfront.png",
     backImg:"/img/oqtayback.jpg",
-    resBackImg:"/img/oqtaybackphone.jpg"
+    resBackImg:"/img/oqtaybackphone.jpg",
+    className:"oqtay"
   }
 ]
