@@ -38,6 +38,7 @@ const Cv = (props) => {
       {
         studentData.map((data,index) =>{
           const {studentName,resBackImg, frontImg,backImg,className} = data
+          console.log(resBackImg)
           // setCertificates(studentName)
           // console.log(frontImg)
           
