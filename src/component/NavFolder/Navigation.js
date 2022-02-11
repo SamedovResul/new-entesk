@@ -141,8 +141,7 @@ studentData.map((subject) =>{
 	// console.log("/" + "/" + studentname)
 	// console.log("/" + studentName )
 	// console.log(location.pathname)
-	if(location.pathname === "/" + studentName ){
-		console.log(location.pathname === "/" + studentName)
+	if(location.pathname === "/" + studentName  ){
 		style = {
 				display:"none"
 			} 

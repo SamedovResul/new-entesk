@@ -208,20 +208,20 @@ body {
 /* oqtay */
 
 .oqtay span:nth-child(1){
-  background: linear-gradient(90deg, transparent, #14a3c7);
+  background: linear-gradient(90deg, transparent, #68c9f2);
 }
 .oqtay span:nth-child(2){
-  background: linear-gradient(180deg, transparent, #14a3c7);
+  background: linear-gradient(180deg, transparent, #68c9f2);
 }
 .oqtay span:nth-child(3){
-  background: linear-gradient(270deg, transparent, #14a3c7);
+  background: linear-gradient(270deg, transparent, #68c9f2);
 }
 .oqtay span:nth-child(4){
-  background: linear-gradient(360deg, transparent, #14a3c7);
+  background: linear-gradient(360deg, transparent, #68c9f2);
 }
 
 .oqtay a {
-  color: #14a3c7;
+  color: #68c9f2;
 }
 
 /* -- */
