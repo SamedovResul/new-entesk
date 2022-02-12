@@ -12,5 +12,12 @@ export const studentData = [
     backImg:"/img/oqtayback.jpg",
     resBackImg:"/img/oqtaybackphone.jpg",
     className:"oqtay"
+  },
+  {
+    studentName:"khraul19",
+    frontImg:"/img/raulfront.png",
+    backImg:"/img/raulback.jpg",
+    resBackImg:"/img/raulbackphone.jpg",
+    className:"raul"
   }
 ]
