@@ -11,7 +11,6 @@ const HomeFunctions = (props) =>{
   // getDimension screen for responsive
 
 	const {screenSize} = GetDimension()
-
   // scroll 
 
   const [scrollPosition, setScrollPosition] = useState(0);

@@ -3,13 +3,13 @@ import react ,{ useState, useEffect } from "react";
 const GetDimension = () =>{
 
   const [screenSize, getDimension] = useState({
-    dynamicWidth: window.innerWidth,
+    dynamicWidth: window.screen.width,
     dynamicHeight: window.innerHeight
   });
 
 	const setDimension = () => {
     getDimension({
-      dynamicWidth: window.innerWidth,
+      dynamicWidth: window.screen.width,
       dynamicHeight: window.innerHeight
     })
   }
@@ -21,7 +21,7 @@ const GetDimension = () =>{
         window.removeEventListener('resize', setDimension);
     })
   }, [screenSize])
-
+  // console.log(screenSize)
 
   return {screenSize}
 }
