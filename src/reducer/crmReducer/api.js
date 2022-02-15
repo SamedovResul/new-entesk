@@ -1,18 +1,27 @@
 import axios from 'axios'
 
-// const url = 'http://localhost:5000';
 
 
+const API = axios.create({ baseURL: 'http://localhost:5000' });
 
+API.interceptors.request.use((req) => {
+  if (localStorage.getItem('profile')) {
+    req.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('profile')).token}`;
+  }
 
-
-
+  return req;
+});
 // export const fetchBlogs = () => axios.get(url)
 // export const createPosts = (data,) => axios.post(url, {...data}, );
-export const SignINUser = (SignINdata,signIN) =>{
-  axios.post(`http://localhost:5000${signIN}`,SignINdata )
+export const SigninAdmin = (data) =>{
+  // console.log(signIN)
+  return API.post(`/admin/signIn`,data )
 }
 
+export const createTimetable = (data) =>{
+
+  return API.post('/student/timetable', data)
+}
 
 // export const updateBlogs = (id, updateBlog) => {
 

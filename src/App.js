@@ -14,7 +14,9 @@ import About from './component/About/about'
 import EnvironmentCourse from './component/environmentFolder/Course/Course'
 import TexnologyCourse from './component/technologyFolder/Course/Course'
 import SkillCours from './component/skillFolder/Course/Course'
-import Login from './component/adminfolder/adminlogin/login';
+import Login from './component/adminfolder/login/login';
+import Admin from './component/adminfolder/admin/admin';
+import Teacher from './component/adminfolder/teacher/teacher';
 import Students from './component/adminfolder/studentsFolder/students'
 import Blogs from './component/adminfolder/blogfolder/blogs'
 import Createblog from './component/adminfolder/blogfolder/Createblog'
@@ -22,7 +24,7 @@ import { useDispatch } from 'react-redux';
 import {getUser} from './reducer/blogReducer/action'
 import Cv from './component/studentsCV/CV'
 import Gallery from './component/studentsCertificate/gallery';
-
+import Create from './component/adminfolder/admin/create';
 
 function App(props) {
   const [certificates, setCertificates] = useState([])
@@ -55,7 +57,9 @@ function App(props) {
             <Route path="/environment" component={Environment} />
             <Route path="/technology" component={Technology} />
             <Route path="/skill" component={Skill} />
-            
+            <Route path='/CourseEnviroment/:name' component={EnvironmentCourse} />
+            <Route path='/CourseTecnology/:name' component={TexnologyCourse} />
+            <Route path='/CourseSkill/:name' component={SkillCours} />
             
 
             <Route path="/products"  >
@@ -66,22 +70,22 @@ function App(props) {
               <Blog handlerSideClose={handlerSideClose} />
             </Route > 
 
-            <Route path='/About'  >
+            <Route exact path='/About'  >
               <About handlerSideClose={handlerSideClose} />
             </Route>
 
-            <Route path={`/${certificates}/:name`}  >
-              <Gallery  />
+            <Route path='/Login' >
+              <Login   />
             </Route>
-
-            <Route exact path='/:name'  >
-              <Cv setCertificates={setCertificates} />
+            <Route path='/admin'>
+              <Admin  />
             </Route>
-
-            
-
-            {/* admin page */}
-            <Route path='/Login' component={Login } />
+            <Route path='/teacher'>
+              <Teacher  />
+            </Route>
+            <Route path="/Create">
+              <Create />
+            </Route>
             <Route path='/Students' >
               <Students />
             </Route>
@@ -91,11 +95,17 @@ function App(props) {
             <Route path='/Createblog/:id' >
               <Createblog  />
             </Route>
-            {/* ------ */}
-            <Route path='/CourseEnviroment/:name' component={EnvironmentCourse} />
-            <Route path='/CourseTecnology/:name' component={TexnologyCourse} />
-            <Route path='/CourseSkill/:name' component={SkillCours} />
             
+            <Route path={`/${certificates}/:name`}  >
+              <Gallery  />
+            </Route>
+
+            <Route  path='/:name'  >
+              <Cv setCertificates={setCertificates} />
+            </Route>
+            
+            
+
             <HomeBanner path='/' handlerSideClose={handlerSideClose} zIndex={zIndex}  /> 
             
           </Switch>

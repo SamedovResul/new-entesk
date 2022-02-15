@@ -1,14 +1,32 @@
-import {SignINUser} from './api'
+import {createTimetable, SigninAdmin} from './api'
  
-export const SigninUsee = (SignInData) => async (dispatch) => {
+export const SignInAdmin = (adminData,router) => async (dispatch) => {
+  console.log(router)
   try {
-    const { data } = await SignINUser(SignIn,SignInData);
-    dispatch({ type: "SignIn", payload: data });
+    const { data } = await SigninAdmin(adminData);
+    console.log(data.admin)
+    dispatch({ type: "SIGNIN", payload: data });
+    if(data.admin?.name){
+      router.push('/admin')
+    }else{
+      router.push('/teacher')
+    }
+    
   } catch (error) {
     console.log(error.message);
   }
 };
 
+export const CreateTimetable = (timetableData,router) => async (dispatch) =>{
+
+  try {
+    const {data} = await createTimetable(timetableData)
+
+    dispatch({type:"TIMETABLE", payload:data})
+  } catch (error) {
+    
+  }
+}
 
 // export const getUser = () => async (dispatch) => {
 //   try {
