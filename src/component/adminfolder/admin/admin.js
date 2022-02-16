@@ -1,10 +1,20 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 const Admin = () => {
   let state = useSelector((state) => state.admin);
   console.log(state.authData.Data.timetable)
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const logOut = () =>{
+    dispatch({ type:"LOGOUT" })
+
+    history.push("/login")
+  }
   return (
   <>
     <div className='container' >
@@ -38,7 +48,13 @@ const Admin = () => {
             create
           </button>
         </Link>
-        
+        <button
+          onClick={()=>{
+            logOut()
+          }}
+        >
+          logOute
+        </button>
         </div>
       </div>
     </div>

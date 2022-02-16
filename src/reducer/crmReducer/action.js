@@ -1,4 +1,4 @@
-import {createTimetable, SigninAdmin} from './api'
+import {createTimetable, SigninAdmin, getAlldata} from './api'
  
 export const SignInAdmin = (adminData,router) => async (dispatch) => {
   console.log(router)
@@ -6,27 +6,43 @@ export const SignInAdmin = (adminData,router) => async (dispatch) => {
     const { data } = await SigninAdmin(adminData);
     console.log(data.admin)
     dispatch({ type: "SIGNIN", payload: data });
-    if(data.admin?.name){
-      router.push('/admin')
-    }else{
-      router.push('/teacher')
-    }
+    // if(data.signIn?.role === 1){
+    //   router.push('/admin')
+    // }else{
+    //   router.push('/teacher')
+    // }
     
   } catch (error) {
     console.log(error.message);
   }
 };
 
+// admin can get, create, update, delete 
+
+export const getData = (id) =>  async (dispatch) =>{
+
+  try {
+    const {data} = await getAlldata(id)
+
+    dispatch({type:"FETCHDATA", payload:data})
+  } catch (error) {
+    console.log(error.message)
+  }
+}
+
 export const CreateTimetable = (timetableData,router) => async (dispatch) =>{
 
   try {
     const {data} = await createTimetable(timetableData)
-
+    console.log(data)
     dispatch({type:"TIMETABLE", payload:data})
+    router.push("/login")
   } catch (error) {
-    
+    console.log(error.message);
   }
 }
+
+
 
 // export const getUser = () => async (dispatch) => {
 //   try {

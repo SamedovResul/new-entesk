@@ -11,6 +11,11 @@ API.interceptors.request.use((req) => {
 
   return req;
 });
+
+export const getAlldata = (id) =>{
+
+  return API.get(`/admin/${id}`)
+}
 // export const fetchBlogs = () => axios.get(url)
 // export const createPosts = (data,) => axios.post(url, {...data}, );
 export const SigninAdmin = (data) =>{

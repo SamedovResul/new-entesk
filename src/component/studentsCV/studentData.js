@@ -8,7 +8,7 @@ export const studentData = [
   },
   {
     studentName:"maogtay21",
-    frontImg:"/img/oqtayfront.png",
+    frontImg:"/img/ogtayfront.png",
     backImg:"/img/oqtayback.jpg",
     resBackImg:"/img/oqtaybackphone.jpg",
     className:"oqtay"
