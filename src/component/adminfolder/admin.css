@@ -50,3 +50,37 @@
 .create-div select{
   margin: 20px;
 }
+
+/* create class */
+
+
+.create-class{
+  width: 100%;
+  height: auto;
+  border: 1px solid;
+  text-align: center;
+}
+
+
+
+.create-class form{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.create-class form label{
+  margin: 10px;
+}
+
+.create-class form label input{
+  margin-left: 5px;
+}
+
+.create-class button{
+  border: none;
+  background-color: blue;
+  border-radius: 20px;
+  color: white;
+  padding: 5px 20px;
+}

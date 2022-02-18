@@ -53,7 +53,7 @@ const Cv = (props) => {
                 </div>
 
                 <div className={`map ${className} `} >
-                  <Link to={`/${studentName}/${studentName}`} onClick={() => Studentname(studentName)} >
+                  <Link to={`/${studentName}/certificates`} onClick={() => Studentname(studentName)} >
                     Certificates
                   <span></span>
                   <span></span>

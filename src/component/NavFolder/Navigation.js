@@ -141,11 +141,17 @@ studentData.map((subject) =>{
 	// console.log("/" + "/" + studentname)
 	// console.log("/" + studentName )
 	// console.log(location.pathname)
-	if(location.pathname === "/" + studentName  ){
+	
+	if(location.pathname === `/${studentName}/certificates`){
+		style = {
+			display:"none"
+		} 
+	}
+
+	if(location.pathname === "/" + studentName ){
 		style = {
 				display:"none"
 			} 
-			
 	}
 
 })

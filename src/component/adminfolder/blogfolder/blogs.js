@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 const Blogs = () => {
 
   const {state,setCurrentId,currentId,setDeleteId} = adminFunctions() 
-  console.log(currentId)
+  // console.log(state)
  
 
 
@@ -19,12 +19,12 @@ const Blogs = () => {
             <Createuttons />
             {  state.map((blog) =>{
               const {_id, name, file, text,title} = blog
-
+              // console.log(file[0]?.filepath)
               return(
                 <div className="col-md-6" key={_id} >
                   <div className="admin-blog">
                     <div className="admin-blog-img">
-                        <img src={`http://localhost:5000/${file[0].filepath}`} alt="img" />
+                        <img src={`http://localhost:5000/${file[0]?.filepath}`} alt="img" />
                     </div>
                     <div className="admin-blog-content">
                       <p className=''  > BlogName: {name}  </p>

@@ -2,10 +2,11 @@ import {React, useState,useEffect} from 'react'
 import {useDispatch } from 'react-redux';
 import {createUser, updateUser, deleteBlog} from '../../../reducer/blogReducer/action'
 import { useSelector } from 'react-redux';
+import { useParams} from 'react-router-dom'
 
-
-function AdminFunctions(id) {
-  let state = useSelector((state) => state.allData);
+function AdminFunctions() {
+  const {id} = useParams()
+  let state = useSelector((state) => state.blogs);
   const [currentId, setCurrentId] = useState(0);
   const [deleteId, setDeleteId] = useState(0);
   const [count, setCount] = useState(0);
@@ -23,7 +24,7 @@ function AdminFunctions(id) {
   
 
   const update = useSelector((state) =>(
-    id ? state.allData.find((blog) => blog._id === id) : null
+    id ? state.blogs.find((blog) => blog._id === id) : null
   ))
   // function imgView(img) {
   //   if(img.type){

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
+import {getData} from '../../../reducer/crmReducer/action'
 const Teacher = () => {
   let state = useSelector((state) => state.admin);
   console.log(state.authData.Data.timetable)

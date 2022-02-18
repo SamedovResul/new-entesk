@@ -4,14 +4,24 @@ export const studentData = [
     frontImg:"/img/imranfront.png",
     backImg:"/img/imranback.jpg",
     resBackImg:"/img/imranbackphone.jpg",
-    className:"imran"
+    className:"imran",
+    certificates:[
+      {
+        img:'/certificat/imrancertificate1.jpg'
+      },
+    ]
   },
   {
     studentName:"maogtay21",
     frontImg:"/img/ogtayfront.png",
     backImg:"/img/oqtayback.jpg",
     resBackImg:"/img/oqtaybackphone.jpg",
-    className:"oqtay"
+    className:"oqtay",
+    certificates:[
+      {
+        img:'/certificat/oqtaycertificate1.jpg'
+      },
+    ]
   },
   {
     studentName:"khraul19",
@@ -29,9 +39,9 @@ export const studentData = [
   },
   {
     studentName:"mamurad05",
-    frontImg:"/img/raulfront.png",
-    backImg:"/img/raulback.jpg",
-    resBackImg:"/img/raulbackphone.jpg",
+    frontImg:"/img/muradfront.png",
+    backImg:"/img/imranback.jpg",
+    resBackImg:"/img/imranbackphone.jpg",
     className:"raul"
   },
   {

@@ -23,8 +23,8 @@ import Createblog from './component/adminfolder/blogfolder/Createblog'
 import { useDispatch } from 'react-redux';
 import {getUser} from './reducer/blogReducer/action'
 import Cv from './component/studentsCV/CV'
-import Gallery from './component/studentsCertificate/gallery';
-import Create from './component/adminfolder/admin/create';
+import Gallery from './component/studentsCV/studentsCertificate/gallery';
+import Create from './component/adminfolder/admin/create/create';
 
 function App(props) {
   const [certificates, setCertificates] = useState([])
@@ -96,7 +96,7 @@ function App(props) {
               <Createblog  />
             </Route>
             
-            <Route path={`/${certificates}/:name`}  >
+            <Route path={`/:name/certificates`}  >
               <Gallery  />
             </Route>
 

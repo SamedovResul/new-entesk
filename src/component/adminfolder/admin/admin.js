@@ -1,29 +1,40 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import {getData} from '../../../reducer/crmReducer/action'
 
 const Admin = () => {
-  let state = useSelector((state) => state.admin);
-  console.log(state.authData.Data.timetable)
+  let state = useSelector((state) => state.crmData);
+  // console.log(state.authData.Data.timetable)
   const dispatch = useDispatch();
   const history = useHistory();
 
+  let userData = JSON.parse(localStorage.getItem('profile'))
+  
+  // get data from back
+
+  useEffect(() => {
+    dispatch(getData(userData.signIn._id))
+  }, [])
+
+  // log out----
   const logOut = () =>{
     dispatch({ type:"LOGOUT" })
-
     history.push("/login")
   }
   return (
   <>
-    <div className='container' >
+  {
+    state.timetable ? (
+      <div className='container' >
       <div className="container-fluid">
         <div className="row">
         {
-          state.authData.Data.timetable.map((time,index) =>{
+          state.timetable.map((time,index) =>{
             const {class_Name, student_Name, teacher_Name} = time
-            console.log(time)
+            // console.log(time)
 
 
             return(
@@ -57,7 +68,12 @@ const Admin = () => {
         </button>
         </div>
       </div>
-    </div>
+    </div> 
+    ):(
+      <p>wait</p>
+    )
+  }
+    
   </>
     
   )

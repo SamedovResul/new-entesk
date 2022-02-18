@@ -4,6 +4,9 @@ import axios from 'axios'
 
 const API = axios.create({ baseURL: 'http://localhost:5000' });
 
+
+// token
+
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('profile')) {
     req.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('profile')).token}`;
@@ -12,20 +15,40 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
+
+// get all data 
+
 export const getAlldata = (id) =>{
 
   return API.get(`/admin/${id}`)
 }
 // export const fetchBlogs = () => axios.get(url)
 // export const createPosts = (data,) => axios.post(url, {...data}, );
+
+// sign in admin and teacher
 export const SigninAdmin = (data) =>{
   // console.log(signIN)
   return API.post(`/admin/signIn`,data )
 }
 
+// create timetable
+
 export const createTimetable = (data) =>{
 
   return API.post('/student/timetable', data)
+}
+
+// create update delete class
+
+
+export const createClass = (data) =>{
+
+  return API.post('/class', data)
+}
+
+export const updateClass = (id, data) =>{
+
+  return API.patch(`/class/${id}`, data)
 }
 
 // export const updateBlogs = (id, updateBlog) => {
