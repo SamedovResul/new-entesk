@@ -14,7 +14,7 @@ import About from './component/About/about'
 import EnvironmentCourse from './component/environmentFolder/Course/Course'
 import TexnologyCourse from './component/technologyFolder/Course/Course'
 import SkillCours from './component/skillFolder/Course/Course'
-// import Login from './component/adminfolder/login/login';
+import Login from './component/adminfolder/login/login';
 // // import Admin from './component/adminfolder/admin/admin';
 // import Teacher from './component/adminfolder/teacher/teacher';
 // import Students from './component/adminfolder/studentsFolder/students'
@@ -74,9 +74,9 @@ function App(props) {
               <About handlerSideClose={handlerSideClose} />
             </Route>
 
-            {/* <Route path='/Login' >
+            <Route path='/Login' >
               <Login   />
-            </Route> */}
+            </Route>
             {/* <Route path='/admin'>
               <Admin  />
             </Route> */}
