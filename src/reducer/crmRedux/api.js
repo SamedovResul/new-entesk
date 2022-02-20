@@ -60,7 +60,7 @@ export const deleteClass = (id) =>{
   return API.delete(`/class/${id}`)
 }
 
-// create update delete get class
+// create, status delete get class
 
 export const getTeacher = () =>{
 
@@ -69,17 +69,11 @@ export const getTeacher = () =>{
 
 export const createTeacher = (data) =>{
 
-  return API.post('/teacher', data)
+  return API.post('/teacher/register', data)
 }
 
 export const updateTeacher = (id, data) =>{
 
   return API.patch(`/teacher/${id}`, data)
 }
-
-export const deleteTeacher = (id) =>{
-
-  return API.delete(`/teacher/${id}`)
-}
-
 // 

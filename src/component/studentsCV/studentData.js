@@ -72,4 +72,39 @@ export const studentData = [
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
   },
+  {
+    studentName:"ibfuad27",
+    frontImg:"/img/raulfront.png",
+    backImg:"/img/raulback.jpg",
+    resBackImg:"/img/raulbackphone.jpg",
+    className:"raul"
+  },
+  {
+    studentName:"alayaz28",
+    frontImg:"/img/raulfront.png",
+    backImg:"/img/raulback.jpg",
+    resBackImg:"/img/raulbackphone.jpg",
+    className:"raul"
+  },
+  {
+    studentName:"maamir14",
+    frontImg:"/img/raulfront.png",
+    backImg:"/img/raulback.jpg",
+    resBackImg:"/img/raulbackphone.jpg",
+    className:"raul"
+  },
+  {
+    studentName:"kaamina21",
+    frontImg:"/img/raulfront.png",
+    backImg:"/img/raulback.jpg",
+    resBackImg:"/img/raulbackphone.jpg",
+    className:"raul"
+  },
+  {
+    studentName:"mafateh12",
+    frontImg:"/img/raulfront.png",
+    backImg:"/img/raulback.jpg",
+    resBackImg:"/img/raulbackphone.jpg",
+    className:"raul"
+  },
 ]

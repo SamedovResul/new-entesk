@@ -1,29 +1,27 @@
 import React, {useEffect, useState} from 'react'
 import { useHistory } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
-// import { CreateTeacher, UpdateTeacher,GetTeacher,DeleteTeacher} from '../../../../reducer/crmRedux/action';
+import { CreateTeacher, UpdateTeacher,GetTeacher} from '../../../../reducer/crmRedux/action';
 
 const Classes = () => {
   const [data, setData] = useState({
     name:"",
-    content:"",
+    email:"",
+    password:"",
+    status:0
   })
-  // console.log(data)
   const [id, setId] = useState({})
   const dispatch = useDispatch();
   const state = useSelector((state) => state.teacherReducer);
-    // update
-    
-    
-    console.log(state)
-    
+
+  // get teacher
   useEffect(() => {
     dispatch(GetTeacher())
   }, [])
   
 
     
-
+// select update teacher
   useEffect(() => {
     state.map((classes) =>{
       const {_id} = classes
@@ -33,7 +31,8 @@ const Classes = () => {
     })
   }, [id])
 
-    // console.log(id)
+
+  // create and update teacher
   const createClass = (e) =>{
     if(id.id){
       dispatch(UpdateTeacher(id.id,data))
@@ -44,17 +43,14 @@ const Classes = () => {
     }
   }
 
-  const deleteClass =(id) =>{
-    console.log(id)
-    dispatch(DeleteTeacher(id))
-  }
+ 
   return (
     <div className='create-data'>
       <p>create teacher</p>
       <form action="">
         <label htmlFor="name">
-          class name
-          <input type="text" id="name"
+          name
+          <input type="name" id="name"
           value={data.name}
             onChange={(e) =>{
               setData({
@@ -63,17 +59,42 @@ const Classes = () => {
             }}
           />
         </label>
-        <label htmlFor="content">
-          content
-          <input type="text" id="content" 
-            value={data.content}
+        <label htmlFor="email">
+          email
+          <input type="email" id="email" 
+            value={data.email}
             onChange={(e) =>{
               setData({
-                ...data, content:e.target.value
+                ...data, email:e.target.value
               })
             }}
           />
         </label>
+        <label htmlFor="password">
+          password
+          <input type="password" id="password"
+            onChange={(e) =>{
+              setData({
+                ...data, password:e.target.value
+              })
+            }}
+              />
+        </label>
+        <label htmlFor="status">
+          status
+          <select name="" id="status"
+            onChange={(e)=>{
+              setData({
+                ...data, status: parseInt(e.target.value) 
+              })
+            }}
+          >
+            <option >select status</option>
+            <option value="0">inactive</option>
+            <option value="1">active</option>
+          </select>
+        </label>
+        
       </form>
       <button
           onClick={() =>{
@@ -96,7 +117,7 @@ const Classes = () => {
         <ul>
           {
             state.map((clas, index) =>{
-              const {name, _id,content} =clas
+              const {name, _id,email,status } =clas
               
               return(
                 <div key={index}>
@@ -104,14 +125,11 @@ const Classes = () => {
                     setId({id: _id})
                   }}>
                   <span> {name} </span> 
+                  <span>status {
+                      status === 1? ( <p>active</p> ) :( <p>inactive</p> )
+                    } 
+                  </span>
                   </li>
-                    <button
-                      onClick={()=>{
-                        deleteClass(_id)
-                      }}
-                    >
-                    &#9747;
-                    </button>
                 </div>
 
               )

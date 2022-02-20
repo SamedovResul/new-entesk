@@ -15,16 +15,16 @@ import EnvironmentCourse from './component/environmentFolder/Course/Course'
 import TexnologyCourse from './component/technologyFolder/Course/Course'
 import SkillCours from './component/skillFolder/Course/Course'
 import Login from './component/adminfolder/login/login';
-// // import Admin from './component/adminfolder/admin/admin';
-// import Teacher from './component/adminfolder/teacher/teacher';
-// import Students from './component/adminfolder/studentsFolder/students'
-// import Blogs from './component/adminfolder/blogfolder/blogs'
-// import Createblog from './component/adminfolder/blogfolder/Createblog'
+import Teacher from './component/adminfolder/admin/create/teachers'
+import Admin from './component/adminfolder/admin/admin'
+import Students from './component/adminfolder/studentsFolder/students'
+import Blogs from './component/adminfolder/blogfolder/blogs'
+import Createblog from './component/adminfolder/blogfolder/Createblog'
 import { useDispatch } from 'react-redux';
 import {getUser} from './reducer/blogReducer/action'
 import Cv from './component/studentsCV/CV'
 import Gallery from './component/studentsCV/studentsCertificate/gallery';
-// import Create from './component/adminfolder/admin/create/create';
+import Create from './component/adminfolder/admin/create/create';
 
 function App(props) {
   const [certificates, setCertificates] = useState([])
@@ -77,24 +77,24 @@ function App(props) {
             <Route path='/Login' >
               <Login   />
             </Route>
-            {/* <Route path='/admin'>
+            <Route path='/admin'>
               <Admin  />
-            </Route> */}
-            {/* <Route path='/teacher'>
+            </Route>
+            <Route path='/teacher'>
               <Teacher  />
-            </Route> */}
-            {/* <Route path="/Create">
+            </Route>
+            <Route path="/Create">
               <Create />
-            </Route> */}
-            {/* <Route path='/Students' >
+            </Route>
+            <Route path='/Students' >
               <Students />
-            </Route> */}
-            {/* <Route path='/adminBlogs' >
+            </Route>
+            <Route path='/adminBlogs' >
               <Blogs  />
-            </Route> */}
-            {/* <Route path='/Createblog/:id' >
+            </Route>
+            <Route path='/Createblog/:id' >
               <Createblog  />
-            </Route> */}
+            </Route>
             
             <Route path={`/:name/certificates`}  >
               <Gallery  />

@@ -1,35 +1,30 @@
 import React, {useEffect, useState} from 'react'
 import { useHistory } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
-// import { 
-//   CreateClass, 
-//   UpdateClass,
-//   GetClass,
-//   DeleteClass
-// } from '../../../../reducer/crmRedux/action';
+import { 
+  CreateClass, 
+  UpdateClass,
+  GetClass,
+  DeleteClass
+} from '../../../../reducer/crmRedux/action';
 
 const Classes = () => {
   const [data, setData] = useState({
     name:"",
     content:"",
   })
-  // console.log(data)
   const [id, setId] = useState({})
   const dispatch = useDispatch();
   const state = useSelector((state) => state.classReducer);
-    // update
-    console.log(state)
     
-    
-    
-    
+    // get classes
   useEffect(() => {
     dispatch(GetClass())
   }, [])
   
 
     
-
+  // select update classes
   useEffect(() => {
     state.map((classes) =>{
       const {_id} = classes
@@ -39,14 +34,20 @@ const Classes = () => {
     })
   }, [id])
 
-    // console.log(id)
+    // create delete class
   const createClass = (e) =>{
     if(id.id){
       dispatch(UpdateClass(id.id,data))
-      console.log(true)
+      setData({
+        name:"",
+        content:"",
+      })
     }else{
       dispatch(CreateClass(data))
-      console.log(false)
+      setData({
+        name:"",
+        content:"",
+      })
     }
   }
 

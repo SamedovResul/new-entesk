@@ -136,15 +136,3 @@ export const UpdateTeacher = (id,teacherData) => async (dispatch) =>{
     console.log(error.message);
   }
 }
-
-export const DeleteTeacher = (id) => async (dispatch)  => {
-
-  try {
-    console.log(id)
-    const {data} = await deleteTeacher(id)
-
-    dispatch({type: "DELETETEACHER" , payload:data})
-  } catch (error) {
-    console.log(error.message);
-  }
-}
