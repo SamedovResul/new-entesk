@@ -4,7 +4,7 @@
 const reducer = (state = [], action ) =>{
   switch (action.type) {
     case "FETCH_ALL":
-      console.log(state)
+      // console.log(state)
       return action.payload;
     case "CREATE":
       console.log(action.payload);
