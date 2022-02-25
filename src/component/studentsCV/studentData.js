@@ -107,4 +107,25 @@ export const studentData = [
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
   },
+  {
+    studentName:"dodeniz12",
+    frontImg:"/img/raulfront.png",
+    backImg:"/img/raulback.jpg",
+    resBackImg:"/img/raulbackphone.jpg",
+    className:"raul"
+  },
+  {
+    studentName:"elmariam04",
+    frontImg:"/img/raulfront.png",
+    backImg:"/img/raulback.jpg",
+    resBackImg:"/img/raulbackphone.jpg",
+    className:"raul"
+  },
+  {
+    studentName:"alreyhana01",
+    frontImg:"/img/raulfront.png",
+    backImg:"/img/raulback.jpg",
+    resBackImg:"/img/raulbackphone.jpg",
+    className:"raul"
+  },
 ]
