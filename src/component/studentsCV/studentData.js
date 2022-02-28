@@ -13,7 +13,7 @@ export const studentData = [
   },
   {
     studentName:"maogtay21",
-    frontImg:"/img/ogtayfront.png",
+    frontImg:"/img/oqtayfront.png",
     backImg:"/img/oqtayback.jpg",
     resBackImg:"/img/oqtaybackphone.jpg",
     className:"oqtay",
@@ -46,9 +46,9 @@ export const studentData = [
   },
   {
     studentName:"alidris27",
-    frontImg:"/img/raulfront.png",
-    backImg:"/img/raulback.jpg",
-    resBackImg:"/img/raulbackphone.jpg",
+    frontImg:"/img/idrisfront.png",
+    backImg:"/img/idrisback.jpg",
+    resBackImg:"/img/idrisbackphone.jpg",
     className:"raul"
   },
   {
