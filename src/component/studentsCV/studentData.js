@@ -115,7 +115,7 @@ export const studentData = [
     className:"raul"
   },
   {
-    studentName:"almariam04",
+    studentName:"almary am04",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
