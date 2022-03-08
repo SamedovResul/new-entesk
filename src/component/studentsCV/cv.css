@@ -40,9 +40,9 @@ body {
 
 
 .front {
-  margin: 10px auto 10px auto;
-    width: 60%;
-    height: auto;
+  margin: 300px auto 300px auto;
+  width: 60%;
+  height: auto;
 }
 
 .front img {
@@ -277,7 +277,7 @@ body {
   }
 
   .front {
-    margin: 100px auto 100px auto;
+    margin: 200px auto 200px auto;
     width: 80%;
   }
 
@@ -296,10 +296,10 @@ body {
   }
 
 
-  .front {
+  /* .front {
     margin: 60px auto 60px auto;
     width: 70%;
-  }
+  } */
 
 
   .map {
@@ -316,8 +316,9 @@ body {
   }
 
   .front {
-    margin: 50px auto 50px auto;
-    width: 75%;
+    margin: 300px auto 300px auto;
+    /* width: 75%; */
+    width: 100%;
   }
 
   .map {
@@ -330,10 +331,10 @@ body {
     height: 140vh;
   }
 
-  .front {
+  /* .front {
     margin: 85px auto 85px auto;
     width: 95%;
-  }
+  } */
 
   .map {
     bottom: 40px;
@@ -349,10 +350,10 @@ body {
 
 @media (max-width:500px) {
 
-  .front {
+  /* .front {
     margin: 95px auto 95px auto;
     width: 100%;
-  }
+  } */
 
   .map {
     bottom: 90px;
@@ -361,20 +362,20 @@ body {
 
 @media (max-width:450px) {
 
-  .front {
+  /* .front {
     margin: 120px auto 120px auto;
     width: 100%;
-  }
+  } */
 }
 
 
 
 @media (max-width:400px) {
 
-  .front {
+  /* .front {
     margin: 160px auto 160px auto;
     width: 100%;
-  }
+  } */
 }
 
 
