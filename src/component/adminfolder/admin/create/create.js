@@ -3,8 +3,11 @@ import { useSelector } from 'react-redux';
 // import {CreateTimetable} from '../../../reducer/crmReducer/action'
 import { useHistory } from 'react-router-dom';
 import {useDispatch } from 'react-redux';
-import Classes from './classes'
+import Classes from './classes';
 import Teachers from './teachers';
+import Student from './students';
+import Timetable from './timetable'
+
 
 const Create = () => {
 
@@ -16,6 +19,8 @@ const Create = () => {
           <div className="col-md-12">
             <Classes />
             <Teachers />
+            <Student />
+            <Timetable />
           </div>
         </div>
       </div>

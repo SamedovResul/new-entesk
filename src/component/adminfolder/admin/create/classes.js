@@ -107,9 +107,14 @@ const Classes = () => {
               
               return(
                 <div key={index}>
-                  <li  key={index} value={_id} onClick={()=>{
-                    setId({id: _id})
-                  }}>
+                  <button
+                    onClick={()=>{
+                      setId({id: _id})
+                    }}
+                   >
+                    update
+                  </button>
+                  <li  key={index} value={_id} >
                   <span> {name} </span> 
                   </li>
                     <button

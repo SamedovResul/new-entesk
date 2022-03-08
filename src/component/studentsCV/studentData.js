@@ -12,6 +12,18 @@ export const studentData = [
     ]
   },
   {
+    studentName:"imran",
+    frontImg:"/invitationsImg/imranfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/img/imranbackphone.jpg",
+    className:"imran",
+    certificates:[
+      {
+        img:'/certificat/imrancertificate1.jpg'
+      },
+    ]
+  },
+  {
     studentName:"maogtay21",
     frontImg:"/img/oqtayfront.png",
     backImg:"/img/oqtayback.jpg",

@@ -9,14 +9,22 @@ import {
   getTeacher,
   createTeacher,
   updateTeacher,
-  deleteTeacher
+  deleteTeacher,
+  getStudent,
+  createStudent,
+  updateStudent,
+  getTimetable,
+  updateTimetable
 } from './api'
  
+
+
+// admin  get, create, update, delete 
+
 export const SignInAdmin = (adminData,router) => async (dispatch) => {
   // console.log(router)
   try {
     const { data } = await SigninAdmin(adminData);
-    console.log(data.admin)
     dispatch({ type: "SIGNIN", payload: data });
     if(data.signIn?.role === 1){
       router.push('/admin')
@@ -29,8 +37,6 @@ export const SignInAdmin = (adminData,router) => async (dispatch) => {
   }
 };
 
-// admin can get, create, update, delete 
-
 export const getData = (id) =>  async (dispatch) =>{
 
   try {
@@ -42,19 +48,8 @@ export const getData = (id) =>  async (dispatch) =>{
   }
 }
 
-export const CreateTimetable = (timetableData,router) => async (dispatch) =>{
 
-  try {
-    const {data} = await createTimetable(timetableData)
-    // console.log(data)
-    dispatch({type:"TIMETABLE", payload:data})
-    router.push("/login")
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-
-// class create update delete get
+// Class create update delete get
 
 export const GetClass = ()=> async(dispatch) =>{
 
@@ -102,13 +97,13 @@ export const DeleteClass = (id) => async (dispatch)  => {
 }
 
 
-// teacher create update delete get
+// Teacher create update  get
 
 export const GetTeacher = ()=> async(dispatch) =>{
 
   try {
     const {data} = await getTeacher()
-    
+    // console.log(data)
     dispatch({type:"FETCHTEACHERDATA", payload:data})
   } catch (error) {
     console.log(error.message)
@@ -132,6 +127,80 @@ export const UpdateTeacher = (id,teacherData) => async (dispatch) =>{
     const {data} = await updateTeacher(id,teacherData)
     console.log(data)
     dispatch({type:"UPDATETEACHER", payload: data})
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+// Student create update get
+
+export const GetStudent = ()=> async(dispatch) =>{
+  
+  try {
+    const {data} = await getStudent()
+    // console.log(data)
+    dispatch({type:"FETCHSTUDENTDATA", payload:data})
+  } catch (error) {
+    console.log(error.message)
+  }
+}
+
+export const CreateStudent = (studentData) => async (dispatch) =>{
+   
+  try {
+    const {data} = await createStudent(studentData)
+    console.log(data)
+    dispatch({type:"CREATESTUDENT", payload: data})
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+export const UpdateStudent = (id,studentData) => async (dispatch) =>{
+   
+  try {
+    const {data} = await updateStudent(id,studentData)
+    console.log(data)
+    dispatch({type:"UPDATESTUDENT", payload: data})
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+// Timetable create update get
+
+
+export const GetTimetable = () => async (dispatch)=>{
+
+
+  try {
+
+    const {data} = await getTimetable()
+
+    dispatch({type:"FETCHTIMETABLE", payload: data })
+  } catch (error) {
+    
+  }
+}
+
+export const CreateTimetable = (timetableData) => async (dispatch) =>{
+
+  try {
+    const {data} = await createTimetable(timetableData)
+    // console.log(data)
+    dispatch({type:"CREATETIMETABLE", payload:data})
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+export const UpdateTimetable = (timetableData, id) => async (dispatch) =>{
+
+  console.log(timetableData)
+  try {
+    const {data} = await updateTimetable(timetableData, id)
+    
+    dispatch({type:"UPDATETIMETABLE", payload:data})
   } catch (error) {
     console.log(error.message);
   }

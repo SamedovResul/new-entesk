@@ -121,14 +121,21 @@ const Classes = () => {
               
               return(
                 <div key={index}>
-                  <li  key={index} value={_id} onClick={()=>{
-                    setId({id: _id})
-                  }}>
-                  <span> {name} </span> 
-                  <span>status {
-                      status === 1? ( <p>active</p> ) :( <p>inactive</p> )
+                  <button
+                    onClick={()=>{
+                      setId({id: _id})
+                    }}
+                  >
+                    update
+                  </button>
+                  <li   value={_id} >
+                  <span>status: {
+                      status === 1? ( <span>active</span> ) :( <span>inactive</span> )
                     } 
                   </span>
+                  </li>
+                  <li>
+                  <span> name: {name} </span>
                   </li>
                 </div>
 

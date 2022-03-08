@@ -3,20 +3,20 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import {getData} from '../../../reducer/crmRedux/action'
+import {GetTimetable} from '../../../reducer/crmRedux/action'
 
 const Admin = () => {
-  let state = useSelector((state) => state.timetable);
+  let state = useSelector((state) => state.timetableReducer);
   // console.log(state.authData.Data.timetable)
   const dispatch = useDispatch();
   const history = useHistory();
-  console.log(state)
-  let userData = JSON.parse(localStorage.getItem('profile'))
+  // console.log(state)
+  // let userData = JSON.parse(localStorage.getItem('profile'))
   
   // get data from back
 
   useEffect(() => {
-    dispatch(getData(userData.signIn._id))
+    dispatch(GetTimetable())
   }, [])
 
   // log out----
@@ -24,15 +24,18 @@ const Admin = () => {
     dispatch({ type:"LOGOUT" })
     history.push("/login")
   }
+
+
+  // create timeTable 
   return (
   <>
   {
-    state.timetable ? (
+    state ? (
       <div className='container' >
       <div className="container-fluid">
         <div className="row">
         {
-          state.timetable.map((time,index) =>{
+          state.map((time,index) =>{
             const {class_Name, student_Name, teacher_Name} = time
             // console.log(time)
 

@@ -31,12 +31,7 @@ export const SigninAdmin = (data) =>{
   return API.post(`/admin/signIn`,data )
 }
 
-// create timetable
 
-export const createTimetable = (data) =>{
-
-  return API.post('/student/timetable', data)
-}
 
 // create update delete get class
 
@@ -60,7 +55,7 @@ export const deleteClass = (id) =>{
   return API.delete(`/class/${id}`)
 }
 
-// create, status delete get class
+// create, update get class
 
 export const getTeacher = () =>{
 
@@ -76,4 +71,36 @@ export const updateTeacher = (id, data) =>{
 
   return API.patch(`/teacher/${id}`, data)
 }
-// 
+// create, update get  class
+
+export const getStudent = () =>{
+
+  return API.get('/student')
+}
+
+export const createStudent = (data) =>{
+
+  return API.post('/student', data)
+}
+
+export const updateStudent = (id, data) =>{
+
+  return API.patch(`/student/${id}`, data)
+}
+
+// Timetable create get update
+
+export const getTimetable = () => {
+
+  return API.get('/timeTable')
+}
+
+export const createTimetable = (data) =>{
+
+  return API.post('/timeTable', data)
+}
+
+export const updateTimetable = (data,id) =>{
+
+  return API.patch(`/timeTable/${id}`, data)
+}

@@ -10,7 +10,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   let state = useSelector((state) => state.admin);
-  console.log(state.authData)
+  // console.log(state.authData)
   const [admin, setAdmin] = useState({
     email:'',
     password:''
@@ -19,14 +19,14 @@ const Login = () => {
   useEffect(() => {
     
   }, [])
-  console.log(admin)
+  // console.log(admin)
   const SignIn = (e) => {
     e.preventDefault();
     dispatch(SignInAdmin(admin,history))
 
   }
 
-  console.log(admin)
+  // console.log(admin)
   return (
    <>
    <div className="container">

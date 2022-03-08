@@ -9,6 +9,7 @@ import { FaBars, FaStream } from 'react-icons/fa';
 import logo from '../../images/logoicon.png'
 import GetDimension from '../functions/getDimension'
 import { studentData } from '../studentsCV/studentData'
+import { InvitationsData } from '../studentInvitations/invitationsData'
 
 
 const NavBar = ( {setZindex,setopenSide,openSide}) =>{
@@ -134,10 +135,31 @@ useEffect(() => {
 
 let style 
 
-const studentname = name
+const studentname = name;
+
 
 studentData.map((subject) =>{
 	const  {studentName} = subject
+	// console.log("/" + "/" + studentname)
+	// console.log("/" + studentName )
+	// console.log(location.pathname)
+	
+	if(location.pathname === `/${studentName}/certificates`){
+		style = {
+			display:"none"
+		} 
+	}
+
+	if(location.pathname === "/" + studentName ){
+		style = {
+				display:"none"
+			} 
+	}
+
+})
+
+InvitationsData.map((subject) =>{
+	const {studentName} = subject
 	// console.log("/" + "/" + studentname)
 	// console.log("/" + studentName )
 	// console.log(location.pathname)
