@@ -44,6 +44,12 @@ export const studentData = [
     className:"raul"
   },
   {
+    studentName:"raul",
+    frontImg:"/invitationsImg/raulfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
     studentName:"mamurad05",
     frontImg:"/img/muradfront.png",
     backImg:"/img/imranback.jpg",
