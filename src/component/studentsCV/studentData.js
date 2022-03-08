@@ -15,7 +15,7 @@ export const studentData = [
     studentName:"imran",
     frontImg:"/invitationsImg/imranfront.png",
     backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
     className:"imran",
     certificates:[
       {

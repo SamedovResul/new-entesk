@@ -1,8 +1,8 @@
 export const InvitationsData = [
   {
     studentName:"imran",
-    frontImg:"/invitationsImg/imranfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
+    frontImg:"/img/imranfront.png",
+    backImg:"/img/imranback.jpg",
     resBackImg:"/img/imranbackphone.jpg",
     className:"imran",
     certificates:[
