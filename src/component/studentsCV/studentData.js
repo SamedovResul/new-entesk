@@ -16,12 +16,6 @@ export const studentData = [
     frontImg:"/invitationsImg/imranfront.png",
     backImg:"/invitationsImg/imranback.jpg",
     resBackImg:"/invitationsImg/imranbackphone.jpg",
-    className:"imran",
-    certificates:[
-      {
-        img:'/certificat/imrancertificate1.jpg'
-      },
-    ]
   },
   {
     studentName:"maogtay21",
