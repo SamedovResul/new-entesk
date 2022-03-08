@@ -37,6 +37,12 @@ export const studentData = [
     className:"raul"
   },
   {
+    studentName:"raul",
+    frontImg:"/invitationsImg/raulfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
     studentName:"khfarkhan29",
     frontImg:"/img/farxanfront.png",
     backImg:"/img/imranback.jpg",
@@ -44,8 +50,8 @@ export const studentData = [
     className:"raul"
   },
   {
-    studentName:"raul",
-    frontImg:"/invitationsImg/raulfront.png",
+    studentName:"farkhan",
+    frontImg:"/invitationsImg/farkhanfront.png",
     backImg:"/invitationsImg/imranback.jpg",
     resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
