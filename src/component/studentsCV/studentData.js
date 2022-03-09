@@ -30,6 +30,12 @@ export const studentData = [
     ]
   },
   {
+    studentName:"oqtay",
+    frontImg:"/invitationsImg/oqtayfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
     studentName:"khraul19",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
@@ -63,11 +69,23 @@ export const studentData = [
     className:"raul"
   },
   {
+    studentName:"murad",
+    frontImg:"/invitationsImg/muradfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
     studentName:"alidris27",
     frontImg:"/img/idrisfront.png",
     backImg:"/img/idrisback.jpg",
     resBackImg:"/img/idrisbackphone.jpg",
     className:"raul"
+  },
+  {
+    studentName:"idris",
+    frontImg:"/invitationsImg/idrisfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
   {
     studentName:"azdavud06",
@@ -89,6 +107,12 @@ export const studentData = [
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
+  },
+  {
+    studentName:"farahnaz",
+    frontImg:"/invitationsImg/farahnazfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
   {
     studentName:"ibfuad27",
