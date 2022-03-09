@@ -128,11 +128,23 @@ export const studentData = [
     className:"raul"
   },
   {
+    studentName:"fuad",
+    frontImg:"/invitationsImg/fuadfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
     studentName:"alayaz28",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
+  },
+  {
+    studentName:"ayaz",
+    frontImg:"/invitationsImg/ayazfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
   {
     studentName:"maamir14",
@@ -155,11 +167,23 @@ export const studentData = [
     className:"raul"
   },
   {
+    studentName:"amina",
+    frontImg:"/invitationsImg/aminafront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
     studentName:"mafateh12",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
+  },
+  {
+    studentName:"fateh",
+    frontImg:"/invitationsImg/fatehfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
   {
     studentName:"dodeniz12",
@@ -203,11 +227,23 @@ export const studentData = [
     className:"raul"
   },
   {
+    studentName:"muhammad",
+    frontImg:"/invitationsImg/muhammadfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
     studentName:"kamehri28",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
+  },
+  {
+    studentName:"mehri",
+    frontImg:"/invitationsImg/mehrifront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
 
   // cv si olmayanlar
@@ -221,6 +257,12 @@ export const studentData = [
   {
     studentName:"nariman",
     frontImg:"/invitationsImg/narimanfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
+    studentName:"ali",
+    frontImg:"/invitationsImg/alifront.png",
     backImg:"/invitationsImg/imranback.jpg",
     resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
