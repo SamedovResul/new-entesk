@@ -266,4 +266,16 @@ export const studentData = [
     backImg:"/invitationsImg/imranback.jpg",
     resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
+  {
+    studentName:"dilshad",
+    frontImg:"/invitationsImg/dilshadfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
+    studentName:"dilusha",
+    frontImg:"/invitationsImg/dilushafront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
 ]
