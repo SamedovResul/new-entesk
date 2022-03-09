@@ -183,6 +183,12 @@ export const studentData = [
     className:"raul"
   },
   {
+    studentName:"reyhana",
+    frontImg:"/invitationsImg/reyhanafront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
     studentName:"agali10",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
