@@ -95,6 +95,12 @@ export const studentData = [
     className:"raul"
   },
   {
+    studentName:"davud",
+    frontImg:"/invitationsImg/davudfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
     studentName:"rakabira07",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
@@ -196,5 +202,20 @@ export const studentData = [
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
+  },
+
+  // cv si olmayanlar
+
+  {
+    studentName:"tahir",
+    frontImg:"/invitationsImg/tahirfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
+    studentName:"nariman",
+    frontImg:"/invitationsImg/narimanfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
 ]
