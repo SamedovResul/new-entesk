@@ -14,7 +14,8 @@ import {
   createStudent,
   updateStudent,
   getTimetable,
-  updateTimetable
+  updateTimetable,
+  signInTeacher
 } from './api'
  
 
@@ -27,12 +28,7 @@ export const SignInAdmin = (adminData,router) => async (dispatch) => {
     const { data } = await SigninAdmin(adminData);
     console.log(data)
     dispatch({ type: "SIGNIN", payload: data });
-    if(data.signIn?.role === 1){
-      router.push('/admin')
-    }else{
-      router.push('/teacher')
-    }
-    
+    router.push('/admin')
   } catch (error) {
     console.log(error.message);
   }
@@ -206,3 +202,17 @@ export const UpdateTimetable = (timetableData, id) => async (dispatch) =>{
     console.log(error.message);
   }
 }
+
+// sign get post teacher
+
+// export const SignInTeacher = (teacher) => async (dispatch) =>{
+
+
+//   try {
+//     const {data} = await signInTeacher(teacher)
+//     console.log(data)
+//     dispatch({type: "SIGNINTECHER", payload:data})
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }

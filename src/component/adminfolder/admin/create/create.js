@@ -17,10 +17,10 @@ const Create = () => {
         <div className="row">
           <div className="col-md-12">
             <Timetable />
-            {/* <Classes />
+            <Classes />
             <Teachers />
             <Student />
-            <Timetable /> */}
+            <Timetable />
           </div>
         </div>
       </div>

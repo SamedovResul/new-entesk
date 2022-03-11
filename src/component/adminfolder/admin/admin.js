@@ -44,7 +44,7 @@ const Admin = () => {
 
             return(
 
-              <div className="col-md-6">
+              <div key={index} className="col-md-6">
                 <div className='table-box' >
                   <p> <b>teacher:</b>  {teacher_Name} </p>
                   <p> <b>student:</b>  {student_Name} </p>

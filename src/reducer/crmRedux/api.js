@@ -22,12 +22,8 @@ export const getAlldata = (id) =>{
 
   return API.get(`/admin/${id}`)
 }
-// export const fetchBlogs = () => axios.get(url)
-// export const createPosts = (data,) => axios.post(url, {...data}, );
 
-// sign in admin and teacher
 export const SigninAdmin = (data) =>{
-  // console.log(signIN)
   return API.post(`/admin/signIn`,data )
 }
 
@@ -104,3 +100,14 @@ export const updateTimetable = (data,id) =>{
 
   return API.patch(`/timeTable/${id}`, data)
 }
+
+// sign get post teacher
+
+export const getTeacherdata = (id) =>{
+
+  return API.get(`/admin/${id}`)
+}
+
+// export const signInTeacher = (data) =>{
+//   return API.post('/',data )
+// }
