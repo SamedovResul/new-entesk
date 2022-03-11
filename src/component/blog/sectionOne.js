@@ -43,7 +43,7 @@ function SectionOne(props) {
                       <div className='blog-img'>
                         <img   style={{width: "80%"}} src={img[0].img} alt='img'/>
                       
-                        <p>{img[0]?.imgName} <a href={img[0]?.imgSource}>{img[0]?.imgSourceName}</a> </p>
+                        <p>{img[0]?.imgName} <a href={img[0]?.imgSource} target="_blank">{img[0]?.imgSourceName}</a> </p>
                       </div>
                       <p>
                         {

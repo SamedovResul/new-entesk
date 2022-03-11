@@ -9,51 +9,59 @@ const Admin = () => {
   let state = useSelector((state) => state.timetableReducer);
   // console.log(state.authData.Data.timetable)
   const dispatch = useDispatch();
-  const history = useHistory();
-  // console.log(state)
-  // let userData = JSON.parse(localStorage.getItem('profile'))
-  
   // get data from back
 
   useEffect(() => {
     dispatch(GetTimetable())
   }, [])
 
-  // log out----
-  const logOut = () =>{
-    dispatch({ type:"LOGOUT" })
-    history.push("/login")
-  }
+  
 
 
-  // create timeTable 
   return (
   <>
   {
     state ? (
-      <div className='container' >
+      <div className='container main-admin-page' >
       <div className="container-fluid">
         <div className="row">
         {
-          state.map((time,index) =>{
-            const {class_Name, student_Name, teacher_Name} = time
+          state.map((timetable,index) =>{
+            const {
+              student_Name,
+              teacher_Name,
+              class_Name,
+              date,
+              _id
+            } = timetable
             // console.log(time)
-
+              const time = new Date(date)
+              const minute = time.getMinutes()
+              const hour = time.getHours()
+              const day = time.getDay()
+              const month = time.getMonth()
+              const year = time.getFullYear()
 
             return(
-              <table key={index}  className="table" >
-                <tbody>
-                  <tr>
-                    <th>{teacher_Name}</th>
-                  </tr>
-                  <tr>
-                    <td>{class_Name}</td>
-                  </tr>
-                  <tr>
-                    <td>{student_Name}</td>
-                  </tr>
-                </tbody>
-              </table>
+
+              <div className="col-md-6">
+                <div className='table-box' >
+                  <p> <b>teacher:</b>  {teacher_Name} </p>
+                  <p> <b>student:</b>  {student_Name} </p>
+                  <p> <b>class:</b>  {class_Name} </p>
+                  <p> <b>class state</b>  <span>nun</span> </p>
+                  <p> <b>class information:</b>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet error impedit iusto nihil magni facilis veniam dolores mollitia nesciunt ipsam, temporibus, architecto suscipit dolore est natus, et reiciendis corrupti tenetur!</p>
+                  <p> <b>date:</b> <span>{`${year} ${month} ${day} ${hour}:${minute}`} </span></p>
+                  <div className='btn-div'>
+                    <button >
+                      confirm class
+                    </button>
+                    <button >
+                      gancel class
+                    </button>
+                  </div>
+                </div>
+              </div>
             )
           })
         }
@@ -62,13 +70,6 @@ const Admin = () => {
             create
           </button>
         </Link>
-        <button
-          onClick={()=>{
-            logOut()
-          }}
-        >
-          logOute
-        </button>
         </div>
       </div>
     </div> 

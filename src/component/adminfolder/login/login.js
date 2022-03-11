@@ -38,7 +38,7 @@ const Login = () => {
      <div className="container-fluid">
        <div className="row">
          <div className="col-md-12">
-           <div className='admin-crm-form' >
+           <div className='login-form' >
             <form action="">
                 <label htmlFor="email">
                   email:

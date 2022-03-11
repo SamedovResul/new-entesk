@@ -200,6 +200,12 @@ export const studentData = [
     className:"raul"
   },
   {
+    studentName:"maryam",
+    frontImg:"/invitationsImg/maryamfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
     studentName:"alreyhana01",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
@@ -293,6 +299,12 @@ export const studentData = [
   {
     studentName:"yusif",
     frontImg:"/invitationsImg/yusiffront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
+    studentName:"safa",
+    frontImg:"/invitationsImg/safafront.png",
     backImg:"/invitationsImg/imranback.jpg",
     resBackImg:"/invitationsImg/imranbackphone.jpg",
   },

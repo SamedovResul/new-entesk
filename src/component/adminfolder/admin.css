@@ -1,8 +1,61 @@
-.admin-crm-form{
+/* main-admin-page */
+
+.main-admin-page{
+  margin-top: 60px;
+}
+
+.main-admin-page .col-md-6{
+  margin: 20px 0px;
+}
+
+.table-box  {
+  border-radius: 20px;
+  padding: 10px;
+  border: 2px dashed rgb(77, 63, 63);
+}
+
+.table-box p{
+  border-bottom: 2px solid rgb(160, 150, 150);
+}
+
+.btn-div{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-div  button{
+  border-radius: 10px;
+  border: none;
+  padding: 4px 20px;
+  font-size: large;
+  color: white;
+}
+
+.btn-div button:nth-child(1){
+  background-color: green;
+}
+
+.btn-div button:nth-child(2){
+  background-color: red;
+}
+
+/* create-page */
+
+
+.create-page{
+  margin-top: 60px;
+  border: 1px solid black;
+}
+
+
+
+/* login-form */
+.login-form{
   margin-top: 30px;
 }
 
-.admin-crm-form form{
+.login-form form{
   border: 1px solid;
   display: flex;
   flex-direction: column;
@@ -11,18 +64,18 @@
   padding:100px;
 }
 
-.admin-crm-form label {
+.login-form label {
   display: inline-block;
   padding: 10px;
 }
 
-.admin-crm-form input {
+.login-form input {
   height: 40px;
   margin: 10px;
 }
 
 
-.admin-crm-form button{
+.login-form button{
   height: 40px;
   margin: 10px;
   border-radius: 10px;
@@ -39,10 +92,14 @@
 
 .create-button{
   position: fixed;
-  width: 100px;
-  border: 1px solid;
+  border:3px solid rgb(53, 43, 43);
   bottom: 50px;
   right: 50px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-size: 30px;
+  color: red;
+  background-color: unset;
 }
 
 .create-div{
@@ -62,6 +119,16 @@
   height: auto;
   border: 1px solid;
   text-align: center;
+}
+
+.create-data select{
+  width: 100px;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 5px;
+  background-color: white;
+  margin: 10px;
 }
 
 

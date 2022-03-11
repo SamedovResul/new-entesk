@@ -12,15 +12,15 @@ import Timetable from './timetable'
 const Create = () => {
 
   return (
-    <div className="container">
+    <div className="container create-page">
       <div className="container-fluid">
         <div className="row">
-          create
           <div className="col-md-12">
-            <Classes />
+            <Timetable />
+            {/* <Classes />
             <Teachers />
             <Student />
-            <Timetable />
+            <Timetable /> */}
           </div>
         </div>
       </div>

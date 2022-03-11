@@ -80,149 +80,163 @@ const Create = () => {
   }
 
   return (
-    <div className="create-data">
-      <p>  create Timetable</p>
-      <form action="">
-        {/* select teacher  */}
-        <select 
-          value={newTimetable.teacher_Name}
-          onChange={(e) =>{
-            setNewtimetable({
-              ...newTimetable, teacher_Id: e.target.value
-            })
-          }}
+    <div className="container">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="create-data">
+              <p>  create Timetable</p>
+            <form action="">
+              {/* select teacher  */}
+              <select 
+                onChange={(e) =>{
+                  setNewtimetable({
+                    ...newTimetable, teacher_Id: e.target.value
+                  })
+                }}
+                
+                name="students" id="teacher">
+                <option  value="select"> select</option>
+                {
+                  state.teacherReducer.map((teacher, index) =>{
+                    const {name, _id} = teacher
+
+                    return(
+                      <option key={index} value={_id}>{name}</option>
+                    )
+                  })
+                }
+              </select>
+              {/* select student */}
+              <select
+              onChange={(e) =>{
+                setNewtimetable({
+                  ...newTimetable, student_Id: e.target.value
+                })
+              }}
+              name="students" id="student">
+                <option  value="select">select</option>
+                {
+                  state.studentReducer.map((student, index) =>{
+                    const {firstName, _id} = student
+
+                    return(
+                      <option key={index} value={_id}>{firstName}</option>
+                    )
+                  })
+                }
+              </select>
+              {/* select class */}
+              <select
+                onChange={(e) =>{
+                  setNewtimetable({
+                    ...newTimetable, class_Id: e.target.value
+                  })
+                }} 
+                name="class" id='class'>
+                <option  value="select">select</option>
+                {
+                  state.classReducer.map((clas, index) =>{
+                    const {name, _id} = clas
+
+                    return(
+                      <option key={index} value={_id}>{name}</option>
+                    )
+                  })
+                }
+              </select>
+
+              
+              {/* set date */}
+              <input type="datetime-local" id="date" name="date"
+                
+                onChange={(e) =>{
+                  setNewtimetable({
+                    ...newTimetable, date: e.target.value
+                  })
+                }}
+              />
+            </form>
+            </div>
+          </div>
+
+              {/* <button
+                onClick={() =>{
+                  createTimetbale()
+                }}
+              >
+                {
+                  id ? (
+                    <span>Update</span>
+                  ) :(
+                    <span>Create</span>
+                  )
+                }
+                
+              </button> */}
+
+            <div className="col-md-4">
+              
+            </div>
+
+            <div className="data">
+              <ul>
+                {
+                  state.timetableReducer.map((timetable, index) =>{
+                    const {
+                      student_Name,
+                      teacher_Name,
+                      class_Name,
+                      date,
+                      _id
+                    } =timetable
+                    const time = new Date(date)
+                    const minute = time.getMinutes()
+                    const hour = time.getHours()
+                    const day = time.getDay()
+                    const month = time.getMonth()
+                    const year = time.getFullYear()
+                    // console.log(year)
+                    return(
+                      <div key={index}>
+                        <button
+                          onClick={()=>{
+                            setId(_id)
+                          }}
+                        >
+                          update
+                        </button>
+                        {/* <li   value={_id} >
+                        <span>status: {
+                            status === 1? ( <span>active</span> ) :( <span>inactive</span> )
+                          } 
+                        </span>
+                        </li> */}
+                        <li>
+                          <span> teacher: {teacher_Name} </span>
+                        </li>
+                        <li>
+                          <span> student: {student_Name} </span>
+                        </li>
+                        <li>
+                          <span> class: {class_Name} </span>
+                        </li>
+                        <li>
+                          <span> date: {`${year} ${month} ${day} ${hour}:${minute}`} </span>
+                        </li>
+                      </div>
+
+                    )
+                  })
+                }
+              </ul>
+            </div>
+
           
-          name="students" id="teacher">
-          <option  value="select"> select</option>
-          {
-            state.teacherReducer.map((teacher, index) =>{
-              const {name, _id} = teacher
-
-              return(
-                <option key={index} value={_id}>{name}</option>
-              )
-            })
-          }
-        </select>
-        {/* select student */}
-        <select
-        onChange={(e) =>{
-          setNewtimetable({
-            ...newTimetable, student_Id: e.target.value
-          })
-        }}
-        name="students" id="student">
-          <option  value="select">select</option>
-          {
-            state.studentReducer.map((student, index) =>{
-              const {firstName, _id} = student
-
-              return(
-                <option key={index} value={_id}>{firstName}</option>
-              )
-            })
-          }
-        </select>
-        {/* select class */}
-        <select
-          onChange={(e) =>{
-            setNewtimetable({
-              ...newTimetable, class_Id: e.target.value
-            })
-          }} 
-          name="class" id='class'>
-          <option  value="select">select</option>
-          {
-            state.classReducer.map((clas, index) =>{
-              const {name, _id} = clas
-
-              return(
-                <option key={index} value={_id}>{name}</option>
-              )
-            })
-          }
-        </select>
-
-        
-        {/* set date */}
-        <input type="datetime-local" id="date" name="date"
-          
-          onChange={(e) =>{
-            setNewtimetable({
-              ...newTimetable, date: e.target.value
-            })
-          }}
-        />
-      </form>
-        <button
-          onClick={() =>{
-            createTimetbale()
-          }}
-        >
-          {
-            id ? (
-              <span>Update</span>
-            ) :(
-              <span>Create</span>
-            )
-          }
-          
-        </button>
-
-      <div className="data">
-        <ul>
-          {
-            state.timetableReducer.map((timetable, index) =>{
-              const {
-                student_Name,
-                teacher_Name,
-                class_Name,
-                date,
-                _id
-              } =timetable
-              const time = new Date(date)
-              const minute = time.getMinutes()
-              const hour = time.getHours()
-              const day = time.getDay()
-              const month = time.getMonth()
-              const year = time.getFullYear()
-              // console.log(year)
-              return(
-                <div key={index}>
-                  <button
-                    onClick={()=>{
-                      setId(_id)
-                    }}
-                  >
-                    update
-                  </button>
-                  {/* <li   value={_id} >
-                  <span>status: {
-                      status === 1? ( <span>active</span> ) :( <span>inactive</span> )
-                    } 
-                  </span>
-                  </li> */}
-                  <li>
-                    <span> teacher: {teacher_Name} </span>
-                  </li>
-                  <li>
-                    <span> student: {student_Name} </span>
-                  </li>
-                  <li>
-                    <span> class: {class_Name} </span>
-                  </li>
-                  <li>
-                    <span> date: {`${year} ${month} ${day} ${hour}:${minute}`} </span>
-                  </li>
-                </div>
-
-              )
-            })
-          }
-        </ul>
+        </div>
       </div>
-
     </div>
+    
 
   )
 }
