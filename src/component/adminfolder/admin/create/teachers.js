@@ -33,13 +33,21 @@ const Classes = () => {
 
 
   // create and update teacher
-  const createClass = (e) =>{
+  const createTeacher = (e) =>{
     if(id.id){
       dispatch(UpdateTeacher(id.id,data))
-      console.log(true)
+      setData({
+        name:"",
+        email:"",
+        password:"",
+      })
     }else{
       dispatch(CreateTeacher(data))
-      console.log(false)
+      setData({
+        name:"",
+        email:"",
+        password:"",
+      })
     }
   }
 
@@ -98,7 +106,7 @@ const Classes = () => {
       </form>
       <button
           onClick={() =>{
-            createClass()
+            createTeacher()
           }}
         >
           {

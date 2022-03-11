@@ -4734,13 +4734,13 @@ table tbody td {
 /* admin form */
 
 
-.admin-form {
+/* .admin-form {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
-}
+} */
 
 .admin-form .btn-primary p{
   margin-block-start: 0em;
@@ -4748,12 +4748,12 @@ table tbody td {
 }
 
 
-.admin-form label {
+/* .admin-form label {
   margin: 5px;
   width: 90%;
   display: flex;
   justify-content: space-around;
-}
+} */
 
 .admin-form label input {
   width: 90%;

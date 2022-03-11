@@ -25,6 +25,7 @@ export const SignInAdmin = (adminData,router) => async (dispatch) => {
   // console.log(router)
   try {
     const { data } = await SigninAdmin(adminData);
+    console.log(data)
     dispatch({ type: "SIGNIN", payload: data });
     if(data.signIn?.role === 1){
       router.push('/admin')
@@ -90,7 +91,7 @@ export const DeleteClass = (id) => async (dispatch)  => {
     console.log(id)
     const {data} = await deleteClass(id)
 
-    dispatch({type: "DELETECLASS" , payload:data})
+    dispatch({type: "DELETECLASS" , payload:id})
   } catch (error) {
     console.log(error.message);
   }

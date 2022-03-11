@@ -35,10 +35,18 @@ const Classes = () => {
   const createClass = (e) =>{
     if(id.id){
       dispatch(UpdateStudent(id.id,data))
-      console.log(true)
+      setData({
+        firstName:"",
+        secondName:"",
+        age:0,
+      })
     }else{
       dispatch(CreateStudent(data))
-      console.log(false)
+      setData({
+        firstName:"",
+        secondName:"",
+        age:0,
+      })
     }
   }
 

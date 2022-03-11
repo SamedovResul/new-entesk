@@ -7,7 +7,7 @@ const reducer = (state = [], action ) =>{
       // console.log(action.payload)
       return [...state, action.payload]
     case "UPDATETEACHER":
-      return state.map((teacher) =>(teacher._id === action.payload.id? action.payload: teacher))
+      return state.map((teacher) =>(teacher._id === action.payload._id? action.payload: teacher))
     default:
       return state;
   }

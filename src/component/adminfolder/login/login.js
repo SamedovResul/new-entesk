@@ -22,7 +22,12 @@ const Login = () => {
   // console.log(admin)
   const SignIn = (e) => {
     e.preventDefault();
-    dispatch(SignInAdmin(admin,history))
+    
+    if(admin.email && admin.password){
+      dispatch(SignInAdmin(admin,history))
+    }else{
+      alert("please insert email and password")
+    }
 
   }
 
@@ -33,21 +38,25 @@ const Login = () => {
      <div className="container-fluid">
        <div className="row">
          <div className="col-md-12">
-           <div className='admin-form' >
+           <div className='admin-crm-form' >
             <form action="">
                 <label htmlFor="email">
-                  email: <input type="email" id='email' 
+                  email:
+                </label>
+                 <input type="email" id='email' 
                   onChange={(e)=> setAdmin({
                     ...admin, email: e.target.value
                   }) } />
-                </label>
+
                 <label htmlFor="password">
-                  password: <input type="password" id='password' 
+                password:
+                </label>
+                 <input type="password" id='password' 
                   onChange={(e)=> setAdmin({
                     ...admin,  password: e.target.value
                   })}
                    />
-                </label>
+                
                 <button onClick={SignIn} >
                   SignIn
                 </button>

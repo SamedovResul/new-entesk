@@ -29,7 +29,7 @@ const Create = () => {
     const {name, _id} = Class
     if(_id === newTimetable.class_Id){
         newTimetable.class_Name = name
-      console.log(newTimetable)
+      // console.log(newTimetable)
     }
   })
 
@@ -38,7 +38,7 @@ const Create = () => {
     const {firstName, _id} = student
     if(_id === newTimetable.student_Id){
       newTimetable.student_Name = firstName
-    console.log(newTimetable)
+    // console.log(newTimetable)
     }
   })
 
@@ -47,7 +47,7 @@ const Create = () => {
     const {name, _id} = student
     if(_id === newTimetable.teacher_Id){
       newTimetable.teacher_Name = name
-    console.log(newTimetable)
+    // console.log(newTimetable)
     }
   })
 
@@ -67,6 +67,7 @@ const Create = () => {
     })
   }, [id])
   
+  // console.log(state.timetableReducer[0])
 
   // create timatable
   const  createTimetbale = (e) =>{
@@ -80,7 +81,7 @@ const Create = () => {
 
   return (
     <div className="create-data">
-      <p>  create teacher</p>
+      <p>  create Timetable</p>
       <form action="">
         {/* select teacher  */}
         <select 
@@ -91,7 +92,7 @@ const Create = () => {
             })
           }}
           
-          name="students" id="cars">
+          name="students" id="teacher">
           <option  value="select"> select</option>
           {
             state.teacherReducer.map((teacher, index) =>{
@@ -110,7 +111,7 @@ const Create = () => {
             ...newTimetable, student_Id: e.target.value
           })
         }}
-        name="students" id="cars">
+        name="students" id="student">
           <option  value="select">select</option>
           {
             state.studentReducer.map((student, index) =>{
@@ -129,7 +130,7 @@ const Create = () => {
               ...newTimetable, class_Id: e.target.value
             })
           }} 
-          name="class" id="cars">
+          name="class" id='class'>
           <option  value="select">select</option>
           {
             state.classReducer.map((clas, index) =>{

@@ -14,7 +14,7 @@ import { InvitationsData } from '../studentInvitations/invitationsData'
 
 const NavBar = ( {setZindex,setopenSide,openSide}) =>{
 	const { name } = useParams();
-	
+	let admin = false
 	const  {screenSize} = GetDimension()
 	const [y, setY] = useState(window.scrollY);
 	const [count, setCount] = useState(false);
@@ -22,7 +22,7 @@ const NavBar = ( {setZindex,setopenSide,openSide}) =>{
 	const { innerWidth: width} = window;
 	const location = useLocation();
 	
-	const admin = false
+	
 	const sideAnimation = useSpring({
 		to: [{
 			right: screenSize.dynamicWidth < 1199 ? 
@@ -140,9 +140,6 @@ const studentname = name;
 
 studentData.map((subject) =>{
 	const  {studentName} = subject
-	// console.log("/" + "/" + studentname)
-	// console.log("/" + studentName )
-	// console.log(location.pathname)
 	
 	if(location.pathname === `/${studentName}/certificates`){
 		style = {
@@ -160,9 +157,6 @@ studentData.map((subject) =>{
 
 InvitationsData.map((subject) =>{
 	const {studentName} = subject
-	// console.log("/" + "/" + studentname)
-	// console.log("/" + studentName )
-	// console.log(location.pathname)
 	
 	if(location.pathname === `/${studentName}/certificates`){
 		style = {
@@ -177,20 +171,16 @@ InvitationsData.map((subject) =>{
 	}
 
 })
-// console.log(style)
+
 if(location.pathname === "/gallery"){
 	style = {
 		display:"none"
 	}
 }
 
-	// style = {
-	// 	display:"none"
-	// } :
-	// style = {
-	// 	display:"block"
-	// }
-    
+if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getItem('profile')).token ){
+	admin = true
+}
 
 	return(
 		<> 
@@ -208,7 +198,7 @@ if(location.pathname === "/gallery"){
 							<ul className='ul-nav' >
 								<li>
 									<Link
-										to={{ pathname: '/Students',}}>
+										to={{ pathname: '/login',}}>
 										Students
 									</Link >
 								</li>
