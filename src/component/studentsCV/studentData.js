@@ -320,4 +320,10 @@ export const studentData = [
     backImg:"/invitationsImg/imranback.jpg",
     resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
+  {
+    studentName:"ayla",
+    frontImg:"/invitationsImg/aylafront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
 ]
