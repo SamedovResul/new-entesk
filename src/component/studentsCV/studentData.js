@@ -314,4 +314,10 @@ export const studentData = [
     backImg:"/invitationsImg/imranback.jpg",
     resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
+  {
+    studentName:"bahar",
+    frontImg:"/invitationsImg/baharfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
 ]
