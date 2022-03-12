@@ -14,9 +14,10 @@ import About from './component/About/about'
 import EnvironmentCourse from './component/environmentFolder/Course/Course'
 import TexnologyCourse from './component/technologyFolder/Course/Course'
 import SkillCours from './component/skillFolder/Course/Course'
-import Login from './component/adminfolder/login/login';
+import LoginAdmin from './component/adminfolder/login/admin';
+import LoginTeacher from './component/adminfolder/login/teacher';
 import Teacher from './component/adminfolder/admin/create/teachers'
-import Admin from './component/adminfolder/admin/admin'
+import Admintimetable from './component/adminfolder/admin/admintimetable'
 import Students from './component/adminfolder/studentsFolder/students'
 import Blogs from './component/adminfolder/blogfolder/blogs'
 import Createblog from './component/adminfolder/blogfolder/Createblog'
@@ -74,11 +75,14 @@ function App(props) {
               <About handlerSideClose={handlerSideClose} />
             </Route>
 
-            <Route path='/Login' >
-              <Login   />
+            <Route path='/admin' >
+              <LoginAdmin/>
             </Route>
-            <Route path='/admin'>
-              <Admin  />
+            <Route path='/teacher'>
+              <LoginTeacher />
+            </Route>
+            <Route path='/adminTimetable'>
+              <Admintimetable  />
             </Route>
             <Route path='/teacher'>
               <Teacher  />

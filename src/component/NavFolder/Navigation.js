@@ -77,7 +77,6 @@ const NavBar = ( {setZindex,setopenSide,openSide}) =>{
 	// log out----
 	const logOut = () =>{
 		dispatch({ type:"LOGOUT" })
-		history.push("/login")
 	}
 
 
@@ -206,12 +205,12 @@ if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getIte
 					admin ? (
 						<div className='nav-menu'>
 							<ul className='ul-nav' >
-								<li>
+								{/* <li>
 									<Link
 										to={{ pathname: '/login',}}>
 										Students
 									</Link >
-								</li>
+								</li> */}
 								<li>
 									<Link
 										to={{ pathname: '/Adminblogs',}}>
@@ -223,7 +222,7 @@ if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getIte
 										onClick={()=>{
 											logOut()
 										}}
-										to={{ pathname: '/login',}}>
+										to={{ pathname: '/admin',}}>
 										logOut
 									</Link >
 								</li>

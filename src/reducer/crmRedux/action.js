@@ -28,7 +28,7 @@ export const SignInAdmin = (adminData,router) => async (dispatch) => {
     const { data } = await SigninAdmin(adminData);
     console.log(data)
     dispatch({ type: "SIGNIN", payload: data });
-    router.push('/admin')
+    router.push('/adminTimetable')
   } catch (error) {
     console.log(error.message);
   }
@@ -205,14 +205,14 @@ export const UpdateTimetable = (timetableData, id) => async (dispatch) =>{
 
 // sign get post teacher
 
-// export const SignInTeacher = (teacher) => async (dispatch) =>{
+export const SignInTeacher = (teacher) => async (dispatch) =>{
 
 
-//   try {
-//     const {data} = await signInTeacher(teacher)
-//     console.log(data)
-//     dispatch({type: "SIGNINTECHER", payload:data})
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// }
+  try {
+    const {data} = await signInTeacher(teacher)
+    console.log(data)
+    dispatch({type: "SIGNINTEACHER", payload:data})
+  } catch (error) {
+    console.log(error.message);
+  }
+}

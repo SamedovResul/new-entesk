@@ -262,7 +262,7 @@ export  const allData = {
 							li:	"Qələmlə 2D rəsm"
 						},
 						{
-							li:	"animasiya"
+							li:	"Animasiya"
 						},
 						{
 							li:	"3D modelləşdirmə və çap"
@@ -277,7 +277,7 @@ export  const allData = {
 
 		module_for: [
 			{
-				li: '5 yaş və yuxarı uşaqlar'
+				li: '3 yaş və yuxarı uşaqlar'
 			},
 			{
 				li: 'Rəqəmsal İncəsənət biliklərini inkişaf etdirmək istəyən hər kəs'

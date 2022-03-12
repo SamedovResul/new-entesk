@@ -103,11 +103,11 @@ export const updateTimetable = (data,id) =>{
 
 // sign get post teacher
 
-export const getTeacherdata = (id) =>{
+// export const getTeacherdata = (id) =>{
 
-  return API.get(`/admin/${id}`)
-}
-
-// export const signInTeacher = (data) =>{
-//   return API.post('/',data )
+//   return API.get(`/admin/${id}`)
 // }
+
+export const signInTeacher = (data) =>{
+  return API.post('/teacher',data )
+}
