@@ -56,80 +56,67 @@ const Classes = () => {
     dispatch(DeleteClass(id))
   }
   return (
-    <div className='create-data'>
-      <p>create class</p>
-      <form action="">
-        <label htmlFor="name">
-          class name
-          <input type="text" id="name"
-          value={data.name}
-            onChange={(e) =>{
-              setData({
-                ...data, name: e.target.value
-              })
-            }}
-          />
-        </label>
-        <label htmlFor="content">
-          content
-          <input type="text" id="content" 
-            value={data.content}
-            onChange={(e) =>{
-              setData({
-                ...data, content:e.target.value
-              })
-            }}
-          />
-        </label>
-      </form>
-      <button
-          onClick={() =>{
-            createClass()
-          }}
-        >
-          {
-            id.id ? (
-              <span>update</span> 
-            ):(
-              <span>create</span> 
-            )
+    <div className="container">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="create-class">
+              <form action="">
+                <label htmlFor="name">
+                  <b>class name: </b>
+                  <input type="text" id="name"
+                  value={data.name}
+                    onChange={(e) =>{
+                      setData({
+                        ...data, name: e.target.value
+                      })
+                    }}
+                  />
+                </label>
+                <label htmlFor="content">
+                  <b>Title: </b>
+                  <input type="text" id="content" 
+                    value={data.content}
+                    onChange={(e) =>{
+                      setData({
+                        ...data, content:e.target.value
+                      })
+                    }}
+                  />
+                </label>
+                <button onClick={() =>{createClass()}}>
+                    {
+                      id.id ? (
+                        <span>update</span> 
+                      ):(
+                        <span>create</span> 
+                      )
 
-          }
-          
-      </button>
-      
-      <div className="data">
+                    }
+                </button>
+              </form>
+            </div>
+          </div>
 
-        <ul>
           {
             state.map((clas, index) =>{
               const {name, _id,content} =clas
-              
-              return(
-                <div key={index}>
-                  <button
-                    onClick={()=>{
-                      setId({id: _id})
-                    }}
-                   >
-                    update
-                  </button>
-                  <li  key={index} value={_id} >
-                  <span> {name} </span> 
-                  </li>
-                    <button
-                      onClick={()=>{
-                        deleteClass(_id)
-                      }}
-                    >
-                    &#9747;
-                    </button>
-                </div>
 
+              return(
+                <div key={_id} className="col-md-4">
+                  <div className="info-table">
+                    <p> <b>Class Name:</b> {name}  </p>
+                    <p> <b>Title Name:</b> {content}  </p>
+                    <button
+                      onClick={()=>{setId({id: _id}) }} >
+                      update
+                    </button>
+                  </div>
+                </div>
               )
             })
           }
-        </ul>
+        </div>
       </div>
     </div>
   )

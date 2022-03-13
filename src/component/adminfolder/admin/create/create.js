@@ -18,9 +18,8 @@ const Create = () => {
           <div className="col-md-12">
             <Timetable />
             <Classes />
-            <Teachers />
+            {/* <Teachers /> */}
             <Student />
-            <Timetable />
           </div>
         </div>
       </div>

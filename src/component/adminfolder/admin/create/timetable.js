@@ -1,6 +1,6 @@
-import React, {useState,useEffect} from 'react'
+import React, {useState,useEffect} from 'react';
 import { useSelector } from 'react-redux';
-import {GetTimetable,CreateTimetable,UpdateTimetable} from '../../../../reducer/crmRedux/action'
+import {GetTimetable,CreateTimetable,UpdateTimetable} from '../../../../reducer/crmRedux/action';
 import { useHistory } from 'react-router-dom';
 import {useDispatch } from 'react-redux';
 
@@ -14,6 +14,7 @@ const Create = () => {
   
   let state = useSelector((state) => state);
   // console.log(state)
+
   const [newTimetable, setNewtimetable] = useState({
     student_Name: '',
     student_Id: '',
@@ -23,33 +24,41 @@ const Create = () => {
     class_Id: '',
     date: '',
   })
-
+  console.log(state.timetableReducer[0])
   //  add class
-  state.classReducer.map((Class) =>{
-    const {name, _id} = Class
-    if(_id === newTimetable.class_Id){
-        newTimetable.class_Name = name
-      // console.log(newTimetable)
-    }
-  })
 
+  useEffect(() => {
+     state.classReducer.map((Class) =>{
+        const {name, _id} = Class
+        if(_id === newTimetable.class_Id){
+            newTimetable.class_Name = name
+          // console.log(newTimetable)
+        }
+      })
+  }, [])
   // add student
-  state.studentReducer.map((student) =>{
-    const {firstName, _id} = student
-    if(_id === newTimetable.student_Id){
-      newTimetable.student_Name = firstName
-    // console.log(newTimetable)
-    }
-  })
-
+  useEffect(() => {
+    state.studentReducer.map((student) =>{
+      const {firstName, _id} = student
+      if(_id === newTimetable.student_Id){
+        newTimetable.student_Name = firstName
+      // console.log(newTimetable)
+      }
+    })
+  }, [])
   // add teacher
-  state.teacherReducer.map((student) =>{
-    const {name, _id} = student
-    if(_id === newTimetable.teacher_Id){
-      newTimetable.teacher_Name = name
-    // console.log(newTimetable)
-    }
-  })
+
+  useEffect(() => {
+    state.teacherReducer.map((student) =>{
+      const {name, _id} = student
+      if(_id === newTimetable.teacher_Id){
+        newTimetable.teacher_Name = name
+      // console.log(newTimetable)
+      }
+    })
+  }, [])
+  
+ 
 
   const history = useHistory();
 
@@ -93,10 +102,14 @@ const Create = () => {
                   setNewtimetable({
                     ...newTimetable, teacher_Id: e.target.value
                   })
-                }}
-                
-                name="students" id="teacher">
-                <option  value="select"> select</option>
+                }}name="students" id="teacher">
+                  {
+                    newTimetable.teacher_Id ? (
+                      <option  value="select"> {newTimetable.teacher_Name} </option>
+                    ):(
+                      <option  value="select"> select </option>
+                    )
+                  }
                 {
                   state.teacherReducer.map((teacher, index) =>{
                     const {name, _id} = teacher
@@ -115,7 +128,13 @@ const Create = () => {
                 })
               }}
               name="students" id="student">
-                <option  value="select">select</option>
+                {
+                    newTimetable.student_Id ? (
+                      <option  value="select"> {newTimetable.student_Name} </option>
+                    ):(
+                      <option  value="select"> select </option>
+                    )
+                  }
                 {
                   state.studentReducer.map((student, index) =>{
                     const {firstName, _id} = student
@@ -132,9 +151,14 @@ const Create = () => {
                   setNewtimetable({
                     ...newTimetable, class_Id: e.target.value
                   })
-                }} 
-                name="class" id='class'>
-                <option  value="select">select</option>
+                }} name="class" id='class'>
+                  {
+                    newTimetable.class_Id ? (
+                      <option  value="select"> {newTimetable.class_Name} </option>
+                    ):(
+                      <option  value="select"> select </option>
+                    )
+                  }
                 {
                   state.classReducer.map((clas, index) =>{
                     const {name, _id} = clas
@@ -156,31 +180,16 @@ const Create = () => {
                   })
                 }}
               />
-            </form>
-            </div>
-          </div>
-
-              {/* <button
-                onClick={() =>{
-                  createTimetbale()
-                }}
-              >
-                {
-                  id ? (
+              <button onClick={() =>{createTimetbale()}}>
+                {id ? (
                     <span>Update</span>
                   ) :(
                     <span>Create</span>
-                  )
-                }
-                
-              </button> */}
-
-            <div className="col-md-4">
-              
+                  )}
+              </button>
+            </form>
             </div>
-
-            <div className="data">
-              <ul>
+          </div>
                 {
                   state.timetableReducer.map((timetable, index) =>{
                     const {
@@ -198,39 +207,36 @@ const Create = () => {
                     const year = time.getFullYear()
                     // console.log(year)
                     return(
-                      <div key={index}>
-                        <button
-                          onClick={()=>{
-                            setId(_id)
-                          }}
-                        >
-                          update
-                        </button>
-                        {/* <li   value={_id} >
-                        <span>status: {
-                            status === 1? ( <span>active</span> ) :( <span>inactive</span> )
-                          } 
-                        </span>
-                        </li> */}
-                        <li>
-                          <span> teacher: {teacher_Name} </span>
-                        </li>
-                        <li>
-                          <span> student: {student_Name} </span>
-                        </li>
-                        <li>
-                          <span> class: {class_Name} </span>
-                        </li>
-                        <li>
-                          <span> date: {`${year} ${month} ${day} ${hour}:${minute}`} </span>
-                        </li>
+
+                      <div key={index} className='col-md-4'>
+                        <div className="info-table">
+                          
+                          {/* <li   value={_id} >
+                          <span>status: {
+                              status === 1? ( <span>active</span> ) :( <span>inactive</span> )
+                            } 
+                          </span>
+                          </li> */}
+                          
+                            <p><b>teacher:</b>  {teacher_Name} </p>
+                            <p><b>student:</b>  {student_Name} </p> 
+                            <p><b>class:</b> {class_Name}  </p>  
+                            <p><b>date:</b>{`${year} ${month} ${day} ${hour}:${minute}`} </p>
+                            <p> <b>class state</b>  <span>nun</span> </p>
+
+                            <button
+                            onClick={()=>{
+                              setId(_id)
+                            }}
+                            >
+                              update
+                            </button>
+                        </div>
                       </div>
 
                     )
                   })
                 }
-              </ul>
-            </div>
 
           
         </div>

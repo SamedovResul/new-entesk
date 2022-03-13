@@ -40,9 +40,21 @@ body {
 
 
 .front {
+  margin: 40px auto 30px auto;
+  width: 60%;
+  height: auto;
+}
+
+.front-cv{
   margin: 300px auto 300px auto;
   width: 60%;
   height: auto;
+}
+
+.front-cv img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .front img {
@@ -277,8 +289,14 @@ body {
   }
 
   .front {
-    margin: 200px auto 200px auto;
+    margin: 40px auto 40px auto;
     width: 80%;
+  }
+
+  .front-cv{
+    margin: 200px auto 200px auto;
+    width: 60%;
+    height: auto;
   }
 
   .map {
@@ -296,10 +314,10 @@ body {
   }
 
 
-  /* .front {
+  .front {
     margin: 60px auto 60px auto;
     width: 70%;
-  } */
+  }
 
 
   .map {
@@ -316,9 +334,12 @@ body {
   }
 
   .front {
+    width: 70%;
+  }
+
+  .front-cv{
     margin: 300px auto 300px auto;
-    /* width: 75%; */
-    width: 60%;
+    width: 75%;
   }
 
   .map {
@@ -331,10 +352,10 @@ body {
     height: 140vh;
   }
 
-  /* .front {
+  .front {
     margin: 85px auto 85px auto;
     width: 95%;
-  } */
+  }
 
   .map {
     bottom: 40px;
@@ -350,10 +371,10 @@ body {
 
 @media (max-width:500px) {
 
-  /* .front {
+  .front {
     margin: 95px auto 95px auto;
     width: 100%;
-  } */
+  }
 
   .map {
     bottom: 90px;
@@ -362,20 +383,20 @@ body {
 
 @media (max-width:450px) {
 
-  /* .front {
+  .front {
     margin: 120px auto 120px auto;
     width: 100%;
-  } */
+  }
 }
 
 
 
 @media (max-width:400px) {
 
-  /* .front {
+  .front {
     margin: 160px auto 160px auto;
     width: 100%;
-  } */
+  }
 }
 
 

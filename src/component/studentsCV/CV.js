@@ -51,9 +51,18 @@ const Cv = (props) => {
               <div key={index} className="one">
                 <img  src={backImg} alt="img" className='img1' />
                 <img src={resBackImg} alt="img" className='img2' />
-                <div className="front rellax">
-                  <img src={frontImg} alt="img" useref={rellaxRef} />
-                </div>
+                {
+                  className ? (
+                    <div className="front rellax">
+                      <img src={frontImg} alt="img" useref={rellaxRef} />
+                    </div>
+                  ) :(
+                    <div className="front-cv rellax">
+                      <img src={frontImg} alt="img" useref={rellaxRef} />
+                    </div>
+                  )
+                }
+                
                 
                 {
                   className ? (
