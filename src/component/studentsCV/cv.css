@@ -274,8 +274,24 @@ body {
   color: #9e91f0;
 }
 
-/*  */
+/* idris27 */
 
+.alidris27 span:nth-child(1){
+  background: linear-gradient(90deg, transparent, #68c9f2);
+}
+.alidris27 span:nth-child(2){
+  background: linear-gradient(180deg, transparent, #68c9f2);
+}
+.alidris27 span:nth-child(3){
+  background: linear-gradient(270deg, transparent, #68c9f2);
+}
+.alidris27 span:nth-child(4){
+  background: linear-gradient(360deg, transparent, #68c9f2);
+}
+
+.alidris27 a {
+  color: #68c9f2;
+}
 
 @media(max-width:1199px) {
   .map {

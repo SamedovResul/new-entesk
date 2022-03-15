@@ -79,7 +79,7 @@ export const studentData = [
     frontImg:"/img/idrisfront.png",
     backImg:"/img/idrisback.jpg",
     resBackImg:"/img/idrisbackphone.jpg",
-    className:"raul"
+    className:"alidris27"
   },
   {
     studentName:"idris",
@@ -102,16 +102,16 @@ export const studentData = [
   },
   {
     studentName:"rakabira07",
-    frontImg:"/img/raulfront.png",
-    backImg:"/img/raulback.jpg",
-    resBackImg:"/img/raulbackphone.jpg",
+    frontImg:"/img/kabirafront.png",
+    backImg:"/img/imranback.jpg",
+    resBackImg:"/img/imranbackphone.jpg",
     className:"raul"
   },
   {
     studentName:"rafarahnaz11",
-    frontImg:"/img/raulfront.png",
-    backImg:"/img/raulback.jpg",
-    resBackImg:"/img/raulbackphone.jpg",
+    frontImg:"/img/farahnazfront.png",
+    backImg:"/img/farahnazback.jpg",
+    resBackImg:"/img/farahnazbackphone.jpg",
     className:"raul"
   },
   {
