@@ -328,7 +328,7 @@ export const studentData = [
   },
   {
     studentName:"gulnaz",
-    frontImg:"/invitationsImg/aylafront.png",
+    frontImg:"/invitationsImg/gulnazfront.png",
     backImg:"/invitationsImg/imranback.jpg",
     resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
