@@ -332,4 +332,22 @@ export const studentData = [
     backImg:"/invitationsImg/imranback.jpg",
     resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
+  {
+    studentName:"rahim",
+    frontImg:"/invitationsImg/rahimfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
+    studentName:"kabira",
+    frontImg:"/invitationsImg/kabirafront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
+  {
+    studentName:"jalal",
+    frontImg:"/invitationsImg/jalalfront.png",
+    backImg:"/invitationsImg/imranback.jpg",
+    resBackImg:"/invitationsImg/imranbackphone.jpg",
+  },
 ]
