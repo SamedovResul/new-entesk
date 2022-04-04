@@ -79,7 +79,7 @@ const SectionThree = ({data,myRef,blog}) =>{
                     <div key={index} className="col-md-12 col-sm-12 section-3-for-mobile skill" ref={myRef} >
                 
                       <h2>{class_description}</h2>
-                      <img src={class_image} alt='img' ></img>
+                      <img src={class_image} alt='entesk' ></img>
                       <p>{class_text}</p>
                       <Link to={{pathname:`/CourseSkill/${classLink}`, }}  >
                         <button className="section-3-button">Davamı</button>

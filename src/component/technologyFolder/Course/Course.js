@@ -57,7 +57,7 @@ const TecnologyBanner = (props) =>{
 								name: 'fromTechnology'
 							}
 							}}>
-							<img className='gear-img' src={ circle} alt='img' >
+							<img className='gear-img' src={ circle} alt='entesk' >
 							</img>
 						</Link>
 
@@ -75,7 +75,7 @@ const TecnologyBanner = (props) =>{
 							}
 						}}>
 						
-							<img    src={ leaf} alt='img' >
+							<img    src={ leaf} alt='entesk' >
 							</img>
 
 						</Link>
@@ -91,7 +91,7 @@ const TecnologyBanner = (props) =>{
 								name: 'fromTechnology'
 							}
 						}}>
-							<img src={brush} alt='img' >
+							<img src={brush} alt='entesk' >
 							</img>
 						</Link>
 

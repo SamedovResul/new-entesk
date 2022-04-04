@@ -61,7 +61,7 @@ const SectionTwo = (props)=>{
             return(
             <div key={id} className="caruseldiv">
               <div className="top-div">
-                <img  src={image} alt="img" ></img>
+                <img  src={image} alt="entesk" ></img>
               </div>
               <div className="bottom-div">
                 <p>{slide_text}</p>

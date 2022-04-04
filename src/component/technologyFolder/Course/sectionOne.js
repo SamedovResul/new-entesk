@@ -62,7 +62,7 @@ const  SectionOne = (props) =>{
           </div>
           
           <div  className=" col-md-5 col-sm-12 col-12 img-box">
-            <img src={image_1} alt="" />
+            <img src={image_1} alt="entesk" />
           </div>
           <div className=" col-md-12">
             <div   className="technology-desc main-desc">
@@ -102,7 +102,7 @@ const  SectionOne = (props) =>{
         <div className="container-fluid">
           <div className="row technology" >
           <div  className=" col-md-12 col-sm-12 col-12 img-box">
-            <img src={image_1} alt="img" />
+            <img src={image_1} alt="entesk" />
           </div>
 
 

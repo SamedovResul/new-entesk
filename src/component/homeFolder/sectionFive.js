@@ -57,7 +57,7 @@ return(
     
     <div className="bg-img-div">
       
-      <img src={bgShape}  alt="img"></img>
+      <img src={bgShape}  alt="entesk"></img>
     </div>
     <div className="slide-div" >
       <h4>Entesk Xəbərlər</h4>
@@ -69,7 +69,7 @@ return(
             return(
             <div className="caruseldiv" key={id}>
               <div className="top-div">
-                <img  src={img[0].img} alt="img" ></img>
+                <img  src={img[0].img} alt="entesk" ></img>
               </div>
               <div className="bottom-div">
                 <p>

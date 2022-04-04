@@ -74,7 +74,7 @@ const Skill =(props)=>{
 							}
 						}}>
 		
-							<img className='brush-img' src={brush} alt='img' >
+							<img className='brush-img' src={brush} alt='entesk' >
 							</img>
 		
 						</Link>
@@ -95,7 +95,7 @@ const Skill =(props)=>{
 							}
 						}}>
 						
-							<img    src={ leaf} alt='img' >
+							<img    src={ leaf} alt='entesk' >
 							</img>
 							
 						</Link>
@@ -114,7 +114,7 @@ const Skill =(props)=>{
 						}
 					}}>
 
-							<img  src={ circle} alt='img' >
+							<img  src={ circle} alt='entesk' >
 							</img>
 
 					</Link>

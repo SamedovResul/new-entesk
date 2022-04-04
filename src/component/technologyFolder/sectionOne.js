@@ -27,7 +27,7 @@ const  SectionOne = ({data, executeScroll}) =>{
             
           </div>
           <div  className="img-box col-md-6 col-sm-12 col-12 img-box ">
-            <img src={SectionOne_image} alt='img'></img>
+            <img src={SectionOne_image} alt='entesk'></img>
           </div>
         </div>
         
@@ -40,7 +40,7 @@ const  SectionOne = ({data, executeScroll}) =>{
           <div className="row technology">
             <div className="col-md-12 col-sm-12 section-1-for-mobile" >
               <h2>{SectionOne_description}</h2>
-                <img src={SectionOne_image} alt='img'></img>
+                <img src={SectionOne_image} alt='entesk'></img>
               <p>{SectionOne_text}</p>
             {/* <button  className="section-1-button" onClick={executeScroll} >Davamı</button> */}
             </div>
