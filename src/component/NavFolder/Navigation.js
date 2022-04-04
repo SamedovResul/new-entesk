@@ -205,12 +205,6 @@ if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getIte
 					admin ? (
 						<div className='nav-menu'>
 							<ul className='ul-nav' >
-								{/* <li>
-									<Link
-										to={{ pathname: '/login',}}>
-										Students
-									</Link >
-								</li> */}
 								<li>
 									<Link
 										to={{ pathname: '/Adminblogs',}}>
@@ -222,7 +216,7 @@ if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getIte
 										onClick={()=>{
 											logOut()
 										}}
-										to={{ pathname: '/admin',}}>
+										to={{ pathname: '/login',}}>
 										logOut
 									</Link >
 								</li>

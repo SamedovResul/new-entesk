@@ -13,7 +13,6 @@ const Create = () => {
   }, [])
   
   let state = useSelector((state) => state);
-  // console.log(state)
 
   const [newTimetable, setNewtimetable] = useState({
     student_Name: '',
@@ -24,49 +23,44 @@ const Create = () => {
     class_Id: '',
     date: '',
   })
-  console.log(state.timetableReducer[0])
-  //  add class
 
+  //  add class
   useEffect(() => {
      state.classReducer.map((Class) =>{
         const {name, _id} = Class
         if(_id === newTimetable.class_Id){
             newTimetable.class_Name = name
-          // console.log(newTimetable)
         }
       })
-  }, [])
+  }, [newTimetable])
+
+
   // add student
   useEffect(() => {
     state.studentReducer.map((student) =>{
       const {firstName, _id} = student
       if(_id === newTimetable.student_Id){
         newTimetable.student_Name = firstName
-      // console.log(newTimetable)
       }
     })
-  }, [])
-  // add teacher
+  }, [newTimetable]);
 
+
+  // add teacher
   useEffect(() => {
     state.teacherReducer.map((student) =>{
       const {name, _id} = student
       if(_id === newTimetable.teacher_Id){
         newTimetable.teacher_Name = name
-      // console.log(newTimetable)
       }
     })
-  }, [])
+  }, [newTimetable])
   
  
 
   const history = useHistory();
 
-  // console.log(new Date(newTimetable.date))
-
   // update timetable
-
-
   useEffect(() => {
     state.timetableReducer.map((timetable) =>{
       const {_id} = timetable
@@ -76,10 +70,10 @@ const Create = () => {
     })
   }, [id])
   
-  // console.log(state.timetableReducer[0])
 
   // create timatable
   const  createTimetbale = (e) =>{
+    console.log(true)
     if(id){
       dispatch(UpdateTimetable(newTimetable, id))
     }else{
@@ -93,14 +87,13 @@ const Create = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
-            <div className="create-data">
+            <div className=" create-admin create-data">
               <p>  create Timetable</p>
             <form action="">
               {/* select teacher  */}
               <select 
                 onChange={(e) =>{
-                  setNewtimetable({
-                    ...newTimetable, teacher_Id: e.target.value
+                  setNewtimetable({...newTimetable, teacher_Id: e.target.value
                   })
                 }}name="students" id="teacher">
                   {
@@ -180,65 +173,63 @@ const Create = () => {
                   })
                 }}
               />
-              <button onClick={() =>{createTimetbale()}}>
-                {id ? (
-                    <span>Update</span>
-                  ) :(
-                    <span>Create</span>
-                  )}
-              </button>
+              
             </form>
+            <button onClick={() =>{createTimetbale()}}>
+                {id ? (
+                  <span>Update</span>
+                ) :(
+                  <span>Create</span>
+                )}
+              </button>
             </div>
           </div>
-                {
-                  state.timetableReducer.map((timetable, index) =>{
-                    const {
-                      student_Name,
-                      teacher_Name,
-                      class_Name,
-                      date,
-                      _id
-                    } =timetable
-                    const time = new Date(date)
-                    const minute = time.getMinutes()
-                    const hour = time.getHours()
-                    const day = time.getDay()
-                    const month = time.getMonth()
-                    const year = time.getFullYear()
-                    // console.log(year)
-                    return(
+            {
+              state.timetableReducer.map((timetable, index) =>{
+                const {
+                  student_Name,
+                  teacher_Name,
+                  class_Name,
+                  date,
+                  _id,
+                  table_State
+                } =timetable
+                const time = new Date(date)
+                const minute = time.getMinutes()
+                const hour = time.getHours()
+                const day = time.getDay()
+                const month = time.getMonth()
+                const year = time.getFullYear()
+                // console.log(year)
+                return(
 
-                      <div key={index} className='col-md-4'>
-                        <div className="info-table">
-                          
-                          {/* <li   value={_id} >
-                          <span>status: {
-                              status === 1? ( <span>active</span> ) :( <span>inactive</span> )
-                            } 
-                          </span>
-                          </li> */}
-                          
-                            <p><b>teacher:</b>  {teacher_Name} </p>
-                            <p><b>student:</b>  {student_Name} </p> 
-                            <p><b>class:</b> {class_Name}  </p>  
-                            <p><b>date:</b>{`${year} ${month} ${day} ${hour}:${minute}`} </p>
-                            <p> <b>class state</b>  <span>nun</span> </p>
+                  <div key={index} className='col-md-4'>
+                    <div className="info-table">
+                      
+                        <p><b>teacher:</b>  {teacher_Name} </p>
+                        <p><b>student:</b>  {student_Name} </p> 
+                        <p><b>class:</b> {class_Name}  </p>  
+                        <p><b>date:</b>{`${year} ${month} ${day} ${hour}:${minute}`} </p>
+                        <p> <b>class state</b>  <span>nun</span> </p>
+                        <p>
+                        <b>class state</b>
+                        {
+                          table_State === 0 ?( <span> undefined </span> ):( <span>confirm</span> )
+                        }
+                      </p>
+                        <button
+                        onClick={()=>{
+                          setId(_id)
+                        }}
+                        >
+                          update
+                        </button>
+                    </div>
+                  </div>
 
-                            <button
-                            onClick={()=>{
-                              setId(_id)
-                            }}
-                            >
-                              update
-                            </button>
-                        </div>
-                      </div>
-
-                    )
-                  })
-                }
-
-          
+                )
+              })
+            }
         </div>
       </div>
     </div>

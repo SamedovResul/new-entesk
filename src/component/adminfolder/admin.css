@@ -4,6 +4,13 @@
   margin-top: 60px;
 }
 
+.main-admin-page .col-md-12{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-admin-page .col-md-6{
   margin: 20px 0px;
 }
@@ -111,6 +118,39 @@
 .create-div select{
   margin: 20px;
 }
+
+/* create data */
+
+.create-admin{
+  text-align: center;
+}
+
+.create-admin form{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.create-admin form label{
+  margin: 10px;
+}
+
+.create-admin form label input{
+  margin-left: 5px;
+}
+
+.create-admin button{
+  border: none;
+  background-color: blue;
+  border-radius: 20px;
+  color: white;
+  padding: 5px 20px;
+}
+
+.create-admin input{
+  border-radius: 20px;
+}
+
 /* create timetable */
 .info-table{
   border: 2px dashed;
@@ -150,29 +190,6 @@
 
 
 
-.create-data form{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.create-data form label{
-  margin: 10px;
-}
-
-.create-data form label input{
-  margin-left: 5px;
-}
-
-.create-data button{
-  border: none;
-  background-color: blue;
-  border-radius: 20px;
-  color: white;
-  padding: 5px 20px;
-}
-
-
 /* create class */
 
 
@@ -180,54 +197,124 @@
   width: 100%;
 }
 
-.create-class button{
-  border: none;
-  background-color: blue;
-  border-radius: 20px;
-  color: white;
-  padding: 5px 20px;
-}
 
 .create-class form{
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
   margin: 30px auto;
 }
 
-.create-class input{
-  border-radius: 20px;
+.classes{
+  height: 0%;
+  overflow: hidden;
 }
 
 /* create student */
 
 .create-student{
   width: 100%;
-  border: 1px solid black;
   text-align: center;
   height: auto;
 }
 
 .create-student form{
   width: 100%;
-  display: flex;
-  justify-content: space-around;
   margin: 30px auto;
   height: auto;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .create-student label{
   margin: 10px;
 }
 
-.create-student input{
+
+/* create student */
+
+.create-teacher{
+  text-align: center;
+}
+
+/* create-teacher */
+
+.create-teacher form{
+  width: 100%;
+  margin: 30px auto;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+/* create box */
+
+.create-box{
+  border: 1px solid black;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
   border-radius: 20px;
 }
 
-.create-student button{
+/* teacher page */
+
+.main-teacher-page{
+  margin-top: 60px;
+}
+
+
+
+.main-teacher-page button{
   border: none;
   background-color: blue;
   border-radius: 20px;
   color: white;
   padding: 5px 20px;
+  margin: 10px;
+}
+
+.create-comment{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.create-comment form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-comment form textarea{
+  padding: 20px 0px 0px 30px;
+  border-radius: 20px;
+  border: 7px double rgb(136, 136, 134);
+  outline: 0 !important;
+}
+
+/* get date */
+
+.get-date{
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.get-date button{
+  background-color: green;
+  padding: 6px 10px;
+  margin: 20px 5px;
+  border: 1px solid whe;
+  border-radius: 20px;
+}
+
+.get-date label{
+  font-size: 20px;
+}
+
+.get-date label input{
+  margin: 10px;
 }

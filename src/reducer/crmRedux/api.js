@@ -51,23 +51,23 @@ export const deleteClass = (id) =>{
   return API.delete(`/class/${id}`)
 }
 
-// create, update get class
+// create, update get teacher
 
 export const getTeacher = () =>{
 
-  return API.get('/teacher')
+  return API.get('/teachers')
 }
 
 export const createTeacher = (data) =>{
 
-  return API.post('/teacher/register', data)
+  return API.post('/teachers/register', data)
 }
 
 export const updateTeacher = (id, data) =>{
 
-  return API.patch(`/teacher/${id}`, data)
+  return API.patch(`/teachers/${id}`, data)
 }
-// create, update get  class
+// create, update get  student
 
 export const getStudent = () =>{
 
@@ -101,13 +101,25 @@ export const updateTimetable = (data,id) =>{
   return API.patch(`/timeTable/${id}`, data)
 }
 
-// sign get post teacher
 
-// export const getTeacherdata = (id) =>{
-
-//   return API.get(`/admin/${id}`)
-// }
-
-export const signInTeacher = (data) =>{
-  return API.post('/teacher',data )
+export const SearchByDate = (search) =>{
+  return API.get(`/timeTable/search?startDate=${search.from}&endDate=${search.to}&name=${search.name}`)
 }
+
+export const ConfirmOrCancel = (id,data) =>{
+  return API.patch(`/timeTable/state/${id}`,data)
+} 
+//  get post teacher
+
+export const getTeacherTable = (id) =>{
+  return API.patch(`/teacher/${id}`)
+}
+
+export const createComment = (id, data) =>{
+  return API.patch(`/teacher/${id}/addComment`,data)
+}
+
+
+
+
+

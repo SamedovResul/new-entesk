@@ -1,29 +1,28 @@
 import {React, useState, useEffect} from 'react';
 // import {useSpring} from 'react-spring'
 // import 'react-bootstrap';
-import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
-import Environment from './component/environmentFolder/environment'
-import Technology from './component/technologyFolder/technology'
-import NavBar from './component/NavFolder/Navigation'
-import HomeBanner from './component/homeFolder/homeBanner'
-import Skill from './component/skillFolder/skill'
-import Products from './component/products/product'
-import Blog from './component/blog/blog'
-import About from './component/About/about'
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import Environment from './component/environmentFolder/environment';
+import Technology from './component/technologyFolder/technology';
+import NavBar from './component/NavFolder/Navigation';
+import HomeBanner from './component/homeFolder/homeBanner';
+import Skill from './component/skillFolder/skill';
+import Products from './component/products/product';
+import Blog from './component/blog/blog';
+import About from './component/About/about';
 // import Circular from './circular/circular';
-import EnvironmentCourse from './component/environmentFolder/Course/Course'
-import TexnologyCourse from './component/technologyFolder/Course/Course'
-import SkillCours from './component/skillFolder/Course/Course'
+import EnvironmentCourse from './component/environmentFolder/Course/Course';
+import TexnologyCourse from './component/technologyFolder/Course/Course';
+import SkillCours from './component/skillFolder/Course/Course';
 import LoginAdmin from './component/adminfolder/login/admin';
-import LoginTeacher from './component/adminfolder/login/teacher';
-import Teacher from './component/adminfolder/admin/create/teachers'
-import Admintimetable from './component/adminfolder/admin/admintimetable'
-import Students from './component/adminfolder/studentsFolder/students'
-import Blogs from './component/adminfolder/blogfolder/blogs'
-import Createblog from './component/adminfolder/blogfolder/Createblog'
+import Teacher from './component/adminfolder/teacherFolder/Teacher';
+import Admintimetable from './component/adminfolder/admin/admintimetable';
+// import Students from './component/adminfolder/studentsFolder/students';
+import Blogs from './component/adminfolder/blogfolder/blogs';
+import Createblog from './component/adminfolder/blogfolder/Createblog';
 import { useDispatch } from 'react-redux';
-import {getUser} from './reducer/blogReducer/action'
-import Cv from './component/studentsCV/CV'
+import {getUser} from './reducer/blogReducer/action';
+import Cv from './component/studentsCV/CV';
 import Gallery from './component/studentsCV/studentsCertificate/gallery';
 import Create from './component/adminfolder/admin/create/create';
 
@@ -74,12 +73,8 @@ function App(props) {
             <Route exact path='/About'  >
               <About handlerSideClose={handlerSideClose} />
             </Route>
-
-            <Route path='/admin' >
+            <Route path='/login' >
               <LoginAdmin/>
-            </Route>
-            <Route path='/teacher'>
-              <LoginTeacher />
             </Route>
             <Route path='/adminTimetable'>
               <Admintimetable  />
@@ -90,16 +85,15 @@ function App(props) {
             <Route path="/Create">
               <Create />
             </Route>
-            <Route path='/Students' >
+            {/* <Route path='/Students' >
               <Students />
-            </Route>
+            </Route> */}
             <Route path='/adminBlogs' >
               <Blogs  />
             </Route>
             <Route path='/Createblog/:id' >
               <Createblog  />
             </Route>
-            
             <Route path={`/:name/certificates`}  >
               <Gallery  />
             </Route>

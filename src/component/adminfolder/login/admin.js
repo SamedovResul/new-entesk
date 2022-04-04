@@ -10,15 +10,11 @@ const Login = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   let state = useSelector((state) => state.admin);
-  // console.log(state.authData)
   const [admin, setAdmin] = useState({
     email:'',
     password:''
   })
 
-  useEffect(() => {
-    
-  }, [])
   // console.log(admin)
   const SignIn = (e) => {
     e.preventDefault();

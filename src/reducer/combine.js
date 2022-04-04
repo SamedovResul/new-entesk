@@ -6,7 +6,8 @@ import classReducer from './crmRedux/reducer/classReducer'
 import timetableReducer from './crmRedux/reducer/timetableReducer'
 import teacherReducer from './crmRedux/reducer/teacherReducer'
 import studentReducer from './crmRedux/reducer/studentReducer'
-import teacherAuth from './crmRedux/reducer/teacherAuth'
+import teachertable from './crmRedux/reducer/teachertable'
+import searchReducer from './crmRedux/reducer/searchReducer'
 
 
 export default combineReducers({
@@ -15,7 +16,7 @@ export default combineReducers({
   classReducer,
   timetableReducer,
   teacherReducer,
-  teacherAuth,
+  teachertable,
   studentReducer,
-  teacherAuth
+  searchReducer
 })

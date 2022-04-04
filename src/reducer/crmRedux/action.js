@@ -9,13 +9,15 @@ import {
   getTeacher,
   createTeacher,
   updateTeacher,
-  deleteTeacher,
   getStudent,
   createStudent,
   updateStudent,
   getTimetable,
   updateTimetable,
-  signInTeacher
+  getTeacherTable,
+  createComment,
+  SearchByDate,
+  ConfirmOrCancel
 } from './api'
  
 
@@ -28,9 +30,14 @@ export const SignInAdmin = (adminData,router) => async (dispatch) => {
     const { data } = await SigninAdmin(adminData);
     console.log(data)
     dispatch({ type: "SIGNIN", payload: data });
-    router.push('/adminTimetable')
+    if(data.superAdmin.role === 1){
+      router.push('/adminTimetable')
+    }else if(data.superAdmin.role === 0) {
+      router.push('/teacher')
+    }
+    
   } catch (error) {
-    console.log(error.message);
+    alert(error.response.data.message)
   }
 };
 
@@ -183,8 +190,9 @@ export const GetTimetable = () => async (dispatch)=>{
 export const CreateTimetable = (timetableData) => async (dispatch) =>{
 
   try {
+    
     const {data} = await createTimetable(timetableData)
-    // console.log(data)
+    console.log(data)
     dispatch({type:"CREATETIMETABLE", payload:data})
   } catch (error) {
     console.log(error.message);
@@ -203,16 +211,50 @@ export const UpdateTimetable = (timetableData, id) => async (dispatch) =>{
   }
 }
 
-// sign get post teacher
 
-export const SignInTeacher = (teacher) => async (dispatch) =>{
+export const searchByDate = (search) => async (dispatch) =>{
+  try {
+    const {data} = await SearchByDate(search);
+    console.log(data)
+    dispatch({type:"FETCHBYSEARCH", payload:data})
+  } catch (error) {
+    alert(error.response.data.message)
+    console.log(error.message);
+  }
+}
+
+export const confirmOrCancel = (id,Confirmdata) => async (dispatch) =>{
+  
+  try {
+    const {data} = await ConfirmOrCancel(id,Confirmdata);
+    console.log(data)
+    dispatch({type:'ConfirmOrCancel', payload:data})
+  } catch (error) {
+    console.log(error.message); 
+  }
+}
+//  get post teacher
+
+export const GetTeacherTable = (id) => async (dispatch) =>{
 
 
   try {
-    const {data} = await signInTeacher(teacher)
-    console.log(data)
-    dispatch({type: "SIGNINTEACHER", payload:data})
+    const {data} = await getTeacherTable(id)
+
+    dispatch({type:"GETTEACHERTABLE", payload:data})
   } catch (error) {
     console.log(error.message);
   }
 }
+
+export const CreateComment = (id,comment) => async (dispatch)  =>{
+  try {
+    const {data} = await createComment(id,comment)
+
+    // console.log(data)
+    dispatch({type:"CREATECOMMENT", payload:data })
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+

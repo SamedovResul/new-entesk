@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react'
-import { useHistory } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
 import { 
   CreateClass, 
@@ -9,6 +8,7 @@ import {
 } from '../../../../reducer/crmRedux/action';
 
 const Classes = () => {
+
   const [data, setData] = useState({
     name:"",
     content:"",
@@ -51,16 +51,17 @@ const Classes = () => {
     }
   }
 
-  const deleteClass =(id) =>{
-    console.log(id)
-    dispatch(DeleteClass(id))
-  }
+  // const deleteClass =(id) =>{
+  //   console.log(id)
+  //   dispatch(DeleteClass(id))
+  // }
   return (
     <div className="container">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
-            <div className="create-class">
+            <div className=" create-admin create-class">
+              <p>create class</p>
               <form action="">
                 <label htmlFor="name">
                   <b>class name: </b>
@@ -84,7 +85,8 @@ const Classes = () => {
                     }}
                   />
                 </label>
-                <button onClick={() =>{createClass()}}>
+              </form>
+              <button onClick={() =>{createClass()}}>
                     {
                       id.id ? (
                         <span>update</span> 
@@ -94,7 +96,6 @@ const Classes = () => {
 
                     }
                 </button>
-              </form>
             </div>
           </div>
 
