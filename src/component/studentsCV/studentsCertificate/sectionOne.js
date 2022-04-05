@@ -32,7 +32,7 @@ const SectionOne = ({studentData}) => {
                 return(
                   <div key={index} className="col-md-6 certificate-div">
                     <div className=" " >
-                      <img className="responsive" src={data.img} alt="test ne isteyirsen"></img>
+                      <img className="responsive" src={data.img} alt="..."></img>
                     </div>
                   </div>
                 )

@@ -9,13 +9,10 @@ export const studentData = [
       {
         img:'/certificat/imrancertificate1.jpg'
       },
+      {
+        img:'/certificat/imrancertificate2.jpg'
+      },
     ]
-  },
-  {
-    studentName:"imran",
-    frontImg:"/invitationsImg/imranfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
   {
     studentName:"maogtay21",
@@ -27,13 +24,37 @@ export const studentData = [
       {
         img:'/certificat/oqtaycertificate1.jpg'
       },
+      {
+        img:'/certificat/oqtaycertificate2.jpg'
+      },
+      {
+        img:'/certificat/oqtaycertificat3.jpg'
+      },
+      {
+        img:'/certificat/oqtaycertificate4.jpg'
+      },
+      {
+        img:'/certificat/oqtaycertificate5.jpg'
+      },
+      {
+        img:'/certificat/oqtaycertificate6.jpg'
+      },
+      {
+        img:'/certificat/oqtaycertificate7.jpg'
+      },
+      {
+        img:'/certificat/oqtaycertificate8.jpg'
+      },
+      {
+        img:'/certificat/oqtaycertificate9.jpg'
+      },
+      {
+        img:'/certificat/oqtaycertificate10.jpg'
+      },
+      {
+        img:'/certificat/oqtaycertificate11.jpg'
+      },
     ]
-  },
-  {
-    studentName:"oqtay",
-    frontImg:"/invitationsImg/oqtayfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
   {
     studentName:"khraul19",
@@ -43,23 +64,11 @@ export const studentData = [
     className:"raul"
   },
   {
-    studentName:"raul",
-    frontImg:"/invitationsImg/raulfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
     studentName:"khfarkhan29",
     frontImg:"/img/farxanfront.png",
     backImg:"/img/imranback.jpg",
     resBackImg:"/img/imranbackphone.jpg",
     className:"raul"
-  },
-  {
-    studentName:"farkhan",
-    frontImg:"/invitationsImg/farkhanfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
   {
     studentName:"mamurad05",
@@ -69,12 +78,6 @@ export const studentData = [
     className:"raul"
   },
   {
-    studentName:"murad",
-    frontImg:"/invitationsImg/muradfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
     studentName:"alidris27",
     frontImg:"/img/idrisfront.png",
     backImg:"/img/idrisback.jpg",
@@ -82,23 +85,11 @@ export const studentData = [
     className:"alidris27"
   },
   {
-    studentName:"idris",
-    frontImg:"/invitationsImg/idrisfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
     studentName:"azdavud06",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
-  },
-  {
-    studentName:"davud",
-    frontImg:"/invitationsImg/davudfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
   {
     studentName:"rakabira07",
@@ -115,12 +106,6 @@ export const studentData = [
     className:"raul"
   },
   {
-    studentName:"farahnaz",
-    frontImg:"/invitationsImg/farahnazfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
     studentName:"ibfuad27",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
@@ -128,23 +113,11 @@ export const studentData = [
     className:"raul"
   },
   {
-    studentName:"fuad",
-    frontImg:"/invitationsImg/fuadfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
     studentName:"alayaz28",
-    frontImg:"/img/raulfront.png",
+    frontImg:"/img/ayazfront.png",
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
-  },
-  {
-    studentName:"ayaz",
-    frontImg:"/invitationsImg/ayazfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
   {
     studentName:"maamir14",
@@ -154,23 +127,11 @@ export const studentData = [
     className:"raul"
   },
   {
-    studentName:"amir",
-    frontImg:"/invitationsImg/amirfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
     studentName:"kaamina21",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
-  },
-  {
-    studentName:"amina",
-    frontImg:"/invitationsImg/aminafront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
   {
     studentName:"mafateh12",
@@ -180,23 +141,11 @@ export const studentData = [
     className:"raul"
   },
   {
-    studentName:"fateh",
-    frontImg:"/invitationsImg/fatehfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
     studentName:"dodeniz12",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
-  },
-  {
-    studentName:"deniz",
-    frontImg:"/invitationsImg/denizfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
   {
     studentName:"almaryam04",
@@ -206,23 +155,11 @@ export const studentData = [
     className:"raul"
   },
   {
-    studentName:"maryam",
-    frontImg:"/invitationsImg/maryamfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
     studentName:"alreyhana01",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
-  },
-  {
-    studentName:"reyhana",
-    frontImg:"/invitationsImg/reyhanafront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
   },
   {
     studentName:"agali10",
@@ -239,115 +176,12 @@ export const studentData = [
     className:"raul"
   },
   {
-    studentName:"muhammad",
-    frontImg:"/invitationsImg/muhammadfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
     studentName:"kamehri28",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
   },
-  {
-    studentName:"mehri",
-    frontImg:"/invitationsImg/mehrifront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
 
   // cv si olmayanlar
-
-  {
-    studentName:"tahir",
-    frontImg:"/invitationsImg/tahirfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
-    studentName:"nariman",
-    frontImg:"/invitationsImg/narimanfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
-    studentName:"ali",
-    frontImg:"/invitationsImg/alifront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
-    studentName:"dilshad",
-    frontImg:"/invitationsImg/dilshadfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
-    studentName:"dilusha",
-    frontImg:"/invitationsImg/dilushafront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
-    studentName:"messi",
-    frontImg:"/invitationsImg/messifront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
-    studentName:"suleyman",
-    frontImg:"/invitationsImg/suleymanfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
-    studentName:"yusif",
-    frontImg:"/invitationsImg/yusiffront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
-    studentName:"safa",
-    frontImg:"/invitationsImg/safafront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
-    studentName:"bahar",
-    frontImg:"/invitationsImg/baharfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
-    studentName:"ayla",
-    frontImg:"/invitationsImg/aylafront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
-    studentName:"gulnaz",
-    frontImg:"/invitationsImg/gulnazfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
-    studentName:"rahim",
-    frontImg:"/invitationsImg/rahimfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
-    studentName:"kabira",
-    frontImg:"/invitationsImg/kabirafront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
-  {
-    studentName:"jalal",
-    frontImg:"/invitationsImg/jalalfront.png",
-    backImg:"/invitationsImg/imranback.jpg",
-    resBackImg:"/invitationsImg/imranbackphone.jpg",
-  },
 ]
