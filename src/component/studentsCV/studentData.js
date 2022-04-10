@@ -34,6 +34,12 @@ export const studentData = [
         img:'/certificat/oqtaycertificate4.jpg'
       },
       {
+        img:'/certificat/oqtaycertificate12.jpg'
+      },
+      {
+        img:'/certificat/oqtaycertificate13.jpg'
+      },
+      {
         img:'/certificat/oqtaycertificate5.jpg'
       },
       {
