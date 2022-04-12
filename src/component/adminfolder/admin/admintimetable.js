@@ -15,9 +15,10 @@ const Admin = () => {
   const [date, getDate] = useState({
     from:'',
     to:'',
-    name:''
+    teacher_Name:'',
+    student_Name:''
   })
-  // console.log(state)
+
   // get data from back
   useEffect(() => {
     dispatch(GetTimetable())
@@ -31,13 +32,11 @@ const Admin = () => {
 
   const Searching = (e) =>{
     e.preventDefault();
-    if(date.from && date.to){
       dispatch(searchByDate(date))
-    }else{
-      alert('you must insert date')
-    }
       setSearch(true)
   }
+
+
   const today =(e) =>{
     e.preventDefault();
     setSearch(false)
@@ -48,7 +47,6 @@ const Admin = () => {
     let data = {
       table_State:conData
     }
-    
     dispatch(confirmOrCancel(id,data))
   }
   // confirm or cancel
@@ -81,12 +79,22 @@ const Admin = () => {
                   }}
                 />
               </label>
-              <label htmlFor="name">Name:
+              <label htmlFor="name"> Teacher Name:
                  <input type="text" id="name" name="name"
                   
                   onChange={(e) =>{
                     getDate({
-                      ...date,name:e.target.value
+                      ...date,teacher_Name:e.target.value
+                    })
+                  }}
+                />
+              </label>
+              <label htmlFor="name"> Student Name:
+                 <input type="text" id="name" name="name"
+                  
+                  onChange={(e) =>{
+                    getDate({
+                      ...date,student_Name:e.target.value
                     })
                   }}
                 />
@@ -97,7 +105,15 @@ const Admin = () => {
             </form>
             <button onClick={today} >today</button>
           </div>
-          {
+          <p> <b> Ümumi say: </b>
+            { 
+              state ? 
+              ( <span>{state?.length}</span> )
+              :(<span>{searchingState?.length}</span>) 
+            }
+          </p>
+            {
+            
             search ? (
               searchingState.map((timetable,index) =>{
                 const {
@@ -119,6 +135,7 @@ const Admin = () => {
                 return(
   
                   <div key={index} className="col-md-6">
+                    
                     <div className='table-box' >
                       <p> <b>teacher:</b>  {teacher_Name} </p>
                       <p> <b>student:</b>  {student_Name} </p>

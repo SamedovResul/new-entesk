@@ -185,7 +185,7 @@ svg{
 }
 
 
-
+/* https://www.google.com/search?q=how+to+make+css+display+for+safari+browser&rlz=1C5CHFA_enAZ889AZ889&oq=how+to+make+css+display+for+safari+brow&aqs=chrome.1.69i57j33i10i160.934440j0j7&sourceid=chrome&ie=UTF-8 */
 @media(max-width:1199px){
   .desktopBurger{
     display: none;

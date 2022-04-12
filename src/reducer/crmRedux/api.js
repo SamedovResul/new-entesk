@@ -103,7 +103,9 @@ export const updateTimetable = (data,id) =>{
 
 
 export const SearchByDate = (search) =>{
-  return API.get(`/timeTable/search?startDate=${search.from}&endDate=${search.to}&name=${search.name}`)
+  return API.get(
+    `/timeTable/search?startDate=${search.from}&endDate=${search.to}&teacher_Name=${search.teacher_Name}&student_Name=${search.student_Name}`
+    )
 }
 
 export const ConfirmOrCancel = (id,data) =>{

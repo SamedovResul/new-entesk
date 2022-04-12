@@ -30,7 +30,7 @@ const SectionOne = ({studentData}) => {
             {
               images.map((data, index) =>{
                 return(
-                  <div key={index} className="col-md-6 certificate-div">
+                  <div key={index} className="col-md-6 col-sm-6 col-6 certificate-div">
                     <div className=" " >
                       <img className="responsive" src={data.img} alt="..."></img>
                     </div>
