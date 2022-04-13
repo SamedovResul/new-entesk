@@ -48,9 +48,11 @@ const  SectionOne = (props) =>{
             </Link>
           </div>
           <div  className="text-box col-md-6 col-sm-12 col-12">
+          <h1> <span>Entesk</span> 
             <VideoPlayer 
             src={videoSrc} className="video"   
             />
+          </h1>
           </div>
         </div>
       </div> 
@@ -62,10 +64,13 @@ const  SectionOne = (props) =>{
           <div className="row">
             <div className=" col-md-12 col-sm-12 section-1-for-mobile" >
               <p>Biz Kimik ?</p>
+              
               <p>{Description}</p>
+              <h1> <span>Entesk</span> 
                 <VideoPlayer 
-                  src={videoSrc}  className="video"   
+                src={videoSrc} className="video"   
                 />
+              </h1>
                <ul>
               {
                 areas.map((areas, index) =>{

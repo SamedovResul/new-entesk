@@ -1931,6 +1931,11 @@ svg{
   justify-content: center;
 }
 
+.text-box h1 span{
+  position: absolute;
+  color: white;
+}
+
 .section-one .text-box img {
   width: 100%;
   height: auto;
@@ -1985,6 +1990,11 @@ svg{
   font-weight: 1000 ;
   color: #482AFF;
   font-family: "Nunito" ;
+}
+
+.section-1-for-mobile h1 span{
+  position:absolute;
+  color: white;
 }
 
 .home

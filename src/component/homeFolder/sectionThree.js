@@ -20,9 +20,11 @@ const SectionThree = ({data,blog}) =>{
 
 
           <div  className="text-box col-md-6 col-sm-12 col-12">
+          <h1> <span>Entesk</span> 
             <VideoPlayer 
-              src={pika} className="video"   
+            src={pika} className="video"   
             />
+          </h1>
           </div>
 
             <div  className="text-box col-md-6 col-sm-12 col-xs-12" >
@@ -58,9 +60,11 @@ const SectionThree = ({data,blog}) =>{
                 
                 
                 <div  className="text-box col-md-6 col-sm-12 col-12">
+                <h1> <span>Entesk</span> 
                   <VideoPlayer 
                   src={pika} className="video"   
                   />
+                </h1>
                 </div>
                 
                 <h2>{description}</h2>
