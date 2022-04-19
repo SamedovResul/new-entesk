@@ -6,7 +6,7 @@ import allData from '../../course'
 import { useParams,useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import Circular from '../../circular/circular'
-
+// dsfghjk
 
 function Blog(props) { 
 
