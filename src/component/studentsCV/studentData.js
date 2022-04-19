@@ -190,7 +190,7 @@ export const studentData = [
   },
   // new
   {
-    studentName:"alali10",
+    studentName:"alali13",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
