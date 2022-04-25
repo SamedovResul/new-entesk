@@ -259,7 +259,5 @@ export const studentData = [
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
   },
-  
-
-  // cv si olmayanlar
+  // test
 ]
