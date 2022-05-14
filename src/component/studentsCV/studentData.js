@@ -259,30 +259,29 @@ export const studentData = [
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
   },
-  // new
   {
-    studentName:"Shraul03",
+    studentName:"shraul03",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
   },
   {
-    studentName:"Asharun30",
+    studentName:"asharun30",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
   },
   {
-    studentName:"Vailhan11",
+    studentName:"vailhan08",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
     className:"raul"
   },
   {
-    studentName:"Asahmad02",
+    studentName:"asahmad02",
     frontImg:"/img/raulfront.png",
     backImg:"/img/raulback.jpg",
     resBackImg:"/img/raulbackphone.jpg",
