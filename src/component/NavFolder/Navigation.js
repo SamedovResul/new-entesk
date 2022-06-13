@@ -287,7 +287,16 @@ if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getIte
 												tədris 	
 											</Link>
 										</li>
-
+										<li>
+											<Link to={{
+												pathname: '/metatesk',
+												aboutProps:{
+													name: 'fromNavication'
+												}
+											}}>
+												metatesk 	
+											</Link>
+										</li>
 										<li>
 											<Link to={{
 												pathname: '/About',

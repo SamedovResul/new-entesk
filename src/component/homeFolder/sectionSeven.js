@@ -1,6 +1,4 @@
 import {React, useState,useEffect } from 'react';
-import uuid from 'react-uuid'
-import { getDatabase, ref, set} from "firebase/database";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { send } from 'emailjs-com';
 import { useAlert } from 'react-alert'

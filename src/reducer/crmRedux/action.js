@@ -37,7 +37,7 @@ export const SignInAdmin = (adminData,router) => async (dispatch) => {
     }
     
   } catch (error) {
-    alert(error.response.data.message)
+    alert(error.response.data.msg)
   }
 };
 
@@ -207,7 +207,7 @@ export const UpdateTimetable = (timetableData, id) => async (dispatch) =>{
     
     dispatch({type:"UPDATETIMETABLE", payload:data})
   } catch (error) {
-    console.log(error.message);
+    alert(error.response.data.msg);
   }
 }
 
@@ -218,8 +218,7 @@ export const searchByDate = (search) => async (dispatch) =>{
     console.log(data)
     dispatch({type:"FETCHBYSEARCH", payload:data})
   } catch (error) {
-    alert(error.response.data.message)
-    console.log(error.message);
+    alert(error.response.data.msg)
   }
 }
 

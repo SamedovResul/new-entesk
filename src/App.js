@@ -25,6 +25,7 @@ import {getUser} from './reducer/blogReducer/action';
 import Cv from './component/studentsCV/CV';
 import Gallery from './component/studentsCV/studentsCertificate/gallery';
 import Create from './component/adminfolder/admin/create/create';
+import Metatesk from './component/metatesk/metatesk';
 
 function App(props) {
   const [certificates, setCertificates] = useState([])
@@ -90,6 +91,9 @@ function App(props) {
             </Route> */}
             <Route path='/adminBlogs' >
               <Blogs  />
+            </Route>
+            <Route path='/metatesk'>
+              <Metatesk/>
             </Route>
             <Route path='/Createblog/:id' >
               <Createblog  />

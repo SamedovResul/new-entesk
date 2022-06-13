@@ -1,0 +1,15 @@
+.metatesk-info{
+  margin: 30px;
+}
+
+.metatesk-video .video-js .vjs-tech {
+  border-radius: 60px;
+  border: 5px solid #FBB116;
+  object-fit: cover;
+}
+
+.metatesk-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

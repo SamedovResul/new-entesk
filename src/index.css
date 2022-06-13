@@ -1440,20 +1440,6 @@ svg{
   }
 }
 
-/* .note{
-  position: relative;
-}
-
-.note::before{
-  content: "";
-  position: absolute;
-  right: ;
-  width: 20px;
-  height: 20px;
-  border: 1px solid black;
-  background-color: blue;
-} */
-
 .main-box div:nth-child(2) .note .cantent-btn {
   border: none;
   background: #5CCDFF;
@@ -1931,7 +1917,7 @@ svg{
   justify-content: center;
 }
 
-.text-box h1 span{
+.text-box h1 > span{
   position: absolute;
   color: white;
 }
