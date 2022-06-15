@@ -1,27 +1,27 @@
-import {useSpring,animated,easings } from 'react-spring'
+import {useSpring,animated } from 'react-spring'
 
-function EasingComponent() {
-  const { background, rotateZ } = useSpring({
-    from: {
-      background: '#46e891',
-      rotateZ: 0,
-    },
-    to: {
-      background: '#277ef4',
-      rotateZ: 225,
-    },
-    config: {
-      duration: 2000,
-      easing: easings.easeInOutQuart,
-    },
+function LoopTrue() {
+  const styles = useSpring({
     loop: { reverse: true },
+    from: { x: 0 },
+    to: { x: 10 },
+    config: {
+      duration: 1000,
+      delay:20
+    }
   })
 
   return (
-    <animated.div
-      style={{ background, width: 120, height: 120, borderRadius: 16, rotateZ }}
+    <animated.div className="animated-div"
+      style={{
+        width: 80,
+        height: 80,
+        backgroundColor: '#46e891',
+        borderRadius: 16,
+        ...styles,
+      }}
     />
   )
 }
 
-export default EasingComponent
+export default LoopTrue

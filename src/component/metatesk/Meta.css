@@ -1,56 +1,9 @@
-.metatesk-info{
-  /* margin: 30px; */
-  background-image: url('./metaImg/sectionOnebg.jpeg');
-  background-position:bottom;
-  background-size:cover;
-  background-repeat: no-repeat;
-  /* -webkit-mask-image: linear-gradient(#fff, #fff, rgba(255, 255, 255, 0)) */
-}
-
-.section-one{
-  position: relative;
-}
-
-.metatesk-info::before{
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  background-color: blue;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-}
-
-
-.section-one .container{
-  position: relative;
-  z-index: 1;
-}
-
-
-.metatesk-video .video-js .vjs-tech {
-  border-radius: 60px;
-  border: 5px solid #FBB116;
-  object-fit: cover;
-}
-
-.metatesk-text{
-  text-align: left;
-  height: 100px;
-  margin: 30px;
-}
-
-.metatesk-text p{
-  font-size: 30px;
-  color: white;
-}
 
 
 .metatesk-header {
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
+  justify-content:center;
   align-items: center;
   height: 500px;
 }
@@ -65,44 +18,86 @@
   margin: 30px;
 }
 
+/* section one */
 
 
-
-.png::after {
-  /* background: unset; */
+.metatesk-text p{
+  font-size: 30px;
+  margin: 20px  10px;
 }
 
-.metatesk-box {
+
+.metatesk-img{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.metatesk-img img{
+  width: 80%;
+  height: auto;
+  border-radius: 20px;
+  border:  5px solid #FBB116;
+}
+/* section Two */
+
+
+.section-Two{
+  background-color: #482AFF;
+}
+
+.metatesk-box{
   width: 100%;
   height: 450px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-self: center;
   text-align: center;
-  margin: 100px auto;
 }
 
-.img-div{
-  height: 80%;
+.metatesk-box p{
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.metatesk-box .img-div{
   width: 100%;
+  height: 60%;
   display: flex;
-  justify-content:center;
-  align-items: center;
-  text-align: center;
+  justify-content: center;
+  align-items:  center;
 }
 
 .metatesk-box .img-div img{
   width: 50%;
   height: auto;
-  margin: 20px auto;
+}
+
+/* secton three */
+
+.section-Three{
+  margin: 50px auto;
 }
 
 
+.line{
+  display: flex;
+  justify-content: center;
+  height: 60px;
+}
 
+.line span{
+  margin: 5px;
+  transition: all 0.2s ease;
+}
 
-.metatesk-box p{
+.line span:hover{
   font-size: 25px;
-  color: white;
   font-weight: 700;
+  color: #482AFF;
+  cursor: pointer;
 }
