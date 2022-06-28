@@ -7,7 +7,6 @@ const HomeFunctions = (props) =>{
   const myRef = useRef(null)
   const [openSide, setopenSide ] = useState(false);
   const { innerWidth: width} = window;
-	console.log(myRef)
   // getDimension screen for responsive
 
 	const {screenSize} = GetDimension()

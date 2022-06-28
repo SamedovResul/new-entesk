@@ -1,31 +1,9 @@
-import React from 'react'
+import React from 'react';
+import metateskEarth from "./metaImg/metateskEarth.png";
+import {useSpring,animated} from 'react-spring';
 
 const sectionThree = () => {
 
-
-    let firstLine = [];
-    firstLine[7] = 'value';
-    let sechondLine = [];
-    sechondLine[8] = 'value';
-    let thirdLine = [];
-    thirdLine[9] = 'value';
-    let fourthLine = [];
-    fourthLine[10] = 'value';
-    let fifthLine = [];
-    fifthLine[11] = 'value';
-
-
-
-    function array(params) {
-      for (let i = 0; i < params.length; i++) {
-        params[i] = 'Metatesk'
-      }
-    }
-    array(firstLine);
-    array(sechondLine);
-    array(thirdLine);
-    array(fourthLine);
-    array(fifthLine)
 
 
 
@@ -36,132 +14,23 @@ const sectionThree = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-12">
-              {/* first */}
-              <div className='line' >
-                {
-                  firstLine.map((word,i) =>{
-
-                    return(
-                      <span key={i}>
-                        {word}
-                      </span>
-                    )
-                    
-                  })
-                }
+              <div className="text-container">
+                <h3> INSIDE THE UNIGALAX UNIVERSE </h3>
+                <p>From visiting galaxies to building, coaching, or learning, UniGalax rewards you for every action you take.</p>
               </div>
-              {/* sechond */}
-              <div className='line' >
-                {
-                  sechondLine.map((word,i) =>{
-
-                    return(
-                      <span key={i}>
-                        {word}
-                      </span>
-                    )
-                    
-                  })
-                }
+            </div>
+            <div className="col-md-6">
+            <div className="text-box"  >
+              <p>► For Creators and Coaches</p>
+              <p>Whether you are a university, platform, or educator, you can enable your content for  web3. </p>
+              <p> Take advantage of UniGalax’s reward system to incentivize your learners!</p>
               </div>
-              {/* third */}
-              <div className='line' >
-                {
-                  thirdLine.map((word,i) =>{
-
-                    return(
-                      <span key={i}>
-                        {word}
-                      </span>
-                    )
-                    
-                  })
-                }
-              </div>
-              {/* fourth */}
-              <div className='line' >
-                {
-                  fourthLine.map((word,i) =>{
-
-                    return(
-                      <span key={i}>
-                        {word}
-                      </span>
-                    )
-                    
-                  })
-                }
-              </div>
-              {/* fifth */}
-              <div className="line">
-                {
-                  fifthLine.map((word,i) =>{
-
-                    return(
-                      <span key={i}>
-                        {word}
-                      </span>
-                    )
-                    
-                  })
-                }
-              </div>
-              {/* center */}
-              {/* fourth */}
-              <div className='line' >
-                {
-                  fourthLine.map((word,i) =>{
-
-                    return(
-                      <span key={i}>
-                        {word}
-                      </span>
-                    )
-                    
-                  })
-                }
-              </div>
-              {/* third */}
-              <div className='line' >
-                {
-                  thirdLine.map((word,i) =>{
-
-                    return(
-                      <span key={i}>
-                        {word}
-                      </span>
-                    )
-                    
-                  })
-                }
-              </div>
-              {/* sechond */}
-              <div className='line' >
-                {
-                  sechondLine.map((word,i) =>{
-
-                    return(
-                      <span key={i}>
-                        {word}
-                      </span>
-                    )
-                    
-                  })
-                }
-              </div>
-              {/* first */}
-              <div className='line' >
-                {
-                  firstLine.map((word,i) =>{
-
-                    return(
-                      <span key={i}>
-                        {word}
-                      </span>
-                    )
-                    
-                  })
-                }
+            </div>
+            <div className="col-md-6">
+              <div className="text-box" >
+              <p>► For Learners & Players</p>
+              <p>Get access to content and educators vetted by the community. </p>
+              <p>Learn valuable skills, get access to exclusive communities, and earn tokens and authentication for your progress!</p>
               </div>
             </div>
           </div>

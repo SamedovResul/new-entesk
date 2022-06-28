@@ -1,5 +1,5 @@
 import {useRef, useEffect} from 'react'
-import {useSpring,} from 'react-spring'
+import {useSpring,animated} from 'react-spring'
 import GetDimension from './getDimension'
 
 
