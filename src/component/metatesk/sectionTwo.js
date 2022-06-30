@@ -56,8 +56,9 @@ const SectionTwo = () => {
           <div className="row">
             <div className="col-md-4 ">
               <animated.div className="metatesk-box " >
+                
                 <div className="img-div">
-                  <img src={img1} alt="" />
+                  <img src={img2} alt="" />
                 </div>
                 <p>Anytime, Anywhere</p>
                 <p>join the classes</p>
@@ -68,10 +69,9 @@ const SectionTwo = () => {
             
             <div className="col-md-4 ">
               <animated.div className="metatesk-box " >
-                <div className="img-div">
-                  <img src={img2} alt="" />
-                </div>
-                
+              <div className="img-div">
+                  <img src={img1} alt="" />
+              </div>
                 <p>Interact</p>
                 <p>with other users <br /> in virtual world</p>
               </animated.div>

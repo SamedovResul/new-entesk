@@ -88,12 +88,17 @@
 
 .section-Two{
   background-color: #482AFF;
-  height: 450px;
+}
+
+@media(max-width:768px){
+  .section-Two{
+    height: auto;
+  }
 }
 
 .metatesk-box{
   width: 100%;
-  height: 450px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   justify-content:flex-start;
@@ -104,13 +109,15 @@
 .metatesk-box p:nth-of-type(1) {
   color: white;
   font-size: 25px;
-  font-weight: 700;
+  font-weight: 900;
+  font-family: 'Nunito';
 }
 
 .metatesk-box p:nth-of-type(2) {
   color: white;
   font-size: 20px;
   font-weight: 500;
+  font-family: 'Calibri light';
 }
 
 .metatesk-box .img-div{

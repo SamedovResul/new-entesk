@@ -39,7 +39,10 @@ const SectionSeven = ({myRef}) =>{
     if(user.name && user.email && user.phone && user.topic ){
       if(  re.test(user.email) ){
       
-      alert.show(<div style={{ color: 'green' }}>Sizinlə əlaqə saxlanilacaq </div>)
+      alert.show(  <div style={{ color: 'green' }}> 
+      {location.pathname === "/metatesk" 
+      ? ( <span>you will be contacted</span> ) :
+      (<span>Sizinlə əlaqə saxlanılacaq</span>) } </div>)
 
       console.log()
       
@@ -72,10 +75,14 @@ const SectionSeven = ({myRef}) =>{
         text:""
       })
       }else{
-        alert.show(<div style={{ color: 'red' }}>Xahiş edirik Mail addresi  düzgün yazın </div>)
+        alert.show(<div style={{ color: 'red' }}> {location.pathname === "/metatesk" 
+        ? ( <span>Please enter the correct Mail addressd</span> ) :
+        (<span>Xahiş edirik Mail addresi  düzgün yazın</span>) } </div>)
       }
     }else{
-      alert.show(<div style={{ color: 'red' }}>Xahiş edirik xanaları doldurun</div>)
+      alert.show(<div style={{ color: 'red' }}> {location.pathname === "/metatesk" 
+      ? ( <span>Please fill in the fields</span> ) :
+      (<span>Xahiş edirik xanaları doldurun</span>) } </div>)
     }
   }
 
@@ -154,7 +161,12 @@ const SectionSeven = ({myRef}) =>{
                   placeholder={location.pathname === "/metatesk" ? ("Text") :("Mətn" )}
                   required
                 ></textarea>
-                <button type="submit" onClick={writeUserData} >Göndər</button>
+                <button type="submit" onClick={writeUserData} >
+
+                  {
+                    location.pathname === "/metatesk" ? ( <span>Send</span> ) :(<span>Göndər</span> )
+                  }
+                  </button>
               </form>
               
             </div>

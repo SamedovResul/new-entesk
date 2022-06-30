@@ -138,7 +138,7 @@ const FooterSection =(props) =>{
                   A. M. Şərifzadə küç. 237 A 
                 </li>
                 <li>
-                  M. İnşaatçilar yaxınlığı
+                  M. İnşaatçılar yaxınlığı
                 </li>
                 <li>contact@enteskedu.com</li>
               </ul>
