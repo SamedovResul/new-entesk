@@ -1,15 +1,15 @@
-import {React,  useState,useEffect, useCallback } from 'react'
-import {useSpring, animated} from 'react-spring'
-import circle from '../../images/circle.png'
-import leaf from '../../images/leaf.png'
-import brush from '../../images/brush.png'
-import { Link,useLocation,useParams } from 'react-router-dom'
-import MediaQuery from 'react-responsive'
+import {React,  useState,useEffect, useCallback } from 'react';
+import {useSpring, animated} from 'react-spring';
+import circle from '../../images/circle.png';
+import leaf from '../../images/leaf.png';
+import brush from '../../images/brush.png';
+import { Link,useLocation,useParams } from 'react-router-dom';
+import MediaQuery from 'react-responsive';
 import { FaBars, FaStream } from 'react-icons/fa';
-import logo from '../../images/logoicon.png'
-import GetDimension from '../functions/getDimension'
-import { studentData } from '../studentsCV/studentData'
-import { InvitationsData } from '../studentInvitations/invitationsData'
+import logo from '../../images/logoicon.png';
+import GetDimension from '../functions/getDimension';
+import { studentData } from '../studentsCV/studentData';
+import { InvitationsData } from '../studentInvitations/invitationsData';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
@@ -23,6 +23,7 @@ const NavBar = ( {setZindex,setopenSide,openSide}) =>{
 	const [y, setY] = useState(window.scrollY);
 	const [count, setCount] = useState(false);
 	const [scroll, setScroll] =  useState();
+	const [isShown, setIsShown] = useState(false);
 	const { innerWidth: width} = window;
 	const location = useLocation();
 	
@@ -191,7 +192,7 @@ if(location.pathname === "/gallery"){
 if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getItem('profile')).token ){
 	admin = true
 }
-
+console.log()
 	return(
 		<> 
 			<article className="stick-class" style={style}>
@@ -232,7 +233,7 @@ if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getIte
 										aboutId:{
 											id: 'fromNav-environment'
 										}
-									}}>
+									}}  >
 								<img  src={ leaf} alt='img'  className=''></img>
 							</Link >
 
@@ -261,18 +262,20 @@ if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getIte
 									</button>
 								</animated.div>
 							
+							{/* top navication */}
 							<animated.div style={ navMenuAnimation } className='nav-menu'>
 
 								<ul className='ul-nav'>
 										<li >
-											<Link lang="aze" to={{
+											<Link  to={{
 														pathname:'/',
 														aboutProps:{
 															name: 'fromNavication'
 														}
-													}}>
-														
-
+													}} 
+													style={location.pathname === "/" ? 
+													{ borderBottom: "1px solid white" }:{ border: "unset" } }
+													>
 													ana səhifə
 											</Link>
 										</li>
@@ -283,7 +286,9 @@ if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getIte
 												aboutProps:{
 													name: 'fromNavication'
 												}
-											}}>
+											}} 
+											style={location.pathname === "/products" ? 
+											{ borderBottom: "1px solid white" }:{borderBottom: "unset"} }>
 												tədris 	
 											</Link>
 										</li>
@@ -293,7 +298,9 @@ if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getIte
 												aboutProps:{
 													name: 'fromNavication'
 												}
-											}}>
+											}} 
+											style={location.pathname === "/metatesk" ? 
+											{ borderBottom: "1px solid white" }:{borderBottom: "unset"} } >
 												metatesk 	
 											</Link>
 										</li>
@@ -303,7 +310,8 @@ if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getIte
 												aboutProps:{
 													name: ''
 												}
-												}}> 
+												}} style={location.pathname === "/About" ? 
+												{ borderBottom: "1px solid white" }:{borderBottom: "unset"} }> 
 												haqqımızda
 											</Link>
 										</li>
@@ -314,7 +322,7 @@ if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getIte
 														aboutProps:{
 															name: 'toAbout'
 														}
-													}}>
+													}} >
 													əlaqə
 											</Link>
 										</li>
@@ -322,6 +330,8 @@ if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getIte
 									</ul>
 							</animated.div>
 
+
+				{/* right side navication */}
 							<animated.div style={sideAnimation} className="sidebar">
 						<button className="side-burger" onClick={handlerSideClose}>
 							<FaStream />
@@ -334,8 +344,10 @@ if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getIte
 											aboutProps:{
 												name: 'fromNavication'
 											}
-										}}>
-										əsas
+										}} 
+										style={location.pathname === "/" ? 
+										{ borderBottom: "1px solid white" }:{borderBottom: "unset"} }>
+										ana səhifə
 								</Link>
 							</li>
 							<li>
@@ -344,18 +356,28 @@ if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getIte
 									aboutProps:{
 										name: 'fromNavication'
 									}
-								}}>
+								}} >
 								tədris 
 								</Link>
-							
 							</li>
 							<li>
+								<Link to={{
+									pathname: '/metatesk',
+									aboutProps:{
+										name: 'fromNavication'
+									}
+								}}  >
+									metatesk 	
+								</Link>
+							</li>
+								<li>
 								<Link to={{
 									pathname: '/About',
 									aboutProps:{
 										name: ''
 									}
-									}}> 
+									}}
+									> 
 									haqqımızda
 								</Link>
 							</li>
@@ -415,7 +437,16 @@ if(JSON.parse(localStorage.getItem('profile')) && JSON.parse(localStorage.getIte
 								}}>
 								tədris 
 								</Link>
-							
+							</li>
+							<li>
+								<Link to={{
+									pathname: '/metatesk',
+									aboutProps:{
+										name: 'fromNavication'
+									}
+								}}  >
+									metatesk 	
+								</Link>
 							</li>
 							<li>
 								<Link to={{

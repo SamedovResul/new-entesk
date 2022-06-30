@@ -28,7 +28,6 @@ const SectionTwo = () => {
         // console.log(Scroll)
     };
 
-    console.log(scrollPosition)
 
   window.addEventListener('scroll', handleScroll)
 
@@ -56,36 +55,35 @@ const SectionTwo = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-4 ">
-              <animated.div style={Animation} className="metatesk-box " >
+              <animated.div className="metatesk-box " >
                 <div className="img-div">
                   <img src={img1} alt="" />
                 </div>
-                <p>Anytime, Anywhere join the classes</p>
+                <p>Anytime, Anywhere</p>
+                <p>join the classes</p>
               </animated.div>
 
 
             </div>
             
             <div className="col-md-4 ">
-              <animated.div style={Animation} className="metatesk-box " >
+              <animated.div className="metatesk-box " >
                 <div className="img-div">
                   <img src={img2} alt="" />
                 </div>
                 
-                <p>Interact
-                    with other users 
-                    in virtual world</p>
+                <p>Interact</p>
+                <p>with other users <br /> in virtual world</p>
               </animated.div>
             </div>
 
             <div className="col-md-4 ">
-              <animated.div style={Animation} className="metatesk-box " >
+              <animated.div className="metatesk-box " >
                 <div className="img-div">
                   <img src={img3} alt="" />
                 </div>
-                <p>Entertain 
-                  with gamified 
-                  engaging classes </p>
+                <p>Entertain</p>
+                <p>with gamified <br /> engaging classes </p>
               </animated.div >
             </div>
           </div>

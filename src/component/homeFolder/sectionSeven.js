@@ -1,19 +1,18 @@
 import {React, useState,useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { send } from 'emailjs-com';
-import { useAlert } from 'react-alert'
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
+import { useAlert } from 'react-alert';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+import { useLocation } from 'react-router-dom';
 // import database from '../../firebase/firebase';
 
 const SectionSeven = ({myRef}) =>{
   
+  const location = useLocation();
   const alert = useAlert()
   const [userId, setUserId] = useState()
-  // const [date, setDate] = useState('')
   let date
-  // const [phone, setPhone] = useState(0)
-  // console.log(phone)
   const [user,setUser] = useState({
     name: "",
     email: "",
@@ -82,8 +81,6 @@ const SectionSeven = ({myRef}) =>{
 
  
 
-  // console.log(user)
-
 
   let name, value
   const hadlerGetClientInfo = (event) =>{
@@ -93,7 +90,6 @@ const SectionSeven = ({myRef}) =>{
     // console.log(user)
     setUser({...user, [name]: value })
   }
-
   
   
 
@@ -104,7 +100,10 @@ const SectionSeven = ({myRef}) =>{
           <div className="row">
             <div className="col-md-12">
               <div className="section-text-div" ref={myRef}>
-                <h6>Bizimlə Əlaqə</h6>
+                {
+                  location.pathname === "/metatesk" ? (<h6>Contact us</h6>) :(<h6>Bizimlə Əlaqə</h6>)
+                }
+                
               </div>
 
               <form className="section-7-form"  >
@@ -113,7 +112,7 @@ const SectionSeven = ({myRef}) =>{
                   value={user.name}
                   name='name'
                   onChange={hadlerGetClientInfo}
-                  placeholder="Ad və Soyad"
+                  placeholder={location.pathname === "/metatesk" ? ("Name and Surname") :("Ad və Soyad")}
                   required
                      ></input>
                 <input 
@@ -134,7 +133,7 @@ const SectionSeven = ({myRef}) =>{
                   onChange={phone => setUser({
                     ...user, phone: phone
                   })}
-                  placeholder="Telefon" 
+                  placeholder={location.pathname === "/metatesk" ? ("Phone") :("Telefon")} 
                   required
                 />
                 <input 
@@ -143,7 +142,7 @@ const SectionSeven = ({myRef}) =>{
                   id="topic" 
                   name="topic" 
                   onChange={hadlerGetClientInfo}
-                  placeholder="Mövzu" 
+                  placeholder={location.pathname === "/metatesk" ? ("Topic") :("Mövzu" )}
                   required
                 ></input>
                 <textarea
@@ -152,7 +151,7 @@ const SectionSeven = ({myRef}) =>{
                   id="phone" 
                   name="text" 
                   onChange={hadlerGetClientInfo}
-                  placeholder="Mətn"
+                  placeholder={location.pathname === "/metatesk" ? ("Text") :("Mətn" )}
                   required
                 ></textarea>
                 <button type="submit" onClick={writeUserData} >Göndər</button>
