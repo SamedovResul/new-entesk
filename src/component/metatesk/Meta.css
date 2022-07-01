@@ -24,6 +24,18 @@
   width: 30%;
 }
 
+@media(max-width:768px){
+  .metatesk-title img{
+    width: 60%;
+  }
+}
+
+@media(max-width:567px){
+  .metatesk-title img{
+    width: 80%;
+  }
+}
+
 .metatesk-title svg{
   width: 10%;
   margin: 30px;
@@ -88,6 +100,7 @@
 
 .section-Two{
   background-color: #482AFF;
+  padding: 20px 0px;
 }
 
 @media(max-width:768px){
@@ -104,6 +117,13 @@
   justify-content:flex-start;
   align-self: center;
   text-align: center;
+}
+
+@media(max-width:767px){
+  .metatesk-box{
+    height: auto;
+    margin: 20px auto;
+  }
 }
 
 .metatesk-box p:nth-of-type(1) {

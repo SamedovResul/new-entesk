@@ -425,7 +425,7 @@ console.log()
 												name: 'fromNavication'
 											}
 										}}>
-										əsas
+										ana səhifə
 								</Link>
 							</li>
 							<li>
