@@ -111,7 +111,7 @@
 
 .metatesk-box{
   width: 100%;
-  height: 550px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content:flex-start;
@@ -121,7 +121,7 @@
 
 @media(max-width:767px){
   .metatesk-box{
-    height: auto;
+    height: 400px;
     margin: 20px auto;
   }
 }
@@ -176,6 +176,29 @@
   font-size: 25px;
   font-weight: 900;
   font-family: unset;
+}
+
+
+.img-container{
+  width: 100%;
+  height: auto;
+  position: relative;
+  /* background:url("./metaImg/something.png"); */
+  background-position: center;
+  background-size:cover;
+}
+
+.map{
+  height: 700px !important;
+  width: 300px;
+  border: 1px solid black;
+}
+
+
+.img-container img{
+  width: 100%;
+  height: auto;
+  cursor: pointer;
 }
 /* section four */
 
@@ -304,3 +327,4 @@
 .project-box ul li{
   list-style: none;
 }
+

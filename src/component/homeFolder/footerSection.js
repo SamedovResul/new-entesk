@@ -137,9 +137,8 @@ const FooterSection =(props) =>{
                 <li>
                   A. M. Şərifzadə küç. 237 A 
                 </li>
-                <li>contact@enteskedu.com</li>
               </ul>
-
+                <span>contact@enteskedu.com</span>
               
               <div className='subscribe' >
                 <div>

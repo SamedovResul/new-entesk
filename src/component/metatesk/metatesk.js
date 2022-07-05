@@ -57,8 +57,8 @@ const Metatesk = () => {
       </animated.div>
       <SectionOne />
       <SectionTwo  />
-      {/* <SectionThree />
-      <SectionFour />
+      <SectionThree />
+      {/* <SectionFour />
       <SectionFive />
       <SectionSix />
       <SectionSeven />

@@ -73,7 +73,7 @@ const SectionTwo = () => {
                   <img src={img1} alt="" />
               </div>
                 <p>Interact</p>
-                <p>with other users <br /> in virtual world</p>
+                <p>with other users  in virtual world</p>
               </animated.div>
             </div>
 
@@ -83,7 +83,7 @@ const SectionTwo = () => {
                   <img src={img3} alt="" />
                 </div>
                 <p>Entertain</p>
-                <p>with gamified <br /> engaging classes </p>
+                <p>with gamified  engaging classes </p>
               </animated.div >
             </div>
           </div>

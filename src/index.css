@@ -3810,9 +3810,15 @@ svg{
   margin-left: 0px;
 }
 
+.div-1 span{
+  color: white;
+  margin: auto auto 0px 0px;
+}
+
 .div-1 ul li {
   width: 200px;
 }
+
 
 .footer-section .col-md-6 {
   display: flex;
