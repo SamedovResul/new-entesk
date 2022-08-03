@@ -286,58 +286,58 @@ console.log()
 
 
 				{/* right side navication */}
-							<animated.div style={sideAnimation} className="sidebar">
+						<animated.div style={sideAnimation} className="sidebar">
 						<button className="side-burger" onClick={handlerSideClose}>
 							<FaStream />
 						</button>
 
-						<ul>
-							<li>
-								<Link to={{
-											pathname:'/',
-											aboutProps:{
-												name: 'fromNavication'
-											}
-										}} 
-										style={location.pathname === "/" ? 
-										{ borderBottom: "1px solid white" }:{borderBottom: "unset"} }>
-										ana səhifə
-								</Link>
-							</li>
-							<li>
-								<Link to={{
-									pathname: '/products',
-									aboutProps:{
-										name: 'fromNavication'
-									}
-								}} >
-								tədris 
-								</Link>
-							</li>
+							<ul>
 								<li>
-								<Link to={{
-									pathname: '/About',
-									aboutProps:{
-										name: ''
-									}
-									}}
-									> 
-									haqqımızda
-								</Link>
-							</li>
-							<li>
-								<Link to={{
-											pathname:'/',
-											aboutProps:{
-												name: 'toAbout'
-											}
-										}}>
-										əlaqə
-								</Link>
-							</li>
-						</ul>
+									<Link to={{
+												pathname:'/',
+												aboutProps:{
+													name: 'fromNavication'
+												}
+											}} 
+											style={location.pathname === "/" ? 
+											{ borderBottom: "1px solid white" }:{borderBottom: "unset"} }>
+											ana səhifə test 2
+									</Link>
+								</li>
+								<li>
+									<Link to={{
+										pathname: '/products',
+										aboutProps:{
+											name: 'fromNavication'
+										}
+									}} >
+									tədris 
+									</Link>
+								</li>
+									<li>
+									<Link to={{
+										pathname: '/About',
+										aboutProps:{
+											name: ''
+										}
+										}}
+										> 
+										haqqımızda
+									</Link>
+								</li>
+								<li>
+									<Link to={{
+												pathname:'/',
+												aboutProps:{
+													name: 'toAbout'
+												}
+											}}>
+											əlaqə
+									</Link>
+								</li>
+							</ul>
 
-					</animated.div>
+						</animated.div>
 
 						</>
 						
@@ -345,7 +345,6 @@ console.log()
 				}
 
 					
-
 					<MediaQuery maxDeviceWidth={1199}>
 						<button className="main-burger" onClick={handlerSideOpen}>
 						<FaBars />
@@ -369,7 +368,7 @@ console.log()
 												name: 'fromNavication'
 											}
 										}}>
-										ana səhifə
+										ana səhifə test
 								</Link>
 							</li>
 							<li>

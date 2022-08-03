@@ -76,10 +76,10 @@ useEffect(() => {
 			width <= 600 &&  width >= 450 ?  location ?
 			openSide? '14.5rem' : '4rem' : 
 			openSide? '4rem' : '14.5rem' :
-			width <= 450 && width >= 390 ? location ? 
+			width <= 450 && width >= 395 ? location ? 
 			openSide? '14rem' : '3.7rem' : 
 			openSide? '3.7rem' : '14rem' :
-			width <= 390 ? location ? 
+			width <= 389 ? location ? 
 			openSide? '11.2rem' : '3.6rem' : 
 			openSide? '3.6rem' : '11.2rem' :
 			location ? 

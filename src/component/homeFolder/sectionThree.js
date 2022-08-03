@@ -60,7 +60,7 @@ const SectionThree = ({data,blog}) =>{
                 
                 
                 <div  className="text-box col-md-6 col-sm-12 col-12">
-                <h1> <span>Entesk</span> 
+                <h1> 
                   <VideoPlayer 
                   src={pika} className="video"   
                   />
