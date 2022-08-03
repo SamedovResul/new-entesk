@@ -301,7 +301,7 @@ console.log()
 											}} 
 											style={location.pathname === "/" ? 
 											{ borderBottom: "1px solid white" }:{borderBottom: "unset"} }>
-											ana səhifə test 2
+											ana səhifə 
 									</Link>
 								</li>
 								<li>
@@ -368,7 +368,7 @@ console.log()
 												name: 'fromNavication'
 											}
 										}}>
-										ana səhifə test
+										ana səhifə 
 								</Link>
 							</li>
 							<li>
