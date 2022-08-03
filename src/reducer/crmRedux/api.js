@@ -23,6 +23,7 @@ export const getAlldata = (id) =>{
   return API.get(`/admin/${id}`)
 }
 
+
 export const SigninAdmin = (data) =>{
   return API.post(`/admin/signIn`,data )
 }

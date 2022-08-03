@@ -8,8 +8,6 @@ import MediaQuery from 'react-responsive';
 import { FaBars, FaStream } from 'react-icons/fa';
 import logo from '../../images/logoicon.png';
 import GetDimension from '../functions/getDimension';
-import { studentData } from '../studentsCV/studentData';
-import { InvitationsData } from '../studentInvitations/invitationsData';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
@@ -149,39 +147,7 @@ let style
 const studentname = name;
 
 
-studentData.map((subject) =>{
-	const  {studentName} = subject
-	
-	if(location.pathname === `/${studentName}/certificates`){
-		style = {
-			display:"none"
-		} 
-	}
 
-	if(location.pathname === "/" + studentName ){
-		style = {
-				display:"none"
-			} 
-	}
-
-})
-
-InvitationsData.map((subject) =>{
-	const {studentName} = subject
-	
-	if(location.pathname === `/${studentName}/certificates`){
-		style = {
-			display:"none"
-		} 
-	}
-
-	if(location.pathname === "/" + studentName ){
-		style = {
-				display:"none"
-			} 
-	}
-
-})
 
 if(location.pathname === "/gallery"){
 	style = {
@@ -294,18 +260,6 @@ console.log()
 										</li>
 										<li>
 											<Link to={{
-												pathname: '/metatesk',
-												aboutProps:{
-													name: 'fromNavication'
-												}
-											}} 
-											style={location.pathname === "/metatesk" ? 
-											{ borderBottom: "1px solid white" }:{borderBottom: "unset"} } >
-												metatesk 	
-											</Link>
-										</li>
-										<li>
-											<Link to={{
 												pathname: '/About',
 												aboutProps:{
 													name: ''
@@ -358,16 +312,6 @@ console.log()
 									}
 								}} >
 								tədris 
-								</Link>
-							</li>
-							<li>
-								<Link to={{
-									pathname: '/metatesk',
-									aboutProps:{
-										name: 'fromNavication'
-									}
-								}}  >
-									metatesk 	
 								</Link>
 							</li>
 								<li>
@@ -436,16 +380,6 @@ console.log()
 									}
 								}}>
 								tədris 
-								</Link>
-							</li>
-							<li>
-								<Link to={{
-									pathname: '/metatesk',
-									aboutProps:{
-										name: 'fromNavication'
-									}
-								}}  >
-									metatesk 	
 								</Link>
 							</li>
 							<li>

@@ -2717,12 +2717,6 @@ svg{
     height: 140px !important;
   }
 
-  /* .section-3-main-div .video-js .vjs-big-play-button {
-    background-size: 40%;
-    height: 150px !important;
-    width: 180px !important;
-    left: 35% !important;
-  } */
 }
 
 
@@ -3308,10 +3302,6 @@ svg{
     border-radius: 70px;
   }
 
-  /* .section-6-main-div .slick-center .squer-div p:nth-child(1) {
-    font-size: 32px;
-  } */
-
   .section-6-main-div .slick-center .squer-div p:nth-child(2) {
     font-size: 20px;
   }
@@ -3332,11 +3322,6 @@ svg{
     margin: auto 0px -140px 0px;
     width: 33%;
   }
-
-  /* .circle-div {
-    width: 33%;
-    height: 50%;
-  } */
 
   .section-6-main-div .slick-center .squer-div {
     width: 60%;
