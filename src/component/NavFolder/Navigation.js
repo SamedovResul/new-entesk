@@ -245,7 +245,19 @@ console.log()
 													ana səhifə
 											</Link>
 										</li>
-
+										<li >
+											<Link  to={{
+														pathname:'/metatesk',
+														aboutProps:{
+															name: 'fromNavication'
+														}
+													}} 
+													style={location.pathname === "/metatesk" ? 
+													{ borderBottom: "1px solid white" }:{ border: "unset" } }
+													>
+													metatesk
+											</Link>
+										</li>
 										<li>
 											<Link to={{
 												pathname: '/products',

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@react-spring/parallax": "^9.4.5",
+    "@react-spring/web": "^9.5.2",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
@@ -12,6 +13,7 @@
     "emailjs-com": "^3.2.0",
     "firebase": "^9.6.0",
     "leva": "^0.9.27",
+    "lodash.shuffle": "^4.2.0",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-alert": "^7.0.3",
@@ -28,6 +30,7 @@
     "react-scripts": "^4.0.3",
     "react-slick": "^0.28.1",
     "react-spring": "^9.3.2",
+    "react-use-measure": "^2.1.1",
     "react-uuid": "^1.0.2",
     "react-video-js-player": "^1.1.1",
     "redux": "^4.1.2",

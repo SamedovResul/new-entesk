@@ -19,6 +19,7 @@ import Createblog from './component/adminfolder/blogfolder/Createblog';
 import { useDispatch } from 'react-redux';
 import {getUser} from './reducer/blogReducer/action';
 import Create from './component/adminfolder/admin/create/create';
+import Metatesk from './component/metatesk/Metatesk'
 
 function App(props) {
   const [certificates, setCertificates] = useState([])
@@ -78,6 +79,9 @@ function App(props) {
             </Route>
             <Route path="/Create">
               <Create />
+            </Route>
+            <Route path="/metatesk">
+              <Metatesk />
             </Route>
             <Route path='/adminBlogs' >
               <Blogs  />
