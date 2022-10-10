@@ -3,6 +3,7 @@ import './metatesk.css'
 import SectionOne from './sectionOne';
 import Addsection1 from './addsection1';
 import Addsection2 from './addsection2';
+import Addsection3 from './addsection3';
 // import SectionFour from './sectionFour';
 import metateskimg from './metaImg/metatesk-logo.png';
 import SectionTwo from './sectionTwo';
@@ -62,6 +63,7 @@ const Metatesk = (props) => {
       <Addsection1 />
       <Addsection2 />
       <SectionThree />
+      <Addsection3 />
       {/* <SectionFour  myref={myref}/> */}
       
       {/* <Animation /> */}
