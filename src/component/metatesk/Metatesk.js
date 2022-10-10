@@ -2,7 +2,8 @@ import React,{useEffect,useRef} from 'react';
 import './metatesk.css'
 import SectionOne from './sectionOne';
 import Addsection1 from './addsection1';
-import SectionFour from './sectionFour';
+import Addsection2 from './addsection2';
+// import SectionFour from './sectionFour';
 import metateskimg from './metaImg/metatesk-logo.png';
 import SectionTwo from './sectionTwo';
 import SectionThree from './sectionThree';
@@ -59,6 +60,7 @@ const Metatesk = (props) => {
       <SectionOne />
       <SectionTwo  />
       <Addsection1 />
+      <Addsection2 />
       <SectionThree />
       {/* <SectionFour  myref={myref}/> */}
       
