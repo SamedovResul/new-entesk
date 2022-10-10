@@ -10,9 +10,9 @@ const Addsection1 = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="text-box">
-                <h3> metatesk <br />
-                    is making the learning process <br />
-                    engaging, entertaining, exciting  </h3>
+                <h3> <span> metatesk </span> <br />
+                    <span> is making the learning process </span> <br />
+                    <span> engaging, entertaining, exciting </span> </h3>
               </div>
             </div>
             <div className="col-md-6">
