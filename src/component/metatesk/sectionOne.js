@@ -30,7 +30,7 @@ const SectionOne = () => {
           <div className="row">
             <div className="col-md-6 ">
               <animated.div style={TextAnimation} className='metatesk-text' >
-                <p>A virtual venue which provides educators and  learners with equipped classrooms. </p>  
+                <p>EDUCATION <br /> in <br /> METAVERSE</p>  
               </animated.div>
             </div>
             <div className="col-md-6 ">

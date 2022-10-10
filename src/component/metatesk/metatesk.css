@@ -94,10 +94,17 @@
 
 /* section one */
 
+.metatesk-text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
 
 .metatesk-text p{
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: 900;
   margin: 20px  10px;
+  font-family: "Nunito";
   color: #482AFF;
 }
 
