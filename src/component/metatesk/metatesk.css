@@ -599,3 +599,47 @@ h1,
 h3 {
 	text-align: center;
 }
+
+
+
+/* add section 1 */
+
+
+
+.add-section-one
+.text-box{
+margin: 20px 0px;
+}
+
+.add-section-one
+.text-box h3{
+  font-size: 45px;
+  color: #482aff;
+  font-family: "Calibri light";
+}
+
+.add-section-one
+.img-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.add-section-one
+.img-box p{
+  font-size: 30px;
+  font-family: "Calibri light";
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+
+.add-section-one
+.img-box img{
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 5px solid #FBB116;
+}

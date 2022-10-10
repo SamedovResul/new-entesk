@@ -1,10 +1,7 @@
 import React,{useEffect,useRef} from 'react';
 import './metatesk.css'
 import SectionOne from './sectionOne';
-// import Course from '../../course';
-// import Animation from './animation';
-// import metateskimg from './metaImg/metateskimg.png';
-// import edengent from './metaImg/edengent.png';
+import Addsection1 from './addsection1';
 import SectionFour from './sectionFour';
 import metateskimg from './metaImg/metatesk-logo.png';
 import SectionTwo from './sectionTwo';
@@ -61,6 +58,7 @@ const Metatesk = (props) => {
       </animated.div>
       <SectionOne />
       <SectionTwo  />
+      <Addsection1 />
       <SectionThree />
       {/* <SectionFour  myref={myref}/> */}
       
