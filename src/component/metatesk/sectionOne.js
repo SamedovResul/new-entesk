@@ -30,7 +30,7 @@ const SectionOne = () => {
           <div className="row">
             <div className="col-md-6 ">
               <animated.div style={TextAnimation} className='metatesk-text' >
-                <p>EDUCATION <br /> in <br /> METAVERSE</p>  
+                <p> <span>EDUCATION</span>  <br /> <span>in</span> <br /> <span>METAVERSE</span> </p>  
               </animated.div>
             </div>
             <div className="col-md-6 ">
