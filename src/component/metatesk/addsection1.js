@@ -1,6 +1,8 @@
 import React from 'react'
 import img1 from './metaImg/beforeRaul.png';
 import img2 from './metaImg/chinaGirl.png'
+// import entesk from '../../../public/images'
+
 
 const Addsection1 = () => {
   return (
