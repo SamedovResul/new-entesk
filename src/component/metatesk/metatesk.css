@@ -613,7 +613,7 @@ margin: 20px 0px;
 
 .add-section-one
 .text-box h3{
-  font-size: 45px;
+  font-size: 25px;
   color: #482aff;
   font-family: "Calibri light";
 }
@@ -629,10 +629,12 @@ margin: 20px 0px;
 .add-section-one
 .text-box h3 span:nth-of-type(1){
   font-family: "Nunito";
+  font-weight: 800;
 }
 .add-section-one
 .text-box h3 span:nth-of-type(3){
   font-family: "Nunito";
+  font-weight: 800;
 }
 
 .add-section-one

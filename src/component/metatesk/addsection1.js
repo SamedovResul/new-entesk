@@ -17,14 +17,16 @@ const Addsection1 = () => {
             </div>
             <div className="col-md-6">
               <div className="img-box">
+              <p> Before </p>
                 <img src={img1} alt="metatesk" />
-                <p> Before </p>
+                
               </div>
             </div>
             <div className="col-md-6">
               <div className="img-box">
+              <p> After </p>
                 <img src={img2} alt="metatesk" />
-                <p> After </p>
+
               </div>
             </div>
           </div>
