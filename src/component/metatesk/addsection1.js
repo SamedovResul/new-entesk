@@ -1,6 +1,6 @@
 import React from 'react'
 import img1 from './metaImg/beforeRaul.png';
-import img2 from './metaImg/Now.png'
+import img2 from './metaImg/chinaGirl.png'
 // import entesk from '../../../public/images'
 
 
@@ -21,7 +21,6 @@ const Addsection1 = () => {
               <div className="img-box">
               <p> before </p>
                 <img src={img1} alt="metatesk" />
-                
               </div>
             </div>
             <div className="col-md-6">

@@ -1,4 +1,5 @@
 import React from 'react'
+// import img1 from './metaImg/Img1.png';
 import img1 from './metaImg/Img1.png';
 import img2 from './metaImg/Img2.png';
 import img3 from './metaImg/Img3.png';

@@ -13,9 +13,9 @@ const Addsection3 = () => {
               <div>
                 <p> Join the Classes </p>
               </div>
-                <input type="text" required placeholder='Name Surname'  />
+                <input type="text" required placeholder='Name and Surname'  />
                 <input type="text" required placeholder='Country' />
-                <input type="email" required  placeholder='E-mail' />
+                <input type="email" required  placeholder='E-mail adress' />
                 <button>get a free demo class</button>
             </form>
           </div>
