@@ -5,6 +5,7 @@ import Addsection1 from './addsection1';
 import Addsection2 from './addsection2';
 import Addsection3 from './addsection3';
 import Addsection4 from './addsection4';
+import Addsection5 from './addsection5';
 // import SectionFour from './sectionFour';
 import metateskimg from './metaImg/metatesk-logo.png';
 import SectionTwo from './sectionTwo';
@@ -64,6 +65,7 @@ const Metatesk = (props) => {
       <SectionTwo  />
       <Addsection1 />
       <Addsection2 />
+      <Addsection5 />
       <SectionThree />
       <Addsection3 />
       {/* <SectionFour  myref={myref}/> */}
