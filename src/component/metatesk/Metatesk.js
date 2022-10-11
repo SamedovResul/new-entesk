@@ -60,7 +60,7 @@ const Metatesk = (props) => {
       </animated.div>  
       </animated.div>
       <SectionOne />
-      <Addsection4 />
+      {/* <Addsection4 /> */}
       <SectionTwo  />
       <Addsection1 />
       <Addsection2 />
