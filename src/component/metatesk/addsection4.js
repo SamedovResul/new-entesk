@@ -1,6 +1,6 @@
 import React from 'react'
 import VideoPlayer from "react-video-js-player";
-import img1 from './metaImg/Img3.png';
+import img1 from './metaImg/beforeRaul.png';
 const Addsection4 = () => {
   return (
     <article className='add-section-four'>
@@ -20,7 +20,8 @@ const Addsection4 = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="video-box text-box">
+              <div className="video-box ">
+              <iframe width="420" height="280" src="https://www.youtube.com/embed/JZz6mcw3y0Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               {/* <VideoPlayer 
                 src={video} className="video"   
               /> */}

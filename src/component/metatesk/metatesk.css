@@ -780,21 +780,20 @@ form {
 
 /* add section 4 */
 
-.metatesk-section .video-js .vjs-tech {
-  border-radius: 60px;
-  border: 5px solid #5CCDFF;
-  object-fit: cover;
-}
 
 
-.metatesk-section .video-js .vjs-big-plays-button {
-  background-image: url('./metaImg/Polygo2.png');
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 .add-section-four{
   margin: 50px auto;
+}
+
+.add-section-four .text-box{
+  padding: 50px;
+}
+
+.add-section-four .text-box h3{
+  font-size: 30px;
+  color: #482AFF;
 }
 
 .add-section-four .img-box {
@@ -811,5 +810,12 @@ form {
 
 .add-section-four .text-box{
   padding-top:5px;
+  height: 100%;
+}
+
+.add-section-four .video-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
 }
