@@ -94,6 +94,8 @@
 
 /* section one */
 
+
+
 .metatesk-text {
   height: 100%;
   display: flex;
@@ -774,4 +776,40 @@ form {
   border-radius: 30px;
   color: white;
   font-size: large;
+}
+
+/* add section 4 */
+
+.metatesk-section .video-js .vjs-tech {
+  border-radius: 60px;
+  border: 5px solid #5CCDFF;
+  object-fit: cover;
+}
+
+
+.metatesk-section .video-js .vjs-big-plays-button {
+  background-image: url('./metaImg/Polygo2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.add-section-four{
+  margin: 50px auto;
+}
+
+.add-section-four .img-box {
+  height: 100%;
+  margin: auto;
+}
+
+.add-section-four .img-box img{
+  width: 90%;
+  height: auto;
+  border-radius: 30px;
+  border: 5px solid #FBB116;
+}
+
+.add-section-four .text-box{
+  padding-top:5px;
+  height: 100%;
 }
