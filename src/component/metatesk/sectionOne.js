@@ -7,6 +7,7 @@ import img3 from './metaImg/Img3.png';
 const SectionOne = () => {
 // use spring 
 const settings = {
+  dots: true,
   infinite: true,
   speed: 500,
   slidesToShow: 1,
@@ -16,10 +17,10 @@ const settings = {
   autoplaySpeed: 4000,
   cssEase: "linear",
   fade: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-      slidesToScroll: 1
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1
 };
 
   return (

@@ -227,6 +227,19 @@
   font-family: "Nunito";
 }
 
+.metatesk-section
+.section-one
+.slick-dots li.slick-active button:before {
+  color: #FBB116 !important;
+}
+
+.metatesk-section
+.section-one
+.slick-dots li button:before {
+  color: #482AFF !important;
+}
+
+
 /* section Two */
 
 
