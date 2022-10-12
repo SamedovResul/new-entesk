@@ -2,6 +2,8 @@ import React from 'react'
 import VideoPlayer from "react-video-js-player";
 import img1 from './metaImg/beforeRaul.png';
 const Addsection4 = () => {
+
+  const src = "https://res.cloudinary.com/dbgyytugh/video/upload/v1665494740/recipes/video_pdww0u.mp4"
   return (
     <article className='add-section-four'>
       <div  className="container">
@@ -9,9 +11,7 @@ const Addsection4 = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="text-box">
-                <h3> <span> metatesk </span> <br />
-                    <span> is making the learning process </span> <br />
-                    <span> engaging, entertaining, exciting </span> </h3>
+                <p> boring </p> <p> with </p> <p> interesting </p>
               </div>
             </div>
             <div className="col-md-6">
@@ -20,11 +20,10 @@ const Addsection4 = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="video-box ">
-              <iframe width="420" height="280" src="https://www.youtube.com/embed/JZz6mcw3y0Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              {/* <VideoPlayer 
-                src={video} className="video"   
-              /> */}
+              <div className="video-box  ">
+              <VideoPlayer 
+                src={src} className="video"   
+              />
               </div>
             </div>
           </div>
