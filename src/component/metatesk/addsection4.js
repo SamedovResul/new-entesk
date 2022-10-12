@@ -10,7 +10,7 @@ const Addsection4 = () => {
             <div className="col-md-12">
               <h3> REPLACING </h3>
               <div className="text-box">
-                <p> borign </p> <p> with </p> <p> interesting </p>
+                <p> borign </p> <p> with </p> <p> exciting </p>
               </div>
             </div>
             <div className="col-md-6">
