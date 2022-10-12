@@ -165,7 +165,7 @@
   height: 100%;
   width: 100%;
   border: 1px solid;
-  height: 700px;
+  height: 500px;
 }
 
 .metatesk-section
@@ -197,6 +197,34 @@
 .section-one .slide img{
   width: 100%;
   height: auto;
+}
+
+.metatesk-section
+.section-one{
+  position: relative;
+}
+
+.metatesk-section
+.section-one
+.text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0px;
+  height: 500px;
+  width: 600px;
+  z-index: 10;
+}
+
+.metatesk-section
+.section-one
+.text-container p{
+  font-size: 30px;
+  font-weight:800;
+  color: #482AFF;
+  font-family: "Nunito";
 }
 
 /* section Two */

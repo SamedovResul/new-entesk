@@ -15,13 +15,22 @@ const settings = {
   speed: 3000,
   autoplaySpeed: 4000,
   cssEase: "linear",
-  centerPadding: "30px",
+  fade: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+      slidesToScroll: 1
 };
 
   return (
     <article className='metatesk-info section-one'>
-      {/* <div className='png' ></div> */}
-      {/* <div  className="container"> */}
+      <div className="text-container">
+        <p> EDUCATION in METAVERSE </p>
+        <p> classes for </p>
+        <p> 6-14 years old </p>
+        <p> from </p>
+        <p> any point of the world </p>
+      </div>
         <div className="container-fluid">
           <div className="row">
             
@@ -41,7 +50,6 @@ const settings = {
           
           </div>
         </div>
-      {/* </div> */}
 
 
     </article>
