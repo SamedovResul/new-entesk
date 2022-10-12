@@ -1,9 +1,13 @@
 import React,{useState,useRef} from 'react'
 import sectionImg from './metaImg/sectionOnebg.jpeg'
 import {useSpring,animated} from 'react-spring';
+import VideoPlayer from "react-video-js-player";
+
 
 const SectionOne = () => {
 // use spring 
+
+const src = "https://res.cloudinary.com/dbgyytugh/video/upload/v1665494740/recipes/video_pdww0u.mp4"
 
   const imgAnimation = useSpring({
 		to: [{opacity: 1 }],
@@ -34,11 +38,13 @@ const SectionOne = () => {
               </animated.div>
             </div>
             <div className="col-md-6 ">
-              <animated.div  className='metatesk-img' >
-                <img 
-                 src={sectionImg} alt="metatesk"
-                 />
-              </animated.div>
+              <div  className='metatesk-img' >
+                <div className="video-box  ">
+                <VideoPlayer 
+                  src={src} className="video"   
+                />
+                </div>
+              </div>
             </div>
 
           </div>

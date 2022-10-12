@@ -143,6 +143,8 @@
   border:  5px solid #FBB116;
 }
 
+
+
 /* section one */
 
 
@@ -170,6 +172,21 @@
 .metatesk-img{
   padding: 90px 0px;
 } 
+
+
+.section-one .video-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.section-one
+.video-js .vjs-tech {
+  border-radius: 60px;
+  border: 5px solid #FBB116;
+  object-fit: cover;
+}
 
 /* section Two */
 
@@ -780,8 +797,18 @@ form {
 
 /* add section 4 */
 
+.add-section-four .col-md-12{
+  text-align: center;
+}
 
-
+.add-section-four .col-md-12 h3 {
+  position: relative;
+  right: 2%;
+  font-size: 45px;
+  color: #482AFF;
+  font-weight: 800;
+  font-family: "Nunito";
+}
 
 .add-section-four{
   margin: 50px auto;
@@ -873,3 +900,5 @@ form {
   font-weight: 700;
   font-family: "Nunito";
 }
+
+
