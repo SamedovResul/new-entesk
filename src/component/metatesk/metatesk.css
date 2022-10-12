@@ -148,44 +148,55 @@
 /* section one */
 
 
-#leva__root{
-  display: none;
+.metatesk-section
+.section-one{
+  margin: 10px auto auto auto ;
 }
 
-
-.metatesk-info{
-  margin: 0px auto 50px auto;
-}
-
-
-
-.metatesk-info .container .col-md-6{
-  position: relative;
-}
-
-.metatesk-text{
-  display: flex;
-  align-items: center;
-}
-
-
-.metatesk-img{
-  padding: 90px 0px;
-} 
-
-
-.section-one .video-box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
+.metatesk-section
 .section-one
-.video-js .vjs-tech {
-  border-radius: 60px;
-  border: 5px solid #FBB116;
-  object-fit: cover;
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.metatesk-section
+.section-one  .slide{
+  height: 100%;
+  width: 100%;
+  border: 1px solid;
+  height: 700px;
+}
+
+.metatesk-section
+.section-one
+.slick-track{
+  margin: auto;
+}
+
+.metatesk-section
+.section-one 
+.slick-slide>div{
+  width: 100%;
+}
+
+.metatesk-section
+.section-one 
+.slick-next
+{
+  display: none !important;
+}
+
+.metatesk-section
+.section-one 
+.slick-prev{
+  display: none !important;
+}
+
+.metatesk-section
+.section-one .slide img{
+  width: 100%;
+  height: auto;
 }
 
 /* section Two */
@@ -749,6 +760,9 @@ margin: 40px 0px;
 
 /* add section 3  */
 
+.add-section-Three{
+  margin: 50px auto;
+}
 
 .metattesk-contact
 form {
@@ -784,6 +798,7 @@ form {
   border-radius: 40px;
   border: 2px solid #482AFF;
   width: 70%;
+  margin: 10px auto;
 }
 
 .metattesk-contact form button{
@@ -793,6 +808,11 @@ form {
   border-radius: 30px;
   color: white;
   font-size: large;
+}
+
+.metattesk-contact
+.metatesk-img{
+  height: 100%;
 }
 
 /* add section 4 */

@@ -53,8 +53,8 @@ const Metatesk = (props) => {
 
   return (
     <article className='metatesk-section' >
+      <SectionOne />
       <Addsection5 />
-      {/* <SectionOne /> */}
       {/* <SrcollNumber /> */}
       <Addsection4 />
       <SectionTwo  />

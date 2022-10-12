@@ -1,55 +1,49 @@
 import React,{useState,useRef} from 'react'
-import sectionImg from './metaImg/sectionOnebg.jpeg'
-import {useSpring,animated} from 'react-spring';
-import VideoPlayer from "react-video-js-player";
-
+import Slider from "react-slick";
+import img1 from './metaImg/banner.png';
+import img2 from './metaImg/Img2.png';
+import img3 from './metaImg/Img3.png';
 
 const SectionOne = () => {
 // use spring 
-
-const src = "https://res.cloudinary.com/dbgyytugh/video/upload/v1665494740/recipes/video_pdww0u.mp4"
-
-  const imgAnimation = useSpring({
-		to: [{opacity: 1 }],
-		from: {opacity: 0  },
-    config: {
-      duration: 2000
-    }
-	})
-
-  const TextAnimation = useSpring({
-		to: [{opacity: 1 }],
-		from: {opacity: 0 },
-    config: {
-      duration: 2000
-    }
-	})
-
+const settings = {
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 3000,
+  autoplaySpeed: 4000,
+  cssEase: "linear",
+  centerPadding: "30px",
+};
 
   return (
     <article className='metatesk-info section-one'>
       {/* <div className='png' ></div> */}
-      <div  className="container">
+      {/* <div  className="container"> */}
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-6 ">
-              <animated.div style={TextAnimation} className='metatesk-text' >
-                <p> <span>EDUCATION</span>  <br /> <span>in</span> <br /> <span>METAVERSE</span> </p>  
-              </animated.div>
-            </div>
-            <div className="col-md-6 ">
-              <div  className='metatesk-img' >
-                <div className="video-box  ">
-                <VideoPlayer 
-                  src={src} className="video"   
-                />
-                </div>
+            
+            <div className="col-md-12">
+            <Slider {...settings}>
+              <div  className='slide' >
+                <img src={img1} alt="" />
               </div>
+              <div className='slide' >
+                <img src={img2} alt="" />
+              </div>
+              <div className='slide' >
+                <img src={img3} alt="" />
+              </div>
+            </Slider>
             </div>
-
+          
           </div>
         </div>
-      </div>
+      {/* </div> */}
+
+
     </article>
   )
 }

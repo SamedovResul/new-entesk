@@ -3,7 +3,7 @@ import sectionImg from './metaImg/sectionOnebg.jpeg'
 
 const Addsection3 = () => {
   return (
-    <article className='metattesk-contact section-one'>
+    <article className='metattesk-contact add-section-Three'>
     {/* <div className='png' ></div> */}
     <div  className="container">
       <div className="container-fluid">
