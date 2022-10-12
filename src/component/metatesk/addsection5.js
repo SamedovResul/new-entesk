@@ -13,6 +13,9 @@ const Addsection5 = () => {
     <div  className="container">
       <div className="container-fluid">
         <div className="row">
+          <div className="col-md-12">
+            <h3> EDUCATION  in METAVERSE </h3>
+          </div>
           <div className="col-md-6 ">
             <div className='metatesk-text' >
               <p>classes for</p>

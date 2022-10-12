@@ -1,7 +1,9 @@
 import React from 'react'
 import VideoPlayer from "react-video-js-player";
-import img1 from './metaImg/beforeRaul.png';
+import img1 from './metaImg/book.png';
 const Addsection4 = () => {
+
+  const src = "https://res.cloudinary.com/dbgyytugh/video/upload/v1665494740/recipes/video_pdww0u.mp4"
   return (
     <article className='add-section-four'>
       <div  className="container">
@@ -20,10 +22,10 @@ const Addsection4 = () => {
             </div>
             <div className="col-md-6">
               <div className="video-box ">
-              <iframe width="420" height="280" src="https://www.youtube.com/embed/JZz6mcw3y0Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              {/* <VideoPlayer 
-                src={video} className="video"   
-              /> */}
+              {/* <iframe width="420" height="280" src="https://www.youtube.com/embed/JZz6mcw3y0Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+              <VideoPlayer 
+                src={src} className="video"   
+              />
               </div>
             </div>
           </div>
@@ -34,3 +36,4 @@ const Addsection4 = () => {
 }
 
 export default Addsection4
+

@@ -862,6 +862,17 @@ form {
 
 /* add-section-five */
 
+.add-section-five{
+  margin: 100px auto auto;
+} 
+
+.add-section-five .col-md-12 h3{
+  font-size: 35px;
+  font-family: "Nunito";
+  font-weight: 900;
+  color: #482AFF;
+}
+
 .add-section-five 
 .metatesk-text{
   display: flex;
@@ -900,5 +911,7 @@ form {
   font-weight: 700;
   font-family: "Nunito";
 }
+
+
 
 
