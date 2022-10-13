@@ -10,9 +10,9 @@ const Addsection4 = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-12">
-              <h3> REPLACING </h3>
+              <h3> shifting EDUCATION from  </h3>
               <div className="text-box">
-                <p> borign </p> <p> with </p> <p> exciting </p>
+                <p> borign </p> <p> to </p> <p> exciting </p>
               </div>
             </div>
             <div className="col-md-6">
