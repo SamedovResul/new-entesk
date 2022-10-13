@@ -46,7 +46,13 @@ import imgData from './imgData'
         <div className="container-fluid">
           <div className="container">
             <div className="row">
-              <div className="col-md-12 ">
+              <div className="col-md-12">
+                <p>
+                  Learn scientific concepts in immersive way
+                </p>
+                <p> while virtually flying in space or exploring the ocean!</p>
+              </div>
+              <div className="col-md-12  animate ">
               <div ref={ref} className='list' style={{ height: Math.max(...heights) }}>
                 {transitions((style, item) => (
                   <a.div style={style}>
