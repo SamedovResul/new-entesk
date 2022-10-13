@@ -1,8 +1,10 @@
 import React,{useState,useRef} from 'react'
 import Slider from "react-slick";
 import img1 from './metaImg/banner.png';
-import img2 from './metaImg/Img2.png';
+import img2 from './metaImg/banner2.png';
 import img3 from './metaImg/Img3.png';
+import ScrollTriger from 'react-scroll-trigger'
+
 
 const SectionOne = () => {
 // use spring 
@@ -41,7 +43,7 @@ const settings = {
                 <img src={img1} alt="" />
               </div>
               <div className='slide' >
-                <img src={img1} alt="" />
+                <img src={img2} alt="" />
               </div>
               <div className='slide' >
                 <img src={img1} alt="" />

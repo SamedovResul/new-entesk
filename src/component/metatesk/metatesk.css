@@ -203,14 +203,15 @@
 }
 .metatesk-section
 .section-one > p{
+  color: white !important;
+  background-color: #482AFF;
   position: absolute;
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
   font-size: 45px !important;
-  border: 5px solid;
-  padding: 25px;
+  padding: 10px 25px ;
   border-radius: 120px;
   font-weight: 800;
   font-family: "Nunito";
@@ -229,6 +230,12 @@
   height: 500px;
   width: 600px;
   z-index: 10;
+}
+
+.metatesk-section
+.section-one
+.text-container p{
+  line-height: 60px;
 }
 
 .metatesk-section
