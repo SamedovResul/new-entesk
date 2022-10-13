@@ -12,7 +12,7 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: true,
+  // autoplay: true,
   speed: 3000,
   autoplaySpeed: 4000,
   cssEase: "linear",
@@ -41,10 +41,10 @@ const settings = {
                 <img src={img1} alt="" />
               </div>
               <div className='slide' >
-                <img src={img2} alt="" />
+                <img src={img1} alt="" />
               </div>
               <div className='slide' >
-                <img src={img3} alt="" />
+                <img src={img1} alt="" />
               </div>
             </Slider>
             </div>
