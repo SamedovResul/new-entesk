@@ -201,6 +201,16 @@
 .section-one{
   position: relative;
 }
+.metatesk-section
+.section-one > p{
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  font-size: 50px !important;
+}
+
 
 .metatesk-section
 .section-one
@@ -217,8 +227,7 @@
 }
 
 .metatesk-section
-.section-one
-.text-container p{
+.section-one p{
   font-size: 30px;
   font-weight:800;
   color: #482AFF;
@@ -686,6 +695,10 @@ h3 {
 
 /* add section 1 */
 
+
+
+
+
 .add-section-one{
   margin: 60px auto;
 }
@@ -856,12 +869,13 @@ form {
 
 /* add section 4 */
 
+
 .add-section-four .col-md-12{
   text-align: center;
 }
 
 .add-section-four .col-md-12 h3 {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   position: relative;
   font-size: 45px;
   color: #482AFF;
@@ -874,7 +888,7 @@ form {
 }
 
 .add-section-four .text-box{
-  margin: 20px auto;
+  margin: 0px auto;
   padding: 20px 0px;
   display: flex;
   justify-content:space-evenly;

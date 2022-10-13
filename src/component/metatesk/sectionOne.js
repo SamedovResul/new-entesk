@@ -25,8 +25,8 @@ const settings = {
 
   return (
     <article className='metatesk-info section-one'>
+      <p> EDUCATION in METAVERSE </p>
       <div className="text-container">
-        <p> EDUCATION in METAVERSE </p>
         <p> classes for </p>
         <p> 6-14 years old </p>
         <p> from </p>
