@@ -11,12 +11,12 @@ const Addsection3 = () => {
           <div className="col-md-6 ">
             <form action="">
               <div>
-                <p> Join the Classes </p>
+                <p> Get a FREE demo class for your child </p>
               </div>
                 <input type="text" required placeholder='Name and Surname'  />
                 <input type="text" required placeholder='Country' />
                 <input type="email" required  placeholder='E-mail adress' />
-                <button>get a free demo class</button>
+                <button>join</button>
             </form>
           </div>
           <div className="col-md-6 ">

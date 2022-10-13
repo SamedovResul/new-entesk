@@ -402,7 +402,7 @@
 .section-Three
 .col-md-12
 p:nth-of-type(1) {
-  font-size: 35px;
+  font-size: 45px;
   color: #482AFF;
   font-weight: 800;
   font-family: "Nunito";
@@ -766,8 +766,6 @@ h3 {
 	text-align: center;
 }
 
-
-
 /* add section 1 */
 
 .add-section-one
@@ -777,7 +775,7 @@ margin: 40px 0px;
 
 .add-section-one
 .text-box h3{
-  font-size: 25px;
+  font-size: 30px;
   color: #482aff;
   font-family: "Calibri light";
 }
@@ -896,7 +894,6 @@ form {
 
 .metattesk-contact form div{
   border: 3px solid #482AFF;
-  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -925,7 +922,7 @@ form {
 .metattesk-contact form button{
   background-color: #482AFF;
   border: none;
-  padding: 12px 19px;
+  padding: 12px 60px;
   border-radius: 30px;
   color: white;
   font-size: large;

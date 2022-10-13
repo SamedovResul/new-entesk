@@ -31,7 +31,7 @@ const settings = {
       <div className="text-container">
         <p> classes for </p>
         <p> 6-14 years old </p>
-        <p> from </p>
+        <p> for </p>
         <p> any point of the world </p>
       </div>
         <div className="container-fluid">
