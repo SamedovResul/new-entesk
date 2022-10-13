@@ -2,7 +2,7 @@ import React,{useState,useRef} from 'react'
 import Slider from "react-slick";
 import img1 from './metaImg/banner.png';
 import img2 from './metaImg/banner2.png';
-import img3 from './metaImg/Img3.png';
+import img3 from './metaImg/banner3.png';
 import ScrollTriger from 'react-scroll-trigger'
 
 
@@ -14,7 +14,7 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  // autoplay: true,
+  autoplay: true,
   speed: 3000,
   autoplaySpeed: 4000,
   cssEase: "linear",
@@ -46,7 +46,7 @@ const settings = {
                 <img src={img2} alt="" />
               </div>
               <div className='slide' >
-                <img src={img1} alt="" />
+                <img src={img3} alt="" />
               </div>
             </Slider>
             </div>
