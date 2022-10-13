@@ -234,12 +234,14 @@
 .metatesk-section
 .section-one p{
   color: #482AFF;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 .metatesk-section
 .section-one .text-container  p:nth-of-type(2){
   font-family: "Nunito";
-  font-size: 35px;
+  font-size: 40px;
   font-weight:800;
 }
 
@@ -254,7 +256,7 @@
 .metatesk-section
 .section-one .text-container  p:nth-of-type(4){
   font-family: "Nunito";
-  font-size: 35px;
+  font-size: 40px;
   font-weight:800;
 }
 
