@@ -212,6 +212,8 @@
   border: 5px solid;
   padding: 25px;
   border-radius: 120px;
+  font-weight: 800;
+  font-family: "Nunito";
 }
 
 
@@ -235,7 +237,7 @@
 }
 
 .metatesk-section
-.section-one .text-container  p:nth-of-type(1){
+.section-one .text-container  p:nth-of-type(2){
   font-family: "Nunito";
   font-size: 35px;
   font-weight:800;
@@ -243,21 +245,21 @@
 
 
 .metatesk-section
-.section-one .text-container  p:nth-of-type(2){
+.section-one .text-container  p:nth-of-type(1){
   font-family: "Calibri light";
   font-size: 30px;
   font-weight:800;
 }
 
 .metatesk-section
-.section-one .text-container  p:nth-of-type(3){
+.section-one .text-container  p:nth-of-type(4){
   font-family: "Nunito";
   font-size: 35px;
   font-weight:800;
 }
 
 .metatesk-section
-.section-one .text-container  p:nth-of-type(4){
+.section-one .text-container  p:nth-of-type(3){
   font-family: "Calibri light";
   font-size: 30px;
   font-weight:800;
