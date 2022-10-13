@@ -12,7 +12,7 @@ const Addsection4 = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-12">
-              <h3> shifting EDUCATION from  </h3>
+              <h3> shifting <span> EDUCATION </span>  from  </h3>
               <div className="text-box">
                 <p> borign </p> <p> to </p> <p> exciting </p>
               </div>
