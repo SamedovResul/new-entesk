@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import sectionImg from './metaImg/sectionOnebg.jpeg'
 import CountUp from 'react-countup'
 import ScrollTriger from 'react-scroll-trigger'
-
+import google from './metaImg/google.png';
 const Addsection5 = () => {
   
 
@@ -30,7 +30,7 @@ const Addsection5 = () => {
           <div className="col-md-4">
           <div className="text-box">
             <p>under the  </p>
-            <p>Google for Startups</p>
+            <img src={google} alt="" />
             <p>program</p>
           </div>
           </div>

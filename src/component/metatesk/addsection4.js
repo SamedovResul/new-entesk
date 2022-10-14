@@ -1,9 +1,9 @@
 import React, {useState,useEffect} from 'react'
 import VideoPlayer from "react-video-js-player";
-import img1 from './metaImg/book.png';
+
 import Video from './video';
 import ScrollTriger from 'react-scroll-trigger'
-
+import img1 from './metaImg/book.png';
 
 const Addsection4 = () => {
   const [number, setNumber] = useState(false)
@@ -43,6 +43,7 @@ const Addsection4 = () => {
               <div className="col-md-6">
                 <div className="img-box">
                   <img src={img1} alt="metatesk" />
+                  <p>traditional learning</p>
                 </div>
               </div>
               <div className="text-box-responsive text">
@@ -56,6 +57,7 @@ const Addsection4 = () => {
                   controls={true}
                   className="video"   
                 />
+                <p>immersive learning</p>
                 </div>
               </div>
             </div>

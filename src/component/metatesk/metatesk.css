@@ -688,6 +688,10 @@ p:nth-of-type(1) {
   color: #482AFF;
   font-weight: 800;
   font-family: "Nunito";
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-top: 50px;
+  
 }
 
 .metatesk-section
@@ -1127,7 +1131,7 @@ h3 {
   font-size: 75px;
   font-family: "Nunito";
   font-weight: 700;
-  line-height: 120px;
+  line-height: 95px;
 }
 
 .add-section-one
@@ -1181,6 +1185,9 @@ h3 {
   margin-block-end: 0em;
   font-family: "Nunito";
   color: #482AFF;
+  border: 5px solid;
+  border-radius: 100px;
+  padding: 7px 18px;
 }
 
 
@@ -1322,8 +1329,15 @@ form {
   margin: 40px auto;
 }
 
+
+.add-section-four .col-md-6{
+  height: auto;
+}
+
 .add-section-four .col-md-12{
   text-align: center;
+  height: auto;
+  padding: 0px 0px 40px 0px;
 }
 
 .add-section-four .col-md-12 h3 {
@@ -1462,7 +1476,19 @@ form {
   width: 100% !important;
   height: 100%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
+
+.add-section-four .img-box p{
+  font-size: 25px;
+  color: #482AFF;
+  font-weight: bold;
+  font-family: "Calibri light";
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
 
 .add-section-four .img-box img{
   width: 90%;
@@ -1486,9 +1512,19 @@ form {
 
 .add-section-four .video-box{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+.add-section-four .video-box p{
+  font-size: 25px;
+  color: #482AFF;
+  font-weight: bold;
+  font-family: "Calibri light";
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 @media(max-width:700px) {
@@ -1516,6 +1552,9 @@ form {
 
 .add-section-five{
   margin: 100px auto;
+  padding: 50px 0px;
+  border-bottom: 5px solid #482AFF;
+  border-top: 5px solid #482AFF;
 } 
 
 .add-section-five .col-md-12 h3{
@@ -1549,7 +1588,7 @@ form {
 
 .add-section-five 
 .text-box p:nth-of-type(2){
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 700;
   font-family: "Nunito";
 }
@@ -1561,6 +1600,12 @@ form {
   font-family: "Calibri light";
 }
 
+
+.add-section-five 
+.text-box img{
+  width: 90%;
+  margin: 10px auto;
+}
 
 
 
