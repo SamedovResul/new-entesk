@@ -13,25 +13,27 @@ const Addsection5 = () => {
     <div  className="container">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-12">
-            <h3> EDUCATION  in METAVERSE </h3>
-          </div>
-          <div className="col-md-6 ">
-            <div className='metatesk-text' >
-              <p>classes for</p>
-              <p> 6-14 years old </p>
-              <p> from </p>
-              <p> any point of the world </p>
+          <div className="col-md-4">
+            <div className="text-box">
+            <p>overall</p>
+            <p>11385</p>
+            <p> class hours </p>
             </div>
           </div>
-          <div className="col-md-6 ">
-            <div  className='metatesk-img' >
-              <img 
-               src={sectionImg} alt="metatesk"
-               />
-            </div>
+          <div className="col-md-4">
+          <div className="text-box">
+            <p> student from  </p>
+            <p>5</p>
+            <p>countries</p>
           </div>
-
+          </div>
+          <div className="col-md-4">
+          <div className="text-box">
+            <p>under the  </p>
+            <p>Google for Startups</p>
+            <p>program</p>
+          </div>
+          </div>
         </div>
       </div>
     </div>
