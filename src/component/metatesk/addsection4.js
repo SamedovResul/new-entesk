@@ -36,8 +36,8 @@ const Addsection4 = () => {
             <div className="row">
               <div className="col-md-12">
                 <h3> shifting <span> EDUCATION </span>  from  </h3>
-                <div className="text-box">
-                  <p> borign </p> <p> to </p> <p> exciting </p>
+                <div className="text-box text">
+                  <p> boring </p> <p> to </p> <p> exciting </p>
                 </div>
               </div>
               <div className="col-md-6">
@@ -45,6 +45,9 @@ const Addsection4 = () => {
                   <img src={img1} alt="metatesk" />
                 </div>
               </div>
+              <div className="text-box-responsive text">
+                  <p> boring </p> <p> to </p> <p> exciting </p>
+                </div>
               <div className="col-md-6">
                 <div className="video-box ">
                 <VideoPlayer

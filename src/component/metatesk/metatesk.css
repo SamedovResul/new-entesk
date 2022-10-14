@@ -254,8 +254,38 @@
 @media(max-width:768px){
   .metatesk-section
   .section-one > p{
-    display: none;
-  } 
+    left: 45%;
+    transform: translateX(-40%);
+    font-size: 20px;
+    top: 20px;
+  }
+}
+
+@media(max-width:675px){
+  .metatesk-section
+  .section-one > p{
+    left: 45%;
+    transform: translateX(-40%);
+    font-size: 15px;
+    top: 15px;
+  }
+}
+
+@media(max-width:460px){
+  .metatesk-section
+  .section-one > p{
+    left: 45%;
+    transform: translateX(-40%);
+    font-size: 10px;
+    top: 15px;
+  }
+}
+
+@media(max-width:400px){
+  .metatesk-section
+  .section-one > p{
+    padding: 5px 10px;
+  }
 }
 
 
@@ -450,7 +480,7 @@
   .metatesk-section
   .section-one
   .text-container{
-    top: 0px;
+    top:40px;
     width: 200px;
     height: 200px;
   }
@@ -484,11 +514,17 @@
   }
 }
 
+@media(max-width:480px){
+  .metatesk-section .section-one .text-container{
+    top: 0px;
+  }
+}
+
 @media(max-width:380px){
   .metatesk-section
   .section-one
   .text-container{
-    top: 0px;
+    top: 20px;
     width: 150px;
     height: 150px;
     text-align: center;
@@ -1243,6 +1279,18 @@ form {
   color: #482AFF;
 }
 
+@media(max-width:500px){
+  .metattesk-contact form div p{
+    font-size: 15px;
+  }
+}
+
+@media(max-width:370px){
+  .metattesk-contact form div p{
+    font-size: 12px;
+  }
+}
+
 .metattesk-contact form input{
   padding: 10px;
   border-radius: 40px;
@@ -1336,7 +1384,7 @@ form {
   }
 }
 
-.add-section-four .text-box{
+.add-section-four .text{
   margin: 0px auto;
   padding: 20px 0px;
   display: flex;
@@ -1344,7 +1392,31 @@ form {
   align-items: center;
 }
 
-.add-section-four .text-box p{
+.add-section-four 
+.text-box-responsive{
+  display: none;
+}
+
+@media(max-width:1199px){
+  .add-section-four .text p{
+    font-size: 20px;
+    margin: 0px;
+    font-weight: 700;
+  }
+  .add-section-four 
+  .text p:nth-of-type(1)  {
+    padding: 5px 10px ;
+  }
+
+  .add-section-four 
+  .text p:nth-of-type(3)  {
+    padding: 5px 10px ;
+  }
+}
+
+
+
+.add-section-four .text p{
   font-size: 30px;
   margin: 0px;
   color: #482AFF;
@@ -1353,33 +1425,35 @@ form {
 }
 
 .add-section-four 
-.text-box p:nth-of-type(1)  {
+.text p:nth-of-type(1)  {
   border: 4px solid #482AFF;
   padding: 10px 20px ;
   border-radius: 100px;
 }
 
 .add-section-four 
-.text-box p:nth-of-type(3)  {
+.text p:nth-of-type(3)  {
   border: 4px solid #482AFF;
   padding: 10px 20px ;
   border-radius: 100px;
 }
 
-@media(max-width:1199px){
-  .add-section-four .text-box p{
-    font-size: 20px;
-    margin: 0px;
-    font-weight: 700;
-  }
-  .add-section-four 
-  .text-box p:nth-of-type(1)  {
-    padding: 5px 10px ;
+@media(max-width:768px){
+  .add-section-four .text-box{
+    display: none;
   }
 
-  .add-section-four 
-  .text-box p:nth-of-type(3)  {
-    padding: 5px 10px ;
+  .add-section-four .text-box-responsive{
+    display: flex;
+  }
+
+  .add-section-four .text{
+    flex-direction: column;
+  }
+
+  .add-section-four .text p{
+    flex-direction: column;
+    margin: 5px auto;
   }
 }
 
@@ -1395,6 +1469,8 @@ form {
   border-radius: 30px;
   border: 5px solid #FBB116;
 }
+
+
 
 @media(max-width:675px){
   .add-section-four .img-box img{
