@@ -3,10 +3,11 @@ import Slider from "react-slick";
 import img1 from './metaImg/banner.png';
 import img2 from './metaImg/banner2.png';
 import img3 from './metaImg/banner3.png';
-import ScrollTriger from 'react-scroll-trigger'
 
 
 const SectionOne = () => {
+  
+
 // use spring 
 const settings = {
   dots: true,

@@ -1,6 +1,6 @@
-import React,{useState} from 'react'
-import CountUp from 'react-countup'
-import ScrollTriger from 'react-scroll-trigger'
+import React,{useState} from 'react';
+import CountUp from 'react-countup';
+import ScrollTriger from 'react-scroll-trigger';
 
 
 
