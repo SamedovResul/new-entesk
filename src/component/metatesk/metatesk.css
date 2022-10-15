@@ -1551,8 +1551,8 @@ form {
 /* add-section-five */
 
 .add-section-five{
-  margin: 100px auto;
-  padding: 50px 0px;
+  margin: 70px auto 100px auto;
+  padding: 50px 0px ;
   border-bottom: 5px solid #482AFF;
   border-top: 5px solid #482AFF;
 } 
@@ -1588,7 +1588,7 @@ form {
 
 .add-section-five 
 .text-box p:nth-of-type(2){
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 700;
   font-family: "Nunito";
 }
@@ -1600,6 +1600,13 @@ form {
   font-family: "Calibri light";
 }
 
+.add-section-five 
+.row div:nth-of-type(3) 
+.text-box p{
+  font-size: 25px;
+  font-weight: 800;
+  font-family: "Calibri light";
+}
 
 .add-section-five 
 .text-box img{
