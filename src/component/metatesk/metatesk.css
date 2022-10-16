@@ -1449,7 +1449,40 @@ form {
 }
 
 .add-section-four 
+.col-md-12
 .text p:nth-of-type(3)  {
+  border: 4px solid #482AFF;
+  padding: 10px 20px ;
+  border-radius: 100px;
+}
+
+.add-section-four 
+.text-box-responsive p:nth-of-type(2){
+  font-size: 25px;
+  color: #482AFF;
+  font-weight: bold;
+  font-family: "Calibri light";
+  margin: 10px auto;
+  margin-block-end: 0em;
+}
+
+
+
+
+.add-section-four 
+.text-box-responsive
+.text-box
+p:nth-of-type(3) {
+  border: 4px solid #482AFF;
+  padding: 10px 20px ;
+  border-radius: 100px;
+}
+
+
+
+.add-section-four 
+.text-box-responsive
+p:nth-of-type(4)  {
   border: 4px solid #482AFF;
   padding: 10px 20px ;
   border-radius: 100px;
@@ -1491,6 +1524,9 @@ form {
   margin-block-end: 0em;
 }
 
+.add-section-four .img-box p{
+  display: none;
+}
 
 .add-section-four .img-box img{
   width: 90%;
@@ -1535,6 +1571,9 @@ form {
 }
 
 @media(max-width:700px) {
+  .add-section-four .video-box{
+    flex-direction: column-reverse;
+  }
   .add-section-four .video-box> div{
     width: 75%;
     height: 200px;
@@ -1650,7 +1689,7 @@ form {
 
   .add-section-five 
   .text-box {
-    margin: 20px auto;
+    margin: 50px auto;
   }
 }
 

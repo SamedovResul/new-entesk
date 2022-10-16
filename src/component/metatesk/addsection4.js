@@ -40,7 +40,10 @@ const Addsection4 = () => {
                 </div>
               </div>
               <div className="text-box-responsive text">
-                  <p> boring </p> <p> to </p> <p> exciting </p>
+                  <p> boring </p>
+                  <p>traditional learning</p>
+                  <p> to </p> 
+                  <p> exciting </p>
                 </div>
               <div className="col-md-6">
                 <div className="video-box ">
