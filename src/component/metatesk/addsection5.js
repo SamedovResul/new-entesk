@@ -22,7 +22,7 @@ const Addsection5 = () => {
           </div>
           <div className="col-md-4">
           <div className="text-box">
-            <p> student from  </p>
+            <p> students from  </p>
             <p>5</p>
             <p>countries</p>
           </div>

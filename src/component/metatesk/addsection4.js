@@ -1,9 +1,8 @@
 import React, {useState,useEffect} from 'react'
 import VideoPlayer from "react-video-js-player";
-
-import Video from './video';
 import ScrollTriger from 'react-scroll-trigger'
 import img1 from './metaImg/book.png';
+import poster from './metaImg/poster.png'
 
 const Addsection4 = () => {
   const [number, setNumber] = useState(false)
@@ -19,12 +18,6 @@ const Addsection4 = () => {
   //   console.log(e)
     
   // }
-
-  useEffect(() => {
-    setTimeout(() => {
-      setNumber(true)
-    }, 5000);
-  }, [])
   
 
   const src = "https://res.cloudinary.com/dbgyytugh/video/upload/v1665658464/recipes/MetateskTrailer_14.49.50_hmrro3.mp4"
@@ -55,6 +48,7 @@ const Addsection4 = () => {
                   src={src}
                   // autoplay={true}
                   controls={true}
+                  poster={poster}
                   className="video"   
                 />
                 <p>immersive learning</p>

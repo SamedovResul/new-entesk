@@ -1518,6 +1518,11 @@ form {
   height: 100%;
 }
 
+.add-section-four
+.vjs-poster{
+  z-index: -1;
+}
+
 .add-section-four .video-box p{
   font-size: 25px;
   color: #482AFF;
@@ -1557,6 +1562,12 @@ form {
   border-top: 5px solid #482AFF;
 } 
 
+@media(max-width:1200px){
+  .add-section-five{
+    margin: 40px auto 100px auto;
+  }
+}
+
 .add-section-five .col-md-12 h3{
   font-size: 35px;
   font-family: "Nunito";
@@ -1588,7 +1599,7 @@ form {
 
 .add-section-five 
 .text-box p:nth-of-type(2){
-  font-size: 50px;
+  font-size: 55px;
   font-weight: 700;
   font-family: "Nunito";
 }
