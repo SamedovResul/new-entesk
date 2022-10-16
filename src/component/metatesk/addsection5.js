@@ -29,7 +29,7 @@ const Addsection5 = () => {
           </div>
           <div className="col-md-4">
           <div className="text-box">
-            <p>under the  </p>
+            <p>under   </p>
             <img src={google} alt="" />
             <p>program</p>
           </div>
