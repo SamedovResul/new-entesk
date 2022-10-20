@@ -246,7 +246,8 @@ console.log()
 											</Link>
 										</li>
 										<li >
-											<Link  to={{
+											<a href="https://www.metatesk.co/"> metatesk </a>
+											{/* <Link  to={{
 														pathname:'/metatesk',
 														aboutProps:{
 															name: 'fromNavication'
@@ -256,7 +257,7 @@ console.log()
 													{ borderBottom: "1px solid white" }:{ border: "unset" } }
 													>
 													metatesk
-											</Link>
+											</Link> */}
 										</li>
 										<li>
 											<Link to={{
@@ -317,7 +318,8 @@ console.log()
 									</Link>
 								</li>
 								<li >
-											<Link  to={{
+								<a href="https://www.metatesk.co/"> metatesk </a>	
+											{/* <Link  to={{
 														pathname:'/metatesk',
 														aboutProps:{
 															name: 'fromNavication'
@@ -327,7 +329,7 @@ console.log()
 													{ borderBottom: "1px solid white" }:{ border: "unset" } }
 													>
 													metatesk
-											</Link>
+											</Link> */}
 										</li>
 								<li>
 									<Link to={{
@@ -397,7 +399,8 @@ console.log()
 								</Link>
 							</li>
 							<li >
-											<Link  to={{
+							<a href="https://www.metatesk.co/"> metatesk </a>
+											{/* <Link  to={{
 														pathname:'/metatesk',
 														aboutProps:{
 															name: 'fromNavication'
@@ -407,7 +410,7 @@ console.log()
 													{ borderBottom: "1px solid white" }:{ border: "unset" } }
 													>
 													metatesk
-											</Link>
+											</Link> */}
 										</li>
 							<li>
 								<Link to={{

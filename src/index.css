@@ -54,18 +54,6 @@ body {
   /* display: none; */
 }
 
-/* @media(max-width:2300px) and (min-width:1800px){
-  .stick-class{
-    height: 90px;
-  }
-}
-
-@media(max-width:1399px){
-  .stick-class{
-    height: 50px;
-  }
-} */
-
 .nav-main-menu {
   width: 100%;
   height: 70px;
