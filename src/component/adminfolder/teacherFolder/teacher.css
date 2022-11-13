@@ -1,0 +1,158 @@
+.main-teacher-page{
+  margin-top: 60px;
+}
+
+
+
+.main-teacher-page button{
+  border: none;
+  background-color: blue;
+  border-radius: 20px;
+  color: white;
+  padding: 5px 20px;
+  margin: 10px;
+}
+
+
+.main-teacher-page
+.create-comment{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+
+.main-teacher-page
+.create-comment form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.main-teacher-page
+.create-comment form textarea{
+  padding: 20px 0px 0px 30px;
+  border-radius: 20px;
+  border: 7px double rgb(136, 136, 134);
+  outline: 0 !important;
+}
+
+
+
+.main-teacher-page
+.teacher-menu div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.main-teacher-page
+.teacher-menu p{
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+.main-teacher-page
+.infoComponent{
+  border: 3px solid #482AFF;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.main-teacher-page
+.infoComponent .close{
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 100px;
+  padding: 5px 12px;
+}
+
+.main-teacher-page
+.infoComponent span{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 1px solid;
+  border-radius: 100px;
+  padding: 6px 12px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+/* Schedule-section */
+
+.Schedule-section{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Schedule-section form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Calendar-section */
+
+
+.Calendar-section{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.Calendar-section
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: auto;
+}
+
+
+.Calendar-section
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+
+.Calendar-section
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* Finished-class-Section */
+
+
+.Finished-class-Section{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Finished-class-Section 
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+

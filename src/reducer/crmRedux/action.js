@@ -17,7 +17,8 @@ import {
   getTeacherTable,
   createComment,
   SearchByDate,
-  ConfirmOrCancel
+  ConfirmOrCancel,
+  SearchByDateForTeacher
 } from './api'
  
 
@@ -136,6 +137,40 @@ export const UpdateTeacher = (id,teacherData) => async (dispatch) =>{
   }
 }
 
+//  get post teacher search
+
+export const GetTeacherTable = (id) => async (dispatch) =>{
+
+
+  try {
+    const {data} = await getTeacherTable(id)
+
+    dispatch({type:"GETTEACHERTABLE", payload:data})
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+export const CreateComment = (id,comment) => async (dispatch)  =>{
+  try {
+    const {data} = await createComment(id,comment)
+
+    // console.log(data)
+    dispatch({type:"CREATECOMMENT", payload:data })
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+export const searchByDateForTeacher = (search) => async (dispatch)  =>{
+  try {
+    const {data} = await SearchByDateForTeacher(search)
+    dispatch({type:"SEARCH_BY_DATE_FOR_TEACHER", payload:data })
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
 // Student create update get
 
 export const GetStudent = ()=> async(dispatch) =>{
@@ -232,28 +267,5 @@ export const confirmOrCancel = (id,Confirmdata) => async (dispatch) =>{
     console.log(error.message); 
   }
 }
-//  get post teacher
 
-export const GetTeacherTable = (id) => async (dispatch) =>{
-
-
-  try {
-    const {data} = await getTeacherTable(id)
-
-    dispatch({type:"GETTEACHERTABLE", payload:data})
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-
-export const CreateComment = (id,comment) => async (dispatch)  =>{
-  try {
-    const {data} = await createComment(id,comment)
-
-    // console.log(data)
-    dispatch({type:"CREATECOMMENT", payload:data })
-  } catch (error) {
-    console.log(error.message);
-  }
-}
 

@@ -42,6 +42,7 @@
     "rellax": "^1.12.1",
     "simple-react-lightbox": "^3.6.9-0",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.6.8",
     "web-vitals": "^1.1.1"
   },
   "scripts": {

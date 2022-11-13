@@ -64,7 +64,6 @@ function App(props) {
             <Route path='/blog/:name'  >
               <Blog handlerSideClose={handlerSideClose} />
             </Route > 
-
             <Route exact path='/About'  >
               <About handlerSideClose={handlerSideClose} />
             </Route>

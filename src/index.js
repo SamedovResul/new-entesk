@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import SimpleReactLightbox from 'simple-react-lightbox'
-import './firebase/firebase'
+import SimpleReactLightbox from 'simple-react-lightbox';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';

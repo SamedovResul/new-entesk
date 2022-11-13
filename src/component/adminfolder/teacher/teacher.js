@@ -1,12 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import {getData} from '../../../reducer/crmReducer/action'
+// import {getData} from '../../../reducer/crmReducer/action'
 const Teacher = () => {
   let state = useSelector((state) => state.admin);
-  console.log(state.authData.Data.timetable)
+  console.log(state)
   return (
     <>
-      {
+      {/* {
         state.authData.Data.timetable.map((time,index) =>{
           const {class_Name, student_Name, teacher_Name} = time
           console.log(time)
@@ -25,7 +25,10 @@ const Teacher = () => {
             </table>
           )
         })
-      }
+      } */}
+      <div>
+        data
+      </div>
     </>
   )
 }

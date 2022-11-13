@@ -84,7 +84,7 @@ const Classes = () => {
                  </label>
                  <label htmlFor="number">
                     <b>age :</b>
-                   <input type="number" id="password"
+                   <input type="date" id="password"
                      value={data.age}
                      onChange={(e) =>{
                        setData({
