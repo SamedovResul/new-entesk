@@ -141,7 +141,8 @@ const Admin = () => {
                       <p> <b>student:</b>  {student_Name} </p>
                       <p> <b>class:</b>  {class_Name} </p>
                       <p> <b>class information:</b> {class_Comment} </p>
-                      <p> <b>date:</b> <span>{`${year} ${month} ${day} ${hour}:${minute}`} </span></p>
+                      <p> <b>time:</b> <span>{`${time.getUTCHours().toString().length === 1 ? `0${time.getUTCHours()}`:`${time.getUTCHours()}` }
+                        :${time.getUTCMinutes().toString().length === 1 ? `0${time.getUTCMinutes()}`:`${time.getUTCMinutes()}` }`}</span></p>
                       <p>
                         <b>class state</b>
                         {
@@ -152,6 +153,12 @@ const Admin = () => {
                         }
                       </p>
                       <div className='btn-div'>
+                        <button onClick={()=>ConCanHandler(_id,1)} >
+                          Confirm class
+                        </button>
+                        <button onClick={()=>ConCanHandler(_id,2)} >
+                          Cancel class
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -169,9 +176,7 @@ const Admin = () => {
                   table_State
                 } = timetable
                   const time = new Date(date)
-                  const minute = time.getMinutes()
-                  const hour = time.getHours()
-                  const day = time.getDate()
+                  const dates = time.getDate()
                   const month = time.getMonth()
                   const year = time.getFullYear()
   
@@ -183,7 +188,13 @@ const Admin = () => {
                       <p> <b>student:</b>  {student_Name} </p>
                       <p> <b>class:</b>  {class_Name} </p>
                       <p> <b>class information:</b> {class_Comment} </p>
-                      <p> <b>date:</b> <span>{`${year} ${month} ${day} ${hour}:${minute}`} </span></p>
+                      <p> <b>time:</b> <span>{`${time.getUTCHours().toString().length === 1 ? `0${time.getUTCHours()}`:`${time.getUTCHours()}` }
+                        :${time.getUTCMinutes().toString().length === 1 ? `0${time.getUTCMinutes()}`:`${time.getUTCMinutes()}` }`}</span>
+                      </p>
+                      <p><b>date:</b> {year}:
+                        {month.toString().length === 1 ? `0${month}` :  month}: 
+                        {dates.toString().length === 1 ? `0${dates}` :  dates} 
+                        </p>
                       <p>
                         <b>class state</b>
                         {

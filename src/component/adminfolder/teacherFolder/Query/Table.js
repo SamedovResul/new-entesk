@@ -21,6 +21,7 @@ const Table = ({State,ReturnParms,table}) => {
                 <th>Week day</th>
                 <th>Name</th>
                 <th>Time</th>
+                <th>date</th>
                 <th>Class Name</th>
                 <th>Select Student</th>
               </tr>
@@ -33,7 +34,10 @@ const Table = ({State,ReturnParms,table}) => {
                       <tr key={i} >
                         <td>{weekday[lessonDate.getDay()]}</td>
                         <td> {student_Name} </td>
-                        <td> {`${lessonDate.getUTCHours()}:${lessonDate.getUTCMinutes()}`} </td>
+                        <td> {`${lessonDate.getUTCHours().toString().length === 1 ? `0${lessonDate.getUTCHours()}`:`${lessonDate.getUTCHours()}`}
+                          :${lessonDate.getUTCMinutes().toString().length === 1 ? `0${lessonDate.getUTCMinutes()}`:`${lessonDate.getUTCMinutes()}`}`} </td>
+                        <td> {lessonDate.getMonth().toString().length === 1 ? `0${lessonDate.getMonth()}` :  lessonDate.getMonth()}: 
+                        {lessonDate.getDate().toString().length === 1 ? `0${lessonDate.getDate()}` :  lessonDate.getDate()}  </td>
                         <td> {class_Name} </td>
                         <td>
                           <button onClick={() => {

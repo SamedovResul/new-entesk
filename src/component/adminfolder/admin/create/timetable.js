@@ -182,12 +182,9 @@ const Create = () => {
                   table_State
                 } =timetable
                 const time = new Date(date)
-                const minute = time.getMinutes()
-                const hour = time.getHours()
-                const day = time.getDay()
+                const dates = time.getDate()
                 const month = time.getMonth()
                 const year = time.getFullYear()
-                // console.log(year)
                 return(
 
                   <div key={index} className='col-md-4'>
@@ -196,8 +193,13 @@ const Create = () => {
                         <p><b>teacher:</b>  {teacher_Name} </p>
                         <p><b>student:</b>  {student_Name} </p> 
                         <p><b>class:</b> {class_Name}  </p>  
-                        <p><b>date:</b>{`${year} ${month} ${day} ${hour}:${minute}`} </p>
-                        {/* <p> <b>class state</b>  <span> tesdiq olunmamis </span> </p> */}
+                        <p><b>date:</b> {year}:
+                        {month.toString().length === 1 ? `0${month}` :  month}: 
+                        {dates.toString().length === 1 ? `0${dates}` :  dates} 
+                        </p>
+                        <p><b>time:</b> 
+                        {`${time.getUTCHours().toString().length === 1 ? `0${time.getUTCHours()}`:`${time.getUTCHours()}` }
+                        :${time.getUTCMinutes().toString().length === 1 ? `0${time.getUTCMinutes()}`:`${time.getUTCMinutes()}` }`}</p>
                         <p>
                         <b>class state</b>
                         {
