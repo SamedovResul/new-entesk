@@ -145,9 +145,9 @@ const Admin = () => {
                       <p>
                         <b>class state</b>
                         {
-                          table_State === 0 ?( <span style={{color:"yellow", fontWeight:"700"}} > undefined </span> )
-                          :table_State === 1 ? ( <span style={{color:"green", fontWeight:"700"}} > Confirm </span> ) 
-                          : table_State === 2 ? ( <span style={{color:"red", fontWeight:"700"}}> Cancel </span> )
+                          table_State === 0 ?( <span style={{color:"gray", fontWeight:"700"}} > təsdiq olunmamış </span> )
+                          :table_State === 1 ? ( <span style={{color:"green", fontWeight:"700"}} > təsdiq olunmuş </span> ) 
+                          : table_State === 2 ? ( <span style={{color:"red", fontWeight:"700"}}> imtina olunmuş </span> )
                           :( <span> something wrong </span> )
                         }
                       </p>
@@ -187,7 +187,7 @@ const Admin = () => {
                       <p>
                         <b>class state</b>
                         {
-                          table_State === 0 ?( <span> undefined </span> ):( <span>confirm</span> )
+                          table_State !== 1 ?( <span> Təsdiq olunmamış </span> ):( <span>Təsdiqlənmiş</span> )
                         }
                       </p>
                       <div className='btn-div'>

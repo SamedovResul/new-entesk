@@ -58,6 +58,22 @@
   margin-block-end: 1em;
 }
 
+
+.student_info{
+  width: 500px;
+}
+
+
+.student_info 
+form input {
+  margin: 30px auto 10px auto;
+  padding: 10px;
+  width: 80%;
+  border-radius: 20px;
+  border: 2px solid #482AFF;
+}
+
+
 .main-teacher-page
 .infoComponent{
   border: 3px solid #482AFF;

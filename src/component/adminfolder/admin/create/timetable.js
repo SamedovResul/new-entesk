@@ -83,7 +83,6 @@ const Create = () => {
     }
     
   }
-
   return (
     <div className="container">
       <div className="container-fluid">
@@ -98,13 +97,7 @@ const Create = () => {
                   setNewtimetable({...newTimetable, teacher_Id: e.target.value
                   })
                 }}name="students" id="teacher">
-                  {
-                    newTimetable.teacher_Id ? (
-                      <option  value="select"> {newTimetable.teacher_Name} </option>
-                    ):(
-                      <option  value="select"> select </option>
-                    )
-                  }
+                  <option  value="select"> select </option>
                 {
                   state.teacherReducer.map((teacher, index) =>{
                     const {name, _id} = teacher
@@ -125,13 +118,7 @@ const Create = () => {
                 })
               }}
               name="students" id="student"  >
-                {
-                    newTimetable.student_Id ? (
-                      <option  value="select"> {newTimetable.student_Name} </option>
-                    ):(
-                      <option  value="select"> select </option>
-                    )
-                  }
+                  <option  value="select"> select </option>
                 {
                   state.studentReducer.map((student, index) =>{
                     const {firstName, _id} = student
@@ -149,13 +136,7 @@ const Create = () => {
                     ...newTimetable, class_Id: e.target.value
                   })
                 }} name="class" id='class'>
-                  {
-                    newTimetable.class_Id ? (
-                      <option  value="select"> {newTimetable.class_Name} </option>
-                    ):(
-                      <option  value="select"> select </option>
-                    )
-                  }
+                  <option  value="select"> select </option>
                 {
                   state.classReducer.map((clas, index) =>{
                     const {name, _id} = clas
@@ -177,7 +158,9 @@ const Create = () => {
                   })
                 }}
               />
-              <button onClick={(e) =>{createTimetbale(e)}}>
+              <button onClick={(e) =>{
+                createTimetbale(e)
+                }}>
                 {id ? (
                   <span>Update</span>
                 ) :(
@@ -214,11 +197,11 @@ const Create = () => {
                         <p><b>student:</b>  {student_Name} </p> 
                         <p><b>class:</b> {class_Name}  </p>  
                         <p><b>date:</b>{`${year} ${month} ${day} ${hour}:${minute}`} </p>
-                        <p> <b>class state</b>  <span>nun</span> </p>
+                        {/* <p> <b>class state</b>  <span> tesdiq olunmamis </span> </p> */}
                         <p>
                         <b>class state</b>
                         {
-                          table_State === 0 ?( <span> undefined </span> ):( <span>confirm</span> )
+                          table_State === 0 ?( <span> tesdiq olunmamis </span> ):( <span>confirm</span> )
                         }
                       </p>
                         <button

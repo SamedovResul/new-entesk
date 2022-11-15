@@ -2,7 +2,7 @@ import axios from 'axios'
 
 
 
-const API = axios.create({ baseURL: 'https://metatesk.herokuapp.com/' });
+const API = axios.create({ baseURL: 'http://localhost:5000/' });
 
 
 // token
@@ -76,13 +76,13 @@ export const getTeacherTable = (id) =>{
   return API.patch(`/teacher/${id}`)
 }
 
-export const createComment = (id, data) =>{
-  return API.patch(`/teacher/${id}/addComment`,data)
+export const createComment = (data) =>{
+  return API.put('/teacher/addComment',data)
 }
 
 export const SearchByDateForTeacher = (search) =>{
   return API.get(
-    `/teacher/search?startDate=${search.from}&endDate=${search.to}`
+    `/teacher/search?startDate=${search.from}&endDate=${search.to}&state=${search.state}`
     )
 }
 

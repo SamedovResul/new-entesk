@@ -151,9 +151,9 @@ export const GetTeacherTable = (id) => async (dispatch) =>{
   }
 }
 
-export const CreateComment = (id,comment) => async (dispatch)  =>{
+export const CreateComment = (comment) => async (dispatch)  =>{
   try {
-    const {data} = await createComment(id,comment)
+    const {data} = await createComment(comment)
 
     // console.log(data)
     dispatch({type:"CREATECOMMENT", payload:data })
@@ -164,6 +164,7 @@ export const CreateComment = (id,comment) => async (dispatch)  =>{
 
 export const searchByDateForTeacher = (search) => async (dispatch)  =>{
   try {
+    console.log(search)
     const {data} = await SearchByDateForTeacher(search)
     dispatch({type:"SEARCH_BY_DATE_FOR_TEACHER", payload:data })
   } catch (error) {

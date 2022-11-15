@@ -8,9 +8,9 @@ const Query = ({ReturnParms}) => {
   const {Return, setReturn}= ReturnParms
   const [Query, setQuery] = useState({
     from:'',
-    to:''
+    to:'',
+    state:0
   })
-  let [data, setData] = useState(false)
   const [id, setId] = useState(0)
   const dispatch = useDispatch()
   const table = useSelector((state) => state.teachertable)
@@ -28,10 +28,6 @@ const Query = ({ReturnParms}) => {
     if(Query.from){
       setTimeout(() => {
         setReturn(Return + 1)
-        setQuery({
-          from:'',
-          to:''
-        })
       }, 2000);
       Toast.fire({
         icon: 'success',
