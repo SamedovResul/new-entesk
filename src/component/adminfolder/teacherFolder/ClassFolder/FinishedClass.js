@@ -7,7 +7,8 @@ import Swal from 'sweetalert2'
 const FinishedClass = ({ReturnParms}) => {
   const [Query, setQuery] = useState({
     from:'',
-    to:''
+    to:'',
+    // state:'',
   })
   const {Return, setReturn} = ReturnParms
 
@@ -29,6 +30,7 @@ const FinishedClass = ({ReturnParms}) => {
 
     if(Query.from || Query.to){
       dispatch(searchByDateForTeacher(Query))
+      console.log(true)
       setTimeout(() => {
         setReturn(Return + 1)
       }, 2000);

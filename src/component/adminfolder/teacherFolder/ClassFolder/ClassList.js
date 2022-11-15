@@ -26,7 +26,7 @@ const ClassList = ({table}) => {
                 <td> {student_Name} </td>
                 <td> {`${lessonDate.getUTCHours()}:${lessonDate.getUTCMinutes()}`} </td>
                 <td> {class_Name} </td>
-                <td> {table_State === 0 ? "Təsdiq olunmamıs": 'legv olunmus' }  </td>
+                <td> {table_State === 1 ? "Təsdiq olunmus": 'legv olunmus' }  </td>
               </tr>
             )
           })) 
