@@ -2,10 +2,11 @@ import React, {useEffect, useState} from 'react'
 import { useHistory } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
 import { CreateStudent, UpdateStudent,GetStudent} from '../../../../reducer/crmRedux/action';
+import Swal from 'sweetalert2'
 
 const Classes = () => {
   const [data, setData] = useState({
-    firstName:"",
+    name:"",
     secondName:"",
     age:0,
     status:0
@@ -37,17 +38,38 @@ const Classes = () => {
     if(id.id){
       dispatch(UpdateStudent(id.id,data))
       setData({
-        firstName:"",
+        name:"",
         secondName:"",
         age:0,
+        status:0
+      })
+      Swal.fire({
+        color:"green",
+        text: "Great",
+        timer:1000
       })
     }else{
-      dispatch(CreateStudent(data))
-      setData({
-        firstName:"",
-        secondName:"",
-        age:0,
-      })
+      if(data.age && data.name && data.secondName && data.status){
+        dispatch(CreateStudent(data))
+        setData({
+          name:"",
+          secondName:"",
+          age:0,
+          status:0
+        })
+        Swal.fire({
+          color:"green",
+          text: "Great",
+          timer:1000
+        })
+      }else{
+        Swal.fire({
+          color:"red",
+          text: "please complete form",
+          timer:1000
+        })
+      }
+      
     }
   }
 
@@ -66,7 +88,7 @@ const Classes = () => {
                    value={data.firstName}
                      onChange={(e) =>{
                        setData({
-                         ...data, firstName: e.target.value
+                         ...data, name: e.target.value
                        })
                      }}
                    />
@@ -123,12 +145,12 @@ const Classes = () => {
           </div>
           {
             state.map((student, index) =>{
-              const {firstName,secondName,age,status,_id} = student;
+              const {name,secondName,age,status,_id} = student;
 
               return(
                 <div key={_id} className="col-md-4">
                   <div className="info-table">
-                    <p> <b>Student fullname:</b> {firstName}, {secondName}  </p>
+                    <p> <b>Student fullname:</b> {name}, {secondName}  </p>
                     <p> <b>Age:</b> {age}  </p>
                     <button
                       onClick={()=>{setId({id: _id}) }} >

@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import { useHistory } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
 import { CreateTeacher, UpdateTeacher,GetTeacher} from '../../../../reducer/crmRedux/action';
+import Swal from 'sweetalert2'
+
 
 const Classes = () => {
   const [data, setData] = useState({
@@ -42,12 +44,26 @@ const Classes = () => {
         password:"",
       })
     }else{
-      dispatch(CreateTeacher(data))
-      setData({
-        name:"",
-        email:"",
-        password:"",
-      })
+      if(data.email && data.name && data.password && data.status){
+        dispatch(CreateTeacher(data))
+        setData({
+          name:"",
+          email:"",
+          password:"",
+        })
+        Swal.fire({
+          color:"green",
+          text: "Great",
+          timer:1000
+        })
+      }else{
+        Swal.fire({
+          color:"red",
+          text: "please complete form",
+          timer:1000
+        })
+      }
+      
     }
   }
 

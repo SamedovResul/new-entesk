@@ -99,19 +99,17 @@ const Admin = () => {
                   }}
                 />
               </label>
-              {/* <button onClick={Searching()} > search </button> */}
               <button onClick={Searching} > search </button>
-              {/* <button onClick={today} >today</button> */}
             </form>
             <button onClick={today} >today</button>
           </div>
-          <p> <b> Ümumi say: </b>
+          {/* <p> <b> Ümumi say: </b>
             { 
               state ? 
               ( <span>{state?.length}</span> )
               :(<span>{searchingState?.length}</span>) 
             }
-          </p>
+          </p> */}
             {
             
             search ? (
@@ -128,7 +126,7 @@ const Admin = () => {
                   const time = new Date(date)
                   const minute = time.getMinutes()
                   const hour = time.getHours()
-                  const day = time.getDay()
+                  const dates = time.getDay()
                   const month = time.getMonth()
                   const year = time.getFullYear()
   
@@ -143,7 +141,11 @@ const Admin = () => {
                       <p> <b>class information:</b> {class_Comment} </p>
                       <p> <b>time:</b> <span>{`${time.getUTCHours().toString().length === 1 ? `0${time.getUTCHours()}`:`${time.getUTCHours()}` }
                         :${time.getUTCMinutes().toString().length === 1 ? `0${time.getUTCMinutes()}`:`${time.getUTCMinutes()}` }`}</span></p>
-                      <p>
+                      <div>
+                      <p><b>date:</b> {year}:
+                        {month.toString().length === 1 ? `0${month + 1}` :  month + 1}: 
+                        {dates.toString().length === 1 ? `0${dates}` :  dates} 
+                        </p>
                         <b>class state</b>
                         {
                           table_State === 0 ?( <span style={{color:"gray", fontWeight:"700"}} > təsdiq olunmamış </span> )
@@ -151,15 +153,20 @@ const Admin = () => {
                           : table_State === 2 ? ( <span style={{color:"red", fontWeight:"700"}}> imtina olunmuş </span> )
                           :( <span> something wrong </span> )
                         }
-                      </p>
-                      <div className='btn-div'>
-                        <button onClick={()=>ConCanHandler(_id,1)} >
-                          Confirm class
-                        </button>
-                        <button onClick={()=>ConCanHandler(_id,2)} >
-                          Cancel class
-                        </button>
                       </div>
+                      {
+                        table_State !== 1 && table_State !== 2 && (
+                          <div className='btn-div'>
+                            <button onClick={()=>ConCanHandler(_id,1)} >
+                              Confirm class
+                            </button>
+                            <button onClick={()=>ConCanHandler(_id,2)} >
+                              Cancel class
+                            </button>
+                          </div>
+                        )
+                      }
+                      
                     </div>
                   </div>
                 )
@@ -192,7 +199,7 @@ const Admin = () => {
                         :${time.getUTCMinutes().toString().length === 1 ? `0${time.getUTCMinutes()}`:`${time.getUTCMinutes()}` }`}</span>
                       </p>
                       <p><b>date:</b> {year}:
-                        {month.toString().length === 1 ? `0${month}` :  month}: 
+                        {month.toString().length === 1 ? `0${month + 1}` :  month + 1}: 
                         {dates.toString().length === 1 ? `0${dates}` :  dates} 
                         </p>
                       <p>

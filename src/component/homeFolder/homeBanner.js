@@ -21,7 +21,6 @@ import allData from '../../course'
 
 const HomeBanner = (props) =>{
 	let location = props.location.aboutProps
-	
 	// home functions 
 	// const {leafshadow} = Iconshadow()
 	const {

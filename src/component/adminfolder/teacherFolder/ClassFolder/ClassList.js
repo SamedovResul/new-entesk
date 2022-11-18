@@ -16,10 +16,11 @@ const ClassList = ({table}) => {
             <th>Time</th>
             <th>Class Name</th>
             <th>Class State</th>
+            <th>Class Information</th>
           </tr>
         {
           (table.map((data,i) =>{
-            const {student_Name,date,class_Name,_id,table_State} = data
+            const {student_Name,date,class_Name,_id,table_State,class_Comment} = data
             const lessonDate = new Date(date)
             return(
               <tr key={i} >
@@ -27,6 +28,7 @@ const ClassList = ({table}) => {
                 <td> {`${lessonDate.getUTCHours()}:${lessonDate.getUTCMinutes()}`} </td>
                 <td> {class_Name} </td>
                 <td> {table_State === 1 ? "Təsdiq olunmus": 'legv olunmus' }  </td>
+                <td> {class_Comment} </td>
               </tr>
             )
           })) 

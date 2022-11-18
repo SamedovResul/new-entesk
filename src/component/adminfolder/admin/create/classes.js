@@ -6,6 +6,8 @@ import {
   GetClass,
   DeleteClass
 } from '../../../../reducer/crmRedux/action';
+import Swal from 'sweetalert2'
+
 
 const Classes = () => {
 
@@ -42,12 +44,31 @@ const Classes = () => {
         name:"",
         content:"",
       })
-    }else{
-      dispatch(CreateClass(data))
-      setData({
-        name:"",
-        content:"",
+      Swal.fire({
+        color:"green",
+        text: "Great",
+        timer:1000
       })
+    }else{
+      if(data.content && data.name){
+        dispatch(CreateClass(data))
+        setData({
+          name:"",
+          content:"",
+        })
+        Swal.fire({
+          color:"green",
+          text: "Great",
+          timer:1000
+        })
+      }else{
+        Swal.fire({
+          color:"red",
+          text: "please complete form",
+          timer:1000
+        })
+      }
+      
     }
   }
 

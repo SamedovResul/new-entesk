@@ -5,7 +5,7 @@ import {useDispatch } from 'react-redux';
 import Classes from './classes';
 import Teachers from './teachers';
 import Student from './students';
-import Timetable from './timetable'
+import Timetable from './timetable/timetable'
 import {useSpring, animated} from 'react-spring'
 import { Link } from 'react-router-dom';
 

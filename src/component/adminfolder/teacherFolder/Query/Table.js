@@ -29,14 +29,15 @@ const Table = ({State,ReturnParms,table}) => {
                 table.map((data,i) =>{
                   const {student_Name,date,class_Name,_id} = data
                   const lessonDate = new Date(date)
-                  console.log(lessonDate.getDay())
+                  console.log(lessonDate.getMonth() + 1)
                   return(
                       <tr key={i} >
                         <td>{weekday[lessonDate.getDay()]}</td>
                         <td> {student_Name} </td>
                         <td> {`${lessonDate.getUTCHours().toString().length === 1 ? `0${lessonDate.getUTCHours()}`:`${lessonDate.getUTCHours()}`}
                           :${lessonDate.getUTCMinutes().toString().length === 1 ? `0${lessonDate.getUTCMinutes()}`:`${lessonDate.getUTCMinutes()}`}`} </td>
-                        <td> {lessonDate.getMonth().toString().length === 1 ? `0${lessonDate.getMonth()}` :  lessonDate.getMonth()}: 
+
+                        <td> {lessonDate.getMonth().toString().length === 1 ? `0${lessonDate.getMonth() + 1}` :  lessonDate.getMonth() + 1},
                         {lessonDate.getDate().toString().length === 1 ? `0${lessonDate.getDate()}` :  lessonDate.getDate()}  </td>
                         <td> {class_Name} </td>
                         <td>
