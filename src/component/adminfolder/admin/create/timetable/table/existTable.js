@@ -1,27 +1,26 @@
 import React from "react";
 
-const Table = ({setNewtimetable,tableData,newTimetable }) => {
+const ExistTable = ({Array,teacher, tableData, setId }) => {
   return (
     <>
       {tableData.map((timetable, index) => {
         const {
           student_Name,
-          student_Id,
           teacher_Name,
           class_Name,
-          class_Id,
           date,
           _id,
           table_State,
           teacher_Id
         } = timetable;
-        console.log(teacher_Id)
         const time = new Date(date);
         const dates = time.getDate();
         const month = time.getMonth();
         const year = time.getFullYear();
+        if(teacher_Id === teacher){
           return (
             <div key={index} className="col-md-4">
+              
               <div className="info-table">
                 <p>
                   <b>teacher:</b> {teacher_Name}{" "}
@@ -50,17 +49,17 @@ const Table = ({setNewtimetable,tableData,newTimetable }) => {
                         : `${time.getUTCMinutes()}`
                     }`}
                 </p>
+                <p>
+                  <b>class state</b>
+                  {table_State === 0 ? (
+                    <span> tesdiq olunmamis </span>
+                  ) : (
+                    <span></span>
+                  )}
+                </p>
                 <button
                   onClick={() => {
-                    setNewtimetable({
-                      ...newTimetable,
-                      student_Name,
-                      class_Name,
-                      date,
-                      class_Id,
-                      student_Id,
-                    })
-                    // console.log(newTimetable)
+                    setId(_id);
                   }}
                 >
                   update
@@ -68,10 +67,11 @@ const Table = ({setNewtimetable,tableData,newTimetable }) => {
               </div>
             </div>
           );
+        }
         
       })}
     </>
   );
 };
 
-export default Table;
+export default ExistTable;

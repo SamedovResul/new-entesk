@@ -57,6 +57,7 @@ const Studentinfo = ({ studentData }) => {
         <input
           type="text"
           placeholder="Write comment"
+          value={comment.comment}
           onChange={(e) => {
             setComment({ ...comment, comment: e.target.value });
           }}
@@ -65,7 +66,7 @@ const Studentinfo = ({ studentData }) => {
           onClick={(e) => {
             e.preventDefault();
             dispatch(CreateComment(comment));
-            console.log(comment);
+            setComment({...comment, comment:""})
           }}
         >
           add comment

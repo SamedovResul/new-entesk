@@ -77,9 +77,8 @@ const Classes = () => {
   //   dispatch(DeleteClass(id))
   // }
   return (
-    <div className="container">
-      <div className="container-fluid">
-        <div className="row">
+    <>
+
           <div className="col-md-12">
             <div className=" create-admin create-class">
               <p>create class</p>
@@ -138,9 +137,9 @@ const Classes = () => {
               )
             })
           }
-        </div>
-      </div>
-    </div>
+
+
+    </>
   )
 }
 

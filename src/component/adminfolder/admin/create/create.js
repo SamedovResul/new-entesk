@@ -23,41 +23,52 @@ const Create = () => {
       </div>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-4">
-            <div className="create-box" onClick={
+          <div className="col-md-3">
+            <div className="create-box" style={div === 0 ? {borderColor:'red'}:{borderColor:''}} onClick={
               () => div !== 0 ? setdiv(0) : setdiv(10) } >
               <h3>Create Classes</h3> 
             </div>
           </div>
-          <div className="col-md-4">
-            <div className="create-box"  onClick={
+          <div className="col-md-3">
+            <div className="create-box" style={div === 1 ? {borderColor:'red'}:{borderColor:''}} onClick={
               () => div !== 1 ? setdiv(1) : setdiv(10) }>
               <h3>Create Teachers</h3>
             </div>
           </div>
-          <div className="col-md-4">
-            <div className="create-box"  onClick={
+          <div className="col-md-3">
+            <div className="create-box" style={div === 2 ? {borderColor:'red'}:{borderColor:''}} onClick={
                 () => div !== 2 ? setdiv(2) : setdiv(10) }>
               <h3>Create Student</h3>
             </div>
           </div>
+          <div className="col-md-3">
+            <div className="create-box" style={div === 3 ? {borderColor:'red'}:{borderColor:''}}  onClick={
+                () => div !== 3 ? setdiv(3) : setdiv(10) }>
+              <h3>Create timetable</h3>
+            </div>
+          </div>
           <div className="col-md-12">
             <div style={
-                div === 0 ? {display: "block", height:'auto'} : {display: "none"}
+                div === 0 ? {display: "block", height:'auto', borderColor:'red'} : {display: "none"}
               } className="classes">
               <Classes  />
             </div>
             <div style={
-                div === 1 ? {display: "block", height:'auto'} : {display: "none"}
+                div === 1 ? {display: "block", height:'auto', borderColor:'red'} : {display: "none"}
               } className="classes">
               <Teachers />
             </div>
             <div style={
-                div === 2 ? {display: "block", height:'auto'} : {display: "none"}
+                div === 2 ? {display: "block", height:'auto', borderColor:'red'} : {display: "none"}
               } className="classes">
               <Student />
             </div>
-            <Timetable />
+            <div style={
+                div === 3 ? {display: "block", height:'auto', borderColor:'red'} : {display: "none"}
+              } className="classes">
+              <Timetable />
+            </div>
+            {/* <Timetable /> */}
           </div>
         </div>
       </div>

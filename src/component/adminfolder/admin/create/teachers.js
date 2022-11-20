@@ -15,7 +15,7 @@ const Classes = () => {
   const [id, setId] = useState({})
   const dispatch = useDispatch();
   const state = useSelector((state) => state.teacherReducer);
-
+  // console.log(state)
   // get teacher
   useEffect(() => {
     dispatch(GetTeacher())
@@ -69,98 +69,94 @@ const Classes = () => {
 
  
   return (
-    <div className="container">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-md-12">
-            <div className=" create-admin create-teacher">
-              <p>create teacher</p>
-              <form action="">
-                <label htmlFor="name">
-                name
-                <input type="name" id="name"
-                value={data.name}
-                  onChange={(e) =>{
-                    setData({
-                      ...data, name: e.target.value
-                    })
-                  }}
-                />
-                </label>
-                <label htmlFor="email">
-                  email
-                  <input type="email" id="email" 
-                    value={data.email}
-                    onChange={(e) =>{
-                      setData({
-                        ...data, email:e.target.value
-                      })
-                    }}
+    <>
+      <div className="col-md-12">
+        <div className=" create-admin create-teacher">
+          <p>create teacher</p>
+          <form action="">
+            <label htmlFor="name">
+            name
+            <input type="name" id="name"
+            value={data.name}
+              onChange={(e) =>{
+                setData({
+                  ...data, name: e.target.value
+                })
+              }}
+            />
+            </label>
+            <label htmlFor="email">
+              email
+              <input type="email" id="email" 
+                value={data.email}
+                onChange={(e) =>{
+                  setData({
+                    ...data, email:e.target.value
+                  })
+                }}
+              />
+            </label>
+            <label htmlFor="password">
+              password
+              <input type="password" id="password"
+                onChange={(e) =>{
+                  setData({
+                    ...data, password:e.target.value
+                  })
+                }}
                   />
-                </label>
-                <label htmlFor="password">
-                  password
-                  <input type="password" id="password"
-                    onChange={(e) =>{
-                      setData({
-                        ...data, password:e.target.value
-                      })
-                    }}
-                      />
-                </label>
-                <label htmlFor="status">
-                  status
-                  <select name="" id="status"
-                    onChange={(e)=>{
-                      setData({
-                        ...data, status: parseInt(e.target.value) 
-                      })
-                    }}
-                  >
-                    <option >select status</option>
-                    <option value="0">inactive</option>
-                    <option value="1">active</option>
-                  </select>
-                </label>
-              </form>
-              <button onClick={() =>{ createTeacher()}}>
-                    {
-                      id.id ? (
-                        <span>update</span> 
-                      ):(
-                        <span>create</span> 
-                      )
-                    }
-                </button>
-            </div>
-          </div>
-            {
-              state.map((teacher, index) =>{
-                const {name, _id,email,status,} = teacher;
-
-                return(
-                  <div key={_id} className="col-md-4">
-                    <div className="info-table">
-                      <p> <b>Teacher name:</b> {name}</p>
-                      <p> <b>Email:</b> {email}  </p>
-                      <p> <b> status: </b> {
-                      status === 1? 
-                      ( <span>active</span> ) :
-                      ( <span>inactive</span> )
-                        } 
-                       </p>
-                      <button
-                        onClick={()=>{setId({id: _id}) }} >
-                        update
-                      </button>
-                    </div>
-                  </div>
-                )
-              })
-            }
+            </label>
+            <label htmlFor="status">
+              status
+              <select name="" id="status"
+                onChange={(e)=>{
+                  setData({
+                    ...data, status: parseInt(e.target.value) 
+                  })
+                }}
+              >
+                <option >select status</option>
+                <option value="0">inactive</option>
+                <option value="1">active</option>
+              </select>
+            </label>
+          </form>
+          <button onClick={() =>{ createTeacher()}}>
+                {
+                  id.id ? (
+                    <span>update</span> 
+                  ):(
+                    <span>create</span> 
+                  )
+                }
+            </button>
         </div>
       </div>
-    </div>
+        {
+          state.map((teacher, index) =>{
+            const {name, _id,email,status,} = teacher;
+
+            return(
+              <div key={_id} className="col-md-4">
+                <div className="info-table">
+                  <p> <b>Teacher name:</b> {name}</p>
+                  <p> <b>Email:</b> {email}  </p>
+                  <p> <b> status: </b> {
+                  status === 1? 
+                  ( <span>active</span> ) :
+                  ( <span>inactive</span> )
+                    } 
+                    </p>
+                  <button
+                    onClick={()=>{setId({id: _id}) }} >
+                    update
+                  </button>
+                </div>
+              </div>
+            )
+          })
+        }
+    </>
   )
 }
 

@@ -75,9 +75,8 @@ const Classes = () => {
 
  
   return (
-    <div className="container">
-      <div className="container-fluid">
-        <div className="row">
+    <>
+
           <div className="col-md-12">
             <div className="create-admin  create-student">
             <p>create Student</p>
@@ -161,9 +160,8 @@ const Classes = () => {
               )
             })
           }
-        </div>
-      </div>
-    </div>
+          
+    </>
   )
 }
 
