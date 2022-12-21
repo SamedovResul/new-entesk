@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import { useSelector,useDispatch } from 'react-redux';
-import { searchByDateForTeacher } from '../../../../reducer/crmRedux/action'
+import { GetTeacherCalendar } from '../../../../reducer/crmRedux/action'
 import Swal from 'sweetalert2'
 
 const Calendar = () => {
@@ -8,11 +8,11 @@ const dispatch = useDispatch()
 const [boolean, setBoolean] = useState(false)
 const [Query, setQuery] = useState({
   from:'',
-  to:''
+  to:'',
+  state:0,
 })
 
-
-let surdentCalendar = useSelector((state) => state.teachertable)
+const table = useSelector((state) => state.teachertable.table)
 
 
   setTimeout(() => {
@@ -37,15 +37,42 @@ let surdentCalendar = useSelector((state) => state.teachertable)
         })
       }, 500);
       
-    dispatch(searchByDateForTeacher(Query))
+    dispatch(GetTeacherCalendar())
   }, [])
   
-
+  console.log(table)
   return (
     <article className='Calendar-section' >
       <table>
       <tbody>
-      <tr>
+        {
+          boolean? 
+          ( <> 
+            {
+              table.map((data,i) =>{
+                const {dateOne,dateTwo,timeOne,timeTwo,studentName} = data
+    
+                return(
+                  <div key={i}>
+                  <th> Student </th>
+                  <th> {dateOne} </th>
+                  <th> {dateTwo} </th>
+                  
+                  <tr key={i} >
+                    <td> {studentName} </td>
+                    <td> {timeOne} </td>
+                    <td> {timeTwo} </td>
+                    
+                  </tr>
+                  </div>
+                )
+              })
+            }
+          </> ):(
+            <></>
+          )
+        }
+      {/* <tr>
         {
            boolean? (
             <>
@@ -61,13 +88,14 @@ let surdentCalendar = useSelector((state) => state.teachertable)
       </tr>
         {
           boolean? 
-          (surdentCalendar.map((data,i) =>{
+          (table.map((data,i) =>{
             const {student_Name,date,class_Name,_id} = data
             const lessonDate = new Date(date)
             return(
               <tr key={i} >
                 <td> {student_Name} </td>
-                <td> {`${lessonDate.getUTCHours()}:${lessonDate.getUTCMinutes()}`} </td>
+                <td> {`${lessonDate.getUTCHours().toString().length === 1 ? `0${lessonDate.getHours()}`:`${lessonDate.getHours()}`}
+                        :${lessonDate.getUTCMinutes().toString().length === 1 ? `0${lessonDate.getUTCMinutes()}`:`${lessonDate.getUTCMinutes()}`}`} </td>
                 <td> {class_Name} </td>
                 
               </tr>
@@ -75,7 +103,7 @@ let surdentCalendar = useSelector((state) => state.teachertable)
           })) : (
             <></>
           )
-        }
+        } */}
       </tbody>
       </table>
     </article>

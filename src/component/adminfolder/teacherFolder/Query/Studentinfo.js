@@ -49,7 +49,7 @@ const Studentinfo = ({ studentData }) => {
           </li>
           <li className="list-group-item">
             {" "}
-            <b>Class Name: </b> <p> {class_Comment} </p>{" "}
+            <b>Class Info: </b> <p> {class_Comment} </p>{" "}
           </li>
         </ul>
       </div>

@@ -6,14 +6,25 @@ import {
   UpdateTimetable,
 } from "../../../../../reducer/crmRedux/action";
 import { useDispatch } from "react-redux";
-import Select from "./select/select";
+import SelectData from "./select/select";
 import Table from "./table/Table";
 import ExistTable from "./table/existTable";
 import Swal from "sweetalert2";
 import { positions } from "react-alert";
+import TimetableFunc from "./function/function";
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button'
+import Box from '@mui/material/Box';
 
 const Create = () => {
   const [id, setId] = useState("");
+
+
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(GetTimetable());
@@ -28,213 +39,208 @@ const Create = () => {
     teacher_Id: "",
     class_Name: "",
     class_Id: "",
+    table_State:0,
+    category_name:'',
     date: "",
+    index:'',
+    condition:false
   });
   const [Array, setArray] = useState([]);
-
+  let [Category, setCategory] = useState([])
   //  add class
-  useEffect(() => {
-    state.classReducer.map((Class) => {
-      const { name, _id } = Class;
-      if (_id === newTimetable.class_Id) {
-        newTimetable.class_Name = name;
-      }
-    });
-  }, [newTimetable]);
 
-  // add student
-  useEffect(() => {
-    state.studentReducer.map((student) => {
-      const { name, _id } = student;
-      if (_id === newTimetable.student_Id) {
-        newTimetable.student_Name = name;
-      }
-    });
-  }, [newTimetable]);
-
-  // add teacher
-  useEffect(() => {
-    state.teacherReducer.map((student) => {
-      const { name, _id, email } = student;
-      if (_id === newTimetable.teacher_Id) {
-        newTimetable.teacher_Name = name;
-        newTimetable.teacher_Email = email;
-      }
-    });
-  }, [newTimetable]);
-
-  // update timetable
-  useEffect(() => {
-    state.timetableReducer.map((timetable) => {
-      const { _id } = timetable;
-      if (_id === id) {
-        setNewtimetable(timetable);
-      }
-    });
-  }, [id]);
-
-  // create timatable
-  const createTimetbale = (e) => {
-    e.preventDefault();
-
-    if (id) {
-      dispatch(UpdateTimetable(newTimetable, id));
-      setNewtimetable({
-        student_Name: "",
-        student_Id: "",
-        teacher_Name: "",
-        teacher_Id: "",
-        class_Name: "",
-        class_Id: "",
-        date: "",
-      });
-    } else {
-      if ( Array.length > 0 && !newTimetable.class_Name &&  !newTimetable.student_Name && !newTimetable.date ) {
-        dispatch(CreateTimetable(Array));
-        setArray([])
-        Swal.fire({
-          color: "green",
-          text: "Great",
-        });
-      } else {
-        Swal.fire({
-          color: "red",
-          text: "please add time table",
-        });
-      }
-    }
-  };
-
-
-  console.log(newTimetable)
-  console.log(Array)
-  const addToArray = (e) =>{
-    e.preventDefault();
-    if( 
-      newTimetable.student_Id &&
-      newTimetable.teacher_Id &&
-      newTimetable.class_Id &&
-      newTimetable.date){
-        setArray([...Array, newTimetable]);
-        setNewtimetable({
-          ...newTimetable,
-          student_Name: "",
-          student_Id: "",
-          class_Name: "",
-          class_Id: "",
-          date: "",
-        })
-      }else{
-        Swal.fire({
-          color: "red",
-          text: "please complete form",
-        });
-      }
-  }
-
-  let Name, value;
-  const onChangeFunction = (e) => {
-    e.preventDefault();
-    Name = e.target.name;
-    value = e.target.value;
-
-    setNewtimetable({
-      ...newTimetable,
-      [Name]: value,
-    });
-  };
+  const {
+    createTimetbale,
+    // create Array
+    addToArray,
+    // onChange
+    onChangeFunction
+  } = TimetableFunc(
+    // class 
+    state.classReducer,
+    newTimetable,
+    setCategory,
+    Category,
+    // student
+    state.studentReducer.students,
+    // teacher
+    state.teacherReducer,
+    // timetable
+    state.timetableReducer,
+    id,
+    setId,
+    setNewtimetable,
+    // createTimetbale
+    dispatch,
+    UpdateTimetable,
+    Array,
+    CreateTimetable,
+    setArray,
+    Swal
+    ) 
 
   return (
     <>
       <div className="">
         <div className=" create-admin create-data">
           <p> create Timetable</p>
-          <form action="">
+          <Box
+                  component="form"
+                  sx={{
+                    '& .MuiTextField-root': { m: 2, width: '25ch' },
+                  }}
+                  noValidate
+                  autoComplete="off"
+                >
             {/* select teacher  */}
-            <Select
+            {
+              Array.length === 0  && <SelectData
               state={state.teacherReducer}
               name={"teacher_Id"}
               params={newTimetable.teacher_Id}
               onChangeFunction={onChangeFunction}
+              select={"Teacher"}
             />
+            }
+            
             {/* select student */}
             {newTimetable.teacher_Id ? (
-              <Select
-                state={state.studentReducer}
+              <SelectData
+                state={state.studentReducer.students}
                 name={"student_Id"}
                 params={newTimetable.student_Id}
                 onChangeFunction={onChangeFunction}
+                select={"Student"}
               />
             ) : (
               <></>
             )}
             {/* select class */}
-            {newTimetable.teacher_Id ? (
-              <Select
-                state={state.classReducer}
-                name={"class_Id"}
-                params={newTimetable.class_Id}
-                onChangeFunction={onChangeFunction}
-              />
+            {newTimetable.teacher_Id  ? (
+              <>
+                <SelectData
+                  state={state.classReducer}
+                  name={"class_Id"}
+                  params={newTimetable.class_Id}
+                  onChangeFunction={onChangeFunction}
+                  select={"Class"}
+                />
+              </>
             ) : (
               <></>
             )}
+            {Category.length > 0 && (
+              <>
+                <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+                  <InputLabel id="demo-simple-select-standard-label">select category </InputLabel>
+                  <Select
+                  labelId="demo-simple-select-standard-label"
+                  id="demo-simple-select-standard"
+                  name="category_name"
+                  value={newTimetable.category_name}
+                  onChange={(e) =>{
+                  onChangeFunction(e)}}
+                  
+                  >
+                    {Category.map((name,i) => {
+                      return (
+                        <MenuItem key={i} value={name}>{name}</MenuItem>
+                      );
+                    })}
+                  </Select>
+                </FormControl>
+              </>
+            ) }
             {/* set date */}
             {newTimetable.teacher_Id ? (
-              <input
+              <TextField
+                // label="age"
+                variant="outlined"
                 type="datetime-local"
                 name={"date"}
                 value={newTimetable.date || "YY-MM-DD"}
-                onChange={(e) => {
+                onChange={(e) =>{
                   onChangeFunction(e);
                 }}
-              />
+                />
             ) : (
               <></>
             )}
-            <button
-              onClick={(e) => {
-                addToArray(e)
+            {
+              !id && (
+                <Button
+                  onClick={(e) => {
+                    addToArray(e)
+                  }}
+                >
+                  {newTimetable.condition === true ? <span>Update</span> : <span>Create</span>}
+                </Button>
+              )
+            }
+            
+            {
+              id ? (
+                <Button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    createTimetbale(e);
+                  }}
+                >
+                update exist table
+                </Button>
+              ):(
+                <></>
+              )
+            }
+            
+            </Box>
+        </div>
+      </div>
+      {
+        Array.length ? (
+          <div 
+            style={ Array.length !== 0? {
+            border:'1px solid',
+            display:'flex',
+            flexWrap:"wrap",
+            position:"relative",
+            paddingTop:"50px"
+            } : {border:'none'}} >
+            <h5
+                style={Array.length !== 0? {
+                  position:"absolute",
+                  left:'50%',
+                  top:"5px",
+                  transform:"translateX(-50%)"
+                } : {display:"none"}}
+              >new Table</h5>
+            {<Table 
+              setNewtimetable={setNewtimetable} 
+              tableData={Array} 
+              setId={setId}
+              newTimetable={newTimetable}
+              />}
+              <Button
+              style={{
+                width:'90%',
+                margin:"10px auto",
+                border:"none",
+                backgroundColor:"blue",
+                color:"white",
+                borderRadius:'10px'
               }}
-            >
-              add
-              {/* {id ? <span>Update</span> : <span>Create</span>} */}
-            </button>
-            <button
               onClick={(e) => {
                 e.preventDefault();
                 createTimetbale(e);
               }}
             >
-              
-              {id ? <span>Update</span> : <span>save</span>}
-            </button>
-          </form>
-        </div>
-      </div>
-      <div 
-        style={ Array.length !== 0? {
-        border:'1px solid',
-        display:'flex',
-        flexWrap:"wrap",
-        position:"relative",
-        paddingTop:"50px"
-        } : {border:'none'}} >
-        <h5
-            style={Array.length !== 0? {
-              position:"absolute",
-              left:'50%',
-              top:"5px",
-              transform:"translateX(-50%)"
-            } : {display:"none"}}
-          >new Table</h5>
-        {<Table 
-          setNewtimetable={setNewtimetable} 
-          tableData={Array} 
-          setId={setId}
-          newTimetable={newTimetable} />}
-      </div>
-      
+              save
+            </Button>
+          </div>
+        ):(
+          <></>
+        )
+      }
         {newTimetable.teacher_Id ? (
           <div 
           style={{

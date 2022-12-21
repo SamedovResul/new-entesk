@@ -1,6 +1,7 @@
 const reducer = (state = [], action ) =>{
   switch (action.type) {
     case "FETCHTIMETABLE":
+      
       return action.payload;
     case "CREATETIMETABLE":
       const Array = action.payload
@@ -10,7 +11,6 @@ const reducer = (state = [], action ) =>{
     case "FETCHBYSEARCH":
       return  action.payload 
     case "ConfirmOrCancel":
-      console.log(action.payload)
       return  action.payload; 
     default:
       return state;

@@ -13,17 +13,17 @@ import TexnologyCourse from './component/technologyFolder/Course/Course';
 import SkillCours from './component/skillFolder/Course/Course';
 import LoginAdmin from './component/adminfolder/login/admin';
 import Teacher from './component/adminfolder/teacherFolder/Teacher';
-import Admintimetable from './component/adminfolder/admin/admintimetable';
+// 
+import Admintimetable from './component/adminfolder/admin/mainPanel/admintimetable';
 import Blogs from './component/adminfolder/blogfolder/blogs';
 import Createblog from './component/adminfolder/blogfolder/Createblog';
 import { useDispatch } from 'react-redux';
 import {getUser} from './reducer/blogReducer/action';
 import Create from './component/adminfolder/admin/create/create';
-import Metatesk from './component/metatesk/Metatesk'
+import Metatesk from './component/metatesk/Metatesk';
 
 function App(props) {
   const [certificates, setCertificates] = useState([])
-  console.log(certificates)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getUser())

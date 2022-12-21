@@ -1,16 +1,23 @@
 import React, {useEffect, useState} from 'react'
 import { useHistory } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
-import { CreateTeacher, UpdateTeacher,GetTeacher} from '../../../../reducer/crmRedux/action';
+import { CreateTeacher, UpdateTeacher,GetTeacher} from '../../../../../reducer/crmRedux/action';
 import Swal from 'sweetalert2'
-
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button'
+import Box from '@mui/material/Box';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
 
 const Classes = () => {
   const [data, setData] = useState({
     name:"",
     email:"",
     password:"",
-    status:0
+    status:'',
+    salary:0
   })
   const [id, setId] = useState({})
   const dispatch = useDispatch();
@@ -42,6 +49,7 @@ const Classes = () => {
         name:"",
         email:"",
         password:"",
+        status:''
       })
     }else{
       if(data.email && data.name && data.password && data.status){
@@ -50,6 +58,7 @@ const Classes = () => {
           name:"",
           email:"",
           password:"",
+          status:''
         })
         Swal.fire({
           color:"green",
@@ -67,46 +76,81 @@ const Classes = () => {
     }
   }
 
- 
   return (
     <>
       <div className="col-md-12">
         <div className=" create-admin create-teacher">
           <p>create teacher</p>
-          <form action="">
-            <label htmlFor="name">
-            name
-            <input type="name" id="name"
-            value={data.name}
-              onChange={(e) =>{
-                setData({
-                  ...data, name: e.target.value
-                })
-              }}
-            />
-            </label>
-            <label htmlFor="email">
-              email
-              <input type="email" id="email" 
-                value={data.email}
+          <Box
+                  component="form"
+                  sx={{
+                    '& .MuiTextField-root': { m: 2, width: '25ch' },
+                  }}
+                  noValidate
+                  autoComplete="off"
+                >
+            <TextField
+              label="name"
+              type="text"
+              variant="outlined"
+              value={data.name}
+                onChange={(e) =>{
+                  setData({
+                    ...data, name: e.target.value
+                  })
+                }}
+              />
+              <TextField
+              label="email"
+              type="email"
+              variant="outlined"
+              value={data.email}
                 onChange={(e) =>{
                   setData({
                     ...data, email:e.target.value
                   })
                 }}
               />
-            </label>
-            <label htmlFor="password">
-              password
-              <input type="password" id="password"
+            <TextField
+              label="password"
+              type="password"
+              variant="outlined"
+              value={data.password}
                 onChange={(e) =>{
                   setData({
                     ...data, password:e.target.value
                   })
                 }}
-                  />
-            </label>
-            <label htmlFor="status">
+              />
+              <TextField
+              label="salary"
+              type="number"
+              variant="outlined"
+              value={data.salary}
+                onChange={(e) =>{
+                  setData({
+                    ...data, salary:e.target.value
+                  })
+                }}
+              />
+              <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+                    <InputLabel id="demo-simple-select-standard-label">select</InputLabel>
+                   <Select
+                    labelId="demo-simple-select-standard-label"
+                    id="demo-simple-select-standard"
+                    onChange={(e)=>{
+                      setData({
+                        ...data, status: parseInt(e.target.value) 
+                      })
+                    }}
+                    value={data.status}
+                    label="status"
+                    >
+                      <MenuItem value="0">inactive</MenuItem>
+                      <MenuItem value="1">active</MenuItem>
+                    </Select>
+                  </FormControl>
+            {/* <label htmlFor="status">
               status
               <select name="" id="status"
                 onChange={(e)=>{
@@ -114,14 +158,14 @@ const Classes = () => {
                     ...data, status: parseInt(e.target.value) 
                   })
                 }}
+                value={data.status}
               >
-                <option >select status</option>
+                <option value="Default" >select status</option>
                 <option value="0">inactive</option>
                 <option value="1">active</option>
               </select>
-            </label>
-          </form>
-          <button onClick={() =>{ createTeacher()}}>
+            </label> */}
+            <Button variant="outlined" onClick={() =>{ createTeacher()}}>
                 {
                   id.id ? (
                     <span>update</span> 
@@ -129,18 +173,21 @@ const Classes = () => {
                     <span>create</span> 
                   )
                 }
-            </button>
+            </Button>
+          </Box>
+          
         </div>
       </div>
         {
           state.map((teacher, index) =>{
-            const {name, _id,email,status,} = teacher;
+            const {name, _id,email,status,salary} = teacher;
 
             return(
               <div key={_id} className="col-md-4">
                 <div className="info-table">
                   <p> <b>Teacher name:</b> {name}</p>
                   <p> <b>Email:</b> {email}  </p>
+                  <p> <b>salary:</b> {salary}  </p>
                   <p> <b> status: </b> {
                   status === 1? 
                   ( <span>active</span> ) :

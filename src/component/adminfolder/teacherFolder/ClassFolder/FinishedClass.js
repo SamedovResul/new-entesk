@@ -1,23 +1,26 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import ClassList from './ClassList'
 import { useSelector,useDispatch } from 'react-redux';
-import { searchByDateForTeacher } from '../../../../reducer/crmRedux/action';
+import { searchByDateForTeacher,Calculate } from '../../../../reducer/crmRedux/action';
 import Swal from 'sweetalert2'
 
 const FinishedClass = ({ReturnParms}) => {
   const [Query, setQuery] = useState({
     from:'',
     to:'',
-    // state:'',
+    state:'',
+    limit:'',
+    skip:''
   })
   const {Return, setReturn} = ReturnParms
+  const [boolean, setBoolean] = useState(false)
 
 
   const dispatch = useDispatch()
-  const table = useSelector((state) => state.teachertable)
+  const table = useSelector((state) => state.teachertable.table)
+  const count = useSelector((state) => state.teachertable.count)
 
-  console.log(table)
-
+  
   const Toast = Swal.mixin({
     toast: true,
     position: 'center',
@@ -25,32 +28,45 @@ const FinishedClass = ({ReturnParms}) => {
     timer: 2000,
     timerProgressBar: true,
   })
+
   const search = (e) =>{
     e.preventDefault()
-
-    if(Query.from || Query.to){
-      dispatch(searchByDateForTeacher(Query))
-      console.log(true)
+    if(Query.state === 1 && Query.from && Query.to){
+      dispatch(Calculate(Query))
+      setBoolean(true)
       setTimeout(() => {
         setReturn(Return + 1)
       }, 2000);
-      
       setQuery({
+        ...Query,
         from:'',
-        to:''
+        to:'',
       })
-
       Toast.fire({
         icon: 'success',
         title: 'Loading ...'
       })
-    }else{
+    }else if(Query.from && Query.to) {
+      dispatch(searchByDateForTeacher(Query))
+      setBoolean(false)
+      setTimeout(() => {
+        setReturn(Return + 1)
+      }, 2000);
+      setQuery({
+        ...Query,
+        from:'',
+        to:''
+      })
+      Toast.fire({
+        icon: 'success',
+        title: 'Loading ...'
+      })
+    } else  {
       Swal.fire({
         color:"red",
-        text: "please insert date",
+        text: "please complete form",
       })
     }
-
   }
 
   return (
@@ -58,36 +74,57 @@ const FinishedClass = ({ReturnParms}) => {
       {
         Return >= 1 ? 
         (
-          <ClassList table={table} />
-        ) 
-        :
-        (
+          <ClassList 
+            table={table}  
+            boolean={boolean} 
+            searchByDateForTeacher={searchByDateForTeacher}
+            dispatch={dispatch}
+            count={count}
+            Query={Query}
+            setQuery={setQuery}
+            Calculate={Calculate}
+          />
+        ) : (
           <form action="">
             <p>Start Date</p>
             <input type="date" onChange={(e) => setQuery({
-              ...Query ,from: e.target.value
+              ...Query,
+              from: e.target.value,
+              limit:5,
+              skip:1
             }) } />
             <p>End Date</p>
             <input type="date" onChange={(e) => setQuery({
               ...Query ,to: e.target.value
             }) } />
+
             <button onClick={(e) => {
               search(e)
             } }>
               Query
             </button>
+            
+            <label htmlFor="state" onChange={(e) =>{
+              if(e.target.checked){
+                setQuery({
+                  ...Query,
+                  state:1
+                })
+              }else{
+                setQuery({
+                  ...Query,
+                  state:''
+                })
+              }
+            }}
+            >
+            calculate confirmed class: 
+            <input type="checkbox"  id='state' 
+              defaultChecked={Query.state === 1 && true} />
+             </label>
           </form> 
         )
       }
-      {/* <form action="">
-        <p>Start Date</p>
-        <input type="date"  />
-        <p>End Date</p>
-        <input type="date"  />
-        <button>
-          Query
-        </button>
-      </form> */}
     </article>
   )
 }

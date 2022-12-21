@@ -2,7 +2,7 @@ import axios from 'axios'
 
 
 // http://localhost:5000/ https://metatesk.herokuapp.com/
-const API = axios.create({ baseURL: 'https://metatesk.herokuapp.com/' });
+const API = axios.create({ baseURL: 'http://localhost:5000/' });
 
 
 // token
@@ -47,6 +47,11 @@ export const updateClass = (id, data) =>{
   return API.patch(`/class/${id}`, data)
 }
 
+export const addCategory = (id, data) =>{
+
+  return API.patch(`/class/addCategory/${id}`, data)
+}
+
 export const deleteClass = (id) =>{
 
   return API.delete(`/class/${id}`)
@@ -72,8 +77,12 @@ export const updateTeacher = (id, data) =>{
 
 //  get post teacher search
 
-export const getTeacherTable = (id) =>{
-  return API.patch(`/teacher/${id}`)
+export const getTeacherTable = (data) =>{
+  return API.get(`/teacher?limit=${data.limit}&skip=${data.skip}`)
+}
+
+export const getTeacherCalendar = () =>{
+  return API.get('/teacher/calendar')
 }
 
 export const createComment = (data) =>{
@@ -82,10 +91,16 @@ export const createComment = (data) =>{
 
 export const SearchByDateForTeacher = (search) =>{
   return API.get(
-    `/teacher/search?startDate=${search.from}&endDate=${search.to}&state=${search.state}`
+    `/teacher/search?startDate=${search.from}&endDate=${search.to}&state=${search.state}&limit=${search.limit}&skip=${search.skip}`
     )
 }
 
+
+export const calculate = (data) =>{
+  return API.get(
+    `/teacher/calculate?startDate=${data.from}&endDate=${data.to}&state=${data.state}&limit=${data.limit}&skip=${data.skip}`
+    )
+}
 // create, update get  student
 
 export const getStudent = () =>{
@@ -99,11 +114,12 @@ export const createStudent = (data) =>{
 }
 
 export const updateStudent = (id, data) =>{
-
   return API.patch(`/student/${id}`, data)
 }
 
-
+export const fetchByBirthday = () =>{
+  return API.get(`/student/birthDay`)
+}
 
 // Timetable create get update
 
@@ -125,7 +141,7 @@ export const updateTimetable = (data,id) =>{
 
 export const SearchByDate = (search) =>{
   return API.get(
-    `/timeTable/search?startDate=${search.from}&endDate=${search.to}&teacher_Name=${search.teacher_Name}&student_Name=${search.student_Name}`
+    `/timeTable/search?startDate=${search.from}&endDate=${search.to}&teacher_Name=${search.teacher_Name}&student_Name=${search.student_Name}&table_State=${search.table_State}`
     )
 }
 

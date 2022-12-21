@@ -1,8 +1,17 @@
 /* main-admin-page */
 
-.main-admin-page{
-  margin-top: 60px;
+.main-Dashboard{
+  padding-top: 20px;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  border: 1px solid;
+  position: fixed;
 }
+
+/* .main-admin-page{
+  margin-top: 60px;
+/* } */
 
 .main-admin-page .col-md-12{
   display: flex;
@@ -15,10 +24,28 @@
   margin: 20px 0px;
 }
 
+.parent-table-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.parent-table-box > p{
+  width: 100%;
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 30px;
+  color: blue;
+  font-family: "Nunito";
+}
+
 .table-box  {
   border-radius: 20px;
   padding: 10px;
   border: 2px dashed rgb(77, 63, 63);
+  margin: 10px;
+  width: 45%;
 }
 
 .table-box p{
@@ -29,7 +56,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-}
+} 
 
 .btn-div  button{
   border-radius: 10px;
@@ -45,13 +72,32 @@
 
 .btn-div button:nth-child(2){
   background-color: red;
+} 
+
+
+.mainContainer{
+  width: 75%;
 }
 
 /* create-page */
 
 
+.sideContainer{
+  border: 1px solid;
+  width: 25%;
+  height: 100%;
+}
+
+.sideContainer p{
+  margin: 10px 10px auto;
+  font-size: 25px;
+}
+
 .create-page{
   margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  /* ju */
 }
 
 .return{
@@ -83,7 +129,6 @@
 }
 
 .login-form form{
-  border: 1px solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,14 +136,13 @@
   padding:100px;
 }
 
-.login-form label {
-  display: inline-block;
-  padding: 10px;
-}
 
-.login-form input {
-  height: 40px;
+
+.login-form
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
   margin: 10px;
+  width: 400px;
+  height: 60px;
 }
 
 
@@ -121,12 +165,12 @@
 
 .create-button{
   position: fixed;
-  border:3px solid rgb(53, 43, 43);
-  bottom: 50px;
+  border: 3px solid rgb(53, 43, 43);
+  top: 11%;
   right: 50px;
-  padding: 10px 25px;
+  padding: 0px 18px;
   border-radius: 20px;
-  font-size: 30px;
+  font-size: 25px;
   color: red;
   background-color: unset;
 }
@@ -152,9 +196,6 @@
   align-items: center;
 }
 
-.create-admin form label{
-  margin: 10px;
-}
 
 .create-admin form label input{
   margin-left: 5px;
@@ -166,7 +207,13 @@
   border-radius: 20px;
   color: white;
   padding: 5px 20px;
+  margin: 10px;
 }
+
+.create-admin button:hover{
+  color: black;
+}
+
 
 .create-admin input{
   border-radius: 20px;
@@ -213,6 +260,9 @@
 
 /* create class */
 
+.class-Name{
+  overflow: scroll;
+}
 
 .create-class{
   width: 100%;
@@ -239,20 +289,46 @@
   width: 100%;
   text-align: center;
   height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0px;
 }
 
 .create-student form{
-  width: 100%;
-  margin: 30px auto;
-  height: auto;
-  flex-wrap: wrap;
+  width: 48%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 20px;
 }
 
-.create-student label{
+/* .create-student label{
   margin: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+} */
+
+.create-student label input{
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid;
+  outline: none !important;
 }
 
+
+.birthDay{
+  width: 48%;
+  border: 1px solid;
+  height: 600px;
+  margin: 10px auto;
+  border-radius: 20px;
+}
 
 /* create student */
 
@@ -272,14 +348,18 @@
 /* create box */
 
 .create-box{
-  border: 1px solid black;
-  width: 100%;
   text-align: center;
-  padding: 20px;
+  margin: 5px auto !important;
+  width: 20%;
+  border: 1px solid;
+  padding: 10px;
   border-radius: 20px;
-  cursor: pointer;
 }
 
+
+.create-box h3{
+  font-size: 20px;
+}
 /* teacher page */
 
 
@@ -288,25 +368,33 @@
 
 .get-date{
   width: 100%;
-  border: 1px solid black;
+  border: 2px dashed  blue;
+  border-radius: 20px;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   margin: 20px auto;
 }
 
-.get-date button{
-  background-color: green;
-  padding: 6px 10px;
-  margin: 20px 5px;
-  border: 1px solid whe;
-  border-radius: 20px;
+
+.get-date
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
+  width: 300px;
+  margin: 20px;
 }
 
-.get-date label{
-  font-size: 20px;
+
+.get-date
+.css-1rwt2y5-MuiButtonBase-root-MuiButton-root{
+  margin: 20px;
 }
 
-.get-date label input{
+/* .get-date label{
   margin: 10px;
-}
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+} */

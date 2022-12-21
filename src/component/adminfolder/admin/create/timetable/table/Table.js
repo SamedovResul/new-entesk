@@ -1,6 +1,6 @@
 import React from "react";
 
-const Table = ({setNewtimetable,tableData,newTimetable }) => {
+const Table = ({setNewtimetable,tableData,newTimetable,setId }) => {
   return (
     <>
       {tableData.map((timetable, index) => {
@@ -11,11 +11,8 @@ const Table = ({setNewtimetable,tableData,newTimetable }) => {
           class_Name,
           class_Id,
           date,
-          _id,
-          table_State,
-          teacher_Id
+          category_name
         } = timetable;
-        console.log(teacher_Id)
         const time = new Date(date);
         const dates = time.getDate();
         const month = time.getMonth();
@@ -24,25 +21,28 @@ const Table = ({setNewtimetable,tableData,newTimetable }) => {
             <div key={index} className="col-md-4">
               <div className="info-table">
                 <p>
-                  <b>teacher:</b> {teacher_Name}{" "}
+                  <b>teacher:</b> {teacher_Name}
                 </p>
                 <p>
-                  <b>student:</b> {student_Name}{" "}
+                  <b>student:</b> {student_Name}
                 </p>
                 <p>
-                  <b>class:</b> {class_Name}{" "}
+                  <b>class:</b> {class_Name}
                 </p>
                 <p>
-                  <b>date:</b> {year}:
-                  {month.toString().length === 1 ? `0${month}` : month}:
-                  {dates.toString().length === 1 ? `0${dates}` : dates}
+                  <b>category:</b> {category_name}
+                </p>
+                <p>
+                  <b>date:</b> {year}/
+                  {month.toString().length === 1 ? `0${month + 1}` : month + 1}/
+                  {dates.toString().length === 1 ? `0${dates }` : dates }
                 </p>
                 <p>
                   <b>time:</b>
                   {`${
-                    time.getUTCHours().toString().length === 1
-                      ? `0${time.getUTCHours()}`
-                      : `${time.getUTCHours()}`
+                    time.getHours().toString().length === 1
+                      ? `0${time.getHours()}`
+                      : `${time.getHours()}`
                   }
                     :${
                       time.getUTCMinutes().toString().length === 1
@@ -59,8 +59,10 @@ const Table = ({setNewtimetable,tableData,newTimetable }) => {
                       date,
                       class_Id,
                       student_Id,
+                      category_name,
+                      index:index,
+                      condition:true
                     })
-                    // console.log(newTimetable)
                   }}
                 >
                   update

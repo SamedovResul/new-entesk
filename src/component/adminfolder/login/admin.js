@@ -4,7 +4,9 @@ import {useDispatch } from 'react-redux';
 import {SignInAdmin} from '../../../reducer/crmRedux/action'
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button'
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -18,16 +20,14 @@ const Login = () => {
   // console.log(admin)
   const SignIn = (e) => {
     e.preventDefault();
-    
     if(admin.email && admin.password){
       dispatch(SignInAdmin(admin,history))
     }else{
       alert("please insert email and password")
     }
-
   }
 
-  // console.log(admin)
+  console.log(admin)
   return (
    <>
    <div className="container">
@@ -36,26 +36,27 @@ const Login = () => {
          <div className="col-md-12">
            <div className='login-form' >
             <form action="">
-                <label htmlFor="email">
-                  email:
-                </label>
-                 <input type="email" id='email' 
+                <TextField
+                  id="outlined-password-input"
                   onChange={(e)=> setAdmin({
-                    ...admin, email: e.target.value
-                  }) } />
+                    ...admin,  email: e.target.value
+                  })}
+                  label="email"
+                  type="email"
+                  variant="outlined"
+                />
 
-                <label htmlFor="password">
-                password:
-                </label>
-                 <input type="password" id='password' 
+                <TextField
+                  id="outlined-email-input"
                   onChange={(e)=> setAdmin({
                     ...admin,  password: e.target.value
                   })}
-                   />
-                
-                <button onClick={SignIn} >
-                  SignIn
-                </button>
+                  label="Password"
+                  type="password"
+                  autoComplete="current-password"
+                  variant="outlined"
+                />
+                <Button variant="outlined" onClick={SignIn}>SignIn</Button>
               </form>
            </div>
          </div>

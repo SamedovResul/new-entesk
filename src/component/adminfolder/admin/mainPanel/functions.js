@@ -1,0 +1,90 @@
+import React,{useEffect,useState} from 'react'
+
+const Functions = (
+  // get data from back
+  dispatch,
+  GetTimetable,
+  GetTeacher,
+  // searching table
+  searchByDate,
+  date,
+  setSearch,
+  // confirm or cancel
+  setBoolean,
+  confirmOrCancel,
+  // get search data
+  getDate,
+  // get birthday
+  GetStudent,
+  // searchingState
+  searchingState
+) => {
+  
+  // get data from back
+  useEffect(() => {
+    dispatch(GetTimetable());
+    dispatch(GetTeacher());
+    dispatch(GetStudent())
+  }, []);
+
+
+  // searching table
+  const Searching = (e) => {
+    e.preventDefault();
+    if(date.from || date.to || date.teacher_Name || date.student_Name || date.table_State){
+      dispatch(searchByDate(date));
+      setSearch(true);
+    }
+  };
+
+  
+
+  // get today
+  const today = (e) => {
+    e.preventDefault();
+    dispatch(GetTimetable());
+    setSearch(false);
+  };
+
+  
+  // confirm or gancel
+  const ConCanHandler = (id, conData) => {
+    setBoolean(id);
+    let data = {
+      table_State: conData,
+    };
+    dispatch(confirmOrCancel(id, data));
+  };
+
+  // onChangeFunction
+
+  let value, Name
+
+  const onChangeFunction = (e) =>{
+    // e.preventDefault();
+    Name = e.target.name;
+    value = e.target.value;
+    getDate({
+      ...date,
+      [Name]: value,
+    })
+  }
+
+  // 
+
+  const style ={
+    display: "flex", 
+    flexWrap:"wrap",
+    height:'auto', 
+  }
+
+  return{
+    Searching,
+    today,
+    ConCanHandler,
+    onChangeFunction,
+    style
+  }
+}
+
+export default Functions

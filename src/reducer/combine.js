@@ -18,5 +18,5 @@ export default combineReducers({
   teacherReducer,
   teachertable,
   studentReducer,
-  searchReducer
+  // searchReducer
 })

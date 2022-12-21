@@ -80,6 +80,7 @@ form input {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+  overflow: scroll;
 }
 
 .main-teacher-page
@@ -111,14 +112,24 @@ form input {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .Schedule-section form{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+
+.Schedule-section
+.Schedule-list{
+  width: 90%;
+  height: 75%;
+  padding: 20px;
 }
 
 /* Calendar-section */
@@ -135,8 +146,9 @@ form input {
 .Calendar-section
 table {
   font-family: arial, sans-serif;
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
   width: auto;
+  border: none;
 }
 
 

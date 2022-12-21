@@ -1,13 +1,17 @@
-const reducer = (state = [], action ) =>{
+const reducer = (state = {students:[], birthDay:[]}, action ) =>{
+  const {students} = state
   switch (action.type) {
     case "FETCHSTUDENTDATA":
-      // console.log(state);
-      return action.payload;
+      return { ...state, students: action.payload.students, birthDay: action.payload.birthDay}
     case "CREATESTUDENT":
-      // console.log(action.payload)
-      return [...state, action.payload]
+      students.push(action.payload)
+      return {...state ,students:students}
     case "UPDATESTUDENT":
-      return state.map((teacher) =>(teacher._id === action.payload._id? action.payload: teacher))
+      return {
+        ...state, students: students.map((students) =>(students._id === action.payload._id? action.payload: students))
+      }
+    case "FETCHBYBIRTHDAY":
+      return {...state,birthDay: action.payload }
     default:
       return state;
   }

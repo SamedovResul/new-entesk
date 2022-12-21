@@ -1,16 +1,22 @@
 
 
 
-const reducer = (state = [], action ) =>{
+const reducer = (state = {table:[], count:''}, action ) =>{
+
   switch (action.type) {
     case "GETTEACHERTABLE":
-      // console.log(action.payload.token);
-      return action.payload
+      return { ...state, table: action.payload.tables, count: action.payload.count }
     case "CREATECOMMENT" :
-      return state.map((teacher) =>(teacher._id === action.payload._id? action.payload: teacher))
+      const {table} = state
+      return {
+        ...state, table: table.map((teacher) =>(teacher._id === action.payload._id? action.payload: teacher))
+      }
     case "SEARCH_BY_DATE_FOR_TEACHER":
-      // console.log(action.payload.token);
-      return action.payload
+      return { ...state, table: action.payload.tables, count: action.payload.count }
+    case "CALCULATE":
+      return { ...state, table: action.payload.tables, count: action.payload.count }
+    case "GETTEACHERCALENDAR":
+      return { ...state, table: action.payload }
     default:
       return state;
   }

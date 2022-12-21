@@ -6,21 +6,25 @@ import {
   updateClass,
   getClass, 
   deleteClass,
+  addCategory,
   getTeacher,
   createTeacher,
   updateTeacher,
   getStudent,
   createStudent,
   updateStudent,
+  fetchByBirthday,
   getTimetable,
   updateTimetable,
   getTeacherTable,
+  getTeacherCalendar,
   createComment,
   SearchByDate,
   ConfirmOrCancel,
-  SearchByDateForTeacher
+  SearchByDateForTeacher,
+  calculate
 } from './api'
- 
+import Swal from 'sweetalert2'
 
 
 // admin  get, create, update, delete 
@@ -31,6 +35,8 @@ export const SignInAdmin = (adminData,router) => async (dispatch) => {
     const { data } = await SigninAdmin(adminData);
     console.log(data)
     dispatch({ type: "SIGNIN", payload: data });
+    
+
     if(data.superAdmin.role === 1){
       router.push('/adminTimetable')
     }else if(data.superAdmin.role === 0) {
@@ -82,8 +88,16 @@ export const UpdateClass= (id,classData) => async (dispatch) =>{
    
   try {
     const {data} = await updateClass(id,classData)
-    console.log(data)
     dispatch({type:"UPDATECLASS", payload: data})
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+export const AddCategory = (id,classData) => async (dispatch) =>{
+  try {
+    const {data} = await addCategory(id,classData)
+    dispatch({type:"ADDCATEGORY", payload: data})
   } catch (error) {
     console.log(error.message);
   }
@@ -151,6 +165,18 @@ export const GetTeacherTable = (id) => async (dispatch) =>{
   }
 }
 
+export const GetTeacherCalendar = () => async (dispatch) =>{
+
+
+  try {
+    const {data} = await getTeacherCalendar()
+
+    dispatch({type:"GETTEACHERCALENDAR", payload:data})
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
 export const CreateComment = (comment) => async (dispatch)  =>{
   try {
     const {data} = await createComment(comment)
@@ -164,9 +190,18 @@ export const CreateComment = (comment) => async (dispatch)  =>{
 
 export const searchByDateForTeacher = (search) => async (dispatch)  =>{
   try {
-    console.log(search)
     const {data} = await SearchByDateForTeacher(search)
     dispatch({type:"SEARCH_BY_DATE_FOR_TEACHER", payload:data })
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+export const Calculate = (search) => async (dispatch)  =>{
+  try {
+    console.log(search)
+    const {data} = await calculate(search)
+    dispatch({type:"CALCULATE", payload:data })
   } catch (error) {
     console.log(error.message);
   }
@@ -207,6 +242,16 @@ export const UpdateStudent = (id,studentData) => async (dispatch) =>{
   }
 }
 
+export const FetchByBirthday = () => async (dispatch) =>{
+   
+  try {
+    const {data} = await fetchByBirthday()
+    dispatch({type:"FETCHBYBIRTHDAY", payload: data})
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
 // Timetable create update get
 
 
@@ -228,7 +273,6 @@ export const CreateTimetable = (timetableData) => async (dispatch) =>{
   try {
     
     const {data} = await createTimetable(timetableData)
-    console.log(data)
     dispatch({type:"CREATETIMETABLE", payload:data})
   } catch (error) {
     console.log(error.message);
