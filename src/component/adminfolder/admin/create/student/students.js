@@ -20,12 +20,6 @@ const Classes = () => {
     Email:'',
     ClassAmount:'',
     status:'',
-    teacherName:"",
-    teacherId:"",
-    dateOne:'',
-    timeOne:'',
-    dateTwo:'',
-    timeTwo:''
   })
   
   const [id, setId] = useState({})
@@ -55,7 +49,6 @@ const Classes = () => {
     // 
     teacher
     )
-    console.log(data)
   return (
     <>
 

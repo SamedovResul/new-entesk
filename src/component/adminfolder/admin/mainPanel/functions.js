@@ -31,7 +31,7 @@ const Functions = (
   // searching table
   const Searching = (e) => {
     e.preventDefault();
-    if(date.from || date.to || date.teacher_Name || date.student_Name || date.table_State){
+    if(date.from || date.to || date.teacher_Id || date.student_Name || date.table_State){
       dispatch(searchByDate(date));
       setSearch(true);
     }
@@ -44,6 +44,13 @@ const Functions = (
     e.preventDefault();
     dispatch(GetTimetable());
     setSearch(false);
+    getDate({
+      from: "",
+      to: "",
+      teacher_Id: "",
+      student_Name: "",
+      table_State: "",
+    })
   };
 
   

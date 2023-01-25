@@ -133,7 +133,6 @@ const Classes = () => {
     })
   }
   const deleteClass =(id) =>{
-    console.log(id)
     dispatch(DeleteClass(id))
   }
   return (
@@ -261,16 +260,22 @@ const Classes = () => {
                     <p> <b>Category Name:</b>  {
                       class_Category.map((category) => `${category}, ` )
                     } </p>
-                    <button
+                    <Button
                       onClick={()=>{setId({id: _id}) }} >
                       update
-                    </button>
-                    <button
+                    </Button>
+                    <Button
                       onClick={()=>{
                         setId({...id, id: _id, category:true}) 
                         }} >
                       add category
-                    </button>
+                    </Button>
+                    <Button
+                      onClick={()=>{
+                        deleteClass(_id) 
+                        }} >
+                      delete Class
+                    </Button>
                   </div>
                 </div>
               )

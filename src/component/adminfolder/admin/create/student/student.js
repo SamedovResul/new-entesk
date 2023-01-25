@@ -24,6 +24,7 @@ const Student = ({state,setId}) => {
                 <p> <b>Email:</b> {Email}  </p>
                 <p> <b>age:</b> {age}  </p>
                 <p> <b>ClassAmount:</b> {ClassAmount}  </p>
+                <p> <b>status:</b> {status ? ( <>active</> ) : ( <>inactive</> )}  </p>
                 <Button
                   onClick={()=>{setId({id: _id}) }} >
                   update

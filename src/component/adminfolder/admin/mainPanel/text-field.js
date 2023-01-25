@@ -2,7 +2,7 @@ import React from 'react'
 import TextField from '@mui/material/TextField';
 
 
-const Textfield = ({type,name,onChangeFunction}) => {
+const Textfield = ({type,name,onChangeFunction,date}) => {
   return (
       <TextField 
         label={`select ${name}`}

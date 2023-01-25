@@ -179,7 +179,6 @@ body {
 }
 
 .entesk {
-  /* border: 1px solid black; */
   position: absolute;
   left: 0;
   right: 0;
@@ -213,7 +212,6 @@ svg{
 }
 
 
-/* https://www.google.com/search?q=how+to+make+css+display+for+safari+browser&rlz=1C5CHFA_enAZ889AZ889&oq=how+to+make+css+display+for+safari+brow&aqs=chrome.1.69i57j33i10i160.934440j0j7&sourceid=chrome&ie=UTF-8 */
 @media(max-width:1199px){
   .desktopBurger{
     display: none;
@@ -294,6 +292,21 @@ svg{
   display: flex;
   flex-direction: column;
   z-index: 999;
+}
+
+@media(max-width: 1199px){
+  .sidebar .nav-menu{
+    display: block;
+  }
+
+  .sidebar .nav-menu .ul-nav{
+    display: block;
+  }
+
+  .sidebar .nav-menu .ul-nav li{
+    padding-left: 20px;
+    margin: 0px !important;
+  }
 }
 
 .sidebar ul {

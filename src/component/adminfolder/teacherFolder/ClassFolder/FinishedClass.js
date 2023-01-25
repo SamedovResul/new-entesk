@@ -37,11 +37,7 @@ const FinishedClass = ({ReturnParms}) => {
       setTimeout(() => {
         setReturn(Return + 1)
       }, 2000);
-      setQuery({
-        ...Query,
-        from:'',
-        to:'',
-      })
+      
       Toast.fire({
         icon: 'success',
         title: 'Loading ...'
@@ -52,11 +48,6 @@ const FinishedClass = ({ReturnParms}) => {
       setTimeout(() => {
         setReturn(Return + 1)
       }, 2000);
-      setQuery({
-        ...Query,
-        from:'',
-        to:''
-      })
       Toast.fire({
         icon: 'success',
         title: 'Loading ...'
@@ -68,6 +59,17 @@ const FinishedClass = ({ReturnParms}) => {
       })
     }
   }
+// when return query 
+  useEffect(() => {
+    if(Return === 0){
+      setQuery({
+        ...Query,
+        from:'',
+        to:'',
+      })
+    }
+  }, [Return])
+  
 
   return (
     <article className='Finished-class-Section'>

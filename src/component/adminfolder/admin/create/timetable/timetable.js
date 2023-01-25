@@ -1,14 +1,21 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import { useSelector } from "react-redux";
 import {
   GetTimetable,
   CreateTimetable,
   UpdateTimetable,
+  CreateTeacherCalendar,
+  GetCalendar,
+  UpdateCalendar
 } from "../../../../../reducer/crmRedux/action";
 import { useDispatch } from "react-redux";
 import SelectData from "./select/select";
+import SelectClass from "./select/selectClass";
 import Table from "./table/Table";
 import ExistTable from "./table/existTable";
+import TimeTableForm from "./timeTableForm/TimeTableForm";
+import Index from "./exist&newTableFolder";
+import CalendarForm from "./calendarForm";
 import Swal from "sweetalert2";
 import { positions } from "react-alert";
 import TimetableFunc from "./function/function";
@@ -19,12 +26,12 @@ import InputLabel from '@mui/material/InputLabel';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button'
 import Box from '@mui/material/Box';
+import NewCalendarTable from './calendarTable/newCalendar'
+import ExistCalendarTable from './calendarTable/existCalendar'
+
 
 const Create = () => {
   const [id, setId] = useState("");
-
-
-
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(GetTimetable());
@@ -45,8 +52,10 @@ const Create = () => {
     index:'',
     condition:false
   });
+
   const [Array, setArray] = useState([]);
   let [Category, setCategory] = useState([])
+  const [tableAndCalendar, setTableAndCalendar] = useState(0)
   //  add class
 
   const {
@@ -54,7 +63,13 @@ const Create = () => {
     // create Array
     addToArray,
     // onChange
-    onChangeFunction
+    onChangeFunction,
+    // create calendar
+    onChangeForCalendar,
+    // calendar reducer
+    State,
+    Dispatch,
+    createCalendar
   } = TimetableFunc(
     // class 
     state.classReducer,
@@ -76,198 +91,105 @@ const Create = () => {
     Array,
     CreateTimetable,
     setArray,
-    Swal
-    ) 
-
+    Swal,
+    // cerate calendar
+    CreateTeacherCalendar,
+    state.calendarReducer,
+    UpdateCalendar
+  ) 
+  const { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday } = State;
   return (
     <>
-      <div className="">
-        <div className=" create-admin create-data">
-          <p> create Timetable</p>
-          <Box
-                  component="form"
-                  sx={{
-                    '& .MuiTextField-root': { m: 2, width: '25ch' },
-                  }}
-                  noValidate
-                  autoComplete="off"
-                >
-            {/* select teacher  */}
-            {
-              Array.length === 0  && <SelectData
-              state={state.teacherReducer}
-              name={"teacher_Id"}
-              params={newTimetable.teacher_Id}
-              onChangeFunction={onChangeFunction}
-              select={"Teacher"}
-            />
-            }
-            
-            {/* select student */}
-            {newTimetable.teacher_Id ? (
-              <SelectData
-                state={state.studentReducer.students}
-                name={"student_Id"}
-                params={newTimetable.student_Id}
-                onChangeFunction={onChangeFunction}
-                select={"Student"}
-              />
-            ) : (
-              <></>
-            )}
-            {/* select class */}
-            {newTimetable.teacher_Id  ? (
-              <>
-                <SelectData
-                  state={state.classReducer}
-                  name={"class_Id"}
-                  params={newTimetable.class_Id}
-                  onChangeFunction={onChangeFunction}
-                  select={"Class"}
-                />
-              </>
-            ) : (
-              <></>
-            )}
-            {Category.length > 0 && (
-              <>
-                <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-                  <InputLabel id="demo-simple-select-standard-label">select category </InputLabel>
-                  <Select
-                  labelId="demo-simple-select-standard-label"
-                  id="demo-simple-select-standard"
-                  name="category_name"
-                  value={newTimetable.category_name}
-                  onChange={(e) =>{
-                  onChangeFunction(e)}}
-                  
-                  >
-                    {Category.map((name,i) => {
-                      return (
-                        <MenuItem key={i} value={name}>{name}</MenuItem>
-                      );
-                    })}
-                  </Select>
-                </FormControl>
-              </>
-            ) }
-            {/* set date */}
-            {newTimetable.teacher_Id ? (
-              <TextField
-                // label="age"
-                variant="outlined"
-                type="datetime-local"
-                name={"date"}
-                value={newTimetable.date || "YY-MM-DD"}
-                onChange={(e) =>{
-                  onChangeFunction(e);
-                }}
-                />
-            ) : (
-              <></>
-            )}
-            {
-              !id && (
-                <Button
-                  onClick={(e) => {
-                    addToArray(e)
-                  }}
-                >
-                  {newTimetable.condition === true ? <span>Update</span> : <span>Create</span>}
-                </Button>
-              )
-            }
-            
-            {
-              id ? (
-                <Button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    createTimetbale(e);
-                  }}
-                >
-                update exist table
-                </Button>
-              ):(
-                <></>
-              )
-            }
-            
-            </Box>
-        </div>
-      </div>
+    <div className="">
       {
-        Array.length ? (
-          <div 
-            style={ Array.length !== 0? {
-            border:'1px solid',
-            display:'flex',
-            flexWrap:"wrap",
-            position:"relative",
-            paddingTop:"50px"
-            } : {border:'none'}} >
-            <h5
-                style={Array.length !== 0? {
-                  position:"absolute",
-                  left:'50%',
-                  top:"5px",
-                  transform:"translateX(-50%)"
-                } : {display:"none"}}
-              >new Table</h5>
-            {<Table 
-              setNewtimetable={setNewtimetable} 
-              tableData={Array} 
-              setId={setId}
-              newTimetable={newTimetable}
-              />}
-              <Button
-              style={{
-                width:'90%',
-                margin:"10px auto",
-                border:"none",
-                backgroundColor:"blue",
-                color:"white",
-                borderRadius:'10px'
-              }}
-              onClick={(e) => {
-                e.preventDefault();
-                createTimetbale(e);
-              }}
-            >
-              save
-            </Button>
-          </div>
-        ):(
-          <></>
-        )
+        <>
+          <Button onClick={()=> setTableAndCalendar(1) } >
+            Table
+          </Button>
+          <Button onClick={()=> setTableAndCalendar(2) } >
+            Calendar
+          </Button>
+        </>
       }
-        {newTimetable.teacher_Id ? (
-          <div 
-          style={{
-            border:'1px solid',
-            display:'flex',
-            flexWrap:"wrap",
-            position:"relative",
-            paddingTop:"50px"
-          }}
-        >
-          <h5
-            style={{
-              position:"absolute",
-              left:'50%',
-              top:"5px",
-              transform:"translateX(-50%)"
-            }}
-          >Existing Table</h5>
-          <ExistTable
-            teacher={newTimetable.teacher_Id}
-            tableData={state.timetableReducer}
-            setId={setId}
+
+      {/* calendar & time table form */}
+      {
+        tableAndCalendar === 1 ?(
+          <TimeTableForm 
+            Box={Box}
+            Array={Array}
+            SelectData={SelectData}
+            SelectClass={SelectClass}
+            Select={Select}
+            newTimetable={newTimetable}
+            Category={Category}
+            FormControl={FormControl}
+            InputLabel={InputLabel}
+            MenuItem={MenuItem}
+            id={id}
+            Button={Button}
+            state={state}
+            onChangeFunction={onChangeFunction}
+            TextField={TextField}
+            addToArray={addToArray}
+            createTimetbale={createTimetbale}
           />
-          </div>
-        ) : (
-          <></>
-        )}
+        ) :tableAndCalendar === 2 ?(
+          <CalendarForm
+            Box={Box}
+            id={id}
+            Button={Button}
+            state={state}
+            State={State}
+            Dispatch={Dispatch}
+            GetCalendar={GetCalendar}
+            dispatch={dispatch}
+          />
+        ) : <></>
+      }
+      
+    </div>
+
+      {/* exist & new table */}
+      {
+        tableAndCalendar === 1?  (
+          <Index
+          Table={Table}
+          setNewtimetable={setNewtimetable}
+          Array={Array}
+          setId={setId}
+          newTimetable={newTimetable}
+          Button={Button}
+          createTimetbale={createTimetbale}
+          ExistTable={ExistTable}
+          state={state}
+          />
+        ): tableAndCalendar === 2 ?(
+          <>
+            {
+              <NewCalendarTable 
+                State={State} 
+                createCalendar={createCalendar}
+                Button={Button}
+                Dispatch={Dispatch}
+              />
+            }
+            
+            {
+              state.calendarReducer._id &&  (
+                <ExistCalendarTable 
+                  Button={Button}
+                  Dispatch={Dispatch}
+                  data={state.calendarReducer}
+                  
+                />
+              )
+            }
+          </>
+        ) : <></>
+      }
+
+      
       
     </>
   );

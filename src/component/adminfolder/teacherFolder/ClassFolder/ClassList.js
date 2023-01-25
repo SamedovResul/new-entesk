@@ -17,7 +17,7 @@ const ClassList = ({
     }
     if(Query.state === 1){
       dispatch(Calculate(Query))
-      // console.log(Query)
+      console.log(Query)
     }
     if(Query.state !== 1){
       dispatch(searchByDateForTeacher(Query))
@@ -25,6 +25,7 @@ const ClassList = ({
     }
     
   }, [Query.skip])
+
 
   return (
     <article>
@@ -46,12 +47,16 @@ const ClassList = ({
           </tr>
         {
           (table.map((data,i) =>{
+            table.sort( function(a, b) {
+              return a.date.localeCompare(b.date);
+            })
             const {student_Name,date,class_Name,_id,table_State,class_Comment} = data
             const lessonDate = new Date(date)
+            console.log(lessonDate.getUTCHours().toString())
             return(
               <tr key={i} >
                 <td> {student_Name} </td>
-                <td> {`${lessonDate.getUTCHours().toString().length === 1 ? `0${lessonDate.getHours()}`:`${lessonDate.getHours()}`}
+                <td> {`${lessonDate.getHours().toString().length === 1 ? `0${lessonDate.getHours()}`:`${lessonDate.getHours()}`}
                         :${lessonDate.getUTCMinutes().toString().length === 1 ? `0${lessonDate.getUTCMinutes()}`:`${lessonDate.getUTCMinutes()}`}`} </td>
                 <td> {lessonDate.getMonth().toString().length === 1 ? `0${lessonDate.getMonth() + 1}` :  lessonDate.getMonth() + 1}/
                         {lessonDate.getDate().toString().length === 1 ? `0${lessonDate.getDate()}` :  lessonDate.getDate()}  </td>
@@ -64,7 +69,37 @@ const ClassList = ({
           })) 
         }
             </tbody>
-          </table>
+      </table>
+
+
+      <div className="mobile-box">
+              {
+                table.length > 0 && (
+                  table.map((data,i) =>{
+                    table.sort( function(a, b) {
+                      return a.date.localeCompare(b.date);
+                    })
+                    const {student_Name,date,class_Name,_id,table_State,class_Comment} = data
+                    const lessonDate = new Date(date)
+
+                    return(
+                      <div> 
+                        <p> <b> Name : </b>   {student_Name} </p>
+                        <p> <b> Time : </b> {`${lessonDate.getHours().toString().length === 1 ? `0${lessonDate.getHours()}`:`${lessonDate.getHours()}`}
+                          :${lessonDate.getUTCMinutes().toString().length === 1 ? `0${lessonDate.getUTCMinutes()}`:`${lessonDate.getUTCMinutes()}`}`} </p>
+                        <p> <b> date : </b> {lessonDate.getMonth().toString().length === 1 ? `0${lessonDate.getMonth() + 1}` :  lessonDate.getMonth() + 1}/
+                          {lessonDate.getDate().toString().length === 1 ? `0${lessonDate.getDate()}` :  lessonDate.getDate()} </p>
+                        <p> <b> Class Name : </b> {class_Name} </p>
+                        <p> {table_State === 1 ? 
+                          <b style={{color:"green"}}>Təsdiq olunmuş</b> : <b style={{color:"red"}}>ləğv olunmuş</b> }  </p>
+                          <p> <b>Class Information : </b>  {class_Comment} </p>
+                      </div>
+                    )
+                  })
+                )
+              }
+
+            </div>
           {
             CountDate >= 6 &&
               <button 

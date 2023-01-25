@@ -123,7 +123,7 @@ const Form = ({ teacher, setData, data }) => {
           <MenuItem value="1">active</MenuItem>
         </Select>
       </FormControl>
-      <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+      {/* <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
         <InputLabel id="demo-simple-select-standard-label">
           select teacher{" "}
         </InputLabel>
@@ -213,7 +213,7 @@ const Form = ({ teacher, setData, data }) => {
             timeTwo: e.target.value
           })
         }}
-        />
+        /> */}
     </Box>
   );
 };

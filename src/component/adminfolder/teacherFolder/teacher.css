@@ -50,6 +50,8 @@
   align-items: center;
   overflow: hidden;
   cursor: pointer;
+  border-radius: 20px;
+  margin: 5px;
 }
 
 .main-teacher-page
@@ -78,9 +80,7 @@ form input {
 .infoComponent{
   border: 3px solid #482AFF;
   position: relative;
-  overflow: hidden;
   border-radius: 20px;
-  overflow: scroll;
 }
 
 .main-teacher-page
@@ -104,6 +104,7 @@ form input {
   background-color: blue;
   color: white;
   cursor: pointer;
+  z-index: 2;
 }
 
 /* Schedule-section */
@@ -132,6 +133,53 @@ form input {
   padding: 20px;
 }
 
+/* responsive */
+
+@media(min-width:768px){
+  .Schedule-section .mobile-box {
+    display: none;
+  }
+}
+
+  @media(max-width:768px){
+    /* .Schedule-section form {
+      display: none;
+    } */
+    .Schedule-section > div table {
+      display: none;
+    }
+    .Schedule-section > div {
+      width: 100%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Schedule-section .student_info{
+      width: 90%;
+      margin-top: 50px;
+    }
+
+    .Schedule-section .mobile-box {
+      width: 85%;
+      height: 90%;
+      overflow-y: scroll;
+      margin: 5px;
+    }
+    .Schedule-section .mobile-box > div{
+      padding: 5px;
+      border: 1px solid;
+      border-radius: 10px;
+      margin: 10px;
+    }
+    .Schedule-section .mobile-box > div p{
+      border-bottom: 0.5px solid ;
+    }
+  }
+
+
 /* Calendar-section */
 
 
@@ -139,30 +187,46 @@ form input {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: left;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 30px;
 }
 
-.Calendar-section
-table {
-  font-family: arial, sans-serif;
-  /* border-collapse: collapse; */
-  width: auto;
-  border: none;
+.Calendar-section ul li{
+  list-style: none;
+} 
+/* responsive */
+
+@media(min-width:991px){
+  .Calendar-section  > div ul {
+    display: none;
+  } 
 }
 
+@media(max-width:991px){
+  .Calendar-section{
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Calendar-section  ul{
+    display: none;
+  }
 
-.Calendar-section
-td, th {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 8px;
-}
+  .Calendar-section > div{
+    width: 80%;
+    height: 90%;
+    overflow: scroll;
+  }
 
-
-.Calendar-section
-tr:nth-child(even) {
-  background-color: #dddddd;
+  .Calendar-section  > div ul {
+    display: block;
+    border: 1px dashed;
+    border-radius: 20px;
+    padding: 20px;
+  } 
 }
 
 /* Finished-class-Section */
@@ -184,3 +248,39 @@ form{
 }
 
 
+/* responsive */
+
+@media(min-width:768px){
+  .Finished-class-Section .mobile-box{
+    display: none;
+  }
+}
+
+@media(max-width:768px){
+  .Finished-class-Section > article table {
+    display: none;
+  }
+  .Finished-class-Section > article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Finished-class-Section .mobile-box {
+    width: 85%;
+    height: 90%;
+    overflow-y: scroll;
+    margin: 5px;
+  }
+  .Finished-class-Section .mobile-box > div{
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  .Finished-class-Section .mobile-box > div p{
+    border-bottom: 0.5px solid ;
+  }
+}

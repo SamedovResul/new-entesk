@@ -22,7 +22,10 @@ import {
   SearchByDate,
   ConfirmOrCancel,
   SearchByDateForTeacher,
-  calculate
+  calculate,
+  createTeacherCalendar,
+  getCalendar,
+  updateCalendar
 } from './api'
 import Swal from 'sweetalert2'
 
@@ -158,7 +161,6 @@ export const GetTeacherTable = (id) => async (dispatch) =>{
 
   try {
     const {data} = await getTeacherTable(id)
-
     dispatch({type:"GETTEACHERTABLE", payload:data})
   } catch (error) {
     console.log(error.message);
@@ -166,8 +168,6 @@ export const GetTeacherTable = (id) => async (dispatch) =>{
 }
 
 export const GetTeacherCalendar = () => async (dispatch) =>{
-
-
   try {
     const {data} = await getTeacherCalendar()
 
@@ -176,6 +176,37 @@ export const GetTeacherCalendar = () => async (dispatch) =>{
     console.log(error.message);
   }
 }
+
+// calendar for admin 
+export const CreateTeacherCalendar = (Data) => async (dispatch) =>{
+  try {
+    const {data} = await createTeacherCalendar(Data)
+
+    dispatch({type:"CREATETEACHERCALENDAR", payload:data})
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+export const GetCalendar = (id) => async (dispatch) =>{
+  try {
+    const {data} = await getCalendar(id)
+    dispatch({type:"GETTEACHERCALENDARFORADMIN", payload:data})
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+
+export const UpdateCalendar = (Data) => async (dispatch) =>{
+  try {
+    const {data} = await updateCalendar(Data)
+    dispatch({type:"UPDATECALENDAR", payload:data})
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
 
 export const CreateComment = (comment) => async (dispatch)  =>{
   try {
@@ -281,7 +312,6 @@ export const CreateTimetable = (timetableData) => async (dispatch) =>{
 
 export const UpdateTimetable = (timetableData, id) => async (dispatch) =>{
 
-  console.log(timetableData)
   try {
     const {data} = await updateTimetable(timetableData, id)
     
@@ -295,7 +325,6 @@ export const UpdateTimetable = (timetableData, id) => async (dispatch) =>{
 export const searchByDate = (search) => async (dispatch) =>{
   try {
     const {data} = await SearchByDate(search);
-    console.log(data)
     dispatch({type:"FETCHBYSEARCH", payload:data})
   } catch (error) {
     alert(error.response.data.msg)

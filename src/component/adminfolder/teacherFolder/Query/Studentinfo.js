@@ -8,8 +8,8 @@ const Studentinfo = ({ studentData }) => {
     id: "",
   });
   const dispatch = useDispatch();
-
-  const { class_Name, date, student_Name, _id, class_Comment } = studentData;
+  
+  const { class_Name, date, student_Name, _id, class_Comment } = studentData[0];
 
   useEffect(() => {
     setComment({
@@ -19,7 +19,7 @@ const Studentinfo = ({ studentData }) => {
   }, []);
 
   const lessonDate = new Date(date);
-  // console.log(("0" + lessonDate.getUTCHours()).slice(-2))
+  
   return (
     <article className="student_info">
       <div className="card">
@@ -32,16 +32,8 @@ const Studentinfo = ({ studentData }) => {
           <li className="list-group-item">
             {" "}
             <b>time: </b>
-            {`${
-              lessonDate.getUTCHours().toString().length === 1
-                ? `0${lessonDate.getUTCHours()}`
-                : `${lessonDate.getUTCHours()}`
-            }
-                          :${
-                            lessonDate.getUTCMinutes().toString().length === 1
-                              ? `0${lessonDate.getUTCMinutes()}`
-                              : `${lessonDate.getUTCMinutes()}`
-                          }`}
+            {`${lessonDate.getHours().toString().length === 1 ? `0${lessonDate.getHours()}`:`${lessonDate.getHours()}`}
+                        :${lessonDate.getUTCMinutes().toString().length === 1 ? `0${lessonDate.getUTCMinutes()}`:`${lessonDate.getUTCMinutes()}`}`}
           </li>
           <li className="list-group-item">
             {" "}
@@ -58,6 +50,7 @@ const Studentinfo = ({ studentData }) => {
           type="text"
           placeholder="Write comment"
           value={comment.comment}
+          maxLength="50"
           onChange={(e) => {
             setComment({ ...comment, comment: e.target.value });
           }}

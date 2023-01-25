@@ -4,7 +4,7 @@ const SearchResult = ({ state,ConCanHandler }) => {
   return (
     <>
       <div className="parent-table-box">
-        {state.map((timetable, index) => {
+        {state.table.map((timetable, index) => {
           const {
             student_Name,
             teacher_Name,
@@ -37,19 +37,20 @@ const SearchResult = ({ state,ConCanHandler }) => {
                 <b>class information:</b> {class_Comment}{" "}
               </p>
               <p>
-                {" "}
-                <b>time:</b>{" "}
-                <span>{`${
-                  time.getUTCHours().toString().length === 1
-                    ? `0${time.getUTCHours()}`
-                    : `${time.getUTCHours()}`
-                }
+                        {" "}
+                        <b>time:</b>{" "}
+                        <span>{`${
+                          time.getHours().toString().length === 1
+                            ? `0${time.getHours()}`
+                            : `${time.getHours()}`
+                        }
                               :${
-                                time.getUTCMinutes().toString().length === 1
+                                time.getUTCMinutes().toString()
+                                  .length === 1
                                   ? `0${time.getUTCMinutes()}`
                                   : `${time.getUTCMinutes()}`
                               }`}</span>
-              </p>
+                      </p>
               <div>
                 <p>
                   <b>date:</b> {year}/

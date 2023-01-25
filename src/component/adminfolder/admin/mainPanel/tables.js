@@ -10,7 +10,10 @@ const Tables = ({state, teacher, ConCanHandler}) => {
           return (
             <div key={i} className="parent-table-box">
               <p>{name}</p>
-              {state.map((timetable, index) => {
+              {state.table.map((timetable, index) => {
+                state.table.sort( function(a, b) {
+                  return a.date.localeCompare(b.date);
+                })
                 const {
                   student_Name,
                   teacher_Name,

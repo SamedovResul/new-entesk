@@ -15,9 +15,9 @@ const Teacher = () => {
   const profile = JSON.parse(localStorage.getItem('profile'));
   const dispatch = useDispatch();
   // get teacher data
-  useEffect(() => {
-    dispatch(GetTeacherTable(profile.superAdmin._id))
-  }, [])
+  // useEffect(() => {
+  //   dispatch(GetTeacherTable(profile.superAdmin._id))
+  // }, [])
 
   const [div, setDiv] = useState(10)
   const container = useSpring({
@@ -29,8 +29,9 @@ const Teacher = () => {
 	})
 
   const containers = useSpring({
-		to: [{height: div === 10  ? '60px' : '0px',}],
-		from: {height: '0px'},
+		to: [{height: div === 10  ? '60px' : '0px',
+     border: div === 10  ? "1px solid blue" :  "0px solid blue"}],
+		from: {height: '0px', border: "0px solid blue" },
     config: {
 			duration: 500
 		}
@@ -85,6 +86,7 @@ const Teacher = () => {
   }, [])
   
 
+  
   return (
     <>
     {
@@ -116,7 +118,7 @@ const Teacher = () => {
                   ): 
                   (
                     <span 
-                      onClick={() => setReturn(Return - 1)}  > 
+                      onClick={() =>  Return === 2 ? setReturn(Return - 2):setReturn(Return - 1) }  > 
                       &#9664;
                     </span>
                   )

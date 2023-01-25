@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 
-// http://localhost:5000/ https://metatesk.herokuapp.com/
-const API = axios.create({ baseURL: 'http://localhost:5000/' });
+// http://localhost:5000/ https://enteskcrmserver.azurewebsites.net/
+const API = axios.create({ baseURL: 'https://enteskcrmserver.azurewebsites.net/' });
 
 
 // token
@@ -75,15 +75,18 @@ export const updateTeacher = (id, data) =>{
 }
 
 
+
 //  get post teacher search
 
 export const getTeacherTable = (data) =>{
   return API.get(`/teacher?limit=${data.limit}&skip=${data.skip}`)
 }
 
-export const getTeacherCalendar = () =>{
-  return API.get('/teacher/calendar')
+export const getTeacherCalendar = (id) =>{
+  return API.get('/teacher/calendar', id)
 }
+
+
 
 export const createComment = (data) =>{
   return API.put('/teacher/addComment',data)
@@ -121,7 +124,23 @@ export const fetchByBirthday = () =>{
   return API.get(`/student/birthDay`)
 }
 
+// admin calendar get post 
+
+export const createTeacherCalendar = (data) =>{
+  return API.post('/calendar/create', data)
+}
+
+export const getCalendar = (id) =>{
+  return API.get(`/calendar/${id}`)
+}
+
+
+export const updateCalendar = (data) =>{
+  return API.patch('/calendar/', data)
+}
 // Timetable create get update
+
+
 
 export const getTimetable = () => {
 
@@ -141,7 +160,7 @@ export const updateTimetable = (data,id) =>{
 
 export const SearchByDate = (search) =>{
   return API.get(
-    `/timeTable/search?startDate=${search.from}&endDate=${search.to}&teacher_Name=${search.teacher_Name}&student_Name=${search.student_Name}&table_State=${search.table_State}`
+    `/timeTable/search?startDate=${search.from}&endDate=${search.to}&teacher_Id=${search.teacher_Id}&student_Name=${search.student_Name}&table_State=${search.table_State}`
     )
 }
 

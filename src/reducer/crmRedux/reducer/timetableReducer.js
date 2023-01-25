@@ -1,17 +1,27 @@
-const reducer = (state = [], action ) =>{
+const reducer = (state = {table:[], teacherData:''}, action ) =>{
+  const {table} = state
   switch (action.type) {
     case "FETCHTIMETABLE":
-      
-      return action.payload;
+      return { ...state, table: action.payload,}
     case "CREATETIMETABLE":
       const Array = action.payload
-      return [...state,  ...Array]
+      return{
+        ...state,
+        table: [...table, ...Array]
+      }
+      // [...state.table,  ...Array]
     case "UPDATETIMETABLE":
-      return state.map((timetable) =>(timetable._id === action.payload._id ? action.payload: timetable));
+      console.log(action.payload)
+      
+      return{
+        ...state,
+        table: table.map((timetable) =>
+        (timetable._id === action.payload._id ? action.payload: timetable))
+      }
     case "FETCHBYSEARCH":
-      return  action.payload 
+      return  { ...state, table: action.payload.table,teacherData: action.payload.teacherData}
     case "ConfirmOrCancel":
-      return  action.payload; 
+      return  { ...state, table: action.payload,}
     default:
       return state;
   }

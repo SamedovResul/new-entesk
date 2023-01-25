@@ -16,7 +16,7 @@ const reducer = (state = {table:[], count:''}, action ) =>{
     case "CALCULATE":
       return { ...state, table: action.payload.tables, count: action.payload.count }
     case "GETTEACHERCALENDAR":
-      return { ...state, table: action.payload }
+      return { ...state, table: action.payload.tables,count:0 }
     default:
       return state;
   }

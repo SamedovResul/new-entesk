@@ -7,7 +7,7 @@ import timetableReducer from './crmRedux/reducer/timetableReducer'
 import teacherReducer from './crmRedux/reducer/teacherReducer'
 import studentReducer from './crmRedux/reducer/studentReducer'
 import teachertable from './crmRedux/reducer/teachertable'
-import searchReducer from './crmRedux/reducer/searchReducer'
+import calendarReducer from './crmRedux/reducer/calendarReducer'
 
 
 export default combineReducers({
@@ -18,5 +18,5 @@ export default combineReducers({
   teacherReducer,
   teachertable,
   studentReducer,
-  // searchReducer
+  calendarReducer
 })

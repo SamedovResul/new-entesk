@@ -17,16 +17,18 @@ const SelectData = ({ state, name, params, onChangeFunction,setCategory,select }
         id="demo-simple-select-standard"
         onChange={(e) => {
           onChangeFunction(e);
-          // classState(e)
         }}
         name={name}
         value={params}
         >
           {state.map((clas, index) => {
-            const { name, _id} = clas;
-            return (
-              <MenuItem key={index} value={_id}>{name}</MenuItem>
-            );
+            const { name, _id, status} = clas;
+            if(status){
+              return (
+                <MenuItem key={index} value={_id}>{name}</MenuItem>
+              );
+            }
+            
           })}
         </Select>
       </FormControl>

@@ -4,6 +4,9 @@ const ExistTable = ({Array,teacher, tableData, setId }) => {
   return (
     <>
       {tableData.map((timetable, index) => {
+        tableData.sort( function(a, b) {
+          return a.date.localeCompare(b.date);
+        })
         const {
           student_Name,
           teacher_Name,
@@ -44,17 +47,21 @@ const ExistTable = ({Array,teacher, tableData, setId }) => {
                   <b>category:</b>{category_name}
                 </p>
                 <p>
-                  <b>date:</b> {year}:
-                  {month2}:
-                  {dates2}
+                  <b>date:</b> {year}/
+                  {month.toString().length === 1 ? `0${month + 1}` : month + 1}/
+                  {dates.toString().length === 1 ? `0${dates }` : dates }
                 </p>
                 <p>
                   <b>time:</b>
                   {`${
-                    hour
+                    time.getHours().toString().length === 1
+                      ? `0${time.getHours()}`
+                      : `${time.getHours()}`
                   }
                     :${
-                      minute
+                      time.getUTCMinutes().toString().length === 1
+                        ? `0${time.getUTCMinutes()}`
+                        : `${time.getUTCMinutes()}`
                     }`}
                 </p>
                 <p>

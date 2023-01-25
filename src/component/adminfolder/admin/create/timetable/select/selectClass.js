@@ -1,18 +1,37 @@
-import React,{useEffect} from 'react'
+import React, { useState } from "react";
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
 
-const SelectClass = ({params}) => {
 
+const SelectData = ({ state, name, params, onChangeFunction,setCategory,select }) => {
+  
 
-  console.log(params)
-  return(
-    params.map((clas, index) => {
-      return (
-        <option key={index} >
-          
-        </option>
-      );
-    })
-  )
-}
+  return (
+    <>
+    <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+        <InputLabel id="demo-simple-select-standard-label">select {`${select}`}  </InputLabel>
+        <Select
+        labelId="demo-simple-select-standard-label"
+        id="demo-simple-select-standard"
+        onChange={(e) => {
+          onChangeFunction(e);
+        }}
+        name={name}
+        value={params}
+        >
+          {state.map((clas, index) => {
+            const { name, _id} = clas;
+            
+            return (
+              <MenuItem key={index} value={_id}>{name}</MenuItem>
+            );
+          })}
+        </Select>
+      </FormControl>
+    </>
+  );
+};
 
-export default SelectClass
+export default SelectData;

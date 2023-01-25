@@ -15,10 +15,7 @@ import Tables from "./tables";
 import Textfield from "./text-field";
 import { Button } from "@mui/material";
 import Checkbox from '@mui/material/Checkbox';
-import Classes from '../create/classes/classes';
-import Teachers from '../create/teacher/teachers';
-import Student from '../create//student/students';
-import Timetable from '../create/timetable/timetable'
+import Option from './option'
 
 
 
@@ -33,7 +30,7 @@ const Admin = () => {
   const [date, getDate] = useState({
     from: "",
     to: "",
-    teacher_Name: "",
+    teacher_Id: "",
     student_Name: "",
     table_State: "",
   });
@@ -63,56 +60,14 @@ const Admin = () => {
     getDate,
     // get birthday
     GetStudent,
-    searchingState
+    searchingState,
+    // search  teacher 
+    teacher,
+    state
   )
-
+  const { cancelClass,confirmedClass,salary } = state.teacherData
   return (
     <>
-      {/* <div className="sideContainer">
-        <p> create </p>
-        <Button className="create-box" variant="outlined" style={div === 0 ? {borderColor:'red'}:{borderColor:''}} onClick={
-          () => div !== 0 ? setdiv(0) : setdiv(10) } >
-          Create Classes 
-        </Button>
-        <Button className="create-box" variant="outlined" style={div === 1 ? {borderColor:'red'}:{borderColor:''}} onClick={
-          () => div !== 1 ? setdiv(1) : setdiv(10) }>
-          Create Teachers
-        </Button>
-        <Button className="create-box" variant="outlined" style={div === 2 ? {borderColor:'red'}:{borderColor:''}} onClick={
-          () => div !== 2 ? setdiv(2) : setdiv(10) }>
-          Create Student
-        </Button>
-        <Button className="create-box" variant="outlined" style={div === 3 ? {borderColor:'red'}:{borderColor:''}} onClick={
-          () => div !== 3 ? setdiv(3) : setdiv(10) }>
-          Create timetable
-        </Button>
-      </div>
-      <div className="mainContainer">
-      <div style={
-          div === 0 ? style : {display: "none"}
-        } className="classes">
-        <Classes  />
-      </div>
-      <div style={
-          div === 1 ? style : {display: "none"}
-        } className="classes">
-        <Teachers />
-      </div>
-      <div style={
-          div === 2 ? style : {display: "none"}
-        } className="classes">
-        <Student />
-      </div>
-      <div style={
-          div === 3 ? {
-            display: "block", 
-            height:'auto', 
-            borderColor:'red'
-          } : {display: "none"}
-        } className="classes">
-        <Timetable />
-      </div>
-      </div> */}
       {state ? (
         <div className="main-admin-page">
           <div className="container">
@@ -122,11 +77,13 @@ const Admin = () => {
                   <form action="" className="get-date">
                     <DateLocal date={date.from} type={'datetime-local'} name={'from'} onChangeFunction={onChangeFunction} />
                     <DateLocal date={date.to} type={'datetime-local'} name={'to'} onChangeFunction={onChangeFunction} />
-                    <Textfield type={'text'} name={'teacher_Name'} onChangeFunction={onChangeFunction} />
-                    <Textfield type={'text'} name={'student_Name'} onChangeFunction={onChangeFunction} />
+                    <Textfield  type={'text'} name={'student_Name'} onChangeFunction={onChangeFunction} date={date} />
+                    <Option date={date.teacher_Id} teacher={teacher}  name={'teacher_Id'} onChangeFunction={onChangeFunction} />
+                    
                     <label
                       htmlFor="state"
                       onChange={(e) => {
+
                         e.target.checked
                           ? getDate({
                               ...date,
@@ -138,39 +95,36 @@ const Admin = () => {
                             });
                       }}
                     >
-                      calculate confirmed class:{" "}
+                      search confirmed class:{" "}
                       <Checkbox
                         sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
                       />
                     </label>
                     <Button variant="outlined" onClick={Searching}>Searching</Button>
                   </form>
+
                   <Button variant="outlined" onClick={today}>today</Button>
                 </div>
+                {
+                  <>
+                  <p>
+                    confirmed : { search ?
+                     confirmedClass : <>0</> }
+                  </p>
+                  <p>
+                    canceled : {search ? 
+                      cancelClass : <>0</> }
+                  </p>
+                  <p>
+                    salary :  { search ?  
+                    salary : <>0</>
+                    }
+                  </p>
+                  </>
+                }
                 {search ? (
                   <>
-                  {
-                    date.table_State === 1 && date.teacher_Name && (
-                      <>
-                        <b> { state.length } </b>
-                        {
-                          teacher.map((s) =>{
-                            const {salary} = s
-                            console.log(s,date.teacher_Name)
-                            if(s.name === date.teacher_Name){
-                              let result = salary * state.length
-                              console.log(result)
-                              return(
-                                <>
-                                  <b>salary:</b> <p> {result} </p>
-                                </>
-                              )
-                            }
-                          })
-                        }
-                      </>
-                    )
-                  }
+                  
                   <SearchResult state={state} ConCanHandler={ConCanHandler} />
                   </>
                   
