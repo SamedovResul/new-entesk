@@ -30,16 +30,23 @@ import {
 import Swal from 'sweetalert2'
 
 
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'center',
+  showConfirmButton: false,
+  timer: 2000,
+  timerProgressBar: true,
+})
+
 // admin  get, create, update, delete 
 
 export const SignInAdmin = (adminData,router) => async (dispatch) => {
   // console.log(router)
   try {
     const { data } = await SigninAdmin(adminData);
-    console.log(data)
+
     dispatch({ type: "SIGNIN", payload: data });
     
-
     if(data.superAdmin.role === 1){
       router.push('/adminTimetable')
     }else if(data.superAdmin.role === 0) {
@@ -47,7 +54,22 @@ export const SignInAdmin = (adminData,router) => async (dispatch) => {
     }
     
   } catch (error) {
-    alert(error.response.data.msg)
+
+    error.response ? (
+      Toast.fire({
+        icon: 'warning',
+        title: `${error.response.data.msg}`,
+        color: "red"
+      })
+    ):(
+      Toast.fire({
+        icon: 'warning',
+        title: 'Network Error',
+        text:'İnternet əlaqəsi yoxdur !',
+        color: "red"
+      })
+    )
+    
   }
 };
 
@@ -125,7 +147,7 @@ export const GetTeacher = ()=> async(dispatch) =>{
 
   try {
     const {data} = await getTeacher()
-    // console.log(data)
+    console.log(data)
     dispatch({type:"FETCHTEACHERDATA", payload:data})
   } catch (error) {
     console.log(error.message)

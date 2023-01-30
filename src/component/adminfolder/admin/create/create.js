@@ -1,13 +1,8 @@
 import React, {useState} from 'react'
-import { useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-import {useDispatch } from 'react-redux';
 import Classes from './classes/classes';
 import Teachers from './teacher/teachers';
 import Student from './student/students';
 import Timetable from './timetable/timetable'
-import {useSpring, animated} from 'react-spring'
-import { Link } from 'react-router-dom';
 import { Button } from "@mui/material";
 
 

@@ -7,6 +7,8 @@ import { useHistory } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button'
+import Swal from 'sweetalert2'
+
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -17,17 +19,25 @@ const Login = () => {
     password:''
   })
 
-  // console.log(admin)
+   
+
+  console.log(state.authData)
   const SignIn = (e) => {
     e.preventDefault();
     if(admin.email && admin.password){
       dispatch(SignInAdmin(admin,history))
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: ' gözləyin ',
+        showConfirmButton: false,
+        timer: 1500
+      })
     }else{
       alert("please insert email and password")
     }
   }
 
-  console.log(admin)
   return (
    <>
    <div className="container">
