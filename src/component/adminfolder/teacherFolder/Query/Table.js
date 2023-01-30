@@ -21,7 +21,7 @@ const Table = ({State,ReturnParms,count,table,Query,setQuery,dispatch,searchByDa
       dispatch(searchByDateForTeacher(Query))
   }, [count])
 
-  
+  console.log(table)
   return (
     <div>
       {
