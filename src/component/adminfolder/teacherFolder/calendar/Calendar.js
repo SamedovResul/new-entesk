@@ -42,6 +42,28 @@ const Calendar = () => {
   }, []);
 
   const {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday,Sunday} = table
+
+  const sortFunction = (weekday) =>{
+    console.log(weekday)
+    weekday.sort( function(a, b) {
+      return a.time.localeCompare(b.time);
+    })
+  }
+  
+  useEffect(() => {
+
+    if(table._id){
+      sortFunction(Monday)
+      sortFunction(Tuesday)
+      sortFunction(Wednesday)
+      sortFunction(Thursday)
+      sortFunction(Friday)
+      sortFunction(Saturday)
+      sortFunction(Sunday)
+    }
+  }, [table._id])
+  
+
   return (
     <article className="Calendar-section">
       <>
@@ -51,9 +73,6 @@ const Calendar = () => {
             <ul>
               <b>Monday</b>
               {Monday.map((list, i) => {
-                Monday.sort( function(a, b) {
-                  return a.time.localeCompare(b.time);
-                })
                 const { studentName, time, studentId } = list;
                 return (
                   <li key={i}>
@@ -67,9 +86,6 @@ const Calendar = () => {
             <ul>
               <b>Tuesday</b>
               {Tuesday.map((list, i) => {
-                Tuesday.sort( function(a, b) {
-                  return a.time.localeCompare(b.time);
-                })
                 const { studentName, time, studentId } = list;
                 return (
                   <li key={i}>
@@ -83,9 +99,6 @@ const Calendar = () => {
             <ul>
               <b>Wednesday</b>
               {Wednesday.map((list, i) => {
-                Wednesday.sort( function(a, b) {
-                  return a.time.localeCompare(b.time);
-                })
                 const { studentName, time, studentId } = list;
                 return (
                   <li key={i}>
@@ -99,9 +112,6 @@ const Calendar = () => {
             <ul>
               <b>Thursday</b>
               {Thursday.map((list, i) => {
-                Thursday.sort( function(a, b) {
-                  return a.time.localeCompare(b.time);
-                })
                 const { studentName, time, studentId } = list;
                 return (
                   <li key={i}>
@@ -115,9 +125,6 @@ const Calendar = () => {
             <ul>
               <b>Friday</b>
               {Friday.map((list, i) => {
-                Friday.sort( function(a, b) {
-                  return a.time.localeCompare(b.time);
-                })
                 const { studentName, time, studentId } = list;
                 return (
                   <li key={i}>
@@ -131,9 +138,6 @@ const Calendar = () => {
             <ul>
               <b>Saturday</b>
               {Saturday.map((list, i) => {
-                Saturday.sort( function(a, b) {
-                  return a.time.localeCompare(b.time);
-                })
                 const { studentName, time, studentId } = list;
                 return (
                   <li key={i}>
@@ -147,9 +151,6 @@ const Calendar = () => {
             <ul>
               <b>Sunday</b>
               {Sunday.map((list, i) => {
-                Sunday.sort( function(a, b) {
-                  return a.time.localeCompare(b.time);
-                })
                 const { studentName, time, studentId } = list;
                 return (
                   <li key={i}>
@@ -169,9 +170,6 @@ const Calendar = () => {
               <ul>
                 <b>Monday</b>
                 {Monday.map((list, i) => {
-                  Monday.sort( function(a, b) {
-                    return a.time.localeCompare(b.time);
-                  })
                   const { studentName, time, studentId } = list;
                   return (
                     <li key={i}>
@@ -186,9 +184,6 @@ const Calendar = () => {
               <ul>
               <b>Tuesday</b>
               {Tuesday.map((list, i) => {
-                Tuesday.sort( function(a, b) {
-                  return a.time.localeCompare(b.time);
-                })
                 const { studentName, time, studentId } = list;
                 return (
                   <li key={i}>
@@ -203,9 +198,6 @@ const Calendar = () => {
               <ul>
               <b>Wednesday</b>
               {Wednesday.map((list, i) => {
-                Wednesday.sort( function(a, b) {
-                  return a.time.localeCompare(b.time);
-                })
                 const { studentName, time, studentId } = list;
                 return (
                   <li key={i}>
@@ -220,9 +212,6 @@ const Calendar = () => {
               <ul>
               <b>Thursday</b>
               {Thursday.map((list, i) => {
-                Thursday.sort( function(a, b) {
-                  return a.time.localeCompare(b.time);
-                })
                 const { studentName, time, studentId } = list;
                 return (
                   <li key={i}>
@@ -237,9 +226,6 @@ const Calendar = () => {
               <ul>
               <b>Friday</b>
               {Friday.map((list, i) => {
-                Friday.sort( function(a, b) {
-                  return a.time.localeCompare(b.time);
-                })
                 const { studentName, time, studentId } = list;
                 return (
                   <li key={i}>
@@ -254,9 +240,6 @@ const Calendar = () => {
               <ul>
               <b>Saturday</b>
               {Saturday.map((list, i) => {
-                Saturday.sort( function(a, b) {
-                  return a.time.localeCompare(b.time);
-                })
                 const { studentName, time, studentId } = list;
                 return (
                   <li key={i}>
@@ -271,9 +254,6 @@ const Calendar = () => {
               <ul>
               <b>Sunday</b>
               {Sunday.map((list, i) => {
-                Sunday.sort( function(a, b) {
-                  return a.time.localeCompare(b.time);
-                })
                 const { studentName, time, studentId } = list;
                 return (
                   <li key={i}>

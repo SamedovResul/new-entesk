@@ -21,7 +21,6 @@ const Table = ({State,ReturnParms,count,table,Query,setQuery,dispatch,searchByDa
       dispatch(searchByDateForTeacher(Query))
   }, [count])
 
-  console.log(table)
   // sorting data
   table.sort( function(a, b) {
     return a.date.localeCompare(b.date);
@@ -57,7 +56,6 @@ const Table = ({State,ReturnParms,count,table,Query,setQuery,dispatch,searchByDa
                   table.map((data,i) =>{
                     const {student_Name,date,class_Name,_id, category_name} = data
                     const lessonDate = new Date(date)
-                    console.log(data)
                     return(
                         <tr key={i} >
                           <td>{weekday[lessonDate.getDay()]}</td>
