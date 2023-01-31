@@ -1,6 +1,9 @@
 import React from 'react'
 import { Button } from "@mui/material";
 const Tables = ({state, teacher, ConCanHandler}) => {
+  state.table.sort( function(a, b) {
+    return a.date.localeCompare(b.date);
+  })
   return (
     <>
       {
@@ -11,9 +14,7 @@ const Tables = ({state, teacher, ConCanHandler}) => {
             <div key={i} className="parent-table-box">
               <p>{name}</p>
               {state.table.map((timetable, index) => {
-                state.table.sort( function(a, b) {
-                  return a.date.localeCompare(b.date);
-                })
+                
                 const {
                   student_Name,
                   teacher_Name,

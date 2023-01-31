@@ -81,7 +81,7 @@ const Query = ({ ReturnParms }) => {
   const getLimit = () =>{
     dispatch(GetTeacherTable(Query));
   }
-  console.log(Query.skip)
+  console.log(table)
   return (
     <>
       <article className="Schedule-section">

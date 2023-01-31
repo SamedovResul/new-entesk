@@ -25,6 +25,7 @@ const Table = ({State,ReturnParms,count,table,Query,setQuery,dispatch,searchByDa
   table.sort( function(a, b) {
     return a.date.localeCompare(b.date);
   })
+  console.log(table)
   return (
     <div>
       {
