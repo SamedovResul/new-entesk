@@ -51,11 +51,9 @@ const Table = ({State,ReturnParms,count,table,Query,setQuery,dispatch,searchByDa
                 {
                   table.length > 0 && (
                   table.map((data,i) =>{
-                    table.sort( function(a, b) {
-                      return a.date.localeCompare(b.date);
-                    })
                     const {student_Name,date,class_Name,_id, category_name} = data
                     const lessonDate = new Date(date)
+                    console.log(data)
                     return(
                         <tr key={i} >
                           <td>{weekday[lessonDate.getDay()]}</td>
@@ -98,7 +96,7 @@ const Table = ({State,ReturnParms,count,table,Query,setQuery,dispatch,searchByDa
                     const lessonDate = new Date(date)
 
                     return(
-                      <div> 
+                      <div key={i} > 
                         <p> <b> Name : </b>   {student_Name} </p>
                         <p> <b> Time : </b> {`${lessonDate.getHours().toString().length === 1 ? `0${lessonDate.getHours()}`:`${lessonDate.getHours()}`}
                           :${lessonDate.getUTCMinutes().toString().length === 1 ? `0${lessonDate.getUTCMinutes()}`:`${lessonDate.getUTCMinutes()}`}`} </p>
