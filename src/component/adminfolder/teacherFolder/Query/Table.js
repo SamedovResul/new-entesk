@@ -22,6 +22,10 @@ const Table = ({State,ReturnParms,count,table,Query,setQuery,dispatch,searchByDa
   }, [count])
 
   console.log(table)
+  // sorting data
+  table.sort( function(a, b) {
+    return a.date.localeCompare(b.date);
+  })
   return (
     <div>
       {
@@ -89,9 +93,7 @@ const Table = ({State,ReturnParms,count,table,Query,setQuery,dispatch,searchByDa
               {
                 table.length > 0 && (
                   table.map((data,i) =>{
-                    table.sort( function(a, b) {
-                      return a.date.localeCompare(b.date);
-                    })
+                    
                     const {student_Name,date,class_Name,_id, category_name} = data
                     const lessonDate = new Date(date)
 
