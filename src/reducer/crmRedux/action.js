@@ -147,7 +147,6 @@ export const GetTeacher = ()=> async(dispatch) =>{
 
   try {
     const {data} = await getTeacher()
-    console.log(data)
     dispatch({type:"FETCHTEACHERDATA", payload:data})
   } catch (error) {
     console.log(error.message)

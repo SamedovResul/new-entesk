@@ -20,8 +20,6 @@ const Login = () => {
   })
 
    
-
-  console.log(state.authData)
   const SignIn = (e) => {
     e.preventDefault();
     if(admin.email && admin.password){
