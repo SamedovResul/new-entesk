@@ -66,7 +66,7 @@ const Tables = ({state, teacher, ConCanHandler}) => {
                 <p>
                   {" "}
                   <b>time:</b>{" "}
-                  <Moment format="HH:mm " >{time}</Moment>
+                  <Moment format="HH:mm " utc>{time}</Moment>
                 </p>
                 <p>
                   <b>date:</b> {year}/
