@@ -1,4 +1,7 @@
 import React from "react";
+import Moment from 'react-moment';
+
+
 
 const SearchResult = ({ state,ConCanHandler }) => {
   return (
@@ -39,17 +42,7 @@ const SearchResult = ({ state,ConCanHandler }) => {
               <p>
                         {" "}
                         <b>time:</b>{" "}
-                        <span>{`${
-                          time.getHours().toString().length === 1
-                            ? `0${time.getHours()}`
-                            : `${time.getHours()}`
-                        }
-                              :${
-                                time.getUTCMinutes().toString()
-                                  .length === 1
-                                  ? `0${time.getUTCMinutes()}`
-                                  : `${time.getUTCMinutes()}`
-                              }`}</span>
+                        <Moment format="HH:mm ">{date}</Moment>
                       </p>
               <div>
                 <p>

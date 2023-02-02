@@ -1,4 +1,8 @@
 import React from 'react'
+import Moment from 'react-moment';
+
+
+
 import { Button } from "@mui/material";
 const Tables = ({state, teacher, ConCanHandler}) => {
   state.table.sort( function(a, b) {
@@ -36,8 +40,11 @@ const Tables = ({state, teacher, ConCanHandler}) => {
             month = time.getMonth();
             year = time.getFullYear();
           // }
-          console.log(timetable)
+          // console.log(timetable)
           // if (T._id === teacher_Id) {
+            console.log(time.getUTCHours())
+            console.log(time)
+            console.log(date)
             return (
               <div className="table-box" key={index}>
                 <p>
@@ -59,17 +66,7 @@ const Tables = ({state, teacher, ConCanHandler}) => {
                 <p>
                   {" "}
                   <b>time:</b>{" "}
-                  <span>{`${
-                    time.getHours().toString().length === 1
-                      ? `0${time.getHours()}`
-                      : `${time.getHours()}`
-                  }
-                        :${
-                          time.getUTCMinutes().toString()
-                            .length === 1
-                            ? `0${time.getUTCMinutes()}`
-                            : `${time.getUTCMinutes()}`
-                        }`}</span>
+                  <Moment format="HH:mm " >{time}</Moment>
                 </p>
                 <p>
                   <b>date:</b> {year}/

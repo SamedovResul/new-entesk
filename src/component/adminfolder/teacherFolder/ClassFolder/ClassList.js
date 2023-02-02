@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react'
+import Moment from 'react-moment';
 
 const ClassList = ({
   table, 
@@ -56,8 +57,7 @@ const ClassList = ({
             return(
               <tr key={i} >
                 <td> {student_Name} </td>
-                <td> {`${lessonDate.getHours().toString().length === 1 ? `0${lessonDate.getHours()}`:`${lessonDate.getHours()}`}
-                        :${lessonDate.getUTCMinutes().toString().length === 1 ? `0${lessonDate.getUTCMinutes()}`:`${lessonDate.getUTCMinutes()}`}`} </td>
+                <td> <Moment format="HH:mm ">{date}</Moment> </td>
                 <td> {lessonDate.getMonth().toString().length === 1 ? `0${lessonDate.getMonth() + 1}` :  lessonDate.getMonth() + 1}/
                         {lessonDate.getDate().toString().length === 1 ? `0${lessonDate.getDate()}` :  lessonDate.getDate()}  </td>
                 <td> {class_Name} </td>

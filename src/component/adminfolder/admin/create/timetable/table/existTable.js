@@ -1,12 +1,14 @@
 import React from "react";
+import Moment from 'react-moment';
 
 const ExistTable = ({Array,teacher, tableData, setId }) => {
+  tableData.sort( function(a, b) {
+    return a.date.localeCompare(b.date);
+  })
   return (
     <>
       {tableData.map((timetable, index) => {
-        tableData.sort( function(a, b) {
-          return a.date.localeCompare(b.date);
-        })
+
         const {
           student_Name,
           teacher_Name,
@@ -27,8 +29,8 @@ const ExistTable = ({Array,teacher, tableData, setId }) => {
         const minute = time.getUTCMinutes().toString().length === 1
         ? `0${time.getUTCMinutes()}`
         : `${time.getUTCMinutes()}`
-        const month2 = month.toString().length === 1 ? `0${month}` : month
-        const dates2 = dates.toString().length === 1 ? `0${dates}` : dates
+
+        console.log(time)
         if(teacher_Id === teacher){
           return (
             <div key={index} className="col-md-4">
@@ -53,7 +55,9 @@ const ExistTable = ({Array,teacher, tableData, setId }) => {
                 </p>
                 <p>
                   <b>time:</b>
-                  {`${
+                  <Moment format="HH:mm " >{time}</Moment>
+                  {/* { moment().format(` ${time.getUTCHours()}:${time.getUTCMinutes()}`)} */}
+                  {/* {`${
                     time.getHours().toString().length === 1
                       ? `0${time.getHours()}`
                       : `${time.getHours()}`
@@ -62,7 +66,7 @@ const ExistTable = ({Array,teacher, tableData, setId }) => {
                       time.getUTCMinutes().toString().length === 1
                         ? `0${time.getUTCMinutes()}`
                         : `${time.getUTCMinutes()}`
-                    }`}
+                    }`} */}
                 </p>
                 <p>
                   <b>class state</b>

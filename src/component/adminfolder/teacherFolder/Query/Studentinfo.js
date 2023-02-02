@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { CreateComment } from "../../../../reducer/crmRedux/action";
+import Moment from 'react-moment';
+
+
 
 const Studentinfo = ({ studentData }) => {
   const [comment, setComment] = useState({
@@ -32,8 +35,7 @@ const Studentinfo = ({ studentData }) => {
           <li className="list-group-item">
             {" "}
             <b>time: </b>
-            {`${lessonDate.getHours().toString().length === 1 ? `0${lessonDate.getHours()}`:`${lessonDate.getHours()}`}
-                        :${lessonDate.getUTCMinutes().toString().length === 1 ? `0${lessonDate.getUTCMinutes()}`:`${lessonDate.getUTCMinutes()}`}`}
+            <Moment format="HH:mm ">{date}</Moment>
           </li>
           <li className="list-group-item">
             {" "}

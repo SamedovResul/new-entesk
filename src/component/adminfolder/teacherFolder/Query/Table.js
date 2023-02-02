@@ -1,5 +1,7 @@
 import React,{useEffect,useState}  from 'react'
 import Studentinfo from './Studentinfo'
+import Moment from 'react-moment';
+
 
 const Table = ({State,ReturnParms,count,table,Query,setQuery,dispatch,searchByDateForTeacher,number,getLimit}) => {
   const {Return, setReturn}= ReturnParms
@@ -61,8 +63,7 @@ const Table = ({State,ReturnParms,count,table,Query,setQuery,dispatch,searchByDa
                         <tr key={i} >
                           <td>{weekday[lessonDate.getDay()]}</td>
                           <td> {student_Name} </td>
-                          <td> {`${lessonDate.getHours().toString().length === 1 ? `0${lessonDate.getHours()}`:`${lessonDate.getHours()}`}
-                          :${lessonDate.getUTCMinutes().toString().length === 1 ? `0${lessonDate.getUTCMinutes()}`:`${lessonDate.getUTCMinutes()}`}`} </td>
+                          <td> <Moment format="HH:mm ">{date}</Moment> </td>
 
                           <td> {lessonDate.getMonth().toString().length === 1 ? `0${lessonDate.getMonth() + 1}` :  lessonDate.getMonth() + 1}/
                           {lessonDate.getDate().toString().length === 1 ? `0${lessonDate.getDate()}` :  lessonDate.getDate()}  </td>
@@ -99,8 +100,7 @@ const Table = ({State,ReturnParms,count,table,Query,setQuery,dispatch,searchByDa
                     return(
                       <div key={i} > 
                         <p> <b> Name : </b>   {student_Name} </p>
-                        <p> <b> Time : </b> {`${lessonDate.getHours().toString().length === 1 ? `0${lessonDate.getHours()}`:`${lessonDate.getHours()}`}
-                          :${lessonDate.getUTCMinutes().toString().length === 1 ? `0${lessonDate.getUTCMinutes()}`:`${lessonDate.getUTCMinutes()}`}`} </p>
+                        <p> <b> Time : </b> <Moment format="HH:mm ">{date}</Moment> </p>
                         <p> <b> date : </b> {lessonDate.getMonth().toString().length === 1 ? `0${lessonDate.getMonth() + 1}` :  lessonDate.getMonth() + 1}/
                           {lessonDate.getDate().toString().length === 1 ? `0${lessonDate.getDate()}` :  lessonDate.getDate()} </p>
                         <p> <b> Class Name : </b> {class_Name} </p>

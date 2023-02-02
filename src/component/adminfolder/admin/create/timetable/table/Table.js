@@ -1,4 +1,6 @@
 import React from "react";
+import Moment from 'react-moment';
+
 
 const Table = ({setNewtimetable,tableData,newTimetable,setId }) => {
   return (
@@ -42,7 +44,10 @@ const Table = ({setNewtimetable,tableData,newTimetable,setId }) => {
                 </p>
                 <p>
                   <b>time:</b>
-                  {`${
+                  <Moment format="HH:mm " >{time}</Moment>
+                  {/* { moment().format(` ${time.getUTCHours()}:${time.getUTCMinutes()}`) } */}
+                  {/* { moment().format(` ${time.getHours()}:${time.getMinutes()}`) } */}
+                  {/* {`${
                     time.getHours().toString().length === 1
                       ? `0${time.getHours()}`
                       : `${time.getHours()}`
@@ -51,7 +56,7 @@ const Table = ({setNewtimetable,tableData,newTimetable,setId }) => {
                       time.getUTCMinutes().toString().length === 1
                         ? `0${time.getUTCMinutes()}`
                         : `${time.getUTCMinutes()}`
-                    }`}
+                    }`} */}
                 </p>
                 <button
                   onClick={() => {
