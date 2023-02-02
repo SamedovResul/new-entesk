@@ -22,6 +22,8 @@ const Table = ({setNewtimetable,tableData,newTimetable,setId }) => {
         const dates = time.getDate();
         const month = time.getMonth();
         const year = time.getFullYear();
+
+        
           return (
             <div key={index} className="col-md-4">
               <div className="info-table">

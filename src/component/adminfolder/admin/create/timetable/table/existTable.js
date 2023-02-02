@@ -30,11 +30,11 @@ const ExistTable = ({Array,teacher, tableData, setId }) => {
         ? `0${time.getUTCMinutes()}`
         : `${time.getUTCMinutes()}`
 
-        console.log(time)
+        console.log( time.getUTCHours() < time.getHours() )
+        console.log( date )
         if(teacher_Id === teacher){
           return (
             <div key={index} className="col-md-4">
-              
               <div className="info-table">
                 <p>
                   <b>teacher:</b> {teacher_Name}
@@ -55,7 +55,8 @@ const ExistTable = ({Array,teacher, tableData, setId }) => {
                 </p>
                 <p>
                   <b>time:</b>
-                  <Moment format="HH:mm " >{time}</Moment>
+                  <Moment format="HH:mm " utc>{date}</Moment>
+                  
                   {/* { moment().format(` ${time.getUTCHours()}:${time.getUTCMinutes()}`)} */}
                   {/* {`${
                     time.getHours().toString().length === 1

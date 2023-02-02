@@ -42,7 +42,7 @@ const SearchResult = ({ state,ConCanHandler }) => {
               <p>
                         {" "}
                         <b>time:</b>{" "}
-                        <Moment format="HH:mm ">{date}</Moment>
+                        <Moment format="HH:mm " utc>{time}</Moment>
                       </p>
               <div>
                 <p>
