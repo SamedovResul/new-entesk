@@ -63,7 +63,7 @@ const Table = ({State,ReturnParms,count,table,Query,setQuery,dispatch,searchByDa
                         <tr key={i} >
                           <td>{weekday[lessonDate.getDay()]}</td>
                           <td> {student_Name} </td>
-                          <td> <Moment format="HH:mm ">{date}</Moment> </td>
+                          <td> <Moment format="HH:mm " utc>{date}</Moment> </td>
 
                           <td> {lessonDate.getMonth().toString().length === 1 ? `0${lessonDate.getMonth() + 1}` :  lessonDate.getMonth() + 1}/
                           {lessonDate.getDate().toString().length === 1 ? `0${lessonDate.getDate()}` :  lessonDate.getDate()}  </td>
