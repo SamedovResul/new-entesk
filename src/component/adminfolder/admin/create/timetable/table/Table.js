@@ -3,12 +3,13 @@ import Moment from 'react-moment';
 
 
 const Table = ({setNewtimetable,tableData,newTimetable,setId }) => {
+  tableData.sort( function(a, b) {
+    return a.date.localeCompare(b.date);
+  })
   return (
     <>
       {tableData.map((timetable, index) => {
-        tableData.sort( function(a, b) {
-          return a.date.localeCompare(b.date);
-        })
+        
         const {
           student_Name,
           student_Id,
