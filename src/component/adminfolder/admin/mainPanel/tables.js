@@ -42,9 +42,9 @@ const Tables = ({state, teacher, ConCanHandler}) => {
           // }
           // console.log(timetable)
           // if (T._id === teacher_Id) {
-            console.log(time.getUTCHours())
-            console.log(time)
-            console.log(date)
+            // console.log(time.getUTCHours())
+            // console.log(time)
+            // console.log(date)
             return (
               <div className="table-box" key={index}>
                 <p>

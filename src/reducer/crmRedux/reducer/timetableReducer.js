@@ -2,6 +2,7 @@ const reducer = (state = {table:[], teacherData:''}, action ) =>{
   const {table} = state
   switch (action.type) {
     case "FETCHTIMETABLE":
+
       return { ...state, table: action.payload,}
     case "CREATETIMETABLE":
       const Array = action.payload
@@ -23,6 +24,7 @@ const reducer = (state = {table:[], teacherData:''}, action ) =>{
     case "ConfirmOrCancel":
       return  { ...state, table: action.payload,}
     default:
+      console.log(state)
       return state;
   }
 }
