@@ -150,6 +150,7 @@ export const GetTeacher = ()=> async(dispatch) =>{
     dispatch({type:"FETCHTEACHERDATA", payload:data})
   } catch (error) {
     console.log(error.message)
+    error.response.data.message &&  localStorage.clear(); 
   }
 }
 
@@ -185,6 +186,7 @@ export const GetTeacherTable = (id) => async (dispatch) =>{
     dispatch({type:"GETTEACHERTABLE", payload:data})
   } catch (error) {
     console.log(error.message);
+    error.response.data.message &&  localStorage.clear(); 
   }
 }
 
@@ -195,6 +197,7 @@ export const GetTeacherCalendar = () => async (dispatch) =>{
     dispatch({type:"GETTEACHERCALENDAR", payload:data})
   } catch (error) {
     console.log(error.message);
+    error.response.data.message &&  localStorage.clear(); 
   }
 }
 
@@ -215,6 +218,7 @@ export const GetCalendar = (id) => async (dispatch) =>{
     dispatch({type:"GETTEACHERCALENDARFORADMIN", payload:data})
   } catch (error) {
     console.log(error.message);
+    error.response.data.message &&  localStorage.clear(); 
   }
 }
 
@@ -269,6 +273,7 @@ export const GetStudent = ()=> async(dispatch) =>{
     dispatch({type:"FETCHSTUDENTDATA", payload:data})
   } catch (error) {
     console.log(error.message)
+    error.response.data.message &&  localStorage.clear(); 
   }
 }
 

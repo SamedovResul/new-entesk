@@ -12,8 +12,6 @@ const reducer = (state = {table:[], teacherData:''}, action ) =>{
       }
       // [...state.table,  ...Array]
     case "UPDATETIMETABLE":
-      console.log(action.payload)
-      
       return{
         ...state,
         table: table.map((timetable) =>
@@ -24,7 +22,6 @@ const reducer = (state = {table:[], teacherData:''}, action ) =>{
     case "ConfirmOrCancel":
       return  { ...state, table: action.payload,}
     default:
-      console.log(state)
       return state;
   }
 }

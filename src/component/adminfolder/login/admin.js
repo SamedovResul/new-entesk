@@ -19,7 +19,11 @@ const Login = () => {
     password:''
   })
 
+  useEffect(() => {
+    localStorage.clear()
+  }, [])
    
+
   const SignIn = (e) => {
     e.preventDefault();
     if(admin.email && admin.password){

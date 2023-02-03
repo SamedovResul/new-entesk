@@ -28,6 +28,7 @@ function App(props) {
   useEffect(() => {
     dispatch(getUser())
   }, [dispatch])
+  
   const [zIndex, setZindex] = useState(0);
   const [openSide, setopenSide ] = useState(false);
 
