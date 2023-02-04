@@ -2,7 +2,7 @@ import axios from 'axios'
 
 
 // http://localhost:5000/ https://enteskcrmserver.azurewebsites.net/
-const API = axios.create({ baseURL: 'http://localhost:5000/' });
+const API = axios.create({ baseURL: 'https://enteskcrmserver.azurewebsites.net/' });
 
 
 // token
