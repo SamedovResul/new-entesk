@@ -17,7 +17,9 @@ const TimeTableForm = ({
   onChangeFunction,
   TextField,
   addToArray,
-  createTimetbale
+  createTimetbale,
+  handleAddStudent,
+  DeleteStudent
 }) => {
 
   
@@ -52,6 +54,9 @@ const TimeTableForm = ({
               params={newTimetable.student_Id}
               onChangeFunction={onChangeFunction}
               select={"Student"}
+              handleAddStudent={handleAddStudent}
+              students={newTimetable.StudentsArray}
+              DeleteStudent={DeleteStudent}
             />
           ) : (
             <></>

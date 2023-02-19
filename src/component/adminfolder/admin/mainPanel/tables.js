@@ -2,9 +2,7 @@ import React from 'react'
 import Moment from 'react-moment';
 import { Button } from "@mui/material";
 const Tables = ({state, teacher, ConCanHandler}) => {
-  state.table.sort( function(a, b) {
-    return a.date.localeCompare(b.date);
-  })
+  
 
 
   
@@ -20,12 +18,11 @@ const Tables = ({state, teacher, ConCanHandler}) => {
               <h2 key={i} >{name}</h2>
               
               {
-                state.table.filter((table) => table.teacher_Id === _id)
+                state.filter((table) => table.teacher_Id === _id)
                 .map((table,index) =>{
                   const {
-                    student_Name,
                     teacher_Name,
-                    teacher_Id,
+                    StudentsArray,
                     class_Name,
                     date,
                     _id,
@@ -45,7 +42,15 @@ const Tables = ({state, teacher, ConCanHandler}) => {
                         </p>
                         <p>
                           {" "}
-                          <b>student:</b> {student_Name}{" "}
+                          <b> Student: </b> 
+                          {
+                            StudentsArray.map((student,i) =>{
+                              const {student_Name} = student
+                              return(
+                                <span key={i} > {student_Name}, </span>
+                              )
+                            })
+                          }
                         </p>
                         <p>
                           {" "}

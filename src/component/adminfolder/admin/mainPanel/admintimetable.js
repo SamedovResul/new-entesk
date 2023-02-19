@@ -66,6 +66,25 @@ const Admin = () => {
     state
   )
   const { cancelClass,confirmedClass,salary } = state.teacherData
+
+
+
+
+  const [tables, setTables] = useState([
+  ]);
+
+  useEffect(() => {
+    const sortedAndUniqueTables = state.table
+      .sort((a, b) => new Date(a.date) - new Date(b.date))
+      .reduce((acc, table) => {
+        if (!acc.some(item => item.name === table.name && item.date === table.date)) {
+          acc.push(table);
+        }
+        return acc;
+      }, []);
+    setTables(sortedAndUniqueTables);
+  }, [state.table]);
+
   return (
     <>
       {state ? (
@@ -125,11 +144,11 @@ const Admin = () => {
                 {search ? (
                   <>
                   
-                  <SearchResult state={state} ConCanHandler={ConCanHandler} />
+                  <SearchResult state={tables} ConCanHandler={ConCanHandler} />
                   </>
                   
                 ) : (
-                  <Tables state={state} teacher={teacher} ConCanHandler={ConCanHandler} />
+                  <Tables state={tables} teacher={teacher} ConCanHandler={ConCanHandler} />
                 )}
               </div>
             </div>

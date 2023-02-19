@@ -12,7 +12,7 @@ const Studentinfo = ({ studentData }) => {
   });
   const dispatch = useDispatch();
   
-  const { class_Name, date, student_Name, _id, class_Comment } = studentData[0];
+  const { class_Name, date, StudentsArray, _id, class_Comment } = studentData[0];
 
   useEffect(() => {
     setComment({
@@ -30,7 +30,15 @@ const Studentinfo = ({ studentData }) => {
         <ul className="list-group list-group-flush">
           <li className="list-group-item">
             {" "}
-            <b>Name: </b> {student_Name}{" "}
+            <b>Name : </b> 
+            {
+              StudentsArray.map((student,i) =>{
+                const {student_Name} = student
+                return(
+                  <b key={i} > {student_Name}, </b>
+                )
+              })
+            }
           </li>
           <li className="list-group-item">
             {" "}

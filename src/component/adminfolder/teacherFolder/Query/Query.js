@@ -81,14 +81,29 @@ const Query = ({ ReturnParms }) => {
   const getLimit = () =>{
     dispatch(GetTeacherTable(Query));
   }
-  console.log(table)
+
+  const [tables, setTables] = useState([
+  ]);
+
+  useEffect(() => {
+    const sortedAndUniqueTables = table
+      .sort((a, b) => new Date(a.date) - new Date(b.date))
+      .reduce((acc, table) => {
+        if (!acc.some(item => item.name === table.name && item.date === table.date)) {
+          acc.push(table);
+        }
+        return acc;
+      }, []);
+    setTables(sortedAndUniqueTables);
+  }, [table]);
+
   return (
     <>
       <article className="Schedule-section">
         {Return >= 1 && table.length > 0 ? (
           <Table
             State={{ id, setId }}
-            table={table}
+            table={tables}
             ReturnParms={{ Return, setReturn }}
             count={count}
             Query={Query}
@@ -127,7 +142,7 @@ const Query = ({ ReturnParms }) => {
             {hideList && table.length > 0 && (
               <Table
               State={{ id, setId }}
-              table={table}
+              table={tables}
               ReturnParms={{ Return, setReturn }}
               count={count}
               Query={Query}

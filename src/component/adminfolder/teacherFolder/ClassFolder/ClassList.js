@@ -27,6 +27,20 @@ const ClassList = ({
     
   }, [Query.skip])
 
+    const [tables, setTables] = useState([
+    ]);
+
+    useEffect(() => {
+      const sortedAndUniqueTables = table
+        .sort((a, b) => new Date(a.date) - new Date(b.date))
+        .reduce((acc, table) => {
+          if (!acc.some(item => item.name === table.name && item.date === table.date)) {
+            acc.push(table);
+          }
+          return acc;
+        }, []);
+      setTables(sortedAndUniqueTables);
+    }, [table]);
 
   return (
     <article>
@@ -47,16 +61,22 @@ const ClassList = ({
             <th>Class Information</th>
           </tr>
         {
-          (table.map((data,i) =>{
-            table.sort( function(a, b) {
-              return a.date.localeCompare(b.date);
-            })
-            const {student_Name,date,class_Name,_id,table_State,class_Comment} = data
+          (tables.map((data,i) =>{
+            
+            const {StudentsArray,date,class_Name,_id,table_State,class_Comment} = data
             const lessonDate = new Date(date)
-            console.log(lessonDate.getUTCHours().toString())
             return(
               <tr key={i} >
-                <td> {student_Name} </td>
+                <td> 
+                  {
+                    StudentsArray.map((student,i) =>{
+                      const {student_Name} = student
+                      return(
+                        <b key={i} > {student_Name}, </b>
+                      )
+                    })
+                  } 
+                </td>
                 <td> <Moment format="HH:mm " utc>{date}</Moment> </td>
                 <td> {lessonDate.getMonth().toString().length === 1 ? `0${lessonDate.getMonth() + 1}` :  lessonDate.getMonth() + 1}/
                         {lessonDate.getDate().toString().length === 1 ? `0${lessonDate.getDate()}` :  lessonDate.getDate()}  </td>
@@ -83,7 +103,7 @@ const ClassList = ({
                     const lessonDate = new Date(date)
 
                     return(
-                      <div> 
+                      <div key={i}> 
                         <p> <b> Name : </b>   {student_Name} </p>
                         <p> <b> Time : </b> {`${lessonDate.getHours().toString().length === 1 ? `0${lessonDate.getHours()}`:`${lessonDate.getHours()}`}
                           :${lessonDate.getUTCMinutes().toString().length === 1 ? `0${lessonDate.getUTCMinutes()}`:`${lessonDate.getUTCMinutes()}`}`} </p>

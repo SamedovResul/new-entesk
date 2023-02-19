@@ -1,4 +1,4 @@
-import React,{useEffect,useReducer} from 'react'
+import React, { useEffect, useReducer, useState } from "react";
 
 const TimetableFunc = (
   // class
@@ -25,275 +25,301 @@ const TimetableFunc = (
   // calendar
   CreateTeacherCalendar,
   calendarReducer,
-  UpdateCalendar
-  ) => {
-    // calendar reducer for teacher
+  UpdateCalendar,
+  // student array
+  setStudents,
+  students
+) => {
+  // calendar reducer for teacher
 
-    const [State, Dispatch] = useReducer((state, action) =>{ 
+  const [State, Dispatch] = useReducer(
+    (state, action) => {
       switch (action.type) {
-      case 'Monday':
-        return  {
-          ...state,
-          Monday: [...state.Monday, 
-            {
-              studentId: state.studentId,
-              studentName: state.studentName,
-              time:state.time,
-              Id:state.Id
-            }
-          ],
-          studentId:'',
-          studentName:'',
-          time:'',
-          weekday:""
-        };
-      case "Tuesday":
-        return  {
-          ...state,
-          Tuesday: [...state.Tuesday, 
-            {
-              studentId: state.studentId,
-              studentName: state.studentName,
-              time:state.time,
-              Id:state.Id
-            }
-          ],
-          studentId:'',
-          studentName:'',
-          time:'',
-          weekday:""
-        }; 
-      case "Wednesday":
-        return  {
-          ...state,
-          Wednesday: [...state.Wednesday, 
-            {
-              studentId: state.studentId,
-              studentName: state.studentName,
-              time:state.time,
-              Id:state.Id
-            }
-          ],
-          studentId:'',
-          studentName:'',
-          time:'',
-          weekday:""
-        }; 
-      case "Thursday":
-      return  {
-        ...state,
-        Thursday: [...state.Thursday, 
-          {
-            studentId: state.studentId,
-            studentName: state.studentName,
-            time:state.time,
-            Id:state.Id
-          }
-        ],
-        studentId:'',
-        studentName:'',
-        time:'',
-        weekday:""
-      }; 
-      case "Friday":
-      return  {
-        ...state,
-        Friday: [...state.Friday, 
-          {
-            studentId: state.studentId,
-            studentName: state.studentName,
-            time:state.time,
-            Id:state.Id
-          }
-        ],
-        studentId:'',
-        studentName:'',
-        time:'',
-        weekday:""
-      }; 
-      case "Saturday":
-      return  {
-        ...state,
-        Saturday: [...state.Saturday, 
-          {
-            studentId: state.studentId,
-            studentName: state.studentName,
-            time:state.time,
-            Id:state.Id
-          }
-        ],
-        studentId:'',
-        studentName:'',
-        time:'',
-        weekday:""
-      }; 
-      case "Sunday":
-      return  {
-        ...state,
-        Sunday: [...state.Sunday, 
-          {
-            studentId: state.studentId,
-            studentName: state.studentName,
-            time:state.time,
-            Id:state.Id
-          }
-        ],
-        studentId:'',
-        studentName:'',
-        time:'',
-        weekday:""
-      }; 
-      case "NAME":
-        return { ...state,studentName: action.payload  }
-      case "StudentId":
-        return { ...state,studentId: action.payload  }
-      case "ID":
-        return { ...state,Id: action.payload  }
-      case "TIME":
-        return { ...state,time: action.payload  }
-      case "TEACHER":
-        return { ...state,teacher_Id: action.payload  }
-      case "Weekday":
-        return { ...state,weekday: action.payload  }
-      case "SelectMonday": 
-        console.log(action.payload)
-        return { ...state,
-          studentName: action.payload.studentName,
-          time: action.payload.time,
-          weekday: action.payload.weekday ,
-          index: action.payload.index,
-          studentId: action.payload.studentId,
-          Monday: state.Monday.filter((data,i) =>
-          data.Id !== action.payload.Id),
-        }
-      case "SelectTuesday": 
-        return { ...state,
-          studentName: action.payload.studentName,
-          time: action.payload.time,
-          weekday: action.payload.weekday ,
-          index: action.payload.index,
-          studentId: action.payload.studentId,
-          Tuesday: state.Monday.filter((data,i) =>
-          data.time !== action.payload.time),
-        }
-      case "SelectWednesday": 
-        return { ...state,
-          studentName: action.payload.studentName,
-          time: action.payload.time,
-          weekday: action.payload.weekday ,
-          index: action.payload.index,
-          studentId: action.payload.studentId,
-          Wednesday: state.Wednesday.filter((data,i) =>
-          data.time !== action.payload.time),
-        }
-      case "SelectThursday": 
-        return { ...state,
-          studentName: action.payload.studentName,
-          time: action.payload.time,
-          weekday: action.payload.weekday ,
-          index: action.payload.index,
-          studentId: action.payload.studentId,
-          Thursday: state.Thursday.filter((data,i) =>
-          data.time !== action.payload.time),
-        }
-      case "SelectFriday": 
-        return { ...state,
-          studentName: action.payload.studentName,
-          time: action.payload.time,
-          weekday: action.payload.weekday ,
-          index: action.payload.index,
-          studentId: action.payload.studentId,
-          Friday: state.Friday.filter((data,i) =>
-          data.time !== action.payload.time),
-        }
-      case "SelectSaturday": 
-        return { ...state,
-          studentName: action.payload.studentName,
-          time: action.payload.time,
-          weekday: action.payload.weekday ,
-          index: action.payload.index,
-          studentId: action.payload.studentId,
-          Saturday: state.Saturday.filter((data,i) =>
-          data.time !== action.payload.time),
-        }
-      case "SelectSunday": 
-        return { ...state,
-          studentName: action.payload.studentName,
-          time: action.payload.time,
-          weekday: action.payload.weekday ,
-          index: action.payload.index,
-          studentId: action.payload.studentId,
-          Sunday: state.Sunday.filter((data,i) =>
-          data.time !== action.payload.time),
-        }
-      case "GetAllCalendar":
-        return {
-          ...state,
-          Monday:calendarReducer.Monday,
-          Tuesday:calendarReducer.Tuesday,
-          Wednesday:calendarReducer.Wednesday,
-          Thursday:calendarReducer.Thursday,
-          Friday:calendarReducer.Friday,
-          Saturday:calendarReducer.Saturday,
-          Sunday:calendarReducer.Sunday,
-          teacher_Id:calendarReducer.teacherId,
-          calendarId:calendarReducer._id
-        }
-      case "ClearAllCalendar":
-        return {
-          ...state,
-          Monday:[],
-          Tuesday:[],
-          Wednesday:[],
-          Thursday:[],
-          Friday:[],
-          Saturday:[],
-          Sunday:[],
-          calendarId:'',
-        }
-      default: 
-        break;
-    } }, {
+        case "Monday":
+          return {
+            ...state,
+            Monday: [
+              ...state.Monday,
+              {
+                studentId: state.studentId,
+                studentName: state.studentName,
+                time: state.time,
+                Id: state.Id,
+              },
+            ],
+            studentId: "",
+            studentName: "",
+            time: "",
+            weekday: "",
+          };
+        case "Tuesday":
+          return {
+            ...state,
+            Tuesday: [
+              ...state.Tuesday,
+              {
+                studentId: state.studentId,
+                studentName: state.studentName,
+                time: state.time,
+                Id: state.Id,
+              },
+            ],
+            studentId: "",
+            studentName: "",
+            time: "",
+            weekday: "",
+          };
+        case "Wednesday":
+          return {
+            ...state,
+            Wednesday: [
+              ...state.Wednesday,
+              {
+                studentId: state.studentId,
+                studentName: state.studentName,
+                time: state.time,
+                Id: state.Id,
+              },
+            ],
+            studentId: "",
+            studentName: "",
+            time: "",
+            weekday: "",
+          };
+        case "Thursday":
+          return {
+            ...state,
+            Thursday: [
+              ...state.Thursday,
+              {
+                studentId: state.studentId,
+                studentName: state.studentName,
+                time: state.time,
+                Id: state.Id,
+              },
+            ],
+            studentId: "",
+            studentName: "",
+            time: "",
+            weekday: "",
+          };
+        case "Friday":
+          return {
+            ...state,
+            Friday: [
+              ...state.Friday,
+              {
+                studentId: state.studentId,
+                studentName: state.studentName,
+                time: state.time,
+                Id: state.Id,
+              },
+            ],
+            studentId: "",
+            studentName: "",
+            time: "",
+            weekday: "",
+          };
+        case "Saturday":
+          return {
+            ...state,
+            Saturday: [
+              ...state.Saturday,
+              {
+                studentId: state.studentId,
+                studentName: state.studentName,
+                time: state.time,
+                Id: state.Id,
+              },
+            ],
+            studentId: "",
+            studentName: "",
+            time: "",
+            weekday: "",
+          };
+        case "Sunday":
+          return {
+            ...state,
+            Sunday: [
+              ...state.Sunday,
+              {
+                studentId: state.studentId,
+                studentName: state.studentName,
+                time: state.time,
+                Id: state.Id,
+              },
+            ],
+            studentId: "",
+            studentName: "",
+            time: "",
+            weekday: "",
+          };
+        case "NAME":
+          return { ...state, studentName: action.payload };
+        case "StudentId":
+          return { ...state, studentId: action.payload };
+        case "ID":
+          return { ...state, Id: action.payload };
+        case "TIME":
+          return { ...state, time: action.payload };
+        case "TEACHER":
+          return { ...state, teacher_Id: action.payload };
+        case "Weekday":
+          return { ...state, weekday: action.payload };
+        case "SelectMonday":
+          console.log(action.payload);
+          return {
+            ...state,
+            studentName: action.payload.studentName,
+            time: action.payload.time,
+            weekday: action.payload.weekday,
+            index: action.payload.index,
+            studentId: action.payload.studentId,
+            Monday: state.Monday.filter(
+              (data, i) => data.Id !== action.payload.Id
+            ),
+          };
+        case "SelectTuesday":
+          return {
+            ...state,
+            studentName: action.payload.studentName,
+            time: action.payload.time,
+            weekday: action.payload.weekday,
+            index: action.payload.index,
+            studentId: action.payload.studentId,
+            Tuesday: state.Monday.filter(
+              (data, i) => data.time !== action.payload.time
+            ),
+          };
+        case "SelectWednesday":
+          return {
+            ...state,
+            studentName: action.payload.studentName,
+            time: action.payload.time,
+            weekday: action.payload.weekday,
+            index: action.payload.index,
+            studentId: action.payload.studentId,
+            Wednesday: state.Wednesday.filter(
+              (data, i) => data.time !== action.payload.time
+            ),
+          };
+        case "SelectThursday":
+          return {
+            ...state,
+            studentName: action.payload.studentName,
+            time: action.payload.time,
+            weekday: action.payload.weekday,
+            index: action.payload.index,
+            studentId: action.payload.studentId,
+            Thursday: state.Thursday.filter(
+              (data, i) => data.time !== action.payload.time
+            ),
+          };
+        case "SelectFriday":
+          return {
+            ...state,
+            studentName: action.payload.studentName,
+            time: action.payload.time,
+            weekday: action.payload.weekday,
+            index: action.payload.index,
+            studentId: action.payload.studentId,
+            Friday: state.Friday.filter(
+              (data, i) => data.time !== action.payload.time
+            ),
+          };
+        case "SelectSaturday":
+          return {
+            ...state,
+            studentName: action.payload.studentName,
+            time: action.payload.time,
+            weekday: action.payload.weekday,
+            index: action.payload.index,
+            studentId: action.payload.studentId,
+            Saturday: state.Saturday.filter(
+              (data, i) => data.time !== action.payload.time
+            ),
+          };
+        case "SelectSunday":
+          return {
+            ...state,
+            studentName: action.payload.studentName,
+            time: action.payload.time,
+            weekday: action.payload.weekday,
+            index: action.payload.index,
+            studentId: action.payload.studentId,
+            Sunday: state.Sunday.filter(
+              (data, i) => data.time !== action.payload.time
+            ),
+          };
+        case "GetAllCalendar":
+          return {
+            ...state,
+            Monday: calendarReducer.Monday,
+            Tuesday: calendarReducer.Tuesday,
+            Wednesday: calendarReducer.Wednesday,
+            Thursday: calendarReducer.Thursday,
+            Friday: calendarReducer.Friday,
+            Saturday: calendarReducer.Saturday,
+            Sunday: calendarReducer.Sunday,
+            teacher_Id: calendarReducer.teacherId,
+            calendarId: calendarReducer._id,
+          };
+        case "ClearAllCalendar":
+          return {
+            ...state,
+            Monday: [],
+            Tuesday: [],
+            Wednesday: [],
+            Thursday: [],
+            Friday: [],
+            Saturday: [],
+            Sunday: [],
+            calendarId: "",
+          };
+        default:
+          break;
+      }
+    },
+    {
       // monday
-      Monday:[],
+      Monday: [],
       // Tuesday
-      Tuesday:[],
+      Tuesday: [],
       // Wednesday
-      Wednesday:[],
+      Wednesday: [],
       // Thursday
-      Thursday:[],
+      Thursday: [],
       // Friday
-      Friday:[],
+      Friday: [],
       // Saturday
-      Saturday:[],
+      Saturday: [],
       // Sunday
-      Sunday:[],
+      Sunday: [],
       // propertys
-      studentId:'',
-      studentName:'',
-      time:'',
-      Id:'',
+      studentId: "",
+      studentName: "",
+      time: "",
+      Id: "",
       // teacher
-      teacher_Id:"",
+      teacher_Id: "",
       // weekday
-      weekday:"",
+      weekday: "",
       // index
-      index:'',
+      index: "",
       // calendar Id
-      calendarId:""
-    })
-  
+      calendarId: "",
+    }
+  );
 
   // class
   useEffect(() => {
     classReducer.map((Class) => {
-      const { name, _id,class_Category } = Class;
+      const { name, _id, class_Category } = Class;
       if (_id === newTimetable.class_Id) {
         newTimetable.class_Name = name;
-        Category.length === 0 && setCategory(class_Category)
+        Category.length === 0 && setCategory(class_Category);
       }
     });
-
   }, [newTimetable]);
 
   // student
@@ -304,10 +330,10 @@ const TimetableFunc = (
         newTimetable.student_Name = name;
       }
       if (_id === State.studentId) {
-        Dispatch({type:"NAME", payload:name })
+        Dispatch({ type: "NAME", payload: name });
       }
     });
-  }, [newTimetable,State.studentId]);
+  }, [newTimetable, State.studentId]);
 
   // teacher
   useEffect(() => {
@@ -328,7 +354,6 @@ const TimetableFunc = (
         setNewtimetable(timetable);
       }
     });
-
   }, [id]);
 
   // create timatable
@@ -339,20 +364,26 @@ const TimetableFunc = (
       dispatch(UpdateTimetable(newTimetable, id));
       setNewtimetable({
         ...newTimetable,
+        StudentsArray:[],
         student_Name: "",
         student_Id: "",
         teacher_Name: "",
         class_Name: "",
         class_Id: "",
-        class_Category:"",
+        class_Category: "",
         date: "",
       });
-      setId('')
-      setCategory([])
+      setId("");
+      setCategory([]);
     } else {
-      if ( Array.length > 0 && !newTimetable.class_Name &&  !newTimetable.student_Name && !newTimetable.date ) {
+      if (
+        Array.length > 0 &&
+        !newTimetable.class_Name &&
+        !newTimetable.student_Name &&
+        !newTimetable.date
+      ) {
         dispatch(CreateTimetable(Array));
-        setArray([])
+        setArray([]);
         Swal.fire({
           color: "green",
           text: "Great",
@@ -366,80 +397,125 @@ const TimetableFunc = (
     }
   };
 
-  const createCalendar = () =>{
-    if(!State.calendarId){
-      dispatch(CreateTeacherCalendar(State))
-      Dispatch({type:'ClearAllCalendar'})
-    }else{
-      dispatch(UpdateCalendar(State))
-      Dispatch({type:'ClearAllCalendar'})
-      
+  const createCalendar = () => {
+    if (!State.calendarId) {
+      dispatch(CreateTeacherCalendar(State));
+      Dispatch({ type: "ClearAllCalendar" });
+    } else {
+      dispatch(UpdateCalendar(State));
+      Dispatch({ type: "ClearAllCalendar" });
     }
-  }
-  
-  // addToArray
-  const addToArray = (e) =>{
-      e.preventDefault();
-      if(newTimetable.condition){
-          setArray( (data) => {
-            return data.map(
-              
-              (data,index) => index === newTimetable.index ? newTimetable : data )
-          })
-          
-          setNewtimetable({
-            ...newTimetable,
-            student_Name: "",
-            student_Id: "",
-            class_Name: "",
-            class_Id: "",
-            category_name:"",
-            date: "",
-            index:'',
-            condition:false
-          })
-        } else if( 
-          newTimetable.student_Id &&
-          newTimetable.teacher_Id &&
-          newTimetable.class_Id &&
-          newTimetable.date){
-            setArray([...Array, newTimetable]);
-            setNewtimetable({
-              ...newTimetable,
-              student_Name: "",
-              student_Id: "",
-              class_Name: "",
-              class_Id: "",
-              category_name:"",
-              date: "",
-            })
-            setCategory([])
-        } else{
-          Swal.fire({
-            color: "red",
-            text: "please complete form",
-          });
-        }
-    }
+  };
 
-    // for time table
-    let Name, value;
-    const onChangeFunction = (e) => {
-      e.preventDefault();
-      Name = e.target.name;
-      value = e.target.value;
+  // addToArray
+  const addToArray = (e) => {
+    e.preventDefault();
+    if (newTimetable.condition) {
+      setArray((data) => {
+        return data.map((data, index) =>
+          index === newTimetable.index ? newTimetable : data
+        );
+      });
+
       setNewtimetable({
         ...newTimetable,
-        [Name]: value,
+        StudentsArray: [],
+        student_Name: "",
+        student_Id: "",
+        class_Name: "",
+        class_Id: "",
+        category_name: "",
+        date: "",
+        index: "",
+        condition: false,
       });
-      classReducer.map((data) =>{
-        const {name,_id,class_Category} = data
-        if(_id === value){
-          setCategory(class_Category)
-        }
-      })
-    };
-    
+    } else if (
+      newTimetable.student_Id &&
+      newTimetable.teacher_Id &&
+      newTimetable.class_Id &&
+      newTimetable.date
+    ) {
+      setArray([...Array, newTimetable]);
+      setNewtimetable({
+        ...newTimetable,
+        StudentsArray: [],
+        student_Name: "",
+        student_Id: "",
+        class_Name: "",
+        class_Id: "",
+        category_name: "",
+        date: "",
+      });
+      setCategory([]);
+    } else {
+      Swal.fire({
+        color: "red",
+        text: "please complete form",
+      });
+    }
+  };
+
+  // student array
+  const handleAddStudent = (e) => {
+    e.preventDefault();
+    let existingStudent
+    if(newTimetable.StudentsArray.length > 0){
+      existingStudent = newTimetable.StudentsArray.find(
+        (student) => student.student_Id === newTimetable.student_Id
+      );
+    }else{
+      setNewtimetable({
+        ...newTimetable,
+        StudentsArray: [
+          ...newTimetable.StudentsArray,
+          {
+            student_Name: newTimetable.student_Name,
+            student_Id: newTimetable.student_Id,
+          },
+        ],
+      });
+    }
+    if(!existingStudent && newTimetable.StudentsArray.length > 0 ){
+      setNewtimetable({
+        ...newTimetable,
+        StudentsArray: [
+          ...newTimetable.StudentsArray,
+          {
+            student_Name: newTimetable.student_Name,
+            student_Id: newTimetable.student_Id,
+          },
+        ],
+      });
+    }
+
+  };
+
+  const DeleteStudent = (id) => {
+    setNewtimetable({
+      ...newTimetable,
+      StudentsArray: newTimetable.StudentsArray.filter(
+        (student) => student.student_Id !== id
+      ),
+    });
+  };
+
+  // for time table
+  let Name, value;
+  const onChangeFunction = (e) => {
+    e.preventDefault();
+    Name = e.target.name;
+    value = e.target.value;
+    setNewtimetable({
+      ...newTimetable,
+      [Name]: value,
+    });
+    classReducer.map((data) => {
+      const { name, _id, class_Category } = data;
+      if (_id === value) {
+        setCategory(class_Category);
+      }
+    });
+  };
 
   return {
     // create timatable
@@ -450,8 +526,11 @@ const TimetableFunc = (
     // calendar reducer
     State,
     Dispatch,
-    createCalendar
-  }
-}
+    createCalendar,
+    // student array
+    handleAddStudent,
+    DeleteStudent,
+  };
+};
 
-export default TimetableFunc
+export default TimetableFunc;

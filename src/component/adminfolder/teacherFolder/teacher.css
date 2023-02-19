@@ -145,9 +145,10 @@ form input {
     /* .Schedule-section form {
       display: none;
     } */
-    .Schedule-section > div table {
+    .Schedule-section > div > div {
       display: none;
     }
+    
     .Schedule-section > div {
       width: 100%;
       height: 70%;
@@ -163,6 +164,7 @@ form input {
     }
 
     .Schedule-section .mobile-box {
+      display: block;
       width: 85%;
       height: 90%;
       overflow-y: scroll;

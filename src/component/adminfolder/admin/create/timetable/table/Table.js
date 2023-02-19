@@ -11,13 +11,12 @@ const Table = ({setNewtimetable,tableData,newTimetable,setId }) => {
       {tableData.map((timetable, index) => {
         
         const {
-          student_Name,
-          student_Id,
           teacher_Name,
           class_Name,
           class_Id,
           date,
-          category_name
+          category_name,
+          StudentsArray
         } = timetable;
         const time = new Date(date);
         const dates = time.getDate();
@@ -32,7 +31,15 @@ const Table = ({setNewtimetable,tableData,newTimetable,setId }) => {
                   <b>teacher:</b> {teacher_Name}
                 </p>
                 <p>
-                  <b>student:</b> {student_Name}
+                  <b> Student: </b> 
+                  {
+                    StudentsArray.map((student,i) =>{
+                      const {student_Name} = student
+                      return(
+                        <span key={i} > {student_Name}, </span>
+                      )
+                    })
+                  }
                 </p>
                 <p>
                   <b>class:</b> {class_Name}
@@ -65,11 +72,10 @@ const Table = ({setNewtimetable,tableData,newTimetable,setId }) => {
                   onClick={() => {
                     setNewtimetable({
                       ...newTimetable,
-                      student_Name,
+                      StudentsArray,
                       class_Name,
                       date,
                       class_Id,
-                      student_Id,
                       category_name,
                       index:index,
                       condition:true

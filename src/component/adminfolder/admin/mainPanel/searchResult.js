@@ -7,7 +7,7 @@ const SearchResult = ({ state,ConCanHandler }) => {
   return (
     <>
       <div className="parent-table-box">
-        {state.table.map((timetable, index) => {
+        {state.map((timetable, index) => {
           const {
             student_Name,
             teacher_Name,

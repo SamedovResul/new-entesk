@@ -36,9 +36,10 @@ const Create = () => {
   useEffect(() => {
     dispatch(GetTimetable());
   }, []);
-
+  const [students, setStudents] = useState([]);
   let state = useSelector((state) => state);
   const [newTimetable, setNewtimetable] = useState({
+    StudentsArray: [],
     student_Name: "",
     student_Id: "",
     teacher_Name: "",
@@ -52,7 +53,7 @@ const Create = () => {
     index:'',
     condition:false
   });
-
+  console.log(newTimetable)
   const [Array, setArray] = useState([]);
   let [Category, setCategory] = useState([])
   const [tableAndCalendar, setTableAndCalendar] = useState(0)
@@ -69,7 +70,10 @@ const Create = () => {
     // calendar reducer
     State,
     Dispatch,
-    createCalendar
+    createCalendar,
+    // students array
+    handleAddStudent,
+    DeleteStudent
   } = TimetableFunc(
     // class 
     state.classReducer,
@@ -95,7 +99,10 @@ const Create = () => {
     // cerate calendar
     CreateTeacherCalendar,
     state.calendarReducer,
-    UpdateCalendar
+    UpdateCalendar,
+    // student array
+    setStudents,
+    students,
   ) 
   const { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday } = State;
   return (
@@ -133,6 +140,8 @@ const Create = () => {
             TextField={TextField}
             addToArray={addToArray}
             createTimetbale={createTimetbale}
+            handleAddStudent={handleAddStudent}
+            DeleteStudent={DeleteStudent}
           />
         ) :tableAndCalendar === 2 ?(
           <CalendarForm
@@ -172,6 +181,7 @@ const Create = () => {
                 createCalendar={createCalendar}
                 Button={Button}
                 Dispatch={Dispatch}
+                
               />
             }
             

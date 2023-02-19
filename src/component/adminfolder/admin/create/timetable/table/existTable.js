@@ -10,7 +10,7 @@ const ExistTable = ({Array,teacher, tableData, setId }) => {
       {tableData.map((timetable, index) => {
 
         const {
-          student_Name,
+          StudentsArray,
           teacher_Name,
           class_Name,
           date,
@@ -40,7 +40,15 @@ const ExistTable = ({Array,teacher, tableData, setId }) => {
                   <b>teacher:</b> {teacher_Name}
                 </p>
                 <p>
-                  <b>student:</b> {student_Name}
+                <b> Student: </b> 
+                  {
+                    StudentsArray.map((student,i) =>{
+                      const {student_Name} = student
+                      return(
+                        <span key={i} > {student_Name}, </span>
+                      )
+                    })
+                  }
                 </p>
                 <p>
                   <b>class:</b> {class_Name}

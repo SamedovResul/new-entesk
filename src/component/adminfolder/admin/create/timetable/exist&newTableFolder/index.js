@@ -21,7 +21,7 @@ const Index = ({
             display:'flex',
             flexWrap:"wrap",
             position:"relative",
-            paddingTop:"50px"
+            paddingTop:"50px",
             } : {border:'none'}} >
             <h5
                 style={Array.length !== 0? {

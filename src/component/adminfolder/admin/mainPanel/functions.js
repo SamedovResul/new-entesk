@@ -16,8 +16,6 @@ const Functions = (
   getDate,
   // get birthday
   GetStudent,
-  // searchingState
-  searchingState
 ) => {
   
   // get data from back
