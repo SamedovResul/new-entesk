@@ -16,8 +16,9 @@ const Functions = (
   getDate,
   // get birthday
   GetStudent,
+  // delete student
+  deleteStudentFromTable
 ) => {
-  
   // get data from back
   useEffect(() => {
     dispatch(GetTimetable());
@@ -30,8 +31,8 @@ const Functions = (
   const Searching = (e) => {
     e.preventDefault();
     if(date.from || date.to || date.teacher_Id || date.student_Name || date.table_State){
-      dispatch(searchByDate(date));
-      setSearch(true);
+      dispatch(searchByDate(date,setSearch));
+      // setSearch(true);
     }
   };
 
@@ -75,7 +76,15 @@ const Functions = (
     })
   }
 
-  // 
+  // delete student
+
+  const deleteStudentHandler = (id,studentId) =>{
+    dispatch(deleteStudentFromTable(id,studentId))
+  }
+
+
+
+
 
   const style ={
     display: "flex", 
@@ -88,7 +97,8 @@ const Functions = (
     today,
     ConCanHandler,
     onChangeFunction,
-    style
+    style,
+    deleteStudentHandler
   }
 }
 

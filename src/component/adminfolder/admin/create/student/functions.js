@@ -17,6 +17,7 @@ const Functions = (
   CreateStudent,
   // get birth day
   FetchByBirthday,
+  GetTimetable,
   // teacher
   teacher
   ) => {
@@ -50,9 +51,9 @@ const Functions = (
   const createStudent = (e) =>{
     if(id.id){
       dispatch(UpdateStudent(id.id,data))
+      dispatch(GetTimetable())
       setData({
-        name:"",
-        SecondName:"",
+        name:'',
         age:'',
         ParentName:'',
         PhoneNumber:'',
@@ -72,14 +73,13 @@ const Functions = (
         timer:1000
       })
     }else{
-      if(data.age && data.name && data.SecondName && data.status){
+      if(data.age && data.name && data.status){
         dispatch(CreateStudent(data))
         setTimeout(() => {
           dispatch(FetchByBirthday())
         }, 2000);
         setData({
-          name:"",
-          SecondName:"",
+          name:'',
           age:'',
           ParentName:'',
           PhoneNumber:'',

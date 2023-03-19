@@ -1,7 +1,12 @@
 import React, {useEffect, useState} from 'react'
-import { useHistory } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
-import { CreateStudent, UpdateStudent,GetStudent,FetchByBirthday} from '../../../../../reducer/crmRedux/action';
+import { 
+  CreateStudent, 
+  UpdateStudent,
+  GetStudent,
+  FetchByBirthday,
+  GetTimetable
+} from '../../../../../reducer/crmRedux/action';
 import Functions from './functions';
 import Swal from 'sweetalert2'
 import Form from './form';
@@ -13,7 +18,6 @@ import Button from '@mui/material/Button'
 const Classes = () => {
   const [data, setData] = useState({
     name:"",
-    SecondName:"",
     age:'',
     ParentName:'',
     PhoneNumber:'',
@@ -46,6 +50,7 @@ const Classes = () => {
     CreateStudent,
     // get birth day
     FetchByBirthday,
+    GetTimetable,
     // 
     teacher
     )

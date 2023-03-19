@@ -33,9 +33,9 @@ const Studentinfo = ({ studentData }) => {
             <b>Name : </b> 
             {
               StudentsArray.map((student,i) =>{
-                const {student_Name} = student
+                const {name} = student
                 return(
-                  <b key={i} > {student_Name}, </b>
+                  <b key={i} > {name}, </b>
                 )
               })
             }

@@ -26,9 +26,6 @@ const TimetableFunc = (
   CreateTeacherCalendar,
   calendarReducer,
   UpdateCalendar,
-  // student array
-  setStudents,
-  students
 ) => {
   // calendar reducer for teacher
 
@@ -167,7 +164,6 @@ const TimetableFunc = (
         case "Weekday":
           return { ...state, weekday: action.payload };
         case "SelectMonday":
-          console.log(action.payload);
           return {
             ...state,
             studentName: action.payload.studentName,
@@ -327,7 +323,7 @@ const TimetableFunc = (
     studentReducer.map((student) => {
       const { name, _id } = student;
       if (_id === newTimetable.student_Id) {
-        newTimetable.student_Name = name;
+        newTimetable.name = name;
       }
       if (_id === State.studentId) {
         Dispatch({ type: "NAME", payload: name });
@@ -365,7 +361,7 @@ const TimetableFunc = (
       setNewtimetable({
         ...newTimetable,
         StudentsArray:[],
-        student_Name: "",
+        fullName: "",
         student_Id: "",
         teacher_Name: "",
         class_Name: "",
@@ -433,8 +429,11 @@ const TimetableFunc = (
       newTimetable.student_Id &&
       newTimetable.teacher_Id &&
       newTimetable.class_Id &&
-      newTimetable.date
+      newTimetable.date &&
+      newTimetable.category_name &&
+      newTimetable.StudentsArray.length > 0
     ) {
+      console.log(true)
       setArray([...Array, newTimetable]);
       setNewtimetable({
         ...newTimetable,
@@ -454,7 +453,6 @@ const TimetableFunc = (
       });
     }
   };
-
   // student array
   const handleAddStudent = (e) => {
     e.preventDefault();
@@ -469,7 +467,7 @@ const TimetableFunc = (
         StudentsArray: [
           ...newTimetable.StudentsArray,
           {
-            student_Name: newTimetable.student_Name,
+            name: newTimetable.name,
             student_Id: newTimetable.student_Id,
           },
         ],
@@ -481,15 +479,16 @@ const TimetableFunc = (
         StudentsArray: [
           ...newTimetable.StudentsArray,
           {
-            student_Name: newTimetable.student_Name,
+            name: newTimetable.name,
             student_Id: newTimetable.student_Id,
           },
         ],
       });
     }
-
+    console.log(newTimetable)
   };
 
+  
   const DeleteStudent = (id) => {
     setNewtimetable({
       ...newTimetable,

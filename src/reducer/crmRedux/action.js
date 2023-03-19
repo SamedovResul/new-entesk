@@ -25,7 +25,8 @@ import {
   calculate,
   createTeacherCalendar,
   getCalendar,
-  updateCalendar
+  updateCalendar,
+  DeleteStudentFromTable
 } from './api'
 import Swal from 'sweetalert2'
 
@@ -269,7 +270,7 @@ export const GetStudent = ()=> async(dispatch) =>{
   
   try {
     const {data} = await getStudent()
-    // console.log(data)
+    
     dispatch({type:"FETCHSTUDENTDATA", payload:data})
   } catch (error) {
     console.log(error.message)
@@ -348,9 +349,10 @@ export const UpdateTimetable = (timetableData, id) => async (dispatch) =>{
 }
 
 
-export const searchByDate = (search) => async (dispatch) =>{
+export const searchByDate = (search,setSearch) => async (dispatch) =>{
   try {
     const {data} = await SearchByDate(search);
+    data && setSearch(true)
     dispatch({type:"FETCHBYSEARCH", payload:data})
   } catch (error) {
     alert(error.response.data.msg)
@@ -363,6 +365,17 @@ export const confirmOrCancel = (id,Confirmdata) => async (dispatch) =>{
     const {data} = await ConfirmOrCancel(id,Confirmdata);
     console.log(data)
     dispatch({type:'ConfirmOrCancel', payload:data})
+  } catch (error) {
+    console.log(error.message); 
+  }
+}
+
+export const deleteStudentFromTable = (id,studentId) => async (dispatch) =>{
+  
+  try {
+    const {data} = await DeleteStudentFromTable(id,studentId);
+    console.log(data)
+    dispatch({type:'UPDATETIMETABLE', payload:data})
   } catch (error) {
     console.log(error.message); 
   }

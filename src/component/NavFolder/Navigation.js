@@ -6,14 +6,12 @@ import brush from "../../images/brush.png";
 import { Link, useLocation, useParams } from "react-router-dom";
 import MediaQuery from "react-responsive";
 import { FaBars, FaStream } from "react-icons/fa";
-import logo from "../../images/logoicon.png";
 import GetDimension from "../functions/getDimension";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { GetStudent } from "../../reducer/crmRedux/action";
-// import Notification from './notification';
 
-const NavBar = ({ setZindex, setopenSide, openSide }) => {
+const NavBar = ({ setZindex, setopenSide, openSide,Create }) => {
+  const {setdiv} = Create
   const dispatch = useDispatch();
   const history = useHistory();
   const { name } = useParams();
@@ -194,7 +192,7 @@ const NavBar = ({ setZindex, setopenSide, openSide }) => {
   const notificationState = useSelector(
     (state) => state.studentReducer.birthDay
   );
-  const state = useSelector((state) => state.studentReducer.students);
+  let state = useSelector((state) => state.timetableReducer.finishedClass)
   return (
     <>
       <article className="stick-class" style={style}>
@@ -274,7 +272,27 @@ const NavBar = ({ setZindex, setopenSide, openSide }) => {
                           : setNotification(true)
                       }
                     >
-                      <span>{notificationState.length}</span>
+                      {
+                        NotificationBoolean && (
+                          <div>
+                            <p onClick={() => {
+                              history.push('/Create')
+                              setdiv(2)
+                            }} >  <b>{state.length}</b>  finished student class  </p>
+                            <p 
+                            onClick={() => {
+                              history.push('/Create')
+                              setdiv(2)
+                            }} > <b>{notificationState.length}</b> student birth Day  </p>
+                          </div>
+                        )
+                      }
+                      
+                      <span>{
+                        state.length > 0 && notificationState.length > 0 ?
+                        (notificationState.length + state.length): state.length > 0 ? 
+                        (state.length): notificationState.length > 0 ? (notificationState.length) : 0
+                      }</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"
@@ -529,7 +547,12 @@ const NavBar = ({ setZindex, setopenSide, openSide }) => {
                           : setNotification(true)
                       }
                     >
-                      <span>{notificationState.length}</span>
+                      <span>{
+                        state.length > 0 && notificationState.length > 0 ?
+                        (notificationState.length + state.length): state.length > 0 ? 
+                        (state.length): notificationState.length > 0 ? (notificationState.length) : 0
+                      
+                      }</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"

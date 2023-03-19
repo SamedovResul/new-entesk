@@ -168,7 +168,9 @@ export const ConfirmOrCancel = (id,data) =>{
   return API.patch(`/timeTable/state/${id}`,data)
 } 
 
-
+export const DeleteStudentFromTable = (id,student_Id) =>{
+  return API.patch(`/timeTable/student/${id}`,{student_Id: student_Id})
+} 
 
 
 

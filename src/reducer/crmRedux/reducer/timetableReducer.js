@@ -1,16 +1,14 @@
-const reducer = (state = {table:[], teacherData:''}, action ) =>{
+const reducer = (state = {table:[], teacherData:'', finishedClass:[]}, action ) =>{
   const {table} = state
   switch (action.type) {
     case "FETCHTIMETABLE":
-
-      return { ...state, table: action.payload,}
+      return { ...state, table: action.payload.table ,finishedClass: action.payload.finishedClass }
     case "CREATETIMETABLE":
       const Array = action.payload
       return{
         ...state,
         table: [...table, ...Array]
       }
-      // [...state.table,  ...Array]
     case "UPDATETIMETABLE":
       return{
         ...state,
@@ -20,7 +18,7 @@ const reducer = (state = {table:[], teacherData:''}, action ) =>{
     case "FETCHBYSEARCH":
       return  { ...state, table: action.payload.table,teacherData: action.payload.teacherData}
     case "ConfirmOrCancel":
-      return  { ...state, table: action.payload,}
+      return  { ...state, table: action.payload.table,finishedClass: action.payload.finishedClass}
     default:
       return state;
   }

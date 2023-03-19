@@ -32,18 +32,7 @@ const Form = ({ teacher, setData, data }) => {
           });
         }}
       />
-      <TextField
-        label="secondName"
-        type="text"
-        variant="outlined"
-        value={data.SecondName}
-        onChange={(e) => {
-          setData({
-            ...data,
-            SecondName: e.target.value,
-          });
-        }}
-      />
+      
       <TextField
         // label="age"
         type="date"
@@ -123,97 +112,7 @@ const Form = ({ teacher, setData, data }) => {
           <MenuItem value="1">active</MenuItem>
         </Select>
       </FormControl>
-      {/* <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-standard-label">
-          select teacher{" "}
-        </InputLabel>
-        <Select
-          labelId="demo-simple-select-standard-label"
-          id="demo-simple-select-standard"
-          onChange={(e) => {
-            setData({
-              ...data,
-              teacherId: e.target.value,
-            });
-          }}
-          value={data.teacherId}
-        >
-          {teacher.map((teach, index) => {
-            const { name, _id } = teach;
-            return (
-              <MenuItem key={index} value={_id}>
-                {name}
-              </MenuItem>
-            );
-          })}
-        </Select>
-      </FormControl>
-      <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-standard-label">week day</InputLabel>
-        <Select
-          labelId="demo-simple-select-standard-label"
-          id="demo-simple-select-standard"
-          onChange={(e) => {
-            setData({
-              ...data, dateOne:e.target.value
-            });
-          }}
-          label="week day"
-        >
-          {
-            weekday.map((day, i) =>{
-
-              return(
-                <MenuItem key={i} value={day}> {day} </MenuItem>
-              )
-            })
-          }
-        </Select>
-      </FormControl>
-      <TextField
-        // label="age"
-        variant="outlined"
-        type="time"
-        onChange={(e) =>{
-          setData({
-            ...data,timeOne: e.target.value
-          });
-        }}
-        />
-        <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-standard-label">week day</InputLabel>
-        <Select
-          labelId="demo-simple-select-standard-label"
-          id="demo-simple-select-standard"
-          onChange={(e) => {
-            setData({
-              ...data,
-              dateTwo: e.target.value
-            });
-          }}
-          label="week day"
-        >
-          {
-            weekday.map((day, i) =>{
-
-              return(
-                <MenuItem key={i} value={day}> {day} </MenuItem>
-              )
-            })
-          }
-        </Select>
-      </FormControl>
-      <TextField
-        // label="age"
-        variant="outlined"
-        type="time"
-        onChange={(e) =>{
-          setData({
-            ...data,
-            timeTwo: e.target.value
-          })
-        }}
-        /> */}
+      
     </Box>
   );
 };

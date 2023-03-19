@@ -9,9 +9,68 @@
   position: fixed;
 }
 
-/* .main-admin-page{
-  margin-top: 60px;
-/* } */
+
+
+/* admin nav */
+
+.admin-nav ul {
+  width: 100%;
+}
+
+.admin-nav ul li{
+  position: relative;
+}
+
+.admin-nav ul li svg{
+  width: 20px !important;
+  fill: white;
+}
+
+.admin-nav ul li span{
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  color: red;
+  font-size: larger;
+  cursor: pointer;
+}
+
+
+.admin-nav ul li div{
+  border: 1px solid black;
+  position: fixed;
+  width: 200px;
+  height: auto;
+  right: 70px;
+  top: 80px;
+  background-color:#482AFF;
+  border-radius: 20px;
+  z-index: 10;
+  padding: 10px;
+}
+
+.admin-nav ul li div p{
+  margin: 5px;
+  font-size: 15px;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+
+.admin-nav ul li div p:nth-of-type(1){
+  color: #ff952b;
+}
+
+.admin-nav ul li div p:nth-of-type(2){
+  color: #5ccdff;
+}
+
+.admin-nav ul li:nth-of-type(1){
+  margin: auto auto auto 20px !important;
+} 
+
+/*  */
 
 .main-admin-page .col-md-12{
   display: flex;
@@ -51,6 +110,28 @@
 .table-box p{
   border-bottom: 2px solid rgb(160, 150, 150);
 }
+
+.table-box div:nth-of-type(1) {
+  border-bottom: 1px solid;
+  margin-bottom: 15px;
+}
+
+.table-box div:nth-of-type(1) > div{
+  display: inline-block;
+  padding: 2px 10px;
+  border: 1px solid;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+}
+
+
+.table-box div:nth-of-type(1) > div span{
+  color: red;
+  cursor: pointer;
+}
+
 
 .btn-div{
   width: 100%;

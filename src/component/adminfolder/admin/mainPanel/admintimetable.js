@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import {
   GetTimetable,
   searchByDate,
   confirmOrCancel,
   GetTeacher,
-  GetStudent
+  GetStudent,
+  deleteStudentFromTable
 } from "../../../../reducer/crmRedux/action";
 import Functions from "./functions";
 import DateLocal from "./date-local";
@@ -22,9 +22,7 @@ import Option from './option'
 const Admin = () => {
   const [search, setSearch] = useState(false);
   const [boolean, setBoolean] = useState(0);
-  const [div,setdiv ] = useState(10)
   let state = useSelector((state) => state.timetableReducer);
-  const searchingState = useSelector((state) => state.timetableReducer);
   const teacher = useSelector((state) => state.teacherReducer);
   const dispatch = useDispatch();
   const [date, getDate] = useState({
@@ -36,14 +34,13 @@ const Admin = () => {
   });
 
 
-    
-
   const { 
     Searching,
     today,
     ConCanHandler,
     onChangeFunction,
     style,
+    deleteStudentHandler
    } = Functions(
     // get data from back
     dispatch,
@@ -60,18 +57,15 @@ const Admin = () => {
     getDate,
     // get birthday
     GetStudent,
-    searchingState,
-    // search  teacher 
-    teacher,
-    state
+    // delete student
+    deleteStudentFromTable
   )
   const { cancelClass,confirmedClass,salary } = state.teacherData
 
 
-
-
   const [tables, setTables] = useState([
   ]);
+
 
   useEffect(() => {
     const sortedAndUniqueTables = state.table
@@ -144,11 +138,20 @@ const Admin = () => {
                 {search ? (
                   <>
                   
-                  <SearchResult state={tables} ConCanHandler={ConCanHandler} />
+                  <SearchResult 
+                    state={tables} 
+                    ConCanHandler={ConCanHandler} 
+                    deleteStudentHandler={deleteStudentHandler}
+                  />
                   </>
                   
                 ) : (
-                  <Tables state={tables} teacher={teacher} ConCanHandler={ConCanHandler} />
+                  <Tables 
+                    state={tables} 
+                    teacher={teacher} 
+                    ConCanHandler={ConCanHandler}
+                    deleteStudentHandler={deleteStudentHandler}
+                  />
                 )}
               </div>
             </div>

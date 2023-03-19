@@ -43,9 +43,9 @@ const ExistTable = ({Array,teacher, tableData, setId }) => {
                 <b> Student: </b> 
                   {
                     StudentsArray.map((student,i) =>{
-                      const {student_Name} = student
+                      const {name} = student
                       return(
-                        <span key={i} > {student_Name}, </span>
+                        <span key={i} > {name}, </span>
                       )
                     })
                   }
@@ -64,18 +64,6 @@ const ExistTable = ({Array,teacher, tableData, setId }) => {
                 <p>
                   <b>time:</b>
                   <Moment format="HH:mm " utc>{date}</Moment>
-                  
-                  {/* { moment().format(` ${time.getUTCHours()}:${time.getUTCMinutes()}`)} */}
-                  {/* {`${
-                    time.getHours().toString().length === 1
-                      ? `0${time.getHours()}`
-                      : `${time.getHours()}`
-                  }
-                    :${
-                      time.getUTCMinutes().toString().length === 1
-                        ? `0${time.getUTCMinutes()}`
-                        : `${time.getUTCMinutes()}`
-                    }`} */}
                 </p>
                 <p>
                   <b>class state</b>

@@ -34,9 +34,9 @@ const Table = ({setNewtimetable,tableData,newTimetable,setId }) => {
                   <b> Student: </b> 
                   {
                     StudentsArray.map((student,i) =>{
-                      const {student_Name} = student
+                      const {name} = student
                       return(
-                        <span key={i} > {student_Name}, </span>
+                        <span key={i} > {name}, </span>
                       )
                     })
                   }

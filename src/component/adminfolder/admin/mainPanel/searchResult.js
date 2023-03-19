@@ -3,13 +3,13 @@ import Moment from 'react-moment';
 
 
 
-const SearchResult = ({ state,ConCanHandler }) => {
+const SearchResult = ({ state,ConCanHandler,deleteStudentHandler }) => {
   return (
     <>
       <div className="parent-table-box">
         {state.map((timetable, index) => {
           const {
-            student_Name,
+            StudentsArray,
             teacher_Name,
             class_Name,
             date,
@@ -27,10 +27,16 @@ const SearchResult = ({ state,ConCanHandler }) => {
                 {" "}
                 <b>teacher:</b> {teacher_Name}{" "}
               </p>
-              <p>
+              <div>
                 {" "}
-                <b>student:</b> {student_Name}{" "}
-              </p>
+                <b> Student: </b>
+                {StudentsArray.map((student, i) => {
+                  const { name, student_Id} = student;
+                  return (<div key={i}> {name}, <span
+                  onClick={() => deleteStudentHandler(_id,student_Id)}
+                  > X </span> </div>) ;
+                })}
+              </div>
               <p>
                 {" "}
                 <b>class:</b> {class_Name}{" "}

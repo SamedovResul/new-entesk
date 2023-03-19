@@ -13,7 +13,6 @@ import TexnologyCourse from './component/technologyFolder/Course/Course';
 import SkillCours from './component/skillFolder/Course/Course';
 import LoginAdmin from './component/adminfolder/login/admin';
 import Teacher from './component/adminfolder/teacherFolder/Teacher';
-// 
 import Admintimetable from './component/adminfolder/admin/mainPanel/admintimetable';
 import Blogs from './component/adminfolder/blogfolder/blogs';
 import Createblog from './component/adminfolder/blogfolder/Createblog';
@@ -23,7 +22,7 @@ import Create from './component/adminfolder/admin/create/create';
 import Metatesk from './component/metatesk/Metatesk';
 
 function App(props) {
-  const [certificates, setCertificates] = useState([])
+  const [div,setdiv] = useState(10)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getUser())
@@ -43,10 +42,11 @@ function App(props) {
       <div className="App" >
         <>
           <NavBar 
-          component={HomeBanner} 
-          setZindex={setZindex}
-          setopenSide={setopenSide}
-          openSide={openSide}
+            component={HomeBanner} 
+            setZindex={setZindex}
+            setopenSide={setopenSide}
+            openSide={openSide}
+            Create={{div,setdiv}}
           />
           <Switch>
 
@@ -57,7 +57,6 @@ function App(props) {
             <Route path='/CourseTecnology/:name' component={TexnologyCourse} />
             <Route path='/CourseSkill/:name' component={SkillCours} />
             
-
             <Route path="/products"  >
               <Products  handlerSideClose={handlerSideClose} />
             </Route >
@@ -69,7 +68,7 @@ function App(props) {
               <About handlerSideClose={handlerSideClose} />
             </Route>
             <Route path='/login' >
-              <LoginAdmin/>
+              <LoginAdmin  />
             </Route>
             <Route path='/adminTimetable'>
               <Admintimetable  />
@@ -78,7 +77,7 @@ function App(props) {
               <Teacher  />
             </Route>
             <Route path="/Create">
-              <Create />
+              <Create Create={{div,setdiv}} />
             </Route>
             <Route path="/metatesk">
               <Metatesk />

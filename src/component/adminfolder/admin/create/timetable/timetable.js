@@ -40,7 +40,7 @@ const Create = () => {
   let state = useSelector((state) => state);
   const [newTimetable, setNewtimetable] = useState({
     StudentsArray: [],
-    student_Name: "",
+    name: "",
     student_Id: "",
     teacher_Name: "",
     teacher_Email: "",
@@ -53,7 +53,6 @@ const Create = () => {
     index:'',
     condition:false
   });
-  console.log(newTimetable)
   const [Array, setArray] = useState([]);
   let [Category, setCategory] = useState([])
   const [tableAndCalendar, setTableAndCalendar] = useState(0)
@@ -105,6 +104,7 @@ const Create = () => {
     students,
   ) 
   const { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday } = State;
+
   return (
     <>
     <div className="">
@@ -156,6 +156,7 @@ const Create = () => {
           />
         ) : <></>
       }
+      
       
     </div>
 

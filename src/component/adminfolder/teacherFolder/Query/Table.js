@@ -49,7 +49,6 @@ const Table = ({
 
   Object.keys(separatedData).map(
     (day) => (
-      console.log(day),
       separatedData[day].map((entry, index) => console.log(entry.student_Name))
     )
   );
@@ -105,9 +104,9 @@ const Table = ({
                             <td> 
                               {
                                 StudentsArray.map((student,i) =>{
-                                  const {student_Name} = student
+                                  const {name} = student
                                   return(
-                                    <b key={i} > {student_Name}, </b>
+                                    <b key={i} > {name}, </b>
                                   )
                                 })
                               } 

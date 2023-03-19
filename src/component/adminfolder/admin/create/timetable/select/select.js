@@ -14,7 +14,6 @@ const SelectData = ({
   students,
   DeleteStudent
 }) => {
-  
   return (
     <div className="select-div">
       <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
@@ -48,11 +47,11 @@ const SelectData = ({
       {name === "student_Id" && (
         <div className="students">
           {students.map((student, i) => {
-            const { student_Name, student_Id } = student;
+            const { name, student_Id } = student;
             return (
               <p key={i}>
                 {" "}
-                {student_Name} <span onClick={() => DeleteStudent(student_Id)}  > X </span>{" "}
+                {name} <span onClick={() => DeleteStudent(student_Id)}  > X </span>{" "}
               </p>
             );
           })}

@@ -6,10 +6,10 @@ import Timetable from './timetable/timetable'
 import { Button } from "@mui/material";
 
 
-const Create = () => {
-  const [div,setdiv ] = useState(10)
-
-  const style ={
+const Create = ({Create}) => {
+  const {div,setdiv} = Create
+  // const [div,setdiv] = useState(10)
+  const style = {
     display: "flex", 
     flexWrap:"wrap",
     height:'auto', 
