@@ -11,14 +11,7 @@ import About from './component/About/about';
 import EnvironmentCourse from './component/environmentFolder/Course/Course';
 import TexnologyCourse from './component/technologyFolder/Course/Course';
 import SkillCours from './component/skillFolder/Course/Course';
-import LoginAdmin from './component/adminfolder/login/admin';
-import Teacher from './component/adminfolder/teacherFolder/Teacher';
-import Admintimetable from './component/adminfolder/admin/mainPanel/admintimetable';
-import Blogs from './component/adminfolder/blogfolder/blogs';
-import Createblog from './component/adminfolder/blogfolder/Createblog';
-import { useDispatch } from 'react-redux';
-// import {getUser} from './reducer/blogReducer/action';
-import Create from './component/adminfolder/admin/create/create';
+import { useDispatch } from 'react-redux'
 import Metatesk from './component/metatesk/Metatesk';
 
 function App(props) {
@@ -67,12 +60,6 @@ function App(props) {
             <Route exact path='/About'  >
               <About handlerSideClose={handlerSideClose} />
             </Route>
-            <Route path='/login' >
-              <LoginAdmin  />
-            </Route>
-            <Route path='/adminTimetable'>
-              <Admintimetable  />
-            </Route>
             <Route path='/teacher'>
               <Teacher  />
             </Route>
@@ -81,9 +68,6 @@ function App(props) {
             </Route>
             <Route path="/metatesk">
               <Metatesk />
-            </Route>
-            <Route path='/adminBlogs' >
-              <Blogs  />
             </Route>
             <Route path='/məhsullar' >
               <> <h1>mehsullar</h1> </>
