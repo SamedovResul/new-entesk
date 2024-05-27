@@ -85,7 +85,7 @@ function App(props) {
             <Route path='/adminBlogs' >
               <Blogs  />
             </Route>
-            <Route path='/Məhsullar' >
+            <Route path='/məhsullar' >
               <> <h1>mehsullar</h1> </>
             </Route>
             
