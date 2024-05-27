@@ -58,12 +58,7 @@ function App(props) {
             <Route exact path='/About'  >
               <About handlerSideClose={handlerSideClose} />
             </Route>
-            <Route path='/teacher'>
-              <Teacher  />
-            </Route>
-            <Route path="/Create">
-              <Create Create={{div,setdiv}} />
-            </Route>
+            
             <Route path="/metatesk">
               <Metatesk />
             </Route>
