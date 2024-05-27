@@ -6,7 +6,6 @@ import SimpleReactLightbox from 'simple-react-lightbox';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-// import alldata from './reducer/combine'
 import { transitions, positions, Provider as AlertProvider } from 'react-alert'
 import AlertTemplate from 'react-alert-template-basic'
 
@@ -20,16 +19,13 @@ const options = {
   transition: transitions.SCALE
 }
 
-// const store = createStore(alldata, compose(applyMiddleware(thunk)))
 ReactDOM.render(
     <React.StrictMode>
-        // <Provider store={store} >
           <AlertProvider template={AlertTemplate} {...options} >
             <SimpleReactLightbox>
               <App />
             </SimpleReactLightbox>
           </AlertProvider>
-        // </Provider>
     </React.StrictMode>
   ,
 
