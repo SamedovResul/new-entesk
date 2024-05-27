@@ -24,9 +24,9 @@ import Metatesk from './component/metatesk/Metatesk';
 function App(props) {
   const [div,setdiv] = useState(10)
   const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(getUser())
-  }, [dispatch])
+  // useEffect(() => {
+  //   dispatch(getUser())
+  // }, [dispatch])
   
   const [zIndex, setZindex] = useState(0);
   const [openSide, setopenSide ] = useState(false);
